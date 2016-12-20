@@ -7,7 +7,7 @@ To automatically start a job on Docker, use the following Collector parameters:
 **Name** | **Description**
 ----- | -----
 `-job-enable` | Enable a specified job by name. Supports job names separated by commas.
-`-job-path` | Import a job from a specified file or HTTP(s) content. Supports comma seperated files. If the `job-enable` parameter is not defined, **ALL** jobs in the file will be started.
+`-job-path` | Import a job from a specified file or HTTP(s) content. Supports comma separated lists of files. If the `job-enable` parameter is not defined, **ALL** jobs in the file will be started.
 `-job-execute` | Run specified jobs by name after the start-up. Multiple job names can be specified, separated by comma.
 
 ## Autostart Pre-configured Job
