@@ -39,7 +39,7 @@ The Collector supports [collections](/docs/collections.md)-based automation to e
 * Amazon Web Services CloudWatch
 * Docker Engine
 * HP OVPM (Performance Manager)
-* OSISoft PI DataArchve
+* OSISoft PI DataArchive
 * OSISoft PIOLEDBEnt
 
 ## Installation

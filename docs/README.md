@@ -39,7 +39,7 @@ It supports [collections](collections.md)-based automation in order to query as 
 * Amazon Web Services CloudWatch
 * Docker Engine
 * HP OVPM (Performance Manager)
-* OSISoft PI DataArchve
+* OSISoft PI DataArchive
 * OSISoft PIOLEDBEnt
 
 ## Installation
