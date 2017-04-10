@@ -10,7 +10,7 @@ The periodic data collection can be organized in several ways:
 The document will provide instructions for the first way of configuring.
 ## Requirements
 * NGINX PLUS server with [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
-* [Axibase Collector](../../README.md) for scheduled polling of the NGINX status page.
+* [Axibase Collector](../../../README.md) for scheduled polling of the NGINX status page.
 * [Axibase Time Series Database](https://github.com/axibase/atsd/blob/master/docs/installation/README.md) as a centralized data repository.
 
 ## Configure a job in Axibase Collector
@@ -19,7 +19,7 @@ Axibase Collector will poll the NGINX PLUS status page every 5 seconds, build ne
 Login into Axibase Collector web interface.
 ### Create Item List for NGINX PLUS servers
 * Open the **Collections:Item Lists** page.
-* Add a new TEXT [Item List](../../collections.md) named **nginx-plus-servers** containing DNS names or IP addresses of the monitored NGINX PLUS servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path `/status`. If the protocols and ports are different, move the entire url to the list and set Path field equal to the`${ITEM}` placeholder.
+* Add a new TEXT [Item List](../../../collections.md) named **nginx-plus-servers** containing DNS names or IP addresses of the monitored NGINX PLUS servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path `/status`. If the protocols and ports are different, move the entire url to the list and set Path field equal to the`${ITEM}` placeholder.
 * **Save** the list.
 
 ![Server list example](./images/ngp_item_list.png)
