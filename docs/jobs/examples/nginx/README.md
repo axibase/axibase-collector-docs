@@ -9,7 +9,7 @@ The process involves enabling the NGINX status page and configuring Axibase Coll
 ## Requirements
 
 * NGINX server with [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) enabled.
-* [Axibase Collector](/docs/README.md) for scheduled polling of the NGINX status page.
+* [Axibase Collector](../../README.md) for scheduled polling of the NGINX status page.
 * [Axibase Time Series Database](https://github.com/axibase/atsd/blob/master/docs/installation/README.md) as a centralized data repository.
 
 ## NGINX Server Configuration

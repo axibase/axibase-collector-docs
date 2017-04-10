@@ -4,7 +4,7 @@
 
 The Socrata job provides a way to convert JSON documents published in [Open Data](https://project-open-data.cio.gov/v1.1/schema/) schema into series, property, and message commands.
 
-Unlike the generic [JSON job](/jobs/json.md), the Socrata job simplifies the processing using built-in rules and heuristics, eliminating the need to use JSONPath expressions to map JSON fields to command fields.
+Unlike the generic [JSON job](./json.md), the Socrata job simplifies the processing using built-in rules and heuristics, eliminating the need to use JSONPath expressions to map JSON fields to command fields.
 
 JSON documents published in the Open Data format contain both metadata as well as data itself.
 
@@ -29,8 +29,8 @@ The most important part that the Socrata job relies on for processing is the `co
 
 ## Job Settings
 
-The [settings](/job-generic.md) implemented at the job level are the same as for other job types.
-The ['Cron Schedule'](/scheduling.md) defines how often the dataset should be checked for new records and ['Storage'](/atsd-server-connection.md) determines the target ATSD instance where the commands should be sent.
+The [settings](../job-generic.md) implemented at the job level are the same as for other job types.
+The ['Cron Schedule'](../scheduling.md) defines how often the dataset should be checked for new records and ['Storage'](/atsd-server-connection.md) determines the target ATSD instance where the commands should be sent.
 
 If the source dataset is static and will not be updated, it may not make sense to enable the job since the data will always be the same. To load data once for a static dataset, save the job and click on the 'Run' button/link to execute the job manually. If, however, the underlying dataset is regularly updated with new rows, enabling the job and specifying an appropriate schedule ensures that new data is continuously propagated into ATSD.
 

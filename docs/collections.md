@@ -50,7 +50,7 @@ For example, include the `${ITEM}` placeholder into the Path field in JSON job t
 
 ### Functions
 
-Item values can be further modified with built-in [string functions](jobs/placeholder.md#string-functions).
+Item values can be further modified with built-in [string functions](jobs/placeholders.md#string-functions).
 
 ```ls
 ${ITEM?function(arguments)}

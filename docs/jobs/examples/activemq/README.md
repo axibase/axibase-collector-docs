@@ -129,7 +129,7 @@ chmod 600 ./conf/jmx.password
   - **User Name** — JMX user name such as `monitorRole`. Read-only permissions are sufficient.
   - **Password** — Password for JMX user.
   - **Entity** — Optionally, specify the output of the hostname command on the ActiveMQ server if it's different from `activemq_hostname` (for example if `activemq_hostname` represents a fully qualified name).
-Other parameters are optional. For more information on JMX configuration, see [JMX](/docs/jobs/jmx.md).
+Other parameters are optional. For more information on JMX configuration, see [JMX](../jmx.md).
 
 1. Click Test to validate the configuration.
 If the specified configuration is correct, there must be no errors or empty fields in the test results.
