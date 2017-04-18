@@ -137,9 +137,9 @@ docker.diskio.sectors.* | I/O | The number of 512-bytes sectors read and written
 docker.fs.size.rw | File System | The total size of all the files in the container, in bytes. If you were to export the filesystem of the container as a tarball, it would be about that size.
 docker.fs.size.rootfs | File System | The size of the files which have been created or changed, if you compare the container to its base image. Just after creation, this should be zero; as you modify (or create) files, this will increase.
 docker.process.all | Process | The number of all processes for running container. 
-docker.process.filtered | Process | The number of all processed which have been filtered by [field 'Excluded Processes'](/jobs/docker.md#job-settings) for running conteiner.
+docker.process.filtered | Process | The number of all processed which have been filtered by [field 'Excluded Processes'](jobs/docker.md#job-settings) for running conteiner.
 
-### Collected by [TCP Job](/jobs/tcp.md) 
+### Collected by [TCP Job](jobs/tcp.md) 
 
 ### Container Metrics
 

@@ -17,7 +17,7 @@ wget -qO- https://ftp.mozilla.org/pub/firefox/releases/26.0/linux-x86_64/en-US/f
 
 ```sh
 sudo apt-get update
-sudo apt-get install openjdk-7-jdk
+sudo apt-get install xvfb
 ```
 
 #### Xvfb on RHEL, Fedora, CentOS

@@ -9,7 +9,7 @@ The process involves enabling the NGINX status page and configuring Axibase Coll
 ## Requirements
 
 * NGINX server with [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) enabled.
-* [Axibase Collector](/docs/README.md) for scheduled polling of the NGINX status page.
+* [Axibase Collector](../../README.md) for scheduled polling of the NGINX status page.
 * [Axibase Time Series Database](https://github.com/axibase/atsd/blob/master/docs/installation/README.md) as a centralized data repository.
 
 ## NGINX Server Configuration
@@ -48,7 +48,7 @@ Axibase Collector will poll the NGINX status page every 5 seconds and upload the
 ### Create Item List for NGINX servers
 
 * Open the **Collections:Item Lists** page.
-* Add a new TEXT [Item List](/collections.md) named **nginx-servers**, containing DNS names or IP addresses of the monitored NGINX servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire url to the list and set the Path field equal to the `${ITEM}` placeholder.
+* Add a new TEXT [Item List](../../../collections.md) named **nginx-servers**, containing DNS names or IP addresses of the monitored NGINX servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire url to the list and set the Path field equal to the `${ITEM}` placeholder.
 * **Save** the list.
 
 ![Server list example](./images/nginx-server-list.png)

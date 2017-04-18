@@ -44,12 +44,12 @@ The JSON file (1.1 MB) can be found [here](https://data.cityofnewyork.us/api/vie
    ![Figure 8](images/Figure8.png)
 
 8. Copy the short URL (**without** `rows.json?accessType=DOWNLOAD` selected) from your JSON file and paste it into the `Path` line. You do not need to fill in the `Name` field, as
-   it will be automatically filled in from the previous page. For more information on the remaining fields in this screenshot, click [here](/docs/jobs/socrata.md#job-configuration).
+   it will be automatically filled in from the previous page. For more information on the remaining fields in this screenshot, click [here](../jobs/socrata.md#job-configuration).
 
    ![Figure 9](images/Figure9.png)
 
 9. Press `Add` to create a pre-configured settings section.
-10. Press `Test`. To view descriptions of each of the fields shown below, click [here](/docs/jobs/socrata.md#job-configuration). 
+10. Press `Test`. To view descriptions of each of the fields shown below, click [here](../jobs/socrata.md#job-configuration). 
 
     ![Figure 10](images/Figure10.png)
 

@@ -31,7 +31,7 @@ Axibase Collector can be configured to query a remote database to either obtain 
 
 ## Job Settings
 
-Apart from [common](/docs/job-generic.md), JDBC job has an additional field. <br>
+Apart from [common](../job-generic.md), JDBC job has an additional field. <br>
 **Data Source** list allows you to select a database that will be queried. The list contains all databases connected as data sources.
 
 ![JDBC job settings](examples/solarwinds/images/solarwinds-job.png)
