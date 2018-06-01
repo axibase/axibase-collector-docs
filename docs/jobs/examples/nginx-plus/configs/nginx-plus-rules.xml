@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><rules>
+<rule>
+<name>nginx_plus_active_connection_heartbeat</name>
+<metric>nginx-plus.connections.active</metric>
+<expression><![CDATA[(timestamp - windowStartTime() >= window_length_time()) AND (time_last() - time_first() < 0.5 * window_length_time())]]></expression>
+<window>time(3 minute)</window>
+<severity>WARNING</severity>
+<alertOpenMessage><![CDATA[Open alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertOpenMessage>
+<alertMessage><![CDATA[Repeat alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertMessage>
+<alertCancellationMessage><![CDATA[Cancel alert for ${entity}, ${metric}, ${tags} . Value: ${value}]]></alertCancellationMessage>
+<alertStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</alertStrategy>
+<lastUpdated>1470384603272</lastUpdated>
+<enabled>false</enabled>
+<disableEntityGrouping>false</disableEntityGrouping>
+<leavingEvents>true</leavingEvents>
+<description><![CDATA[Raise an alert when status page statistics are no longer being received by ATSD.
+Check that the server is reachable and Axibase Collector job is running.]]></description>
+<actionStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</actionStrategy>
+<groupFilter>nginx-plus-servers</groupFilter>
+<emailNotification>
+<rule-name>nginx_plus_active_connection_heartbeat</rule-name>
+<repeat-interval>
+<type>INTERVAL</type>
+<intervalCount>3</intervalCount>
+<intervalUnit>HOUR</intervalUnit>
+</repeat-interval>
+<body-first>An alert when status page statistics are no longer being received by ATSD has been raised.&#13;
+Check that the server is reachable and Axibase Collector job is running.</body-first>
+<body-cancel>Sufficient amount of  statistics data about NGINX PLUS server has been received during last 3 minutes.</body-cancel>
+<name>Email Notification id=1</name>
+<use-in-threshold-only>false</use-in-threshold-only>
+<recipients>address@domain</recipients>
+<first-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}</first-subject>
+<repeat-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</repeat-subject>
+<cancel-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</cancel-subject>
+<merge>false</merge>
+<first-details>true</first-details>
+<repeat-details>true</repeat-details>
+<cancel-details>true</cancel-details>
+<priority>0</priority>
+</emailNotification>
+<ruleTable/>
+</rule>
+<rule>
+<name>nginx_plus_active_connection_low</name>
+<metric>nginx-plus.connections.active</metric>
+<expression><![CDATA[(avg() < 10) AND (count() >= 0.6 * window_length_time() / 5)]]></expression>
+<window>time(15 minute)</window>
+<severity>WARNING</severity>
+<alertOpenMessage><![CDATA[Open alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertOpenMessage>
+<alertMessage><![CDATA[Repeat alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertMessage>
+<alertCancellationMessage><![CDATA[Cancel alert for ${entity}, ${metric}, ${tags} . Value: ${value}]]></alertCancellationMessage>
+<alertStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</alertStrategy>
+<lastUpdated>1470393190829</lastUpdated>
+<enabled>false</enabled>
+<disableEntityGrouping>false</disableEntityGrouping>
+<leavingEvents>false</leavingEvents>
+<description><![CDATA[Raise an alert when an NGINX PLUS server average active connection count is below 10 over the last 15 minutes.]]></description>
+<actionStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</actionStrategy>
+<groupFilter>nginx-plus-servers</groupFilter>
+<emailNotification>
+<rule-name>nginx_plus_active_connection_low</rule-name>
+<repeat-interval>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</repeat-interval>
+<body-first>An alert when an NGINX PLUS server average Active Connection count is below 10 over the last 15 minutes has been raised.</body-first>
+<body-cancel>Your NGINX PLUS server Active Connection count is above 10 over the last 15 minutes.&#13;
+Your server is likely to have no problems with accessibility.</body-cancel>
+<name>Email Notification id=3</name>
+<use-in-threshold-only>false</use-in-threshold-only>
+<recipients>vlad.pavlov24@yandex.ru</recipients>
+<first-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}</first-subject>
+<repeat-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</repeat-subject>
+<cancel-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</cancel-subject>
+<merge>false</merge>
+<first-details>true</first-details>
+<repeat-details>true</repeat-details>
+<cancel-details>true</cancel-details>
+<priority>0</priority>
+</emailNotification>
+<ruleTable/>
+</rule>
+<rule>
+<name>nginx_plus_downtime_long</name>
+<metric>nginx-plus.downtime</metric>
+<tags>type, upstream, server</tags>
+<expression><![CDATA[last() - first() == window_length_time()]]></expression>
+<window>time(15 minute)</window>
+<severity>WARNING</severity>
+<alertOpenMessage><![CDATA[Open alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertOpenMessage>
+<alertMessage><![CDATA[Repeat alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertMessage>
+<alertCancellationMessage><![CDATA[Cancel alert for ${entity}, ${metric}, ${tags} . Value: ${value}]]></alertCancellationMessage>
+<alertStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</alertStrategy>
+<lastUpdated>1470388924578</lastUpdated>
+<enabled>false</enabled>
+<disableEntityGrouping>false</disableEntityGrouping>
+<leavingEvents>false</leavingEvents>
+<description><![CDATA[Raise an alert indicating NGINX PLUS server's peer is in the “unavail” and “unhealthy” states during whole last 15 minutes.]]></description>
+<actionStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</actionStrategy>
+<groupFilter>nginx-plus-servers</groupFilter>
+<emailNotification>
+<rule-name>nginx_plus_downtime_long</rule-name>
+<repeat-interval>
+<type>INTERVAL</type>
+<intervalCount>3</intervalCount>
+<intervalUnit>HOUR</intervalUnit>
+</repeat-interval>
+<body-first>An alert indicating NGINX PLUS server's peer  was in the “unavail” and “unhealthy” states during whole last 15 minutes.</body-first>
+<body-cancel>Now the peer is healthy/available again.</body-cancel>
+<name>Email Notification id=1</name>
+<use-in-threshold-only>false</use-in-threshold-only>
+<recipients>address@domain</recipients>
+<first-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}</first-subject>
+<repeat-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</repeat-subject>
+<cancel-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</cancel-subject>
+<merge>false</merge>
+<first-details>true</first-details>
+<repeat-details>true</repeat-details>
+<cancel-details>true</cancel-details>
+<priority>0</priority>
+</emailNotification>
+<ruleTable/>
+</rule>
+<rule>
+<name>nginx_plus_droppped_high</name>
+<metric>nginx-plus.connections.dropped</metric>
+<expression><![CDATA[(avg() > 50) AND (count() >= 0.6 * window_length_time() / 5)]]></expression>
+<window>time(10 minute)</window>
+<severity>WARNING</severity>
+<alertOpenMessage><![CDATA[Open alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertOpenMessage>
+<alertMessage><![CDATA[Repeat alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertMessage>
+<alertCancellationMessage><![CDATA[Cancel alert for ${entity}, ${metric}, ${tags} . Value: ${value}]]></alertCancellationMessage>
+<alertStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</alertStrategy>
+<lastUpdated>1470393313352</lastUpdated>
+<enabled>false</enabled>
+<disableEntityGrouping>false</disableEntityGrouping>
+<leavingEvents>false</leavingEvents>
+<description><![CDATA[Raise an alert when an NGINX PLUS server dropped sufficient amount of connections during last 10 minutes.]]></description>
+<actionStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</actionStrategy>
+<groupFilter>nginx-plus-servers</groupFilter>
+<emailNotification>
+<rule-name>nginx_plus_droppped_high</rule-name>
+<repeat-interval>
+<type>INTERVAL</type>
+<intervalCount>3</intervalCount>
+<intervalUnit>HOUR</intervalUnit>
+</repeat-interval>
+<body-first>An alert when an NGINX PLUS server dropped too many connections during last 10 minutes.</body-first>
+<body-cancel>Now your server's dropped connection value has become acceptable.</body-cancel>
+<name>Email Notification id=1</name>
+<use-in-threshold-only>false</use-in-threshold-only>
+<recipients>address@domain</recipients>
+<first-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}</first-subject>
+<repeat-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</repeat-subject>
+<cancel-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</cancel-subject>
+<merge>false</merge>
+<first-details>true</first-details>
+<repeat-details>true</repeat-details>
+<cancel-details>true</cancel-details>
+<priority>0</priority>
+</emailNotification>
+<ruleTable/>
+</rule>
+<rule>
+<name>nginx_plus_fails_high</name>
+<metric>nginx-plus.fails</metric>
+<tags>type, upstream, server</tags>
+<expression><![CDATA[(avg() > 10) AND (count() >= 0.6 * window_length_time() / 5)]]></expression>
+<window>time(10 minute)</window>
+<severity>WARNING</severity>
+<alertOpenMessage><![CDATA[Open alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertOpenMessage>
+<alertMessage><![CDATA[Repeat alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertMessage>
+<alertCancellationMessage><![CDATA[Cancel alert for ${entity}, ${metric}, ${tags} . Value: ${value}]]></alertCancellationMessage>
+<alertStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</alertStrategy>
+<lastUpdated>1470392706487</lastUpdated>
+<enabled>false</enabled>
+<disableEntityGrouping>false</disableEntityGrouping>
+<leavingEvents>false</leavingEvents>
+<description><![CDATA[Raise an alert when an NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high during last 10 minutes.]]></description>
+<actionStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</actionStrategy>
+<groupFilter>nginx-plus-servers</groupFilter>
+<emailNotification>
+<rule-name>nginx_plus_fails_high</rule-name>
+<repeat-interval>
+<type>INTERVAL</type>
+<intervalCount>3</intervalCount>
+<intervalUnit>HOUR</intervalUnit>
+</repeat-interval>
+<body-first>An alert indicating NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high during last 10 minutes.</body-first>
+<body-cancel>Now NGINX PLUS server's total number of unsuccessful attempts to communicate with the peer server has become acceptable.</body-cancel>
+<name>Email Notification id=1</name>
+<use-in-threshold-only>false</use-in-threshold-only>
+<recipients>address@domain</recipients>
+<first-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}</first-subject>
+<repeat-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</repeat-subject>
+<cancel-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</cancel-subject>
+<merge>false</merge>
+<first-details>true</first-details>
+<repeat-details>true</repeat-details>
+<cancel-details>true</cancel-details>
+<priority>0</priority>
+</emailNotification>
+<ruleTable/>
+</rule>
+<rule>
+<name>nginx_plus_respawned_proc_increase</name>
+<metric>nginx-plus.processes.respawned</metric>
+<expression><![CDATA[first() < last()]]></expression>
+<window>length(2)</window>
+<severity>WARNING</severity>
+<alertOpenMessage><![CDATA[Open alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertOpenMessage>
+<alertMessage><![CDATA[Repeat alert for ${entity}, ${metric}, ${tags}. Value: ${value}]]></alertMessage>
+<alertCancellationMessage><![CDATA[Cancel alert for ${entity}, ${metric}, ${tags} . Value: ${value}]]></alertCancellationMessage>
+<alertStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</alertStrategy>
+<lastUpdated>1470392651249</lastUpdated>
+<enabled>false</enabled>
+<disableEntityGrouping>false</disableEntityGrouping>
+<leavingEvents>false</leavingEvents>
+<description><![CDATA[Raise an alert when an NGINX PLUS server's total number of abnormally terminated and respawned child processes increases.]]></description>
+<actionStrategy>
+<type>NONE</type>
+<intervalCount>5</intervalCount>
+<intervalUnit>MINUTE</intervalUnit>
+</actionStrategy>
+<groupFilter>nginx-plus-servers</groupFilter>
+<emailNotification>
+<rule-name>nginx_plus_respawned_proc_increase</rule-name>
+<repeat-interval>
+<type>INTERVAL</type>
+<intervalCount>3</intervalCount>
+<intervalUnit>HOUR</intervalUnit>
+</repeat-interval>
+<body-first>An alert indicating that NGINX PLUS server's  total number of abnormally terminated and respawned child processes is increasing.</body-first>
+<body-cancel>Now NGINX PLUS server's total number of abnormally terminated and respawned child processes has stopped increasing.</body-cancel>
+<name>Email Notification id=1</name>
+<use-in-threshold-only>false</use-in-threshold-only>
+<recipients>address@domain</recipients>
+<first-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}</first-subject>
+<repeat-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</repeat-subject>
+<cancel-subject>Rule ${rule}. Status ${status}. Entity: for ${entity}. Metric: ${metric}. Tags: ${tags}. Duration: ${alert_duration_interval}</cancel-subject>
+<merge>false</merge>
+<first-details>true</first-details>
+<repeat-details>true</repeat-details>
+<cancel-details>true</cancel-details>
+<priority>0</priority>
+</emailNotification>
+<ruleTable/>
+</rule>
+</rules>

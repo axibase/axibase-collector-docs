@@ -1,0 +1,14 @@
+{
+  "name": "atsd-docs-site",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Apache2.0",
+  "devDependencies": {
+    "vuepress": "git+https://github.com/axibase/vuepress.git#patches"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
