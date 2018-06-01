@@ -1,5 +1,6 @@
 const githubSettings = {
     docsRepo: 'axibase/axibase-collector',
+    docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Help us improve this page!'
 };
