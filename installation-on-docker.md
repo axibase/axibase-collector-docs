@@ -38,7 +38,7 @@ Alternatively, you can download a pre-built image file from [axibase.com](https:
 
 ## Start Container
 
-> Using Collector to monitor Docker? Launch container in privileged mode as described in this [document](./jobs/docker.md#local-collection).
+> Using Collector to monitor Docker? Launch container in privileged mode as described in this [document](./jobs/docker.md#local-installation).
 
 ```properties
 docker run \
@@ -79,7 +79,7 @@ docker run \
 
 ## Start Container in Privileged Mode
 
-The launch command is different if the Collector container is used to [monitor statistics](./jobs/docker.md#local-collection) from the local Docker Engine.
+The launch command is different if the Collector container is used to [monitor statistics](./jobs/docker.md#local-installation) from the local Docker Engine.
 
 ## Launch Parameters
 
