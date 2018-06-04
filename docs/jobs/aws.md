@@ -54,7 +54,7 @@ For example, the `AWS/Billing Estimated Charges` metric is stored as 5 metrics:
 * `aws_billing.estimatedcharges.average`
 * `aws_billing.estimatedcharges.samplecount`
 
-The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of 15+ [metrics](#aws-ec2-metrics).
+The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of 15+ [metrics](#sample-aws-ec2-cloudwatch-metrics).
 
 The job assigns each metric to an entity which is determined based on the [primary dimension](#namespace-dimensions).
 

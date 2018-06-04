@@ -47,7 +47,7 @@ Use the table below to fill in the fields and configure the query.
 | Command Type    | Type of command sent to ATSD. Possible values: SERIES, PROPERTY, MESSAGE, METRIC, ENTITY. |
 | Default Entity  | Default entity assigned to the collected commands. |
 | Entity Column   | Retrieve entity value from the specified entity column. |
-| Entity Replacement Expression | Freemarker expression to extract entity name from an input string or to retrieve it from a lookup table using [LOOKUP](#lookup-function). |
+| Entity Replacement Expression | Freemarker expression to extract entity name from an input string or to retrieve it from a lookup table using [LOOKUP](placeholders.md#functions). |
 | Split Condition  | One or multiple WHERE conditions to copy the base query into multiple queries returning smaller resultsets.  |
 | Tag Columns     | Columns that contain series tags. |
 | Predefined Tags    | Assign predefined tags to all series. |
