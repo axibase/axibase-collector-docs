@@ -55,8 +55,8 @@ const landingPageMenu = [
     },
     {
         title: 'Updating', children: [
-            ['/updating-collector-on-docker.md', 'Host'],
-            ['/updating-collector.md', 'Docker']
+            ['/updating-collector.md', 'Host'],
+            ['/updating-collector-on-docker.md', 'Docker']
         ],
         collapsable: true
     },
