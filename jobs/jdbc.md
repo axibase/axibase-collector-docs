@@ -65,7 +65,7 @@ Use the table below to fill in the fields and configure the query.
 
 #### Placeholders
 
-[Default Entity](#field-default-entity) and [Predefined Tags](#field-pre-tags) fields support the following placeholders:
+**Default Entity** and **Predefined Tags** fields support the following placeholders:
 
 | **Placeholder** | **Description** |
 | --- | :--- |

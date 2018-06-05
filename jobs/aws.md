@@ -110,7 +110,7 @@ The job assigns each metric to an entity which is determined based on the [prima
 
 ![](./images/aws_config.png)
 
-## Sample AWS/EC2 CloudWatch Metrics
+## Sample AWS EC2 CloudWatch Metrics
 
 * aws_ec2.cpucreditbalance
 * aws_ec2.cpucreditusage

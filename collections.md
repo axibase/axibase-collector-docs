@@ -173,7 +173,7 @@ Examples:
 * [MULTILINE_TEXT](#example-with-multiline-text-content)
 * [JSON](#example-with-json-content)
 
-##### Example with `MULTILINE_TEXT` content
+##### Example with `MULTILINE TEXT` content
 
 ![URL Type](./images/collection_url_type.png)
 

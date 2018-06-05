@@ -4,11 +4,11 @@ To add a database as a data source in Axibase Collector, navigate to **Data Sour
 
 | Field        | Description |
 |:-------------|:-------------|
-| <a name="db-name"></a>Name | Name of data source. |
+| Name | Name of data source. |
 | Database Type  | Type of database. <br> Possible values: Oracle, MSSQL, MSSQL_Native, DB2, SOLID, MYSQL, POSTGRESQL, SYBASE, DERBY, SAP, PI_SERVER, VERTICA, CUSTOM      |
-| <a name="db-server">Server</a> | IP or hostname of the target server. |
-| <a name="db-port"></a>Port | Port on which the database is listening. |
-| <a name="db-database"></a>Database | Name of the database residing on the database server. |
+| Server | IP or hostname of the target server. |
+| Port | Port on which the database is listening. |
+| Database | Name of the database residing on the database server. |
 | Instance | Name of the instance. |
 | Username | Username connecting to the database. The recommended setting is to create a read-only account to access the database. |
 | Password | User password. |
