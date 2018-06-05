@@ -99,7 +99,7 @@ The Collector supports data markers to minimize the load on the source systems a
 
 ## Administration
 
-* [Monitoring](monitoring.md)   
+* [Monitoring](monitoring.md)
 * [Logging](logging.md)
 
 ## Examples
