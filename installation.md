@@ -1,5 +1,9 @@
 # Axibase Collector Installation
 
+## Quick Start
+
+For a quick installation of pre-integrated Axibase Collector and ATSD instances in a single Docker container, refer to the [ATSD Sandbox](https://github.com/axibase/dockers/tree/atsd-sandbox#overview) guide.
+
 ## Install Java 8 JDK
 
 ### OpenJDK on Ubuntu or Debian
@@ -33,13 +37,9 @@ java -version
 
 ## Install
 
-Download Axibase Collector archive. The latest version and direct download link is available on the [Axibase Download Site](https://axibase.com/public/axibase-collector_latest.htm).
+Download Axibase Collector [archive](https://axibase.com/public/axibase-collector_latest.htm).
 
-```sh
-wget http://axibase.com/public/axibase-collector-v${VERSION}.tar.gz
-```
-
-Extract the archive.
+Replace `${VERSION}` placeholder in the command below with the specific version number, for example `19111`. Extract the archive.
 
 ```sh
 tar xvf axibase-collector-v${VERSION}.tar.gz
@@ -47,13 +47,13 @@ tar xvf axibase-collector-v${VERSION}.tar.gz
 
 ## Check Ports
 
-Check that port **9443** is available. If the port is available, output of this command should be blank.
+Check that port `9443` is available. If the port is available, output of this command should be blank.
 
 ```sh
 sudo netstat -tulnp | grep "9443"
 ```
 
-If port **9443** is taken by another processes, open the `start-collector.sh` script and set a custom port:
+If port `9443` is taken by another processes, open the `start-collector.sh` script and set a custom port:
 
 ```sh
 nano ./axibase-collector/bin/start-collector.sh

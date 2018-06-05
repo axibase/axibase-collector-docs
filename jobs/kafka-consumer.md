@@ -36,8 +36,8 @@ Key Password | The password of the private key in the key store file.
 
 ### Configuration
 
-![Kafka Consumer Configuration Example](images/kafka_consumer_configuration.png)
+![Kafka Consumer Configuration Example](./images/kafka_consumer_configuration.png)
 
 ### Test Result
 
-![Kafka Consumer Test Results](images/kafka_consumer_test_results.png)
+![Kafka Consumer Test Results](./images/kafka_consumer_test_results.png)

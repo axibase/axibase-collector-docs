@@ -131,6 +131,7 @@ The expression selects all elements of the `book` array in the root's child name
 | Time Field   | Field with values that specify time for all commands ([example](#time-field)).<br> This field supports the following options:<br> - Name of the field containing date in the matched object<br> - JSON Path |
 | Time Format  | Date format applied when parsing time value ([example](#metric-name-and-value-fields)). |
 | Time Zone    | Time zone can be optionally applied if the extracted date is in local time, otherwise the local Collector time zone is in effect ([example](#time-field)). |
+| Minimum Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) to specify minimum time for commands. Commands with timestamp earlier than specified will be ignored. |
 
 ### Message Fields
 
@@ -636,6 +637,53 @@ series e:tst d:2016-01-01T00:00:00.000Z m:fail=2 m:ok=10
 series e:tst d:2016-01-02T00:00:00.000Z m:fail=2 m:ok=15
 ```
 
+#### Minimum time
+
+JSON:
+
+```json
+{
+
+    "count": 1848,
+    "uniques": 123,
+    "views": [
+        {
+            "timestamp": "2018-05-22T00:00:00Z",
+            "count": 177,
+            "uniques": 20
+        },
+        {
+            "timestamp": "2018-05-23T00:00:00Z",
+            "count": 269,
+            "uniques": 15
+        },
+        {
+            "timestamp": "2018-05-24T00:00:00Z",
+            "count": 128,
+            "uniques": 18
+        }
+    ]
+}
+```
+
+Field Name       | Field Value
+:--------------- | :----------
+Default Entity   | ${ITEM}
+JSON Path        | $.views
+**Time Field**   | timestamp
+Time Format      | yyyy-MM-dd'T'HH:mm:ssZ
+Minimum Time     | NOW-1*DAY
+Metric Prefix    | repo.traffic.
+
+If current time is `2018-05-23T17:00:00Z`, it adds following commands to ATSD.
+
+Result:
+
+```ls
+series e:axibase/atsd d:2018-05-23T00:00:00.000Z m:repo.traffic.uniques=6 m:repo.traffic.count=15
+series e:axibase/atsd d:2018-05-24T00:00:00.000Z m:repo.traffic.uniques=5 m:repo.traffic.count=43
+```
+
 ### Message Fields Examples
 
 #### Message Defaults
@@ -762,12 +810,12 @@ message e:tst d:2016-07-06T08:19:30.563Z t:id=1 t:source=1.2.3.4:1234 t:type=pee
 
 ## Configuration Example
 
-![](images/json_job_configuration.png)
+![](./images/json_job_configuration.png)
 
 ## Settings Example
 
-![](images/json_job_configuration_settings.png)
+![](./images/json_job_configuration_settings.png)
 
 ## JSON Viewer Example
 
-![](images/json_job_viewer.png)
+![](./images/json_job_viewer.png)

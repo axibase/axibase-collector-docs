@@ -1,6 +1,6 @@
 # Using `axibase_nginx_plus_collector` Script for Monitoring nginx Plus Servers
 
-To collect information from your nginx PLUS servers, download the [provided scripts](https://github.com/axibase/axibase-collector/tree/master/jobs/examples/nginx-plus/axibase-nginx-plus-collector/src) and run the `axibase_nginx_plus_collector.py` script with the appropriate options.
+To collect information from your NGINX Plus servers, download the [`axibase_nginx_plus_collector.py`](./src/axibase_nginx_plus_collector.py) and [`axibase_npc_core.py`](./src/axibase_npc_core.py) scripts and run the `axibase_nginx_plus_collector.py` script with the appropriate options.
 The help message can be printed after running:
 
 ```sh

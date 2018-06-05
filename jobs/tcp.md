@@ -41,4 +41,4 @@ In case of failure retests, the values for the above metrics are based on the la
 
 ## Configuration Example
 
-![TCP Configuration](images/tcp-configuration.png)
+![TCP Configuration](./images/tcp-configuration.png)

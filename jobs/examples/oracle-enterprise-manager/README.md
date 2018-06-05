@@ -21,7 +21,7 @@ Oracle EM collects and stores statistics from remote databases, applications, an
 * Open the **Data Sources > Databases** page and select the `OracleEM` database.
 * Provide connection parameters to the target Oracle EM database as displayed below:
 
-![](images/oracle_database_example.png)
+![](./images/oracle_database_example.png)
 
 * Read-only/`SELECT` privileges to `SYSMAN.GC$TARGET` and `SYSMAN.gc$metric_values` tables are sufficient.
 * Execute the following test query to check the connection:
@@ -37,20 +37,20 @@ SELECT NULL FROM dual
 * Open Oracle EM JDBC job.
 * Set **Data Source** to OracleEM.
 
-![](images/oracle_job_ds.png)
+![](./images/oracle_job_ds.png)
 
 * Choose one of target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
 * Open each configuration, click the **Test** button, and review the output. See [Data Queries](#data-queries) for more information.
 
-![](images/test_result.png)
+![](./images/test_result.png)
 
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click the **Run** button for the Oracle EM JDBC job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set job status to **Enabled** and save the job.
 
@@ -59,7 +59,7 @@ SELECT NULL FROM dual
 * Log in to ATSD.
 * Click the **Metrics** tab and filter metrics by name `oem.*`.
 
-![](images/metrics_atsd.png)
+![](./images/metrics_atsd.png)
 
 ## Viewing Data in ATSD
 
@@ -80,11 +80,11 @@ SELECT NULL FROM dual
 
 * [Oracle Databases Live Portal](https://apps.axibase.com/chartlab/8c86c962)
 
-![](images/oracle_databases_poral3.png "Oracle Databases")
+![](./images/oracle_databases_poral3.png "Oracle Databases")
 
 * [Oracle Host Live Portal](https://apps.axibase.com/chartlab/81259b97)
 
-![](images/oracle_host_portal.png "Oracle Host")
+![](./images/oracle_host_portal.png "Oracle Host")
 
 ## Data Queries
 

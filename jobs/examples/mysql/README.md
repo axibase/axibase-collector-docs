@@ -41,7 +41,7 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 * Open the **Data Sources** > **Databases** page and select the `10.102.0.7` database.
 * Provide connection parameters to the target MySQL Server database as displayed below:
 
-![](images/mysql-datasource.png)
+![](./images/mysql-datasource.png)
 
 * Execute the following test query to check the connection:
 
@@ -56,20 +56,20 @@ SELECT 1
 * Open **MySQL Server** job.
 * Set **Data Source** to `10.102.0.7`.
 
-![](images/mysql-jdbc-job.png)
+![](./images/mysql-jdbc-job.png)
 
 * Choose one of the target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
 * Open each configuration, click on the **Test** button and review output. See [Data Queries](#data-queries) below.
 
-![](images/test_result.png)
+![](./images/test_result.png)
 
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click the **Run** button for the MySQL Server JDBC job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set job status to **Enabled** and save the job.
 
@@ -78,7 +78,7 @@ SELECT 1
 * Log in to ATSD.
 * Click on the **Metrics** tab and filter metrics by name `mysql.*`.
 
-![](images/mysql-metrics.png)
+![](./images/mysql-metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -97,7 +97,7 @@ hasMetric('mysql.global_status.uptime')
 
 * Save and verify that the group contains your MySQL database hosts:
 
-![](images/mysql-entity-group.png)
+![](./images/mysql-entity-group.png)
 
 ### Portals
 
@@ -105,10 +105,10 @@ hasMetric('mysql.global_status.uptime')
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the **Entities** tabs, find the `mysql` database by name, and click on the portal icon.
 
-![](images/mysql-portal-icon.png)
+![](./images/mysql-portal-icon.png)
 
 [**MySQL Server Perfomance Live Portal**](http://apps.axibase.com/chartlab/cf72dec3)
-![](images/mysql-portal.png)
+![](./images/mysql-portal.png)
 
 ## Data Queries
 

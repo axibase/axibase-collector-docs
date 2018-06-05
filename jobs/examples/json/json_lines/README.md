@@ -95,16 +95,16 @@ series e:json_lines d:2016-07-01T10:28:07.638Z m:metric2=250
 
 ### Additional Configurations
 
-![](images/configuration.png)
+![](./images/configuration.png)
 
 ### Additional Settings
 
-![](images/settings.png)
+![](./images/settings.png)
 
 ### Viewer
 
-![](images/viewer.png)
+![](./images/viewer.png)
 
 ### Test Results
 
-![](images/test_results.png)
+![](./images/test_results.png)

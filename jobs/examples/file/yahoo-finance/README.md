@@ -43,4 +43,4 @@ Date,Open,High,Low,Close,Volume,Adj Close
 
 ## Screenshot
 
-![Job Screenshot](yahoo-finance-config.png)
+![Job Screenshot](./yahoo-finance-config.png)

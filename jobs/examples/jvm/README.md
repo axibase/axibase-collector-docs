@@ -26,18 +26,18 @@ Configure your Java application for JMX data collection as described by the [JMX
 * For each JMX Configuration:
 * Provide connection parameters to the target JVM:
 
-![](images/jvm_jmx_configuration.png)
+![](./images/jvm_jmx_configuration.png)
 
 * Click the **Test** button:
 
-![](images/jvm_test_jmx_configuration.png)
+![](./images/jvm_test_jmx_configuration.png)
 
 ### Schedule the Job
 
 * Open the **JMX Job** page and click the **Run** button for the JVM JMX job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set the job status to **Enabled** and save.
 
@@ -46,7 +46,7 @@ Configure your Java application for JMX data collection as described by the [JMX
 * Log in to ATSD.
 * Click on **Metrics** tab and filter metrics by name `jmx.jvm*`.
 
-![](images/jvm_metrics.png)
+![](./images/jvm_metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -71,7 +71,7 @@ Configure your Java application for JMX data collection as described by the [JMX
 * Select the Entity Group that you created earlier.
 * Click **View** and browse information about your entities:
 
-![](images/jvm_entity_view.png)
+![](./images/jvm_entity_view.png)
 
 ### Portal
 
@@ -79,17 +79,16 @@ Configure your Java application for JMX data collection as described by the [JMX
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the Entity tab, find the java application by name, and click the **Portal** icon:
 
-![](images/jvm_portal_icon.png)
+![](./images/jvm_portal_icon.png)
 
 [**JVM Live Portal**](http://apps.axibase.com/chartlab/e6911d9d)
-
-![](images/jvm_portal.png)
+![](./images/jvm_portal.png)
 
 ### Rules
 
 ### Setting up Mail Client
 
-* Configure [Mail Client](https://github.com/axibase/atsd/blob/master/administration/mail-client.md).
+* Configure [Mail Client](https://axibase.com/docs/atsd/administration/mail-client.html).
 
 #### Import Rules
 
@@ -101,12 +100,12 @@ Imported rules:
 
 | **Rule** |  **Description** |
 | :--- | :--- |
-| `jvm_application_restart` | Raise an alert when an application has been restarted less than 5 minutes ago.  |
-| `jvm_cpu_load` | Raise an alert when an application cpu load exceeds the set threshold. |
-| `jvm_garbage_collection_rate` |  Raise an alert when an application Garbage Collector rate exceeds the set threshold. |
-| `jvm_garbage_collection_time` |   Raise an alert when an application Garbage Collector time exceeds the set threshold. |
-| `jvm_heap_memory_usage` | Raise an alert when an application heap memory usage exceeds the set threshold. |
-| `jvm_runtime_property_changed` | Raise an alert when an application property is changed. |
-| `jvm_system_load` | Raise an alert when an application system load exceeds the set threshold. |
+| jvm_application_restart | Raise an alert when an application has been restarted less than 5 minutes ago.  |
+| jvm_cpu_load | Raise an alert when an application cpu load exceeds the set threshold. |
+| jvm_garbage_collection_rate |  Raise an alert when an application Garbage Collector rate exceeds the set threshold. |
+| jvm_garbage_collection_time |   Raise an alert when an application Garbage Collector time exceeds the set threshold. |
+| jvm_heap_memory_usage | Raise an alert when an application heap memory usage exceeds the set threshold. |
+| jvm_runtime_property_changed | Raise an alert when an application property is changed. |
+| jvm_system_load | Raise an alert when an application system load exceeds the set threshold. |
 
-To create your own rules, refer to [Rule Engine Documentation](https://github.com/axibase/atsd/blob/master/rule-engine/README.md).
+To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).

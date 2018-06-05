@@ -25,7 +25,7 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 * Open the **Data Sources** > **Databases** page and select the `scom` database.
 * Provide connection parameters to the target `scom-2012` database as displayed below:
 
-![](images/scom-datasource.png)
+![](./images/scom-datasource.png)
 
 * Execute the following test query to check the connection:
 
@@ -40,20 +40,20 @@ SELECT 1
 * Open SCOM job.
 * Set **Data Source** to `scom`.
 
-![](images/scom-job.png)
+![](./images/scom-job.png)
 
 * Choose one of target ATSD instances if the Collector instance is connected to multiple ATSD servers.
 * Save the Job.
 * Open each configuration, click on the **Test** button, and review the output. See [Data Queries](#data-queries) below.
 
-![](images/test_result.png)
+![](./images/test_result.png)
 
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click the **Run** button for the Microsoft SCOM JDBC job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set job status to **Enabled** and save the job.
 
@@ -62,7 +62,7 @@ SELECT 1
 * Log in to ATSD.
 * Click on the **Metrics** tab and filter metrics by prefix `scom.*`.
 
-![](images/atsd_metrics.png)
+![](./images/atsd_metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -83,11 +83,11 @@ SELECT 1
 
 * [SCOM Server Live Portal](http://apps.axibase.com/chartlab/c09dc1cd)
 
-![](images/scom_server_portal.png)
+![](./images/scom_server_portal.png)
 
 * [SCOM SQL Live Server](http://axibase.com/chartlab/693b4f8d/2/)
 
-![](images/scom_sql_server_portal.png)
+![](./images/scom_sql_server_portal.png)
 
 ## Data Queries
 

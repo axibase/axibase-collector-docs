@@ -8,7 +8,7 @@ This document describes how to add a storage driver for sending data into ATSD.
 
 ## Collector Account
 
-* Create a [collector account](https://github.com/axibase/atsd/blob/master/administration/collector-account.md) in ATSD to be used for inserting data into the database.
+* Create a [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) in ATSD to be used for inserting data into ATSD.
 
 ## HTTP Pool
 
@@ -17,10 +17,10 @@ Since Axibase Collector transmits data to ATSD using the http/https protocol, yo
 * Open **Data Sources > HTTP Pools** and click the **Add** button to arrive at the appropriate form.
 * Enter a pool name.
 * Set connection parameters to the target ATSD instance: hostname/IP address; port (8443); https protocol.
-* Check **Ignore SSL Certificate Errors** to ignore certificate errors since ATSD certificate is self-signed by default.
-* Apply connection limits using the [recommended settings](#recommended-pool-settings) below.
-* Select `Authentication Type=BASIC`. Set **Test Path** to `/ping`.
-* Enter [collector account](https://github.com/axibase/atsd/blob/master/administration/collector-account.md) credentials. <br>Make sure that the collector user has roles `API_DATA_WRITE` and `API_META_WRITE`, as well as `All Access: Write` permission.
+* Check 'Ignore SSL Certificate Errors' to ignore certificate errors since ATSD certificate is self-signed by default.
+* Apply connection limits using the [recommended settings](#recommended-http-pool-settings) below.
+* Select Authentication Type=BASIC. Set Test Path to `/ping`.
+* Enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials. <br>Make sure that the collector user has roles `API_DATA_WRITE` and `API_META_WRITE`, as well as 'All Access: Write' permission.
 
 ### Test HTTP Pool
 
@@ -46,7 +46,7 @@ Socket Keep-Alive | true
 
 #### ATSD HTTP Pool Configuration Example
 
-![ATSD HTTP Pool](images/atsd_pool.png)
+![ATSD HTTP Pool](./images/atsd_pool.png)
 
 ## Storage Driver Configuration
 
@@ -56,4 +56,4 @@ Socket Keep-Alive | true
 * Keep API path as `/api/v1`.
 * Click **Test**. Collector returns Response Code 200 if the connection was successful.
 
-![ATSD Server Test](images/atsd_server.png)
+![ATSD Server Test](./images/atsd_server.png)

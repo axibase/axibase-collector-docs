@@ -21,7 +21,7 @@ This document describes the process of configuring ActiveMQ for availability and
 cd /opt/apache-activemq-5.13.1
 ```
 
-*  Download the log aggregation filter `.jar` files to the ActiveMQ lib directory:
+* Download the log aggregation filter `.jar` files to the ActiveMQ lib directory:
 
 ```sh
 wget --content-disposition -P ./lib/ \
@@ -81,20 +81,20 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
 
 This should be the result:
 
-![SUN_JMX_START_IMAGE](https://axibase.com/wp-content/uploads/2016/03/very_new_screen.png)
+![SUN_JMX_START_IMAGE](./images/very_new_screen.png)
 
 * Modify JMX security credential files in the `./conf` directory.
 
-`jmx.access`:
+jmx.access:
 
-```
+```sh
 # The "monitorRole" role has readonly access.
 monitorRole readonly
 ```
 
-`jmx.password`:
+jmx.password:
 
-```
+```sh
 # The "monitorRole" role has password "abc123".
 monitorRole abc123
 ```
@@ -122,7 +122,7 @@ chmod 600 ./conf/jmx.password
 
 > For more information on cron expressions, see [Scheduling](../../../scheduling.md).
 
-![JMX_JOB](https://axibase.com/wp-content/uploads/2016/03/jmx_job_to_configuration.png)
+![JMX_JOB](./images/jmx_job_to_configuration.png)
 
 ##### Configuring activemq-series
 
@@ -136,11 +136,21 @@ chmod 600 ./conf/jmx.password
 * **Entity** — Optionally, specify the output of the hostname command on the ActiveMQ server if hostname is different from `activemq_hostname` (for example if `activemq_hostname` represents a fully qualified name).
   Other parameters are optional. For more information on JMX configuration, see [JMX](../../../jobs/jmx.md).
 
-1. Click **Test** to validate the configuration.
-  If the specified configuration is correct, there must be no errors or empty fields in the test results.
+* **Host** — ActiveMQ hostname. Must be the same as the `activemq_hostname`.
+* **Port** — JMX port.
+* **User Name** — JMX user name such as `monitorRole`. Read-only permissions are sufficient.
+* **Password** — Password for JMX user.
+* **Entity** — Optionally, specify the output of the hostname command on the ActiveMQ server if it's different from `activemq_hostname` (for example if `activemq_hostname` represents a fully qualified name).
+
+Other parameters are optional. For more information on JMX configuration, see [JMX](../../../jobs/jmx.md).
+
+1. Click Test to validate the configuration.
+
+If the specified configuration is correct, there must be no errors or empty fields in the test results.
+
 1. Click **Save**.
 
-  ![](https://axibase.com/wp-content/uploads/2016/03/series_config_85.png)
+![](./images/series_config_85.png)
 
 ##### Configuring activemq-property
 
@@ -149,7 +159,7 @@ chmod 600 ./conf/jmx.password
 1. Click **Test** to validate the configuration.
 1. Click **Save**.
 
-![](https://axibase.com/wp-content/uploads/2016/03/enitites_list_full-450x132.png)
+![](./images/enitites_list_full-450x132.png)
 
 ## Viewing Data in ATSD
 
@@ -174,7 +184,7 @@ chmod 600 ./conf/jmx.password
 * Select the Entity Group that you created earlier.
 * Click the **View** button and browse information about your entities.
 
-![](images/activemq_entity_view.png)
+![](./images/activemq_entity_view.png)
 
 ### Portal
 
@@ -182,16 +192,16 @@ chmod 600 ./conf/jmx.password
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the **Entities** tab, find the java application by name, and click the **Portal** icon.
 
-![](images/activemq_portal_icon.png)
+![](./images/activemq_portal_icon.png)
 
 [**Active MQ Live Portal**](http://apps.axibase.com/chartlab/2f11a5ef)
-![](https://axibase.com/wp-content/uploads/2016/03/log_portal_example.png)
+![](./images/log_portal_example.png)
 
 ### Rules
 
 ### Setting up **Mail Client**
 
-* Configure [**Mail Client**](https://github.com/axibase/atsd/blob/master/administration/mail-client.md).
+* Configure [Mail Client](https://axibase.com/docs/atsd/administration/mail-client.html).
 
 #### Import Rules
 
@@ -203,10 +213,10 @@ Imported rules:
 
 | **Rule** |  **Description** |
 | :--- | :--- |
-| `activemq_broker_configuration_change` | Send a notification on configuration change. |
-| `activemq_connection_count` | Raise an alert when connection count exceeds the specified threshold. |
-| `activemq_enqueue_stopped` |  Raise an alert when enqueueing stops (no new messages are received). |
-| `activemq_health_status` |   Raise an alert when Activemq health status is abnormal. |
-| `activemq_unauthorized_connection` | Raise an alert when connection from unauthorized IP address is detected. |
+| activemq_broker_configuration_change | Send a notification on configuration change. |
+| activemq_connection_count | Raise an alert when connection count exceeds the specified threshold. |
+| activemq_enqueue_stopped |  Raise an alert when enqueueing stops (no new messages are received). |
+| activemq_health_status |   Raise an alert when Activemq health status is abnormal. |
+| activemq_unauthorized_connection | Raise an alert when connection from unauthorized IP address is detected. |
 
-To create your own rules, refer to [Rule Engine documentation](https://github.com/axibase/atsd/blob/master/rule-engine/README.md).
+To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).

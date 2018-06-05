@@ -85,17 +85,17 @@ The configuration instructs Collector how to convert fields in the JSON document
 
 ### Configuration Example
 
-![Socrata Configuration](images/socrata_job_configuration.png)
+![Socrata Configuration](./images/socrata_job_configuration.png)
 
-![Socrata Configuration Settings](images/socrata_job_configuration_settings.png)
+![Socrata Configuration Settings](./images/socrata_job_configuration_settings.png)
 
 #### Dataset Info
 
-![Socrata Dataset Info](images/socrata_job_dataset_info.png)
+![Socrata Dataset Info](./images/socrata_job_dataset_info.png)
 
 #### Columns Info
 
-![Socrata Columns Info](images/socrata_job_columns_info.png)
+![Socrata Columns Info](./images/socrata_job_columns_info.png)
 
 * Dataset URL: `https://data.cdc.gov/api/views/mr8w-325u`
 * Sample Command:

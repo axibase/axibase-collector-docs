@@ -21,4 +21,4 @@ ICMP (Internet Control Message Protocol) is one of the main protocols of the TCP
 
 The image below shows ICMP configuration example.
 
-![ICMP Configuration](https://axibase.com/wp-content/uploads/2014/06/icmp_job.png)
+![ICMP Configuration](./images/icmp_job.png)

@@ -130,4 +130,4 @@ Template: `http://www.bom.gov.au:80/fwo/IDV60801/IDV60801.${ITEM}.json`
 
 ## Screenshot
 
-![Job Screenshot](australia-bom-config.png)
+![Job Screenshot](./australia-bom-config.png)

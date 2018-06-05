@@ -122,7 +122,7 @@ Special processing for `PROPERTY` command:
 * **Attribute Name** list is ignored for property commands since property commands collect all attributes of the matched beans.
 * The default value for property `type` field is set to MBean type, for instance, to `Broker` in the example above. To override the default type, enter a custom value or use `${attribute_name}` placeholders in the `property_type` column.
 
-![image](https://axibase.com/wp-content/uploads/2014/06/property_type.png)
+![image](./images/property_type.png)
 
 #### Metric Prefix Example
 
@@ -134,7 +134,7 @@ jmx.${domain}.${name}
 
 The attribute `name` is excluded from series tags, because the `Metric Prefix` field stores the `name` attribute using placeholder:
 
-![image](images/jmx_configuration_metric_prefix_example.png)
+![image](./images/jmx_configuration_metric_prefix_example.png)
 
 #### Item List Example
 
@@ -148,11 +148,11 @@ The `kafka-cluster-jmx` list contains items (`host,port,entity`):
 
 The each row is splitted by [freemarker function](https://freemarker.apache.org/docs/ref_builtins_string.html#ref_builtin_split) to extract values:
 
-![image](images/jmx_configuration_item_list_example.png)
+![image](./images/jmx_configuration_item_list_example.png)
 
 ## JMX Configuration Example
 
-![](images/jmx_configuration_example.png)
+![](./images/jmx_configuration_example.png)
 
 ## Viewer
 
@@ -160,7 +160,7 @@ Click **Viewer** to open a tree-based MBean navigator displaying available Manag
 
 Select a checkbox next to an attribute name to add to the list of collected attributes. Modify the expression by replacing the specific **Object Name** fields with wildcards, if necessary.
 
-![JMX Viewer](https://axibase.com/wp-content/uploads/2014/06/jmx_viewer.png)
+![JMX Viewer](./images/jmx_viewer.png)
 
 ## Ignored MBean Attributes
 

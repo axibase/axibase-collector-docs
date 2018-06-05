@@ -1,6 +1,7 @@
-#Collected PostgreSQL Metrics
+# Collected PostgreSQL Metrics
 
-#### PostgreSQL
+## PostgreSQL
+
 ```css
 postgres.bgwriter.buffers_alloc
 postgres.bgwriter.buffers_backend

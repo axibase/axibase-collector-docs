@@ -28,7 +28,7 @@ Fields in a cron expression have the following order:
 [seconds] [minutes] [hours] [day-of-month] [month] [day-of-week]
 ```
 
-![Cron Expressions](http://axibase.com/wp-content/uploads/2016/03/cron_expressions.png)
+![Cron Expressions](./images/cron_expressions.png)
 
 Field Control Symbols:
 

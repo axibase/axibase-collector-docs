@@ -25,7 +25,7 @@ Type-specific properties, such as a SQL query in a JDBC job or a CSV parser in a
 
 The job may include multiple configurations. For example, a JDBC job may be configured to execute multiple SQL queries.
 
-![](images/job-properties.png)
+![](./images/job-properties.png)
 
 ## Cloning Jobs
 

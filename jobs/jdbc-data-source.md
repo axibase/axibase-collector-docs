@@ -6,7 +6,7 @@ To add a database as a data source in Axibase Collector, navigate to **Data Sour
 |:-------------|:-------------|
 | <a name="db-name"></a>Name | Name of data source. |
 | Database Type  | Type of database. <br> Possible values: Oracle, MSSQL, MSSQL_Native, DB2, SOLID, MYSQL, POSTGRESQL, SYBASE, DERBY, SAP, PI_SERVER, VERTICA, CUSTOM      |
-| <a name="db-server"></a>Server | IP or hostname of the target server. |
+| <a name="db-server">Server</a> | IP or hostname of the target server. |
 | <a name="db-port"></a>Port | Port on which the database is listening. |
 | <a name="db-database"></a>Database | Name of the database residing on the database server. |
 | Instance | Name of the instance. |
@@ -24,4 +24,4 @@ To add a database as a data source in Axibase Collector, navigate to **Data Sour
 | Idle Timeout (seconds) | Duration after which an unused connection is closed. |
 | Socket Timeout (seconds) | Duration after which the connection is dropped if there is no response from the server. |
 
-![](http://axibase.com/wp-content/uploads/2015/05/database_data_source.png)
+![](./images/datasource-database.png)

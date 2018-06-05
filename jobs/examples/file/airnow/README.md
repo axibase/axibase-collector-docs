@@ -46,4 +46,4 @@ Template: `/aq/data/?startDate=${TIME("current_hour - 360 * hour", "yyyy-MM-dd'T
 
 ## Screenshot
 
-![Job Screenshot](airnow-config.png)
+![Job Screenshot](./airnow-config.png)

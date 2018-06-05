@@ -60,7 +60,7 @@ listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
 * Open the **Data Sources** > **Databases** page and select the `postgresql` database.
 * Provide connection parameters to the target PostgreSQL database displayed below:
 
-![](images/postgres-datasource.png)
+![](./images/postgres-datasource.png)
 
 * Execute the following test query to check the connection:
 
@@ -75,20 +75,20 @@ SELECT 1
 * Open the **PostgreSQL** job.
 * Set **Data Source** to `postgresql`.
 
-![](images/postgres-jdbc-job.png)
+![](./images/postgres-jdbc-job.png)
 
 * Choose one of the target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
 * Open each configuration, click on the **Test** button, and review the output. See [Data Queries](#data-queries).
 
-![](images/test_result.png)
+![](./images/test_result.png)
 
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the **PostgreSQL JDBC** job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set the job status to **Enabled** and save.
 
@@ -97,7 +97,7 @@ SELECT 1
 * Log in to ATSD.
 * Click the **Metrics** tab and filter metrics by name `postgres.*`.
 
-![](images/postgres-metrics.png)
+![](./images/postgres-metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -120,7 +120,7 @@ hasMetric('postgres.global_status.uptime')
 
 * Save and verify that the group contains PostgreSQL database hosts:
 
-![](images/postgres-entity-group.png)
+![](./images/postgres-entity-group.png)
 
 ### Portals
 
@@ -128,10 +128,10 @@ hasMetric('postgres.global_status.uptime')
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open **Entities** tabs, find the `postgresql` database by name, and click the **Portal** icon.
 
-![](images/postgres-portal-icon.png)
+![](./images/postgres-portal-icon.png)
 
 [PostgreSQL Live Portal](http://apps.axibase.com/chartlab/070b4941)
-![](images/postgres-portal.png)
+![](./images/postgres-portal.png)
 
 ## Data Queries
 

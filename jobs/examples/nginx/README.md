@@ -8,15 +8,15 @@ The process involves enabling the nginx status page and configuring Axibase Coll
 
 ## Requirements
 
-* nginx server with [`ngx_http_stub_status_module`](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) enabled.
-* [Axibase Collector](../../../README.md) for scheduled polling of the nginx status page.
-* [Axibase Time Series Database](https://github.com/axibase/atsd/blob/master/installation/README.md) as a centralized data repository.
+* NGINX server with [ngx_http_stub_status_module](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html) enabled.
+* [Axibase Collector](../../../README.md) for scheduled polling of the NGINX status page.
+* [Axibase Time Series Database](https://axibase.com/docs/atsd/installation/) as a centralized data repository.
 
 ## nginx Server Configuration
 
 Follow the steps outlined in the [nginx Server Configuration Guide](./nginx-configure.md) to enable metrics.
 
-The status page returns connection statistics in an unstructured/malformed format, which is parsed by ATSD with [`RFC 7111`](https://axibase.com/products/axibase-time-series-database/writing-data/csv/csv-schema/) selectors using whitespace as a separator.
+The status page returns connection statistics in an unstructured/malformed format, which is parsed by ATSD with [RFC 7111](https://axibase.com/docs/atsd/parsers/csv/#schema-based-parsing) selectors using whitespace as a separator.
 
 ```ls
 Active connections: 291
@@ -125,7 +125,7 @@ For example, you can send an email if the average **Active Connections** count o
 
 ### Setting up Mail Client
 
-* Configure [Mail Client](https://github.com/axibase/atsd/blob/master/administration/mail-client.md).
+* Configure [Mail Client](https://axibase.com/docs/atsd/administration/mail-client.html).
 
 ### Import rules
 
@@ -144,4 +144,4 @@ The following rules are provided in the `nginx_notification_rules.xml` file:
 | `nginx_active_connections_heartbeat`| Raise an alert when status page statistics are no longer being received by ATSD.<br> Check that the server is reachable and Axibase Collector job is running. |
 |`nginx_tcp_heartbeat`| Raise an alert when the TCP connect metric is no longer being received by ATSD or if the TCP connect metric contains error codes.<br>Check that the server is reachable and Axibase Collector job is running.|
 
-To create your own rules, refer to [Rule Engine documentation](https://github.com/axibase/atsd/blob/master/rule-engine/README.md).
+To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).

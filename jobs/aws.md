@@ -20,7 +20,7 @@ You can configure the AWS job to collect metrics for all or a subset of namespac
 
 Available namespaces:
 
-![](images/aws-namespaces.png)
+![](./images/aws-namespaces.png)
 
 ## Schema
 
@@ -54,7 +54,7 @@ For example, the **AWS/Billing Estimated Charges** metric is stored as 5 metrics
 * `aws_billing.estimatedcharges.average`
 * `aws_billing.estimatedcharges.samplecount`
 
-The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of more than 15 [metrics](#aws-ec2-metrics).
+The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of more than 15 [metrics](#sample-aws-ec2-cloudwatch-metrics).
 
 The job assigns each metric to an entity which is determined based on the [primary dimension](#namespace-dimensions).
 
@@ -79,11 +79,11 @@ The job assigns each metric to an entity which is determined based on the [prima
 * Select AWS regions from which you want to collect data. <br>The wizard creates a separate AWS configuration for each region within the same job.
 * Validate the credentials and save the job if there are no errors.
 
-![](images/aws-wizard-validate.png)
+![](./images/aws-wizard-validate.png)
 
 * Select one of the created configurations and click **Test**.
 
-![](images/aws-test.png)
+![](./images/aws-test.png)
 
 * To view available metrics for a particular namespace, uncheck all namespaces except one and click **Test**.
 
@@ -94,21 +94,21 @@ The job assigns each metric to an entity which is determined based on the [prima
 * Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job may take a while to load backlogged historical data for all metrics after the job is created.
 * Open the **Entities** tab and locate one of AWS EC2 instances. Click the **Portal** links to access pre-defined AWS portals.
 
-![](images/metric_list.png)
+![](./images/metric_list.png)
 
 ## Sample Dashboards
 
 * [EC2](https://apps.axibase.com/chartlab/0aa34311)
 
-![](images/ec2.png)
+![](./images/ec2.png)
 
 * [EBS](https://apps.axibase.com/chartlab/e8977b4a)
 
-![](images/ebs.png)
+![](./images/ebs.png)
 
 ## Configuration Example
 
-![](https://axibase.com/wp-content/uploads/2016/03/aws_config.png)
+![](./images/aws_config.png)
 
 ## Sample AWS/EC2 CloudWatch Metrics
 

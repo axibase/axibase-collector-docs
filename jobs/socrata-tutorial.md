@@ -5,29 +5,29 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
 1. Log in to Collector.
 
-   ![Figure 1](images/Figure1.png)
+   ![Figure 1](./images/Figure1.png)
 
 2. Click on the **Jobs** tab in Collector.
 
-   ![Figure 2](images/Figure2.png)
+   ![Figure 2](./images/Figure2.png)
 
 3. Click on the **Add Job** button.
 
-   ![Figure 3](images/Figure3.png)
+   ![Figure 3](./images/Figure3.png)
 
 4. To select the type of job you would like to add, you may complete either of the following steps.
 
    - Before completing the previous step, filter by desired job type (Socrata) in the **Jobs** tab. After clicking **Add Job** button, the desired job type is specified.
 
-   ![Figure 4](images/Figure4.png)
+   ![Figure 4](./images/Figure4.png)
 
    - Press the **Add Job** button (step 3). On the following page, select your specified job type.
 
-   ![Figure 5](images/Figure5.png)
+   ![Figure 5](./images/Figure5.png)
 
 5. As shown in the image below, there are four fields to specify: **Enabled**, **Name**, **Cron Expression**, and **Storage**.
 
-   ![Figure 6](images/Figure6.png)
+   ![Figure 6](./images/Figure6.png)
 
    - **Enabled**: job status. You may enable the job, and schedule the job for data collection with the period specified in the Cron Expression, by clicking the check box. To
       have the job disabled, do not click the check box. Leave unchecked for this tutorial.
@@ -36,38 +36,38 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
       on field to see time periods in human-readable formats, as shown in the image below.
    - **Storage**: database for storing data collected by this job.
 
-   ![Figure 7](images/Figure7.png)
+   ![Figure 7](./images/Figure7.png)
 
 6. After specifying each of these fields, hit the **Save** button.
 7. Press the **Create Configuration** button.
 
-   ![Figure 8](images/Figure8.png)
+   ![Figure 8](./images/Figure8.png)
 
 8. Copy the short URL (without `rows.json?accessType=DOWNLOAD` selected) from your JSON file and paste the URL into the `Path` line. User does not need to fill in the **Name** field, as
    the field is automatically filled in from the previous page. For more information on the remaining fields in this screenshot, see [Job Configuration Documentation](../jobs/socrata.md#job-configuration).
 
-   ![Figure 9](images/Figure9.png)
+   ![Figure 9](./images/Figure9.png)
 
 9. Press **Add** to create a pre-configured settings section.
 10. Press **Test**. To view descriptions of each of the fields shown below, see [Job Configuration Documentation](../jobs/socrata.md#job-configuration).
 
-    ![Figure 10](images/Figure10.png)
+    ![Figure 10](./images/Figure10.png)
 
 11. After pressing the **Test** button, you should get the following output: Collector downloads a part of the JSON file (file limitation 1 MB) and generates commands based on
     the dataset configuration (series, property, message, metric, and entity tags). These commands are only for text purposes, and are not yet saved in ATSD.
 
     You may save this configuration by clicking the **Save** button shown in the image from step 10.
 
-    ![Figure 11](images/Figure11.png)
+    ![Figure 11](./images/Figure11.png)
 
 12. Navigate back to the Socrata job (the figure shown in step 7). Press **Run**. This sends generated commands to ATSD, which enables user to begin working with this dataset.
     After hitting **Run**, you are redirected to this page by the database. Hit the **Refresh** button after a couple of seconds. If the database successfully completed the job, you see something like the images below.
 
-    ![Figure 12](images/Figure12.png)
+    ![Figure 12](./images/Figure12.png)
 
-    ![Figure 13](images/Figure13.png)
+    ![Figure 13](./images/Figure13.png)
 
 13. Navigate to your local ATSD instance and log in. Open the **Entities** tab to verify that metrics from the dataset are present in ATSD. You can search by your `dataset id`, which
     is assigned by the database from the original JSON file, in this case the id is `5b3a-rs48`. You can see that metrics were successfully sent from Collector to ATSD and begin analyzing this dataset.
 
-    ![Figure 14](images/Figure14.png)
+    ![Figure 14](./images/Figure14.png)

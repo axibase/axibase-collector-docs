@@ -26,18 +26,18 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 * For each JMX Configuration:
   * Provide connection parameters to the target Tomcat:
 
-  ![](images/tomcat_jmx_configuration.png)
+![](./images/tomcat_jmx_configuration.png)
 
 * Click the **Test** button and make sure that the result is similar to the below screenshot:
 
-![](images/tomcat_test_jmx_configuration.png)
+![](./images/tomcat_test_jmx_configuration.png)
 
 ### Schedule the Job
 
 * Open the **JMX Job** page and click the **Run** button for the Tomcat JMX job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set job status to **Enabled** and save the job.
 
@@ -46,7 +46,7 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 * Log in to ATSD.
 * Click on the **Metrics** tab and filter metrics by name `jmx.tomcat*`.
 
-![](images/tomcat_metrics.png)
+![](./images/tomcat_metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -71,7 +71,7 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 * Select the Entity Group that you created earlier.
 * Click the **View** button and browse information about your entities:
 
-![](images/tomcat_entity_view.png)
+![](./images/tomcat_entity_view.png)
 
 ### Portal
 
@@ -79,8 +79,8 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 * Click the **Assign** link and associate the portal with the entity group created earlier.
 * Open the **Entities** tabs, find the java application by name, and the **Portal** icon.
 
-![](images/tomcat_portal_icon.png)
+![](./images/tomcat_portal_icon.png)
 
 [**Tomcat Portal**](http://apps.axibase.com/chartlab/106bddba)
 
-![](images/tomcat_portal.png)
+![](./images/tomcat_portal.png)

@@ -107,16 +107,16 @@ series e:github-status d:2016-07-08T00:00:00.000Z m:github-status.major=0 m:gith
 
 ### Additional Configuration
 
-![](images/configuration.png)
+![](./images/configuration.png)
 
 ### Additional Settings
 
-![](images/settings.png)
+![](./images/settings.png)
 
 ### Viewer
 
-![](images/viewer.png)
+![](./images/viewer.png)
 
 ### Test Results
 
-![](images/test_results.png)
+![](./images/test_results.png)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Axibase Collector is a Java-based ETL application that queries external data sources on a defined schedule and uploads the data as series, properties, messages, and files into [Axibase Time Series Database](http://axibase.com/products/axibase-time-series-database/) (ATSD).
+Axibase Collector is a Java-based ETL application that queries external data sources on a defined schedule and uploads the data as series, properties, messages, and files into the [Axibase Time Series Database](https://axibase.com/docs/atsd/) (ATSD).
 
 The Collector supports data markers to minimize the load on the source systems as well as [list](collections.md)-based automation to efficiently copy data from multiple sources with re-usable configurations.
 
@@ -65,7 +65,7 @@ The Collector supports data markers to minimize the load on the source systems a
   * Installation in [Docker container](installation-on-docker.md)
   * Installation on [Kubernetes](installation-on-kubernetes.md)
 * [Administrator Account](configure-administrator-account.md)
-* [Collector account](https://github.com/axibase/atsd/blob/master/administration/collector-account.md) in ATSD
+* [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) in ATSD
 * [ATSD Server Connection](atsd-server-connection.md)
 
 ## Jobs
@@ -99,7 +99,7 @@ The Collector supports data markers to minimize the load on the source systems a
 
 ## Administration
 
-* [Monitoring](monitoring.md)
+* [Monitoring](monitoring.md)   
 * [Logging](logging.md)
 
 ## Examples

@@ -30,4 +30,4 @@ Date,Queries
 
 ## Screenshot
 
-![Job Screenshot](duckduckgo-config.png)
+![Job Screenshot](./duckduckgo-config.png)

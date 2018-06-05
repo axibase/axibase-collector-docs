@@ -97,4 +97,4 @@ series e:bls d:2016-07-01T00:00:00.000Z m:CUSR0000SA0=239.81
 
 ## Screenshot
 
-![Job Screenshot](bls-config.png)
+![Job Screenshot](./bls-config.png)

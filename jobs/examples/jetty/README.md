@@ -24,18 +24,18 @@ Configure your Java application for JMX monitoring as described by the [JMX Job 
 * For each JMX Configuration:
 * Provide connection parameters to the target Jetty:
 
-![](images/jetty_jmx_configuration.png)
+![](./images/jetty_jmx_configuration.png)
 
 * Click the **Test** button and make sure that the result is correct:
 
-![](images/jetty_test_jmx_configuration.png)
+![](./images/jetty_test_jmx_configuration.png)
 
 ### Schedule the Job
 
 * Open the `JMX Job` page and click the **Run** button for the Jetty JMX job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set job status to **Enabled** and save the job.
 
@@ -44,7 +44,7 @@ Configure your Java application for JMX monitoring as described by the [JMX Job 
 * Log in to ATSD.
 * Click the **Metrics** tab and filter metrics by name `jmx.jetty*`.
 
-![](images/jetty_metrics.png)
+![](./images/jetty_metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -69,7 +69,7 @@ Configure your Java application for JMX monitoring as described by the [JMX Job 
 * Select the Entity Group that you created earlier.
 * Click the **View** button and browse information about your entities.
 
-![](images/jetty_entity_view.png)
+![](./images/jetty_entity_view.png)
 
 ### Portal
 
@@ -77,7 +77,7 @@ Configure your Java application for JMX monitoring as described by the [JMX Job 
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open **Entities** tabs, find the java application by name, and click on the portal icon.
 
-![](images/jetty_portal_icon.png)
+![](./images/jetty_portal_icon.png)
 
 [**Jetty Live Portal**](http://apps.axibase.com/chartlab/4bcd2299)
-![](images/jetty_portal.png)
+![](./images/jetty_portal.png)

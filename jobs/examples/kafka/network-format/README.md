@@ -25,8 +25,8 @@ series e:default d:2017-03-08T14:12:40.653Z m:pref.ju001_70500_perf_lotrunningti
 
 ### Additional Configuration
 
-![](images/configuration.png)
+![](./images/configuration.png)
 
 ### Test Results
 
-![](images/test_results.png)
+![](./images/test_results.png)

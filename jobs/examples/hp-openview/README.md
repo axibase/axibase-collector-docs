@@ -23,14 +23,14 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 * Open the **Data Sources** menu and select **HTTP Pools**, select the `ovpm-10.102.0.6` database.
 * Provide connection parameters to the target `ovpm-10.102.0.6` pool as displayed below:
 
-![](images/http_pool_conf.png)
+![](./images/http_pool_conf.png)
 
 ### Verify Job Configuration
 
 * Open the `ovpm-global` job.
 * Set the **HTTP Pool** to `ovpm-10.102.0.6`.
 
-![](images/ovmp_configuration.png)
+![](./images/ovmp_configuration.png)
 
 * Choose an ATSD server if you have connected your Collector to multiple ATSD servers.
 * Save the Job.
@@ -38,12 +38,16 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 * Open the `ovpm` Item List and define servers whose statistics you would like to collect.
 * Click the **Test** button and review the output.
 
+<!---
+![](./images/ovmp.png)
+-->
+
 ### Schedule the Job
 
 * Open the **OVPM Job** page and click the **Run** button for the `ovpm-global` job.
 * Make sure that the job status is `COMPLETED` and the `Items Read` and `Sent commands` fields show a value greater than 0.
 
-![](images/ovmp-global.png)
+![](./images/ovmp-global.png)
 
 * If there are no errors, set job status to **Enabled** and click **Save**.
 
@@ -52,7 +56,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 * Log in to ATSD.
 * Click on Metrics tab and filter metrics by the prefix `gbl_.*`
 
-![](images/metrics.png)
+![](./images/metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -72,7 +76,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 
 ## Portal List
 
-[OVPM Portal](http://axibase.com/chartlab/f9d176ac/2/)
+[OVPM Portal](https://apps.axibase.com/chartlab/f9d176ac/2/)
 
-![](images/ovpm_portal_linux.png "HP OpenView")
-![](images/ovpm_portal_windows.png "ovpm_portal_windows")
+![](./images/ovpm_portal_linux.png "HP OpenView")
+![](./images/ovpm_portal_windows.png "ovpm_portal_windows")

@@ -123,8 +123,8 @@ series e:Tibooburra_Airport d:2016-07-07T18:30:00.000Z m:au-weather-nsw.air_temp
 
 ## Configuration
 
-* [FILE job configuration](australia-weather-job.xml). Import `xml` into Collector.
+* [FILE job configuration](./australia-weather-job.xml). Import xml into Collector.
 
 ## Screenshot
 
-![Job Screenshot](australia-weather-config.png)
+![Job Screenshot](./australia-weather-config.png)

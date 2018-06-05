@@ -37,4 +37,4 @@ Use the table below to create HTTP job configuration.
 
 ### Configuration Example
 
-![HTTP Configuration](images/httpconfiguration.png)
+![HTTP Configuration](./images/httpconfiguration.png)

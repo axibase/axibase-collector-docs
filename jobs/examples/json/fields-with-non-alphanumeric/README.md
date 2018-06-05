@@ -112,16 +112,16 @@ Metric Value Field | x.['a.b'].[2]
 
 ### Configurations
 
-![](images/configuration.png)
+![](./images/configuration.png)
 
 ### Other Settings
 
-![](images/settings.png)
+![](./images/settings.png)
 
 ### Viewer
 
-![](images/viewer.png)
+![](./images/viewer.png)
 
 ### Test Results
 
-![](images/test_results.png)
+![](./images/test_results.png)

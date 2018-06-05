@@ -56,4 +56,4 @@ Dato og tid      ;      1 ;      2 ;      3 ;      4 ;      5 ;      6 ;      7 
 
 ## Screenshot
 
-![Job Screenshot](energinet-ftp-config.png)
+![Job Screenshot](./energinet-ftp-config.png)

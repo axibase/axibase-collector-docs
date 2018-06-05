@@ -145,4 +145,4 @@ rundate,reporting_period,airport_name,this_year_pax,this_year_total_pax_UK_airpo
 
 ## Screenshot
 
-![Job Screenshot](uk-caa-config.png)
+![Job Screenshot](./uk-caa-config.png)

@@ -6,16 +6,16 @@ This document describes how to collect various metrics from an nginx PLUS web se
 
 You can organize the periodic data collection in several ways:
 
-* Configuring Axibase Collector `JSON` job to periodically poll server status page and upload obtained data for parsing in ATSD.
-* Using [`axibase_nginx_plus_collector`](https://github.com/axibase/axibase-collector/tree/master/jobs/examples/nginx-plus/axibase-nginx-plus-collector/src) Python script along with an OS scheduler. For this method, see [Alternative nginx PLUS Documentation](axibase-nginx-plus-collector/README.md).
+* Configuring Axibase Collector JSON job to periodically poll server's status page and upload obtained data for parsing in ATSD.
+* Using [axibase_nginx_plus_collector](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector/src) python script along with an OS scheduler. This way is described at [axibase_nginx_plus_collector page](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector).
 
 The document contains instructions for the first method of configuration.
 
 ## Requirements
 
-* nginx PLUS server with [`ngx_http_status_module`](http://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
-* [Axibase Collector](../../../README.md) for scheduled polling of the nginx status page.
-* [Axibase Time Series Database](https://github.com/axibase/atsd/blob/master/installation/README.md) as a centralized data repository.
+* NGINX PLUS server with [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
+* [Axibase Collector](../../../README.md) for scheduled polling of the NGINX status page.
+* [Axibase Time Series Database](https://axibase.com/docs/atsd/installation/) as a centralized data repository.
 
 ## Configure a job in Axibase Collector
 
@@ -99,7 +99,7 @@ For example, send an email if the average active connections* count over the las
 
 ### Setting up Mail Client
 
-* Configure [Mail Client](https://github.com/axibase/atsd/blob/master/administration/mail-client.md).
+* Configure [Mail Client](https://axibase.com/docs/atsd/administration/mail-client.html).
 
 ### Import rules
 
@@ -113,11 +113,11 @@ The following rules are provided in the `nginx_plus_rules.xml` file:
 
 | **Rule**                                     |                                      **Description**                        |
 |:----------------------------------------:|:------------------------------------------------------------------------|
-|`nginx_plus_respawned_proc_increase`        | Raise an alert when an nginx PLUS server's total number of abnormally terminated and respawned child processes increases.|
-| `nginx_plus_fails_high`                    | Raise an alert when an nginx PLUS server's total number of unsuccessful attempts to communicate with some peer server is high.|
-| `nginx_plus_droppped_high`                 | Raise an alert when an nginx PLUS server dropped sufficient amount of connections. |
-| `nginx_plus_downtime_long`                 | Raise an alert indicating nginx PLUS server's peer is in "unavail" and "unhealthy" states during a specified period of time (default: 15 minutes). |
-|`nginx_plus_active_connection_low`          | Raise an alert when an nginx PLUS server average active connection count is below the specified threshold (default: 10) over the last 15 minutes.|
-| `nginx_plus_active_connection_heartbeat`   | Raise an alert when status page statistics are no longer being received by ATSD. Check that the server is reachable and Axibase Collector job is running. |
+|nginx_plus_respawned_proc_increase        | Raise an alert when an NGINX PLUS server's total number of abnormally terminated and respawned child processes increases.|
+| nginx_plus_fails_high                    | Raise an alert when an NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high.|
+| nginx_plus_droppped_high                 | Raise an alert when an NGINX PLUS server dropped sufficient amount of connections. |
+| nginx_plus_downtime_long                 | Raise an alert indicating NGINX PLUS server's peer is in "unavail" and "unhealthy" states during a specified period of time (default: 15 minutes). |
+|nginx_plus_active_connection_low          | Raise an alert when an NGINX PLUS server average active connection count is below the specified threshold (default: 10) over the last 15 minutes.|
+| nginx_plus_active_connection_heartbeat   | Raise an alert when status page statistics are no longer being received by ATSD. Check that the server is reachable and Axibase Collector job is running. |
 
-To create your own rules, refer to [Rule Engine Documentation](https://github.com/axibase/atsd/blob/master/rule-engine/README.md).
+To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).

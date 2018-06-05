@@ -10,13 +10,13 @@ This document describes the process of creating a **read-only** account used to 
 
 Log in to the AWS Console and locate the **IAM** (Identity and Access Management) service under the **Security, Identity and Compliance** section.
 
-![](images/aws-console.png)
+![](./images/aws-console.png)
 
 Open the **Groups** menu and click **Create New Group**.
 
 Specify group name, for example `cloudwatch-ro-group`.
 
-![](images/aws-acl-2.png)
+![](./images/aws-acl-2.png)
 
 ### Create User
 
@@ -24,11 +24,11 @@ Open the **Users** page and click **Create New User**.
 
 Enter a user name such as `cloudwatch-ro-user`.
 
-![](images/aws-acl-3.png)
+![](./images/aws-acl-3.png)
 
 Generate access and secret keys for the user. Copy the keys for your reference.
 
-![](images/aws-access-key.png)
+![](./images/aws-access-key.png)
 
 The keys are required for the AWS Job in Axibase Collector.
 
@@ -38,7 +38,7 @@ Open the **Group** page and click on **Add Users to Group**.
 
 Add `cloudwatch-ro-user` to the `cloudwatch-ro-group`.
 
-![](images/aws-acl-4.png)
+![](./images/aws-acl-4.png)
 
 ### Grant Permissions
 
@@ -81,6 +81,6 @@ Sample namespace-specific actions:
 * [`route53:ListTagsForResources`](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListTagsForResources.html)
 * [`route53:ListHealthChecks`](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHealthChecks.html)
 
-![](images/aws-policy.png)
+![](./images/aws-policy.png)
 
 You can now query Amazon CloudWatch APIs with the new user account, access key, and secret key.

@@ -16,7 +16,7 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 
 ### Import Derby Job into Axibase Collector
 
-* On **Jobs** page and click **Import** and upload the [derby-job.xml](configs/derby_job.xml) file.
+* On the **Jobs** page, click **Import** and upload the [derby-job.xml](configs/derby_job.xml) file.
 
 ### Configure Derby JMX Connection
 
@@ -24,18 +24,18 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 * For each JMX Configuration:
   * Provide connection parameters to the target Derby as displayed below:
 
-  ![](images/derby_jmx_configuration.png)
+  ![](./images/derby_jmx_configuration.png)
 
   * Click **Test** and make sure that the result is similar to the screenshot:
 
-  ![](images/derby_test_jmx_configuration.png)
+  ![](./images/derby_test_jmx_configuration.png)
 
 ### Schedule the Job
 
 * Open the **JMX Job** page and click **Run**.
 * Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than `0`.
 
-![](images/test_run.png)
+![](./images/test_run.png)
 
 * If there are no errors, set job status to **Enabled** and save the job.
 
@@ -44,7 +44,7 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 * Log in to ATSD.
 * Click on **Metrics** tab and filter metrics by name `jmx.derby*`.
 
-![](images/derby_metrics.png)
+![](./images/derby_metrics.png)
 
 ## Viewing Data in ATSD
 
@@ -60,7 +60,7 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 
 * Open **Settings** menu and click **Entity Groups**, click **Import**, and upload  [derby_entity_group.xml](configs/derby_entity_group.xml).
 * Select the imported `apache-derby-databases` group.
-* Verify that the group contains the correct Derby hosts.
+* Verify that the group contains your Derby hosts.
 
 ### Entity Views
 
@@ -69,7 +69,7 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 * Select the Entity Group that you created earlier.
 * Click **View** button and browse information about existing entities:
 
-![](images/derby_entity_view.png)
+![](./images/derby_entity_view.png)
 
 ### Portal
 
@@ -77,7 +77,7 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 * Click the **Assign** link and associate the portal with the entity group created earlier.
 * Open **Entity** tabs, find the java application by name, and click the **Portal** icon.
 
-![](images/derby_portal_icon.png)
+![](./images/derby_portal_icon.png)
 
 [**Derby Live Portal**](http://apps.axibase.com/chartlab/c4412a78)
-![](images/derby_portal.png)
+![](./images/derby_portal.png)

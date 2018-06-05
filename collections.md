@@ -48,7 +48,7 @@ The items retain the original order as specified in the editor or returned by an
 
 For example, include the `${ITEM}` placeholder into the Path field in JSON job to query a different URL for each element in the list.
 
-![Item List Example](images/item-list.png)
+![Item List Example](./images/item-list.png)
 
 ### Functions
 
@@ -78,7 +78,7 @@ An Item List which stores strings entered in the **Items** field on the form.
 
 List items should be separated by a line break.
 
-![TEXT Type](images/collection_text_type.png)
+![TEXT Type](./images/collection_text_type.png)
 
 #### FILE
 
@@ -91,11 +91,11 @@ Reads lines from a file on the local filesystem.
 
 If the file is not found, an empty list is returned. List items in the file should be separated with a line break.
 
-![FILE Type](images/collection_file_type.png)
+![FILE Type](./images/collection_file_type.png)
 
 Exclude items which end with `axibase.com`:
 
-![FILE Type](images/collection_file_type_filtered.png)
+![FILE Type](./images/collection_file_type_filtered.png)
 
 #### SCRIPT
 
@@ -110,7 +110,7 @@ The **Command** field should start with the script file name (absolute path not 
 
 The script should print items separated by line breaks to `stdout`.
 
-![SCRIPT Type](images/collection_script_type.png)
+![SCRIPT Type](./images/collection_script_type.png)
 
 * **Example**
 
@@ -175,7 +175,7 @@ Examples:
 
 ##### Example with `MULTILINE_TEXT` content
 
-![URL Type](images/collection_url_type.png)
+![URL Type](./images/collection_url_type.png)
 
 * ***Example***
 
@@ -206,7 +206,7 @@ result:
 
 ##### Example with `JSON` content
 
-![URL Type JSON](images/collection_url_type_json.png)
+![URL Type JSON](./images/collection_url_type_json.png)
 
 #### QUERY
 
@@ -222,11 +222,11 @@ Each item is created by concatenating values from **all** columns in a given row
 
 If the result set is empty, Collector returns an empty list.
 
-![QUERY Type](images/collection_query_type.png)
+![QUERY Type](./images/collection_query_type.png)
 
 #### ATSD_PROPERTY
 
-Requests a list of property records from ATSD with the [property query](https://github.com/axibase/atsd/blob/master/api/data/properties/query.md) method.
+Requests a list of property records from ATSD with the [property query](https://axibase.com/docs/atsd/api/data/properties/query.html) method.
 
 **Field** | **Description**
 :--- | :---
@@ -244,4 +244,4 @@ Each item is created by concatenating field values (Keys/Tags + Entity Tags) sep
 
 If no property records are found, Collector returns an empty list.
 
-![ATSD_PROPERTY Type](images/collection_atsd_property_type.png)
+![ATSD_PROPERTY Type](./images/collection_atsd_property_type.png)

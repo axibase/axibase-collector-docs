@@ -367,24 +367,24 @@ Example: `http://demo.nginx.com/status`
 
 ### Additional Configurations
 
-![](images/configuration.png)
+![](./images/configuration.png)
 
 ### Settings 1
 
-![](images/settings_1.png)
+![](./images/settings_1.png)
 
 ### Settings 2
 
-![](images/settings_2.png)
+![](./images/settings_2.png)
 
 ### Settings 3
 
-![](images/settings_3.png)
+![](./images/settings_3.png)
 
 ### Settings 4
 
-![](images/settings_4.png)
+![](./images/settings_4.png)
 
 ### Settings 5
 
-![](images/settings_5.png)
+![](./images/settings_5.png)

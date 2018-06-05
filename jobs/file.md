@@ -8,7 +8,7 @@ In addition, the FILE job supports downloading JSON files and converting them to
 
 Other than the JSON to CSV conversion, the FILE job does not make any changes to the downloaded files and does not perform any local parsing.
 
-The files are parsed by ATSD using a [CSV Parser](https://axibase.com/products/axibase-time-series-database/writing-data/csv/#parser) that is configured with the specific file format in mind.
+The files are parsed by ATSD using a [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) that is configured with the specific file format in mind.
 
 ## Workflow
 
@@ -22,7 +22,7 @@ The files are parsed by ATSD using a [CSV Parser](https://axibase.com/products/a
 6. Repeat steps one through five if the Path is configured to download multiple files with an `ITEM` from the item list, the `DATE_ITEM` function, or a wildcard expression in the case of FILE, FTP, and SFTP protocols.
 7. Send a job status message into ATSD for monitoring.
 
-![File Job Workflow](images/file_job_steps.png)
+![File Job Workflow](./images/file_job_steps.png)
 
 ## Supported Protocols
 
@@ -123,7 +123,7 @@ FILE protocol supports directory traversal.
 
 | **Name** | **Description** |
 |:---|:---|
-| Parser Name | [CSV Parser](https://axibase.com/products/axibase-time-series-database/writing-data/csv/#parser) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings** > **CSV Parser** page in ATSD. The parser should exist and be enabled.|
+| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings** > **CSV Parser** page in ATSD. The parser should exist and be enabled.|
 | Auto Detect Encoding | Automatically detect file charset based on leading bytes, the header, and the heuristics. ATSD accepts the charset and the file is correctly parsed by the database. |
 | Encoding | Specify the file charset so that the file is correctly parsed by the database. |
 | Metric Prefix | Text added to all metrics names extracted from the CSV file, typically to column headers.<br>For example, if the Metric Prefix is set to `custom.`, and the file contains the `PageViews` column, the resulting metric name is `custom.Pageviews`.|
@@ -132,7 +132,7 @@ FILE protocol supports directory traversal.
 | Use Current Time | Enables all data contained in the CSV file to be stored with the current time of the Collector instead of the date/time possibly contained in the file. This option should be used when the CSV file does not contain any time/date information.|
 | Time Zone | Timezone which should be used by ATSD when parsing the datetime column in the CSV file, if the datetime format does not contain information about the time zone.|
 | Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, the collector job may not know if the upload file is valid or if there are errors. |
-| Process in Rule Engine | Process parsed commands in the [ATSD Rule Engine](https://github.com/axibase/atsd/blob/master/rule-engine/README.md "Rule Engine"). If enabled, allows the data in the CSV file to be checked by rules. |
+| Process in Rule Engine | Process parsed commands in the [ATSD Rule Engine](https://axibase.com/docs/atsd/rule-engine/). If enabled, allows the data in the CSV file to be checked by rules. |
 | Ignore Unchanged Files | Prevents unchanged files from being repeatedly uploaded into the database. When enabled, the collector compares the downloaded file's last modified time (FILE, FTP, SFTP) or MD5 hashcode (HTTP, HTTP_POOL, SCP) with the previously stored information and ignores the upload if the file has not changed. For FTP and SFTP protocols, the remote files with unchanged last modified times are not downloaded to the collector host.|
 
 ### Post-Processing

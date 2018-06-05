@@ -49,12 +49,12 @@ series e:/axibase/nur/axi/harvest/ct-1612 d:2016-03-09T19:47:23.000Z m:AXI.REM-1
 
 ### Additional Configurations
 
-![](images/configuration.png)
+![](./images/configuration.png)
 
 ### Additional Settings
 
-![](images/settings.png)
+![](./images/settings.png)
 
 ### Test Results
 
-![](images/test_results.png)
+![](./images/test_results.png)

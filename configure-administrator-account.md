@@ -9,4 +9,4 @@ Set up this account as part of the installation process:
 3. Click **Save**.
 4. Log in to Axibase Collector again as an administrator.
 
-![Login](http://axibase.com/wp-content/uploads/2016/03/Collector_create_account.png)
+![Login](./images/Collector_create_account.png)

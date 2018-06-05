@@ -55,7 +55,7 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
 
 The result should be as shown in the image below:
 
-![SUN_JMX_START_IMAGE](https://axibase.com/wp-content/uploads/2016/03/very_new_screen.png)
+![SUN_JMX_START_IMAGE](./images/very_new_screen.png)
 
 #### Setup JMX User Credentials
 

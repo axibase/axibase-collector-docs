@@ -32,4 +32,4 @@ Reading: 0 Writing: 1 Waiting: 6
 
 ## Screenshot
 
-![Job Screenshot](nginx-config.png)
+![Job Screenshot](./nginx-config.png)

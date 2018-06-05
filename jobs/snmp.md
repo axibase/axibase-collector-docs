@@ -41,4 +41,4 @@ If you choose option the **Version3c** in the **Version** field, you are prompte
 
 The image below shows possible SNMP configuration.
 
-![SNMP Configuration](https://axibase.com/wp-content/uploads/2015/01/SNMP.png)
+![SNMP Configuration](./images/SNMP.png)

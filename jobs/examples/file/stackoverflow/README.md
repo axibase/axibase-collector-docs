@@ -53,4 +53,4 @@ count,name
 
 ## Screenshot
 
-![Job Screenshot](stackoverflow-config.png)
+![Job Screenshot](./stackoverflow-config.png)

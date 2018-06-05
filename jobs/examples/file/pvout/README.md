@@ -31,4 +31,4 @@ API key is required.
 
 ## Screenshot
 
-![Job Screenshot](pvout-config.png)
+![Job Screenshot](./pvout-config.png)

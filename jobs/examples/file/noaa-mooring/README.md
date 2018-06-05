@@ -44,4 +44,4 @@ CCE2_121W_34N,34.324,-120.816,3/24/12,15:17,563.1,2,2.78,399.1,2,2.62,1015.7,11.
 
 ## Screenshot
 
-![Job Screenshot](noaa-mooring-config.png)
+![Job Screenshot](./noaa-mooring-config.png)

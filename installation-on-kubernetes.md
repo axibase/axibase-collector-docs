@@ -2,7 +2,7 @@
 
 ## Create secrets
 
-Create a [secret object](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) for the ATSD [collector user](https://github.com/axibase/atsd/blob/master/administration/collector-account.md). This account is used by collector instances to transmit metrics securely into the database.
+Create a [secret object](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) for the ATSD [collector user](https://axibase.com/docs/atsd/administration/collector-account.html). This account is used by collector instances to transmit metrics securely into the database.
 
 Create a [`secret.yaml`](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-manually) file with the [following content](./files/secret.yaml):
 

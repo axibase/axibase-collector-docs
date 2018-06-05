@@ -29,7 +29,7 @@ Use the table below to set configuration parameters.
 | `pisnapshot WHERE` Filter | An expression included in the `WHERE` clause when querying the pisnapshot table. The expression must return a boolean value. |
 | `picomp2 WHERE` Filter | An expression included in the `WHERE` clause when querying the picomp2 table. The expression must return a boolean value. |
 | `pipoint2 WHERE` Filter | An expression included in the `WHERE` clause when querying the picomp2 table. The expression must return a boolean value. |
-| Collecting Start Time | [Calendar expression](https://github.com/axibase/atsd/blob/master/shared/calendar.md) defining the beginning of the data collection interval, for example: `previous_week`. |
+| Collecting Start Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) defining the beginning of the data collection interval, for example: `previous_week`. |
 | Use `JOIN` Clause while Fetching Tag Names | If disabled, results of `pipoint2` and `pisnapshot` tables are merged on the client side (in Collector). If enabled, Collecter executes one query with `JOIN` clause to filter tags. |
 | Ignore Unresolved Entity | If enabled, skip tags for which no valid entity can be retrieved. If the entity is invalid and this case is not ignored, the job fails with an error. |
 | Collect QSA Fields | If enabled, collect non-default values of questionable, substituted, annotated, annotations columns. |

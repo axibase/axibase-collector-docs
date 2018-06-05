@@ -34,7 +34,7 @@ Axibase Collector can be configured to query a remote database to either obtain 
 In contrast to the  [Generic Job](../job-generic.md), the JDBC job has an additional field. <br>
 **Data Source** list allows you to select a database that to query. The list contains all databases connected as data sources.
 
-![JDBC job settings](examples/solarwinds/images/solarwinds-job.png)
+![JDBC job settings](./examples/solarwinds/images/solarwinds-job.png)
 
 ### Job Configuration
 
@@ -47,8 +47,8 @@ Use the table below to fill in the fields and configure the query.
 | Command Type    | Type of command sent to ATSD. Possible values: `SERIES`, `PROPERTY`, `MESSAGE`, `METRIC`, `ENTITY`. |
 | Default Entity  | Default entity assigned to the collected commands. |
 | Entity Column   | Retrieve entity value from the specified entity column. |
-| Entity Replacement Expression | Freemarker expression to extract entity name from an input string or to retrieve string from a lookup table using [`LOOKUP`](#lookup-function). |
-| Split Condition  | One or more `WHERE` conditions to copy the base query into multiple queries returning smaller resultsets.  |
+| Entity Replacement Expression | Freemarker expression to extract entity name from an input string or to retrieve it from a lookup table using [LOOKUP](placeholders.md#functions). |
+| Split Condition  | One or multiple WHERE conditions to copy the base query into multiple queries returning smaller resultsets.  |
 | Tag Columns     | Columns that contain series tags. |
 | Predefined Tags    | Assign predefined tags to all series. |
 | Time Column | Column containing the timestamp. |
@@ -58,10 +58,10 @@ Use the table below to fill in the fields and configure the query.
 | Time Round | Time is rounded before storing the series in ATSD. <br> Possible values: `MILLISECOND`, `SECONDS`, `MINUTE`, `HOUR`, `DAY` |
 | Time Zone | Time zone in which the data was originally collected and stored. |
 | Check Last Time | Ignore metrics that have time set to less than the previous entry. |
-| Query With Time | When executing the job, the server sets the maximum time of the previous data. |
-| Collection Start Time | [Calendar expression](https://github.com/axibase/atsd/blob/master/shared/calendar.md) defining the beginning of the data collection interval, for example, `previous_week`. |
-| Max Rows | Maximum number of rows collected with each batch, `-1` is unlimited. |
-| Query Timeout, seconds| Number of seconds after which the database interrupts the query, `-1` is unlimited. |
+| Query With Time | When executing the job, the server will be set to the maximum time of the previous data. |
+| Collection Start Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) defining the beginning of the data collection interval, for example, `previous_week`. |
+| Max Rows | Maximum number of rows that will be collected with each batch, `-1` is unlimited. |
+| Query Timeout Seconds| Number of seconds after which the query will be interrupted, `-1` is unlimited. |
 
 #### Placeholders
 
@@ -110,7 +110,7 @@ Use the table below to fill in the fields and configure the query.
 | Field              | Description  |
 | :----------------- |:-------------|
 | Metric Name Column | Column containing metric names. |
-| Label Column | **Label Column**: Column containing metric or entity label.<BR>**Default Label**: Label applied to all generated metrics or entities |
+| Label Column | **Label Column**: Column containing metric or entity label.<br>**Default Label**: Label applied to all generated metrics or entities |
 | Description Column | Column containing metric or entity description. |
 | Data Type | Default metric data type, or column containing metric datatype. One of: short, integer, long, float, double, decimal |
 | Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. Should contain a string value, case-insensitive. Possible values: LINEAR, PREVIOUS, or NONE  |
@@ -118,13 +118,13 @@ Use the table below to fill in the fields and configure the query.
 | Versioning | Default versioning behavior if versioning column is not specified, or column specifying if metric is versioned. |
 | Min and Max Value Columns | Minimum and Maximum Values |
 | Units | Measurement Units |
-| Metric Time Zone | Default Time Zone or column containing the [Time Zone Identifier](https://github.com/axibase/atsd/blob/master/shared/timezone-list.md)  |
+| Metric Time Zone | Default Time Zone or column containing the [Time Zone Identifier](https://axibase.com/docs/atsd/shared/timezone-list.html)  |
 
 ##### ENTITY
 
 | Field              | Description  |
 | :----------------- |:-------------|
-| Label Column | **Label Column**: Column containing metric or entity label.<BR>**Default Label**: Label applied to all generated metrics or entities |
+| Label Column | **Label Column**: Column containing metric or entity label.<br>**Default Label**: Label applied to all generated metrics or entities |
 | Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. Should contain a string value, case-insensitive. Possible values: `LINEAR`, `PREVIOUS`, or `NONE`  |
 | Entity Time Zone | Default Time Zone or column containing the [Time Zone Identifier](https://github.com/axibase/atsd/blob/master/shared/timezone-list.md) |
 
@@ -132,4 +132,4 @@ Use the table below to fill in the fields and configure the query.
 
 The image below shows an example JDBC query configuration.
 
-![JDBC Query](examples/solarwinds/images/solarwinds-configuration.png)
+![JDBC Query](./examples/solarwinds/images/solarwinds-configuration.png)

@@ -32,7 +32,7 @@ For example, on a Docker host where the `/var/lib/docker` size is 30 GB with 20 
   sys 0m0.032s
   ```
 
-![docker-ps](docker-ps-as.png)
+![docker-ps](./docker-ps-as.png)
 
 Executing API requests with the `&size=1` parameter typically requires even more time than the `docker ps -as` command and may cause timeout issues for API clients.
 
@@ -136,7 +136,7 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
 
 To display volume sizes, import the updated [Entity View](volume-entity-view.xml) for Docker Volumes. Open **Entity Views** > **Configure**  and click **Import** on the split button at the bottom of the screen with the **Replace Existing Entity Views** option enabled.
 
-![volume-view](volume-view.png)
+![volume-view](./volume-view.png)
 
 ## Volume Disk Rules
 
@@ -152,7 +152,7 @@ Import the [rules](volume-rules.xml) file to raise an alert whenever a volume co
 As an alternative to running the `du` script on the Docker host, you can launch an Axibase Collector container with the `/var/lib/docker/volumes` directory mounted in read-only mode.
 
 * Replace the `atsd_host` placeholder with the actual ATSD hostname in the command below.
-* Replace `collector-user` and `collector-password` with [collector account](https://github.com/axibase/atsd/blob/master/administration/collector-account.md) credentials.
+* Replace `collector-user` and `collector-password` with [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
    ```properties
    docker run \
