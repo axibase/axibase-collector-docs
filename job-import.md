@@ -1,6 +1,6 @@
 # Job Import
 
-## Description 
+## Description
 
 Axibase Collector allows to store and import jobs in XML format. The file can contain multiple amounts of jobs.
 
@@ -45,7 +45,7 @@ There are two ways to import job from the XML file: through `Import Page` or by 
 
    ![](./images/job_import.png)
 
-3. Click `Browse...` button and select job file or just drag job file and drop it to the button. 
+3. Click `Browse...` button and select job file or just drag job file and drop it to the button.
 
 4. Click `Import` button.
 
@@ -65,10 +65,9 @@ If the application will encounter problems during import you will see an explici
 
 ## Using Environment variables in job file
 
-Collector resolves environment variables specified in `${VARIABLE_NAME}` format in job file during import. If a variable does not exist the application will not replace it. 
+Collector resolves environment variables specified in `${VARIABLE_NAME}` format in job file during import. If a variable does not exist the application will not replace it.
 
 For Example if there is `JAVA_HOME` that set to `/usr/lib/java` variable you can use it in job file:
-
 
 ```xml
 <path>${JAVA_HOME}/README.html</path>
@@ -84,10 +83,9 @@ You can view all available variables on `Admin:Server Info` page in the section 
 
 ![](./images/admin_server_info_envs.png)
 
-
 ### New environment variables
 
-You should restart Axibase Collector if you want to use newly added environment variables. 
+You should restart Axibase Collector if you want to use newly added environment variables.
 
 ```bash
 $AXIBASE_COLLECTOR_HOME/bin/stop-collector.sh
