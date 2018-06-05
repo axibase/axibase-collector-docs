@@ -2,9 +2,9 @@
 
 ## Overview
 
-Download Nginx statistics using [api](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+Download nginx statistics using [api](http://nginx.org/en/docs/http/ngx_http_status_module.html).
 
-The Path field contains the `${ITEM}` placeholder so that multiple servers can be queried with one configuration.
+The **Path** field contains the `${ITEM}` placeholder so that a user may query multiple servers with one configuration.
 
 ## File
 
@@ -20,7 +20,7 @@ Example: `http://demo.nginx.com/status`
 
 ## Configuration
 
-[JSON Job Configuration](nginx_status_job.xml) file. Import xml into Collector.
+[JSON Job Configuration](nginx_status_job.xml) file. Import `xml` into Collector.
 
 ### Matched Objects
 

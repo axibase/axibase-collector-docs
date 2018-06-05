@@ -16,7 +16,7 @@ Template: `http://www.bom.gov.au:80/fwo/IDV60801/IDV60801.${ITEM}.json`
 
 ### Local Copy
 
-[IDV60801.94693.json](IDV60801.94693.json)
+[`IDV60801.94693.json`](IDV60801.94693.json)
 
 ### Content
 
@@ -125,8 +125,8 @@ Template: `http://www.bom.gov.au:80/fwo/IDV60801/IDV60801.${ITEM}.json`
 
 ## Configuration
 
-* [FILE job configuration](australia-bom-job.xml). Import xml into Collector.
-* [CSV Parser](australia-bom-parser.xml). Import xml into ATSD.
+* [FILE job configuration](australia-bom-job.xml). Import `xml` into Collector.
+* [CSV Parser](australia-bom-parser.xml). Import `xml` into ATSD.
 
 ## Screenshot
 

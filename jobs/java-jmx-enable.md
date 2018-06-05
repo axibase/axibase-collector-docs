@@ -6,7 +6,7 @@
 
 #### Reference Information
 
-* Configuring JMX in ActiveMQ: [activemq.apache.org/jmx.html](http://activemq.apache.org/jmx.html)
+* Configuring JMX in ActiveMQ: [`activemq.apache.org/jmx.html`](http://activemq.apache.org/jmx.html)
 
 #### Configure JMX properties
 
@@ -16,7 +16,7 @@
 cd /opt/apache-activemq-5.13.1
 ```
 
-* Modify JMX settings in the ActiveMQ JVM launch options. <br>Search for the `ACTIVEMQ_SUNJMX_START` setting and change it as specified below.
+* Modify JMX settings in the ActiveMQ JVM launch options. <br>Search for the `ACTIVEMQ_SUNJMX_START` setting and change the setting as indicated below.
 
 ##### ActiveMQ 5.11.x and later
 
@@ -51,7 +51,7 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
 ```
 
 > Replace `activemq_hostname` with the full hostname or IP address of the ActiveMQ server.
-> This should be the same hostname that Axibase Collector will be using when connecting to the ActiveMQ server.
+> This should be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
 
 The result should be as shown in the image below:
 
@@ -63,7 +63,7 @@ Change to `./conf` directory.
 
 Add/edit the `jmx.access` and `jmx.password` files as follows.
 
-Make sure the owner of these files is the same as ActiveMQ user.
+Make sure the owner of these files is the same as the ActiveMQ user.
 
 `jmx.access`:
 

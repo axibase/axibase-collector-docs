@@ -56,7 +56,7 @@ docker.cpu.usage.kernel | CPU | Total CPU consumed by tasks of the cgroup in ker
 docker.cpu.usage.kernel.percent | CPU | Percentage of CPU consumed by tasks in kernel mode.
 docker.cpu.usage.percpu | CPU | Total CPU time consumed per core.
 docker.cpu.throttlingdata.periods | CPU | The number of periods with throttling active.
-docker.cpu.throttlingdata.throttledperiods | CPU | The number of periods when the container hit its throttling limit.
+docker.cpu.throttlingdata.throttledperiods | CPU | The number of periods when the container hit the throttling limit.
 docker.cpu.throttlingdata.throttledtime | CPU | Total time that a container's CPU usage was throttled.
 docker.cpu.avg.usage.total.percent | CPU | The average value of `docker.cpu.usage.total.percent`.
 docker.cpu.avg.usage.allocated.percent | CPU | The avarage value `docker.cpu.usage.total.percent` for allocated CPU core.
@@ -66,7 +66,7 @@ docker.cpu.avg.usage.user.percent | CPU | The average value for `docker.cpu.usag
 docker.memory.activeanon | Memory | The number of bytes of active memory backed by anonymous pages, excluding sub-cgroups.
 docker.memory.activefile | Memory | The number of bytes of active memory backed by files, excluding sub-cgroups.
 docker.memory.cache | Memory | The number of bytes used for the cache, excluding sub-cgroups.
-docker.memory.failcnt | Memory | The number of times the container hit its memory limit.
+docker.memory.failcnt | Memory | The number of times the container hit the memory limit.
 docker.memory.hierarchical.memorylimit | Memory |  The memory limit for the hierarchy that contains the memory cgroup, in bytes.
 docker.memory.hierarchical.memswlimit | Memory | The memory plus swap limit for the hierarchy that contains the memory cgroup, in bytes.
 docker.memory.inactiveanon | Memory | The number of bytes of inactive memory in anonymous pages, excluding sub-cgroups.
@@ -113,7 +113,7 @@ docker.network.txdropped | Network | Total transmitted packets dropped on the ne
 docker.network.txerrors | Network | Total transmission errors on the network interface.
 docker.network.txpackets | Network | Total packets transmitted on the network interface.
 docker.diskio.iomerged.* | I/O | The number of BIOS requests merged into requests for I/O operations by a cgroup. Entries have two fields: number and operation. Number is the number of requests, and operation represents the type of operation (read, write, sync, or async).
-docker.diskio.ioqueue.* | I/O |  The number of requests queued for I/O operations by a cgroup. Entries have two fields: number and operation. Number is the number of requests, and operation represents the type of operation (read, write, sync, or async). If the cgroup isn’t doing any I/O, this will be zero.
+docker.diskio.ioqueue.* | I/O |  The number of requests queued for I/O operations by a cgroup. Entries have two fields: number and operation. Number is the number of requests, and operation represents the type of operation (read, write, sync, or async). If the cgroup isn’t doing any I/O, this is be zero.
 docker.diskio.ioservicebytes.* | I/O | The number of bytes transferred to or from specific devices by a cgroup as seen by the CFQ scheduler. Entries have four fields: major, minor, operation, and bytes. Major and minor are device types and node numbers specified in Linux Allocated Devices, operation represents the type of operation (read, write, sync, or async) and bytes is the number of transferred bytes.
 docker.diskio.ioservicebytes.async | I/O |
 docker.diskio.ioservicebytes.blockread | I/O |
@@ -134,8 +134,8 @@ docker.diskio.ioserviced.write | I/O |
 docker.diskio.iotime.* | I/O | The total time between request dispatch and request completion for I/O operations on specific devices by a cgroup as seen by the CFQ scheduler. Entries have four fields: major, minor, operation, and time. Major and minor are device types and node numbers specified in Linux Allocated Devices, operation represents the type of operation (read, write, sync, or async) and time is the length of time in nanoseconds (ns). The time is reported in nanoseconds rather than a larger unit so that this report is meaningful even for solid-state devices.
 docker.diskio.iowaittime.* | I/O | The total time I/O operations on specific devices by a cgroup spent waiting for service in the scheduler queues. When you interpret this report, note: <BR>* the time reported can be greater than the total time elapsed, because the time reported is the cumulative total of all I/O operations for the cgroup rather than the time that the cgroup itself spent waiting for I/O operations. To find the time that the group as a whole has spent waiting, use the blkio.group_wait_time parameter.<BR>* if the device has a queue_depth > 1, the time reported only includes the time until the request is dispatched to the device, not any time spent waiting for service while the device reorders requests.<BR>Entries have four fields: major, minor, operation, and time. Major and minor are device types and node numbers specified in Linux Allocated Devices, operation represents the type of operation (read, write, sync, or async) and time is the length of time in nanoseconds (ns). The time is reported in nanoseconds rather than a larger unit so that this report is meaningful even for solid-state devices.
 docker.diskio.sectors.* | I/O | The number of 512-bytes sectors read and written by the processes member of the cgroup, device by device. Reads and writes are merged in a single counter.
-docker.fs.size.rw | File System | The total size of all the files in the container, in bytes. If you were to export the filesystem of the container as a tarball, it would be about that size.
-docker.fs.size.rootfs | File System | The size of the files which have been created or changed, if you compare the container to its base image. Just after creation, this should be zero; as you modify (or create) files, this will increase.
+docker.fs.size.rw | File System | The total size of all the files in the container, in bytes. If you were to export the filesystem of the container as a tarball, the file would be about that size.
+docker.fs.size.rootfs | File System | The size of the files which have been created or changed, if you compare the container to the base image. Just after creation, this should be zero; as you modify (or create) files, this increases.
 docker.process.all | Process | The number of all processes for running container.
 docker.process.filtered | Process | The number of all processed which have been filtered by [field 'Excluded Processes'](./jobs/docker.md#job-settings) for running conteiner.
 docker.pids.current | Process | The number of pids in the cgroup (Linux specific stats, not populated on Windows.)

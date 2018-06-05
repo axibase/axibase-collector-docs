@@ -34,7 +34,7 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
 </repeat-interval>
 <body-first>An alert when status page statistics are no longer being received by ATSD has been raised.&#13;
 Check that the server is reachable and Axibase Collector job is running.</body-first>
-<body-cancel>Sufficient amount of  statistics data about NGINX PLUS server has been received during last 3 minutes.</body-cancel>
+<body-cancel>Sufficient amount of  statistics data about nginx PLUS server has been received during last 3 minutes.</body-cancel>
 <name>Email Notification id=1</name>
 <use-in-threshold-only>false</use-in-threshold-only>
 <recipients>address@domain</recipients>
@@ -67,7 +67,7 @@ Check that the server is reachable and Axibase Collector job is running.</body-f
 <enabled>false</enabled>
 <disableEntityGrouping>false</disableEntityGrouping>
 <leavingEvents>false</leavingEvents>
-<description><![CDATA[Raise an alert when an NGINX PLUS server average active connection count is below 10 over the last 15 minutes.]]></description>
+<description><![CDATA[Raise an alert when an nginx PLUS server average active connection count is below 10 over the last 15 minutes.]]></description>
 <actionStrategy>
 <type>NONE</type>
 <intervalCount>5</intervalCount>
@@ -81,8 +81,8 @@ Check that the server is reachable and Axibase Collector job is running.</body-f
 <intervalCount>5</intervalCount>
 <intervalUnit>MINUTE</intervalUnit>
 </repeat-interval>
-<body-first>An alert when an NGINX PLUS server average Active Connection count is below 10 over the last 15 minutes has been raised.</body-first>
-<body-cancel>Your NGINX PLUS server Active Connection count is above 10 over the last 15 minutes.&#13;
+<body-first>An alert when an nginx PLUS server average Active Connection count is below 10 over the last 15 minutes has been raised.</body-first>
+<body-cancel>Your nginx PLUS server Active Connection count is above 10 over the last 15 minutes.&#13;
 Your server is likely to have no problems with accessibility.</body-cancel>
 <name>Email Notification id=3</name>
 <use-in-threshold-only>false</use-in-threshold-only>
@@ -117,7 +117,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <enabled>false</enabled>
 <disableEntityGrouping>false</disableEntityGrouping>
 <leavingEvents>false</leavingEvents>
-<description><![CDATA[Raise an alert indicating NGINX PLUS server's peer is in the “unavail” and “unhealthy” states during whole last 15 minutes.]]></description>
+<description><![CDATA[Raise an alert indicating nginx PLUS server's peer is in the “unavail” and “unhealthy” states during whole last 15 minutes.]]></description>
 <actionStrategy>
 <type>NONE</type>
 <intervalCount>5</intervalCount>
@@ -131,7 +131,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <intervalCount>3</intervalCount>
 <intervalUnit>HOUR</intervalUnit>
 </repeat-interval>
-<body-first>An alert indicating NGINX PLUS server's peer  was in the “unavail” and “unhealthy” states during whole last 15 minutes.</body-first>
+<body-first>An alert indicating nginx PLUS server's peer  was in the “unavail” and “unhealthy” states during whole last 15 minutes.</body-first>
 <body-cancel>Now the peer is healthy/available again.</body-cancel>
 <name>Email Notification id=1</name>
 <use-in-threshold-only>false</use-in-threshold-only>
@@ -165,7 +165,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <enabled>false</enabled>
 <disableEntityGrouping>false</disableEntityGrouping>
 <leavingEvents>false</leavingEvents>
-<description><![CDATA[Raise an alert when an NGINX PLUS server dropped sufficient amount of connections during last 10 minutes.]]></description>
+<description><![CDATA[Raise an alert when an nginx PLUS server dropped sufficient amount of connections during last 10 minutes.]]></description>
 <actionStrategy>
 <type>NONE</type>
 <intervalCount>5</intervalCount>
@@ -179,7 +179,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <intervalCount>3</intervalCount>
 <intervalUnit>HOUR</intervalUnit>
 </repeat-interval>
-<body-first>An alert when an NGINX PLUS server dropped too many connections during last 10 minutes.</body-first>
+<body-first>An alert when an nginx PLUS server dropped too many connections during last 10 minutes.</body-first>
 <body-cancel>Now your server's dropped connection value has become acceptable.</body-cancel>
 <name>Email Notification id=1</name>
 <use-in-threshold-only>false</use-in-threshold-only>
@@ -214,7 +214,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <enabled>false</enabled>
 <disableEntityGrouping>false</disableEntityGrouping>
 <leavingEvents>false</leavingEvents>
-<description><![CDATA[Raise an alert when an NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high during last 10 minutes.]]></description>
+<description><![CDATA[Raise an alert when an nginx PLUS server's total number of unsuccessful attempts to communicate with some peer server is high during last 10 minutes.]]></description>
 <actionStrategy>
 <type>NONE</type>
 <intervalCount>5</intervalCount>
@@ -228,8 +228,8 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <intervalCount>3</intervalCount>
 <intervalUnit>HOUR</intervalUnit>
 </repeat-interval>
-<body-first>An alert indicating NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high during last 10 minutes.</body-first>
-<body-cancel>Now NGINX PLUS server's total number of unsuccessful attempts to communicate with the peer server has become acceptable.</body-cancel>
+<body-first>An alert indicating nginx PLUS server's total number of unsuccessful attempts to communicate with some peer server is high during last 10 minutes.</body-first>
+<body-cancel>Now nginx PLUS server's total number of unsuccessful attempts to communicate with the peer server has become acceptable.</body-cancel>
 <name>Email Notification id=1</name>
 <use-in-threshold-only>false</use-in-threshold-only>
 <recipients>address@domain</recipients>
@@ -262,7 +262,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <enabled>false</enabled>
 <disableEntityGrouping>false</disableEntityGrouping>
 <leavingEvents>false</leavingEvents>
-<description><![CDATA[Raise an alert when an NGINX PLUS server's total number of abnormally terminated and respawned child processes increases.]]></description>
+<description><![CDATA[Raise an alert when an nginx PLUS server's total number of abnormally terminated and respawned child processes increases.]]></description>
 <actionStrategy>
 <type>NONE</type>
 <intervalCount>5</intervalCount>
@@ -276,8 +276,8 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <intervalCount>3</intervalCount>
 <intervalUnit>HOUR</intervalUnit>
 </repeat-interval>
-<body-first>An alert indicating that NGINX PLUS server's  total number of abnormally terminated and respawned child processes is increasing.</body-first>
-<body-cancel>Now NGINX PLUS server's total number of abnormally terminated and respawned child processes has stopped increasing.</body-cancel>
+<body-first>An alert indicating that nginx PLUS server's  total number of abnormally terminated and respawned child processes is increasing.</body-first>
+<body-cancel>Now nginx PLUS server's total number of abnormally terminated and respawned child processes has stopped increasing.</body-cancel>
 <name>Email Notification id=1</name>
 <use-in-threshold-only>false</use-in-threshold-only>
 <recipients>address@domain</recipients>

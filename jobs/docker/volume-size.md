@@ -4,14 +4,14 @@
 
 Monitoring disk space usage with a breakdown by individual container ensures continuous service availability by preventing space leakages in containers with data (persistent) volumes.
 
-While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) provides a way to obtain container sizes using the `--size` flag, the command may take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host's disk subsystem and slowing down Docker Engine API response times. Besides, the CLI output doesn't expose space usage by volume and requires parsing size units (kb, mb, gb).
+While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) includes a way to obtain container sizes using the `--size` flag, the command may take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host disk subsystem and slowing down Docker Engine API response times. The CLI output does not expose space usage by volume and requires parsing size units (KB, MB, GB).
 
   ```sh
   axibase@NURSWGHBS001:~$ docker ps -s --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
   ```
 
   ```sh
-  a832af264060 JENKINS_atsd-api-test_ 132.3 kB (virtual 984.1 MB)
+  a832af264060 JENKINS_atsd-api-test_ 132.3 KB (virtual 984.1 MB)
   d7f87797f36e distracted_williams 323 MB (virtual 1.821 GB)
   f53cf366a4c6 stupefied_hamilton 323 MB (virtual 1.821 GB)
   d6d362779455 sad_spence 446.5 MB (virtual 1.944 GB)
@@ -20,7 +20,7 @@ While the Docker [command line](https://docs.docker.com/engine/reference/command
   ...
   ```
 
-For example, on a Docker host where the `/var/lib/docker` size is 30Gb with 20 running containers and 80 in total, the initial execution of the `docker ps -as` command takes more than 2 minutes while fully loading the host's I/O.
+For example, on a Docker host where the `/var/lib/docker` size is 30 GB with 20 running containers and 80 in total, the initial execution of the `docker ps -as` command takes more than 2 minutes while fully loading the host `I/O`.
 
   ```sh
   axibase@NURSWGHBS001:~$ time docker ps -as
@@ -40,7 +40,7 @@ Executing API requests with the `&size=1` parameter typically requires even more
 
 To gather container sizes using Axibase Collector, set **Container Size Interval** to an interval 60 minutes or longer.
 
-To minimize the load on the disk subsystem, this interval will be applied to running containers, while the size of inactive containers will be collected less frequently, as specified by the Property Interval.
+To minimize the load on the disk subsystem, this interval is applied to running containers, while the size of inactive containers is collected less frequently, as specified by Property Interval.
 
 ### Container Size Metrics
 
@@ -48,24 +48,24 @@ Axibase Collector collects sizes for both individual containers as well as the t
 
 **Metric Name** | **Description**
 ---|---
-docker.fs.size.rw | The total size of all the files in the container, in bytes. If you were to export the filesystem of the container as a tarball, it would be about that size.
-docker.fs.size.rootfs | The size of the files which have been created or changed, if you compare the container to its base image. Just after creation, this should be zero; as you modify (or create) files, this will increase
-docker.fs.total.size.rw | The total size of all the files for all containers, in bytes. Σ docker.fs.size.rw for all containers.
-docker.fs.total.size.rootfs | The size of the files which have been created or changed for all containers. Σ docker.fs.size.rootfs for all containers.
-docker.fs.running.size.rw | The total size of all the files for all running containers, in bytes. Σ docker.fs.size.rw for running containers.
-docker.fs.running.size.rootfs | The size of the files which have been created or changed for running containers. Σ docker.fs.size.rootfs for running containers.
+`docker.fs.size.rw` | The total size of all the files in the container, in bytes. The entire filesystem of the container exported as a tarbell is about this size.
+`docker.fs.size.rootfs` | The size of the files which have been created or changed, if you compare the container to the base image. Just after creation, this number should be zero; as you modify (or create) files, this number increases.
+`docker.fs.total.size.rw` | The total size of all the files for all containers, in bytes. Σ `docker.fs.size.rw` for all containers.
+`docker.fs.total.size.rootfs` | The size of the files created or changed for all containers. Σ `docker.fs.size.rootfs` for all containers.
+`docker.fs.running.size.rw` | The total size of all the files for all running containers, in bytes. Σ `docker.fs.size.rw` for running containers.
+`docker.fs.running.size.rootfs` | The size of the files which have been created or changed for running containers. Σ `docker.fs.size.rootfs` for running containers.
 
 [Chartlab example](https://apps.axibase.com/chartlab/81932cd6/2/)
 
-## `du` Alternative
+## Alternative Method
 
-One of the "lesser evil" alternatives is to calculate disk usage of `/var/lib/docker` subdirectories using the `ds` command. This requires superuser privileges.
+One of the "lesser evil" alternatives is to calculate disk usage of `/var/lib/docker` subdirectories using the `du` command. This requires superuser privileges.
 
   ```sh
   sudo bash -c 'du -hs /var/lib/docker/volumes/*'
   ```
 
-> Note: We're using the `bash -c` wrapper here as a permission-safe way to pass the * wildcard.
+> Note: Use the `bash -c` wrapper here as a permission-safe way to pass the `*` wildcard.
 
   ```sh
   177M /var/lib/docker/volumes/dd1e8b1942e204054b8a56219e523834d35bd8e84283720daf227823eae9b21f
@@ -80,7 +80,7 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
 
 ### Running
 
-* Print commands to stdout:
+* Print commands to `stdout`:
 
   ```sh
   sudo ./docker_volume_collect.sh
@@ -116,7 +116,7 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
   crontab -e
   ```
 
-* Add the task to collect data every 15 minutes:
+* Add a task to collect data every 15 minutes:
 
   ```sh
   */15 * * * * /bin/bash -l -c '/opt/scripts/docker_volume_collect.sh > /dev/tcp/{atsd_hostname}/8081'
@@ -126,15 +126,15 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
 
 | **Metric Name** | **Description** |
 |---|---|
-|docker.volume.fs.size | Total size (used + available, in bytes) of the file system where the `/var/lib/docker` directory is located. Collected for the entire docker host. |
-|docker.volume.total_used | Total space (in bytes) used by the `/var/lib/docker` directory. Collected for the entire docker host. |
-|docker.volume.total_used_percent | Percentage of space used by the `/var/lib/docker` directory in the file system where the `/var/lib/docker` directory is located. Calculated as docker.volume.total_used/docker.volume.fs.size * 100. Collected for the entire docker host. |
-|docker.volume.used | Space used by all files in the given volume (in bytes).|
-|docker.volume.used_percent | Space used by files in the given volume as percentage of the total size of the file system where the `/var/lib/docker` directory is located. Calculated as docker.volume.used/docker.volume.fs.size * 100.
+|`docker.volume.fs.size` | Total size (used + available, in bytes) of the file system where the `/var/lib/docker` directory is located. Collected for the entire docker host. |
+|`docker.volume.total_used` | Total space (in bytes) used by the `/var/lib/docker` directory. Collected for the entire docker host. |
+|`docker.volume.total_used_percent` | Percentage of space used by the `/var/lib/docker` directory in the file system where the `/var/lib/docker` directory is located. Calculated as `docker.volume.total_used/docker.volume.fs.size * 100`. Collected for the entire docker host. |
+|`docker.volume.used` | Space used by all files in the given volume (in bytes).|
+|`docker.volume.used_percent` | Space used by files in the given volume as percentage of the total size of the file system where the `/var/lib/docker` directory is located. Calculated as `docker.volume.used/docker.volume.fs.size * 100`.
 
 ## Volume View
 
-To display volume sizes, import the [updated Entity View](volume-entity-view.xml) for Docker Volumes via ATSD -> [Configuration] -> Entity Views -> [Import] with the 'Replace Existing Entity Views' option enabled.
+To display volume sizes, import the updated [Entity View](volume-entity-view.xml) for Docker Volumes. Open **Entity Views** > **Configure**  and click **Import** on the split button at the bottom of the screen with the **Replace Existing Entity Views** option enabled.
 
 ![volume-view](volume-view.png)
 
@@ -144,12 +144,12 @@ Import the [rules](volume-rules.xml) file to raise an alert whenever a volume co
 
 | Rule Name | Description |
 |---|---|
-|docker-host-volume-space-low | Raise an alert if the total size of the `/var/lib/docker` directory exceeds 60% of the total space on the file system. |
-| docker-volume-space-leak| Raise an alert if the volume consumes more than 25% of the total space on the file system where `/var/lib/docker` is located.|
+|`docker-host-volume-space-low` | Raise an alert if the total size of the `/var/lib/docker` directory exceeds 60% of the total space on the file system. |
+| `docker-volume-space-leak`| Raise an alert if the volume consumes more than 25% of the total space on the file system where `/var/lib/docker` is located.|
 
 ## Monitor Volume Sizes using a Container
 
-As an alternative to running the above `du` script on the Docker host, you can launch an Axibase Collector container with the `/var/lib/docker/volumes` directory mounted in read-only mode.
+As an alternative to running the `du` script on the Docker host, you can launch an Axibase Collector container with the `/var/lib/docker/volumes` directory mounted in read-only mode.
 
 * Replace the `atsd_host` placeholder with the actual ATSD hostname in the command below.
 * Replace `collector-user` and `collector-password` with [collector account](https://github.com/axibase/atsd/blob/master/administration/collector-account.md) credentials.
@@ -196,7 +196,7 @@ As an alternative to running the above `du` script on the Docker host, you can l
    docker exec axibase-collector /opt/axibase-collector/ext/docker_volume_collect.sh docker_hostname tcp://atsd_host:8081
    ```
 
-* Login in to ATSD and verify that the following metrics are available:
+* Log in to ATSD and verify that the following metrics are available:
 
         docker.volume.fs.size
         docker.volume.total_used

@@ -25,7 +25,7 @@ sudo rpm -i jdk-8u131-linux-x64.rpm
 
 ## Verify Java Installation
 
-Verify that the `java` command displays version 1.8.x.
+Verify that the `java` command displays version `1.8.x`.
 
 ```sh
 java -version
@@ -33,7 +33,7 @@ java -version
 
 ## Install
 
-Download Axibase Collector archive. The latest version and direct download link is available  [here](https://axibase.com/public/axibase-collector_latest.htm).
+Download Axibase Collector archive. The latest version and direct download link is available on the [Axibase Download Site](https://axibase.com/public/axibase-collector_latest.htm).
 
 ```sh
 wget http://axibase.com/public/axibase-collector-v${VERSION}.tar.gz
@@ -66,11 +66,11 @@ COLLECTOR_OPTS="-httpsPort=10443"
 ./axibase-collector/bin/start-collector.sh
 ```
 
-It may take up to 5 minutes for collector to initialize.
+Collector initialization may take up to five minutes.
 
 ## Check Installation
 
-Check the collector log file for the message FrameworkServlet 'dispatcher': initialization completed.
+Check the collector log file for the message `FrameworkServlet 'dispatcher': initialization completed`.
 
 ```sh
 tail -f ./axibase-collector/logs/axibase-collector.log
@@ -86,7 +86,7 @@ Configure Axibase Collector to send data into an Axibase Time Series Database in
 
 * [ATSD Server connection](atsd-server-connection.md)
 
-## Stoping Axibase Collector
+## Stopping Axibase Collector
 
 In order to stop Axibase Collector, execute the following command:
 

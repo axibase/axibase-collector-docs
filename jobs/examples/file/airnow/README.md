@@ -4,7 +4,7 @@
 
 Download pollution statistics from [airnow.gov](https://www.airnow.gov/) for a collection of cities and metropolitan areas in the U.S.
 
-The Path field contains the `${ITEM}` placeholder so that multiple areas, defined in an item list, can be queried with one configuration.
+The **Path** field contains the `${ITEM}` placeholder so that multiple areas, defined in an item list, are queried with one configuration.
 
 The `$TIME()` function is used to set a relative time interval, 15 days, from the current time in order to override provisional (estimated) data with revised values.
 
@@ -41,8 +41,8 @@ Template: `/aq/data/?startDate=${TIME("current_hour - 360 * hour", "yyyy-MM-dd'T
 
 ## Configuration
 
-* [FILE job configuration](airnow-job.xml). Import xml into Collector.
-* [CSV Parser](airnow-parser.xml). Import xml into ATSD.
+* [FILE job configuration](airnow-job.xml). Import `xml` into Collector.
+* [CSV Parser](airnow-parser.xml). Import `xml` into ATSD.
 
 ## Screenshot
 

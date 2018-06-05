@@ -4,19 +4,19 @@
 
 AWS job allows you to copy [Amazon Web Services CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into Axibase Time Series Database for long-term retention, reporting, and visualization.
 
-Refer to [AWS documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
+Refer to [AWS Documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
 
 The AWS job stores markers for each CloudWatch metric so that API requests are incremental and load only the most recent data. These markers allow the job to build optimized queries and to avoid data gaps in case of network outages.
 
 Each job can be configured to execute multiple configurations in order to retrieve metrics from different [regions](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region). The configurations are processed sequentially within each job iteration.
 
-When an AWS job is started for the first time, it will load available historical data from CloudWatch, available for up to 2 weeks.
+When an AWS job is started for the first time, the job loads available historical data from CloudWatch, available for up to 2 weeks.
 
 ## Supported Namespaces
 
 Each AWS [namespace](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html) provides a set of metrics available for resources of a particular type.
 
-You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you're actually using.
+You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you actually use.
 
 Available namespaces:
 
@@ -46,7 +46,7 @@ For each metric, the AWS job retrieves the following period statistics:
 
 The AWS statistics are stored in ATSD as metrics which means that ATSD can compute aggregate statistics on top of AWS statistics.
 
-For example, the `AWS/Billing Estimated Charges` metric is stored as 5 metrics:
+For example, the **AWS/Billing Estimated Charges** metric is stored as 5 metrics:
 
 * `aws_billing.estimatedcharges.minimum`
 * `aws_billing.estimatedcharges.maximum`
@@ -54,7 +54,7 @@ For example, the `AWS/Billing Estimated Charges` metric is stored as 5 metrics:
 * `aws_billing.estimatedcharges.average`
 * `aws_billing.estimatedcharges.samplecount`
 
-The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of 15+ [metrics](#aws-ec2-metrics).
+The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of more than 15 [metrics](#aws-ec2-metrics).
 
 The job assigns each metric to an entity which is determined based on the [primary dimension](#namespace-dimensions).
 
@@ -74,25 +74,25 @@ The job assigns each metric to an entity which is determined based on the [prima
 ## Configuration Steps
 
 * Create a read-only [IAM account](aws-iam.md) for querying CloudWatch statistics.
-* Open the **Jobs:Add Job:Use Wizard** page.
+* Open the **Jobs** page, click **Add Job** and select **Use Wizard**.
 * Specify access and secret keys.
-* Select AWS regions from which you want to collect data. <br>The wizard will create a separate AWS configuration for each region within the same job.
+* Select AWS regions from which you want to collect data. <br>The wizard creates a separate AWS configuration for each region within the same job.
 * Validate the credentials and save the job if there are no errors.
 
 ![](images/aws-wizard-validate.png)
 
-* Select one of the created configurations and click Test.
+* Select one of the created configurations and click **Test**.
 
 ![](images/aws-test.png)
 
-* To view available metrics for a particular namespace, uncheck all namespaces except one and click Test.
+* To view available metrics for a particular namespace, uncheck all namespaces except one and click **Test**.
 
 ## Validation
 
-* Open the AWS job page and set the schedule to `R 0/5 * * * ?` to execute the job every 5 minutes with random seconds.
+* Open the AWS job page and set the schedule to `R 0/5 * * * ?` to execute the job every five minutes with random seconds.
 * On the AWS Jobs list page, check that Items Read and Commands Sent are greater than 0.
-* Login into ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the Name Mask.<br>Note that it may take the AWS job a while to load backlogged historical data for all metrics after the job was created.
-* Open the Entities tab and locate one of AWS EC2 instances. Click on Portal links to access pre-defined AWS portals.
+* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job may take a while to load backlogged historical data for all metrics after the job is created.
+* Open the **Entities** tab and locate one of AWS EC2 instances. Click the **Portal** links to access pre-defined AWS portals.
 
 ![](images/metric_list.png)
 
@@ -131,7 +131,7 @@ The job assigns each metric to an entity which is determined based on the [prima
 
 AWS applies [usage charges](https://aws.amazon.com/cloudwatch/pricing/) for CloudWatch API requests with free entitlement available on a monthly basis.
 
-An extra fee is charged for detailed monitoring, as well as for custom metrics. The detailed monitoring provides `1-minute` period granularity and a lower delay, typically 1 or 2 minutes, whereas the basic monitoring can have a delay between 5 and 10 minutes.
+An extra fee is charged for detailed monitoring, as well as for custom metrics. The detailed monitoring provides `1-minute` period granularity and a lower delay, typically one or two minutes, whereas the basic monitoring can have a delay between five and ten minutes.
 
 ## Namespace Dimensions
 

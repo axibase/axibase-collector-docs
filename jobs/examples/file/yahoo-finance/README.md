@@ -11,7 +11,7 @@ Download daily historical pricing information (OHLC) from [Yahoo! Finance](http:
 * FB
 * AMZN
 
-The Path field contains the `${ITEM}` placeholder so that multiple securities can be queried with one configuration.
+The **Path** field contains the `${ITEM}` placeholder so that multiple securities can be queried with one configuration.
 
 ## File
 

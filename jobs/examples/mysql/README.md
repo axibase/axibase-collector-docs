@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to collect global status metrics from `performance_schema` introduced in [MySQL](http://www.mysql.com/) 5.7+ for long-term retention and monitoring in the Axibase Time Series Database.
+This document describes how to collect global status metrics from `performance_schema` introduced in [MySQL](http://www.mysql.com/) `5.7+` for long-term retention and monitoring in the Axibase Time Series Database.
 
 The process involves enabling a JDBC job in Axibase Collector to poll a `global_status` table and uploading the counters to ATSD for processing.
 
@@ -34,11 +34,11 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 
 ### Import MySQL Server Job into Axibase Collector
 
-* Open **Jobs:Import** and upload the [mysql-server-jobs.xml](mysql-server-jobs.xml) file.
+* Open the **Jobs** menu and select **Import** from the split button at the botton of the screen to upload the [mysql-server-jobs.xml](mysql-server-jobs.xml) file.
 
 ### Configure MySQL Server Database Connection
 
-* Open the **Data Sources:Databases** page and select the `10.102.0.7` database.
+* Open the **Data Sources** > **Databases** page and select the `10.102.0.7` database.
 * Provide connection parameters to the target MySQL Server database as displayed below:
 
 ![](images/mysql-datasource.png)
@@ -53,30 +53,30 @@ SELECT 1
 
 ### Verify Job Configuration
 
-* Open MySQL Server job.
-* Set Data Source to `10.102.0.7`.
+* Open **MySQL Server** job.
+* Set **Data Source** to `10.102.0.7`.
 
 ![](images/mysql-jdbc-job.png)
 
 * Choose one of the target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click on the [Test] button and review output. See [Data Queries](#data-queries) below.
+* Open each configuration, click on the **Test** button and review output. See [Data Queries](#data-queries) below.
 
 ![](images/test_result.png)
 
 ### Schedule the Job
 
-* Open the `JDBC Job` page and click the [Run] button for the MySQL Server JDBC job.
-* Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than 0.
+* Open the **JDBC Job** page and click the **Run** button for the MySQL Server JDBC job.
+* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](images/test_run.png)
 
-* If there are no errors, set job status to Enabled and save the job.
+* If there are no errors, set job status to **Enabled** and save the job.
 
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the Metrics tab and filter metrics by name `mysql.*`.
+* Click on the **Metrics** tab and filter metrics by name `mysql.*`.
 
 ![](images/mysql-metrics.png)
 
@@ -88,8 +88,8 @@ SELECT 1
 
 ### Entity Groups
 
-* Open the **Admin: Entity Groups** page.
-* Create a new Entity Group, click on Expression 'Edit mode', and enter the following expression:
+* Open the **Settings** menu and select **Entity Groups**.
+* Create a new Entity Group, select the **Expression** tab from the **Members** table, and enter the following expression:
 
 ```javascript
 hasMetric('mysql.global_status.uptime')
@@ -101,9 +101,9 @@ hasMetric('mysql.global_status.uptime')
 
 ### Portals
 
-* Open the **Configuration: Portals** page and import a MySQL portal from [portal-mysql.xml](portal-mysql.xml).
-* Click Assign link and associate the portal with the entity group you created earlier.
-* Open Entity tabs, find the mysql database by name, and click on its portal icon.
+* Open the **Portals** page and import a MySQL portal from [portal-mysql.xml](portal-mysql.xml).
+* Click the **Assign** link and associate the portal with the entity group you created earlier.
+* Open the **Entities** tabs, find the `mysql` database by name, and click on the portal icon.
 
 ![](images/mysql-portal-icon.png)
 

@@ -2,9 +2,9 @@
 
 ## Overview
 
-Download historical weather information from the [Bureau of Meteorology service](http://www.bom.gov.au) for a set of stations in New South Wales province.
+Download historical weather information from the [Bureau of Meteorology](http://www.bom.gov.au) for a set of stations in the New South Wales province.
 
-The Path field contains the `${ITEM}` placeholder so that multiple stations in New South Wales province can be queried with one configuration.
+The **Path** field contains the `${ITEM}` placeholder so that multiple stations in New South Wales province can be queried with one configuration.
 
 ## File
 
@@ -123,7 +123,7 @@ series e:Tibooburra_Airport d:2016-07-07T18:30:00.000Z m:au-weather-nsw.air_temp
 
 ## Configuration
 
-* [FILE job configuration](australia-weather-job.xml). Import xml into Collector.
+* [FILE job configuration](australia-weather-job.xml). Import `xml` into Collector.
 
 ## Screenshot
 

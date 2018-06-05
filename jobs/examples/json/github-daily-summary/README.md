@@ -2,9 +2,9 @@
 
 ## Overview
 
-Download GitHub Daily Summary by using [api](https://status.github.com/api).
+Download GitHub Daily Summary by using the [API](https://status.github.com/api).
 
-The Json Path field contains the `${DATE_ITEM}` placeholder so that multiple dates can be queried with one configuration.
+The **JSONPath** field contains the `${DATE_ITEM}` placeholder so a user may query multiple dates with one configuration.
 
 ## File
 
@@ -65,7 +65,7 @@ Time Format    | yyyy-MM-dd
 Time Zone      | UTC
 Metric Prefix  | github-status.
 
-[JSON Job Configuration](github_daily_summary_job.xml) file. Import xml into Collector.
+[JSON Job Configuration](github_daily_summary_job.xml) file. Import `xml` into Collector.
 
 ### Matched Objects
 

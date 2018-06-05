@@ -2,15 +2,15 @@
 
 ## Overview
 
-Axibase Collector is a Java-based ETL application that queries external data sources on a defined schedule and uploads the data as series, properties, messages, and files into the [Axibase Time Series Database](http://axibase.com/products/axibase-time-series-database/) (ATSD).
+Axibase Collector is a Java-based ETL application that queries external data sources on a defined schedule and uploads the data as series, properties, messages, and files into [Axibase Time Series Database](http://axibase.com/products/axibase-time-series-database/) (ATSD).
 
 The Collector supports data markers to minimize the load on the source systems as well as [list](collections.md)-based automation to efficiently copy data from multiple sources with re-usable configurations.
 
 ## Use Cases
 
-* Download a CSV/TSV file from a URL or an FTP server and upload it into ATSD.
+* Download a CSV/TSV file from a URL or an FTP server and upload the file into ATSD.
 * Offload data from a relational database for long-term storage in ATSD.
-* Query a web service, convert its JSON output into tabular format, and upload it into ATSD.
+* Query a web service, convert JSON output into tabular format, and upload the file into ATSD.
 * Historize metrics by querying current values and retaining their history in ATSD.
 * Collect key performance metrics from Java applications (JMX), network devices (SNMP), etc.
 
@@ -111,7 +111,7 @@ The Collector supports data markers to minimize the load on the source systems a
 [File](jobs/examples/file) | File | Download CSV files
 [HP OpenView](jobs/examples/hp-openview) | OVPM | Offload CODA metrics from OVPM
 [Jetty](jobs/examples/jetty) | JMX | Collect sessions, requests, status from the Jetty server
-[JSON](jobs/examples/json) | JSON | Download JSON file and convert it to CSV format
+[JSON](jobs/examples/json) | JSON | Download JSON file and convert the file to CSV format
 [JVM](jobs/examples/jvm) | JMX | Collect key JVM performance metrics
 [MySQL](jobs/examples/mysql) | JDBC | Collect database performance metrics
 [nginx](jobs/examples/nginx) | File | Collect key web server metrics for nginx

@@ -2,17 +2,17 @@
 
 ## Overview
 
-The following document describes the process of creating a **read-only** account used to query statistics from AWS CloudWatch API.
+This document describes the process of creating a **read-only** account used to query statistics from AWS CloudWatch API.
 
 ## Account Configuration
 
 ### Create User Group
 
-Login into the AWS Console and locate **IAM** (Identity and Access Management) service under the **Security, Identity and Compliance** section.
+Log in to the AWS Console and locate the **IAM** (Identity and Access Management) service under the **Security, Identity and Compliance** section.
 
 ![](images/aws-console.png)
 
-Open the Groups menu and click **Create New Group**.
+Open the **Groups** menu and click **Create New Group**.
 
 Specify group name, for example `cloudwatch-ro-group`.
 
@@ -20,7 +20,7 @@ Specify group name, for example `cloudwatch-ro-group`.
 
 ### Create User
 
-Open Users page and click **Create New User**.
+Open the **Users** page and click **Create New User**.
 
 Enter a user name such as `cloudwatch-ro-user`.
 
@@ -30,11 +30,11 @@ Generate access and secret keys for the user. Copy the keys for your reference.
 
 ![](images/aws-access-key.png)
 
-The keys will be required for the AWS job in Axibase Collector.
+The keys are required for the AWS Job in Axibase Collector.
 
 ### Add User To Group
 
-Open Group page and click on **Add Users to Group**.
+Open the **Group** page and click on **Add Users to Group**.
 
 Add `cloudwatch-ro-user` to the `cloudwatch-ro-group`.
 
@@ -42,9 +42,9 @@ Add `cloudwatch-ro-user` to the `cloudwatch-ro-group`.
 
 ### Grant Permissions
 
-Open the Group page and click **Create Group Policy**
+Open the **Group** page and click **Create Group Policy**
 
-Enter the following policy text in `JSON` format, click **Validate Policy** and save it.
+Enter the following policy text in `JSON` format, click **Validate Policy** and save the configuration.
 
 ```json
 {
@@ -66,7 +66,7 @@ Enter the following policy text in `JSON` format, click **Validate Policy** and 
 }
 ```
 
-The above policy grants users in the `cloudwatch-ro-group` permissions to execute various `Get`, `List`, and `Describe` API methods. This type of policy provides a **read-only** access.
+The above policy grants users in the `cloudwatch-ro-group` permissions to execute various `Get`, `List`, and `Describe` API methods. This type of policy grants **read-only** access.
 
 The `cloudwatch:` actions are required to list available CloudWatch metrics and download statistics, whereas actions for the other namespaces are required to download AWS resource attributes and relationships and store them as metadata in ATSD.
 

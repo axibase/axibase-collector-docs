@@ -1,6 +1,6 @@
 # Install ATSD and Axibase Collector Bundle
 
-You can launch linked ATSD and Axibase Collector containers on the same Docker host with `docker-compose`.
+Launch linked ATSD and Axibase Collector containers on the same Docker host with `docker-compose`.
 
 ## Create `docker-compose.yml` file
 
@@ -43,5 +43,5 @@ export cuser=myuser; export cpassword=mypassword; docker-compose pull && docker-
 
 ## Access UI
 
-* ATSD url: `https://docker_host:8443/`
-* Axibase Collector url: `https://docker_host:9443/`
+* ATSD URL: `https://docker_host:8443/`
+* Axibase Collector URL: `https://docker_host:9443/`

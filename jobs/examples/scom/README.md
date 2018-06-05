@@ -4,7 +4,7 @@
 
 [Microsoft System Center Operations Manager
 (SCOM)](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/ "Microsoft SCOM")
-is an agent-based monitoring system for the Microsoft Windows operating system and applications that run on it.
+is an agent-based monitoring system for the Microsoft Windows operating system and compatible applications.
 
 SCOM collects and stores statistics from Windows servers in Operations (`PerformanceDataAllView`) and DataWareHouse (`vperf_raw`, `vperf_hourly`, `vperf_daily`) database views.
 
@@ -12,17 +12,17 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 
 ## Requirements
 
-* Microsoft System Center Operations Manager 2012+.
+* Microsoft System Center Operations Manager `2012+`.
 
-## Installation steps
+## Installation
 
 ### Import Microsoft SCOM JDBC job
 
-* Open the **Jobs:Import** page and upload the [collector-jobs-scom-jobs.xml](collector-jobs-scom-jobs.xml) file.
+* On the **Jobs** page select **Import** from the split button below the table and upload the [`collector-jobs-scom-jobs.xml`](collector-jobs-scom-jobs.xml) file.
 
 ### Configure Microsoft SCOM Database Connection
 
-* Open the **Data Sources:Databases** page and select the `scom` database.
+* Open the **Data Sources** > **Databases** page and select the `scom` database.
 * Provide connection parameters to the target `scom-2012` database as displayed below:
 
 ![](images/scom-datasource.png)
@@ -38,29 +38,29 @@ SELECT 1
 ### Verify Job Configuration
 
 * Open SCOM job.
-* Set Data Source to `scom`.
+* Set **Data Source** to `scom`.
 
 ![](images/scom-job.png)
 
-* Choose one of target ATSD instances if your Collector instance is connected to multiple ATSD servers.
+* Choose one of target ATSD instances if the Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click on the [Test] button, and review the output. See [Data Queries](#data-queries) below.
+* Open each configuration, click on the **Test** button, and review the output. See [Data Queries](#data-queries) below.
 
 ![](images/test_result.png)
 
 ### Schedule the Job
 
-* Open the `JDBC Job` page and click the [Run] button for the Microsoft SCOM JDBC job.
-* Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than 0.
+* Open the **JDBC Job** page and click the **Run** button for the Microsoft SCOM JDBC job.
+* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](images/test_run.png)
 
-* If there are no errors, set job status to 'Enabled' and save the job.
+* If there are no errors, set job status to **Enabled** and save the job.
 
 ### Verify Metrics in ATSD
 
-* Login into ATSD.
-* Click on the Metrics tab and filter metrics by prefix `scom.*`.
+* Log in to ATSD.
+* Click on the **Metrics** tab and filter metrics by prefix `scom.*`.
 
 ![](images/atsd_metrics.png)
 

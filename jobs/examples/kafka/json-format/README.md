@@ -37,7 +37,7 @@ Excluded Fields    | timestamp, pointtype, original_timestamp_from_sdk, question
 Metric Name Field  | pitagname
 Metric Value Field | pitagvalue
 
-[Kafka Job Configuration](kafka_job_configuration.xml) file. Import xml into Collector.
+[Kafka Job Configuration](kafka_job_configuration.xml) file. Import `xml` into Collector.
 
 ## Command
 

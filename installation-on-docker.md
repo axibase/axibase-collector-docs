@@ -6,7 +6,7 @@
 
 ## Image Information
 
-* Image name: axibase/collector:latest
+* Image name: `axibase/collector:latest`
 * [Dockerfile](https://github.com/axibase/docker-axibase-collector/blob/master/Dockerfile)
 * [Docker Hub](https://hub.docker.com/r/axibase/collector/)
 
@@ -14,8 +14,8 @@
 
 If the target Docker host has no direct connectivity to [Docker Hub](https://hub.docker.com), execute the following steps to prepare and load the Collector image:
 
-* Login into a Docker host which is connected to Docker Hub.
-* Pull the Collector image from Docker Hub and export it into an archive file:
+* Log in to a Docker host which is connected to Docker Hub.
+* Pull the Collector image from Docker Hub and export into an archive file:
 
 ```sh
 docker pull axibase/collector:latest
@@ -30,11 +30,11 @@ gzip docker-axibase-collector.tar
 docker load < docker-axibase-collector.tar.gz
 ```
 
-Alternatively, you can download a pre-built image file from [axibase.com](https://axibase.com/public/docker-axibase-collector.tar.gz).
+Alternatively, download a pre-built image file from the [Axibase Website](https://axibase.com/public/docker-axibase-collector.tar.gz).
 
 ## Start Container
 
-> Using Collector to monitor Docker? Launch container in privileged mode as described in this [document](./jobs/docker.md#local-collection).
+> Using Collector to monitor Docker? Launch container in privileged mode as described in the [Docker Job Documentation](./jobs/docker.md#local-collection).
 
 ```properties
 docker run \
@@ -57,7 +57,7 @@ docker run \
   -atsd-url=https://collector-user:collector-password@atsd_host:atsd_https_port
 ```
 
-If the user name or password contains a `$`, `&`, `#`, or `!` character, escape it with backslash `\`.
+If the user name or password contains a `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
 
 The password must contain at least **six** (6) characters and is subject to the following [requirements](https://github.com/axibase/atsd/blob/master/administration/user-authentication.md#password-requirements).
 
@@ -83,7 +83,7 @@ The launch command is different if the Collector container is used to [monitor s
 ----- | ----- | -----
 `--detach` | Yes | Run container in background and print container id.
 `--publish-all` | No | Publish exposed https port (9443) to a random port.
-`--restart` | No | Auto-restart policy. _Not supported in all Docker Engine versions._
+`--restart` | No | Auto-restart policy. **Not supported in all Docker Engine versions.**
 `--name` | No | Assign a host-unique name to the container.
 
 To bind the collector to a particular port instead of a random one, replace `--publish-all` with `--publish 10443:9443`, where the first number indicates an available port on the Docker host.
@@ -95,7 +95,7 @@ To bind the collector to a particular port instead of a random one, replace `--p
 |`ATSD_SERVICE_HOST` | No | Host where Axibase Time Series Database is installed. |
 |`ATSD_SERVICE_PORT_HTTPS` | No | Https port. |
 |`ATSD_SERVICE_PORT_TCP` | No | Tcp port for [network commands](https://github.com/axibase/atsd/blob/master/api/network#network-api). |
-|`ATSD_URL` | No | URL (protocol://host:port) for the Axibase Time Series Database connection.|
+|`ATSD_URL` | No | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
 |`COLLECTOR_USER_NAME` | No | User name for the [data collector](https://github.com/axibase/atsd/blob/master/administration/collector-rw-account.md) account. |
 |`COLLECTOR_USER_PASSWORD` | No | [Password](https://github.com/axibase/atsd/blob/master/administration/user-authentication.md#password-requirements) for the data collector account.|
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
@@ -129,7 +129,7 @@ docker run \
 
 ## Check Installation
 
-It may take up to 5 minutes to initialize the application.
+Initializing the application may take up to five minutes.
 
 ```sh
 docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-collector.log
@@ -137,7 +137,7 @@ docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-co
 
 Wait until the following message appears:
 
-> _FrameworkServlet 'dispatcher': initialization completed._
+> `FrameworkServlet 'dispatcher': initialization completed.`
 
 This message indicates that the initial configuration is complete.
 

@@ -1,4 +1,4 @@
-# NGINX Plus Server Metrics
+# nginx Plus Server Metrics
 
 ## Server Metrics
 

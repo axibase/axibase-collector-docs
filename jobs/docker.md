@@ -16,13 +16,13 @@ Information is collected for the following object types:
 
 **Name** | **Description**
 ----- | -----
-`API Version` | API version used when querying the Docker Engine API. Defaults to 'latest'. <br>Can be set to a specific version to ensure compatibility.
+`API Version` | API version used when querying the Docker Engine API. Defaults to `latest`. <br>Can be set to a specific version to ensure compatibility.
 `Lifecycle Event Monitoring` | Enables continuous monitoring of container lifecycle events instead of scheduled polling.
 `Property Interval`, minutes | Interval for refreshing detailed image and container properties.
 `Statistics Interval`, seconds | Interval at which utilization statistics from running containers are collected.
 `Process Interval`, minutes | Interval at which top process list is collected from running docker containers.
-`Excluded Processes` | Lists processes, separated by comma, to exclude from collection. Expressions support the wildcard option (*).
-`Environment Tags` | List of ENV variables stored as entity tags.
+`Excluded Processes` | Lists processes, separated by comma, to exclude from collection. Expressions support the wildcard option (`*`).
+`Environment Tags` | List of `ENV` variables stored as entity tags.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Information is collected for the following object types:
 
 ## Local Installation
 
-In local collection mode, Axibase Collector containers run on each Docker host and gather statistics locally from the Docker engine API exposed at the [/var/run/docker.sock](https://docs.docker.com/engine/reference/api/docker_remote_api/) Unix socket.
+In local collection mode, Axibase Collector containers run on each Docker host and gather statistics locally from the Docker engine API exposed at the [`/var/run/docker.sock`](https://docs.docker.com/engine/reference/api/docker_remote_api/) Unix socket.
 
 ![Local Collection](images/docker-local.png)
 
@@ -53,7 +53,7 @@ docker run \
    -job-enable=docker-socket
 ```
 
-If the user name or password contains `$`, `&`, `#`, or `!` character, escape it with backslash `\`.
+If the username or password contains `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
 
 The password must contain at least **six** (6) characters and is subject to the following [requirements](https://github.com/axibase/atsd/blob/master/administration/user-authentication.md#password-requirements).
 
@@ -72,19 +72,19 @@ docker run \
    -job-enable=docker-socket
 ```
 
-It may take up to 5 minutes to initialize the Collector's database upon initial startup.
+Initializing the Collector database may take up to five minutes upon initial startup.
 
-The Docker job should start executing immediately.
+The Docker job begins executing immediately.
 
 ### SELinux
 
-On Docker hosts with SELinux enabled in enforced mode, the container will run into a `permission denied` error when trying to read data from  `/var/run/docker.sock`.
+On Docker hosts with SELinux enabled in enforced mode, the container runs into a `permission denied` error when trying to read data from  `/var/run/docker.sock`.
 
-Switch to the Remote Collection option or follow one of the following steps to address it:
+Switch to the **Remote Collection** option or follow one of these steps:
 
 * Run container in privileged mode (`--privileged`)
 * Run container with disabled security labeling (`--security-opt label=disable`)
-* Disable SELinux or set it into logging mode with `sudo setenforce Permissive`
+* Disable or set SELinux to logging mode with `sudo setenforce Permissive`
 * Other alternatives using [`semodule`](https://github.com/dpw/selinux-dockersock)
 
 * **Launch Parameters**
@@ -93,7 +93,7 @@ Switch to the Remote Collection option or follow one of the following steps to a
 ----- | ----- | -----
 `--detach` | Yes | Run container in background and print container id.
 `--name` | No | Assign a host-unique name to the container.
-`--restart` | No | Auto-restart policy. _Not supported in all Docker Engine versions._
+`--restart` | No | Auto-restart policy. **Not supported in all Docker Engine versions**.
 `--publish-all` | No | Publish all exposed ports to random ports.
 `--env` | No | Set environment variables.
 
@@ -107,7 +107,7 @@ In remote collection mode Axibase Collector fetches data from multiple remote Do
 
 * Log in to the Docker host via SSH and generate [client and server certificates](docker-certificates.md).
 
-* Configure the Docker daemon for secure access over HTTPS.
+* Configure the Docker daemon for secure access over https.
 
   **On Ubuntu 14.04**
 
@@ -189,7 +189,7 @@ In remote collection mode Axibase Collector fetches data from multiple remote Do
     systemctl start docker
     ```
 
-  * Ensure that the Docker daemon status is _active_ and there are no warnings.
+  * Ensure that the Docker daemon status is **active** and there are no warnings.
 
     ```sh
     systemctl status docker
@@ -221,9 +221,9 @@ docker run \
    -atsd-url=https://collector-rw:collector-password@atsd_host:atsd_https_port
 ```
 
-If the user name or password contains a `$`, `&`, `#`, or `!` character, escape it with backslash `\`.
+If the username or password contains a `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
 
-The password must contain at least **6** characters and is subject to the following [requirements](https://github.com/axibase/atsd/blob/master/administration/user-authentication.md#password-requirements).
+The password must contain at least **six** characters and is subject to the following [requirements](https://github.com/axibase/atsd/blob/master/administration/user-authentication.md#password-requirements).
 
 * Find the https port assigned to the `axibase-collector` container.
 
@@ -232,15 +232,15 @@ docker ps -a | grep axibase-collector
 ```
 
 * Log in to the Axibase Collector web interface at `https://hostname:port`.
-* Open the **Jobs > Docker > Add Job** page and enter the job name. Click **Enabled** to enable the job. Click Save.
-* Click the [Use Wizard] button, specify the Docker Engine hostname, API port (2376), and attach `{cert,key,ca}.pem` files.
-* Click Validate and then Save if the test is successful.
+* Open the **Jobs > Docker** page and click **Add Job**. Enter the job name. Click **Enabled** to enable the job. Click **Save**.
+* Click the **Use Wizard** button, specify the Docker Engine hostname, API port (2376), and attach `{cert,key,ca}.pem` files.
+* Click **Validate** and then **Save** if the test is successful.
 
 ## Validation
 
-Log in to ATSD and verify that connected Docker hosts are displayed on the 'Entities: Docker Hosts' page.
+Log in to ATSD and verify that connected Docker hosts are displayed on the **Entities** > **Docker Hosts** page.
 
-If the Docker host is missing in ATSD, open the 'Jobs' page in Collector, check the **Result** column, and review the **Execution Details** page for any errors.
+If the Docker host is missing in ATSD, open the **Jobs** page in Collector, check the **Result** column, and review the **Execution Details** page for any errors.
 
 ## Container Launch Troubleshooting
 
@@ -254,14 +254,14 @@ The following message indicates that the initial configuration is finished:
 
 ## UI
 
-Verify the https port that is assigned to the collector and open it in your browser: `https://container-ip:port`
+Verify the https port that is assigned to the collector and open the application in your browser: `https://container-ip:port`
 
 ```sh
 docker ps | grep axibase-collector
 ```
 
-Locate the **docker-socket** job on the 'Jobs' list and verify that it is enabled and that the `Items Read` column is not 0.
+Locate the **docker-socket** job on the **Jobs** page and verify that the job is enabled and that the **Items Read** column is not 0.
 
 ## Testing and Evaluating
 
-You can launch both the **atsd** and **axibase-collector** containers in a [test environment](docker-compose.md) using  `docker-compose`.
+Optionally launch either the **atsd** and **axibase-collector** containers in a [test environment](docker-compose.md) using  `docker-compose`.

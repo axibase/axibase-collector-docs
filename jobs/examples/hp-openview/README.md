@@ -2,11 +2,11 @@
 
 ## Overview
 
-[**HP OpenView Performance Manager**](https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=PERFMINFO) provides an agent-based centralized data collection solution.
+[HP OpenView Performance Manager](https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=PERFMINFO) is an agent-based centralized data collection solution.
 
-OVPM stores collected statistics in files on the local file system for a period of several months.
+OVPM stores collected statistics in files on the local file system for several months.
 
-Axibase Collector queries the OVPM server for particular GLOBAL classes every 15 minutes to offload incremental data into the Axibase Time Series Database for long-term retention and operations analytics.
+Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 15 minutes to offload incremental data into the Axibase Time Series Database for long-term retention and operations analytics.
 
 ## Requirements
 
@@ -16,11 +16,11 @@ Axibase Collector queries the OVPM server for particular GLOBAL classes every 15
 
 ### Import HP OpenView JDBC job
 
-* Open the **Jobs:Import** page and upload the [collector-jobs-ovpm-jobs.xml](collector-jobs-ovpm-jobs.xml) file.
+* Open the **Jobs** drop-down menu and click **Import** at the bottom of the screen. Upload the [collector-jobs-ovpm-jobs.xml](collector-jobs-ovpm-jobs.xml) file.
 
 ### Configure HP Open View HTTP Pool
 
-* Open the **Data Sources:HTTP Pools** page, select the `ovpm-10.102.0.6` database.
+* Open the **Data Sources** menu and select **HTTP Pools**, select the `ovpm-10.102.0.6` database.
 * Provide connection parameters to the target `ovpm-10.102.0.6` pool as displayed below:
 
 ![](images/http_pool_conf.png)
@@ -28,28 +28,24 @@ Axibase Collector queries the OVPM server for particular GLOBAL classes every 15
 ### Verify Job Configuration
 
 * Open the `ovpm-global` job.
-* Set the HTTP Pool to `ovpm-10.102.0.6`.
+* Set the **HTTP Pool** to `ovpm-10.102.0.6`.
 
 ![](images/ovmp_configuration.png)
 
-* Choose an ATSD server if your Collector instance is connected to multiple ATSD servers.
+* Choose an ATSD server if you have connected your Collector to multiple ATSD servers.
 * Save the Job.
 * Open each configuration.
-* Open the `ovpm` Item List and populate it with servers whose statistics you would like to collect.
+* Open the `ovpm` Item List and define servers whose statistics you would like to collect.
 * Click the **Test** button and review the output.
-
-<!---
-![](images/ovmp.png)
--->
 
 ### Schedule the Job
 
-* Open the `OVPM Job` page and click the **Run** button for the `ovpm-global` job.
+* Open the **OVPM Job** page and click the **Run** button for the `ovpm-global` job.
 * Make sure that the job status is `COMPLETED` and the `Items Read` and `Sent commands` fields show a value greater than 0.
 
 ![](images/ovmp-global.png)
 
-* If there are no errors, set job status to 'Enabled' and save the job.
+* If there are no errors, set job status to **Enabled** and click **Save**.
 
 ### Verify Metrics in ATSD
 

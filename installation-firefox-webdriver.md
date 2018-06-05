@@ -33,7 +33,7 @@ Xvfb :99
 
 ## Setup Collector Script
 
-Before starting collector with the Firefox webdriver, modify the startup script (uncomment and set path to firefox bin file):
+Before starting Collector with the Firefox webdriver, modify the startup script (uncomment and set path to firefox bin file):
 
 ```sh
 #COLLECTOR_JAVA_OPTS="$COLLECTOR_JAVA_OPTS -Dwebdriver.firefox.bin="
