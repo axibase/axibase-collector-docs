@@ -166,12 +166,12 @@ module.exports = {
     title: 'Axibase Collector',
     description: "User manual and API reference for Axibase® Time Series Database",
     head: [
-        ['link', {rel: 'shortcut icon', href: '/favicon.ico'}]
+        ['link', {rel: 'shortcut icon', href: '/images/favicon-96x96.png'}]
     ],
     staticFilesExtensionsTest: /(?:tcollector|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service))$/,
     themeConfig: {
         nav: topNavMenu,
-        logo: '/images/axibase_logo.png',
+        logo: '/favicon-96x96.png',
 
         sidebarDepth: 1,
         sidebar: {
