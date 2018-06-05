@@ -4829,7 +4829,7 @@ vuepress-html-webpack-plugin@^3.2.0:
 
 "vuepress@git+https://github.com/axibase/vuepress.git#patches":
   version "0.8.4"
-  resolved "git+https://github.com/axibase/vuepress.git#7dbc22c8a5a0adc360d7d32fd65de8daf9e2d7c2"
+  resolved "git+https://github.com/axibase/vuepress.git#a0cc0d62200fabfb987d42ecb6ece2517f5dd4f3"
   dependencies:
     autoprefixer "^8.2.0"
     buble "^0.19.3"
