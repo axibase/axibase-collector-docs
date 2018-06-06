@@ -7,7 +7,7 @@ This document describes how to collect various metrics from an NGINX PLUS web se
 The periodic data collection can be organized in several ways:
 
 * Configuring Axibase Collector JSON job to periodically poll server's status page and upload obtained data for parsing in ATSD.
-* Using [axibase_nginx_plus_collector](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector/src) python script along with an OS scheduler. This way is described at [axibase_nginx_plus_collector page](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector).
+* Using [axibase_nginx_plus_collector](./axibase-nginx-plus-collector) python script along with an OS scheduler. This way is described at [axibase_nginx_plus_collector page](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector).
 
 The document will provide instructions for the first way of configuring.
 

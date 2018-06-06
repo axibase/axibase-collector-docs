@@ -121,7 +121,8 @@ const examplesMenu = [
     },
     ['/jobs/examples/jvm/', 'JVM'],
     ['/jobs/examples/mysql/', 'MySQL'],
-    ['/jobs/examples/nginx/', 'nginx'],
+    ['/jobs/examples/nginx/', 'Nginx'],
+    ['/jobs/examples/nginx-plus/', 'Nginx Plus'],
     ['/jobs/examples/oracle-enterprise-manager/', 'Oracle EM'],
     {
         title: 'PI', children: [
@@ -168,7 +169,7 @@ module.exports = {
     head: [
         ['link', {rel: 'shortcut icon', href: '/favicon-96x96.png'}]
     ],
-    staticFilesExtensionsTest: /(?:tcollector|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service))$/,
+    staticFilesExtensionsTest: /(?:tcollector|nginx_status|src|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service|yaml|sh|py))$/,
     themeConfig: {
         nav: topNavMenu,
         logo: '/favicon-96x96.png',
