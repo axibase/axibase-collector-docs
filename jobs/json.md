@@ -36,31 +36,64 @@ The [JSON path](https://github.com/jayway/JsonPath#operators) is an expression e
 * `.{cname}` denotes a selector of the given object's child object with name `cname`.
 * `{arr-name}[*]` stands for all elements of the specified array `arr-name`.
 
-Example:
+Examples:
 
-```json
-$.store.book[*]
-```
-
-The expression will select all elements of the `book` array in the root's child named `store`.
+Retrieved JSON:
 
 ```json
 {
-    "store": {
-    "book": [{
-    "category": "reference",
-    "author": "Nigel Rees",
-    "title": "Sayings of the Century",
-    "price": 8.95
-    }, {
-    "category": "fiction",
-    "author": "Evelyn Waugh",
-    "title": "Sword of Honour",
-    "price": 12.99
-    }]
-    }
+   "count" : 1818,
+   "uniques" : 121,
+   "views" : [
+      {
+         "timestamp" : "2018-05-22T00:00:00Z",
+         "count" : 177,
+         "uniques" : 20
+      },
+      {
+         "timestamp" : "2018-05-23T00:00:00Z",
+         "count" : 269,
+         "uniques" : 15
+      },
+      {
+         "timestamp" : "2018-05-24T00:00:00Z",
+         "count" : 128,
+         "uniques" : 18
+      },
+      {
+         "timestamp" : "2018-05-25T00:00:00Z",
+         "count" : 123,
+         "uniques" : 14
+      },
+      {
+         "timestamp" : "2018-05-26T00:00:00Z",
+         "count" : 34,
+         "uniques" : 9
+      },
+      {
+         "timestamp" : "2018-05-27T00:00:00Z",
+         "count" : 15,
+         "uniques" : 6
+      },
+      {
+         "timestamp" : "2018-05-28T00:00:00Z",
+         "count" : 84,
+         "uniques" : 5
+      },
+      {
+         "timestamp" : "2018-05-29T00:00:00Z",
+         "count" : 76,
+         "uniques" : 9
+      }
+   ]
 }
 ```
+
+| **JSON Path** | **Result** |
+|:--------------|:----------------|
+| `$.views[*]` | Select all elements of the `views` array in the root. |
+| `$.views[?(@.count > 70)]` | Select `views` which has count value greater than 70 |
+| `$.views[?(@.timestamp > '2018-05-22')]`| Select `views` for days later than '2018-05-22'. Dates compare as string (lexicographical order). |
 
 ## Download Settings
 
