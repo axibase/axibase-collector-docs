@@ -11,17 +11,17 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 2](./images/Figure2.png)
 
-3. Click on the **Add Job** button.
+3. Click **Add Job**.
 
    ![Figure 3](./images/Figure3.png)
 
 4. To select the type of job you would like to add, you may complete either of the following steps.
 
-   - Before completing the previous step, filter by desired job type (Socrata) in the **Jobs** tab. After clicking **Add Job** button, the desired job type is specified.
+   - Before completing the previous step, filter by desired job type (Socrata) in the **Jobs** tab. After clicking **Add Job**, the desired job type is specified.
 
    ![Figure 4](./images/Figure4.png)
 
-   - Press the **Add Job** button (step 3). On the following page, select your specified job type.
+   - Click **Add Job** (step 3). On the following page, select your specified job type.
 
    ![Figure 5](./images/Figure5.png)
 
@@ -38,8 +38,8 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 7](./images/Figure7.png)
 
-6. After specifying each of these fields, hit the **Save** button.
-7. Press the **Create Configuration** button.
+6. After specifying each of these fields, hit **Save**.
+7. Click **Create Configuration**.
 
    ![Figure 8](./images/Figure8.png)
 
@@ -53,15 +53,15 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
     ![Figure 10](./images/Figure10.png)
 
-11. After pressing the **Test** button, you should get the following output: Collector downloads a part of the JSON file (file limitation 1 MB) and generates commands based on
+11. After clicking **Test**, you should get the following output: Collector downloads a part of the JSON file (file limitation 1 MB) and generates commands based on
     the dataset configuration (series, property, message, metric, and entity tags). These commands are only for text purposes, and are not yet saved in ATSD.
 
-    You may save this configuration by clicking the **Save** button shown in the image from step 10.
+    You may save this configuration by clicking **Save**, shown in the image from step 10.
 
     ![Figure 11](./images/Figure11.png)
 
 12. Navigate back to the Socrata job (the figure shown in step 7). Press **Run**. This sends generated commands to ATSD, which enables user to begin working with this dataset.
-    After hitting **Run**, you are redirected to this page by the database. Hit the **Refresh** button after a couple of seconds. If the database successfully completed the job, you see something like the images below.
+    After hitting **Run**, you are redirected to this page by the database. Hit **Refresh** after a couple of seconds. If the database successfully completed the job, you see something like the images below.
 
     ![Figure 12](./images/Figure12.png)
 

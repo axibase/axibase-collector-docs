@@ -16,7 +16,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 
 ### Import HP OpenView JDBC job
 
-* Open the **Jobs** drop-down menu and click **Import** at the bottom of the screen. Upload the [collector-jobs-ovpm-jobs.xml](collector-jobs-ovpm-jobs.xml) file.
+* Open the **Jobs** drop-down list and click **Import** at the bottom of the screen. Upload the [collector-jobs-ovpm-jobs.xml](collector-jobs-ovpm-jobs.xml) file.
 
 ### Configure HP Open View HTTP Pool
 
@@ -36,7 +36,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 * Save the Job.
 * Open each configuration.
 * Open the `ovpm` Item List and define servers whose statistics you would like to collect.
-* Click the **Test** button and review the output.
+* Click **Test** and review the output.
 
 <!---
 ![](./images/ovmp.png)
@@ -44,7 +44,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 
 ### Schedule the Job
 
-* Open the **OVPM Job** page and click the **Run** button for the `ovpm-global` job.
+* Open the **OVPM Job** page and click **Run** for the `ovpm-global` job.
 * Make sure that the job status is `COMPLETED` and the `Items Read` and `Sent commands` fields show a value greater than 0.
 
 ![](./images/ovmp-global.png)

@@ -32,7 +32,7 @@ The most important part that the Socrata job relies on for processing is the `co
 The [settings](../job-generic.md) implemented at the job level are the same as for other job types.
 The [**Cron Schedule**](../scheduling.md) defines how often the dataset should be checked for new records and [**Storage**](../atsd-server-connection.md) determines the target ATSD instance where the commands should be sent.
 
-If the source dataset is static and never updated by the collecting entity, do not enable the job since the data remains unchanged. To load data once for a static dataset, save the job and click the **Run** button to execute the job manually. If, however, the underlying dataset is regularly updated with new rows by the collecting entity, enabling the job and specifying an appropriate schedule ensures that new data is continuously propagated into ATSD.
+If the source dataset is static and never updated by the collecting entity, do not enable the job since the data remains unchanged. To load data once for a static dataset, save the job and click **Run** to execute the job manually. If, however, the underlying dataset is regularly updated with new rows by the collecting entity, enabling the job and specifying an appropriate schedule ensures that new data is continuously propagated into ATSD.
 
 Each Socrata job can have multiple configurations, with each loading data for a different dataset. The job executes the configurations sequentially, after launch, and sends data into the same ATSD instance. Group datasets with similar update intervals under one job for efficient processing. For example, datasets that are updated weekly can be grouped into one Weekly Socrata job.
 

@@ -41,8 +41,8 @@ Template: `/aq/data/?startDate=${TIME("current_hour - 360 * hour", "yyyy-MM-dd'T
 
 ## Configuration
 
-* [FILE job configuration](airnow-job.xml). Import `xml` into Collector.
-* [CSV Parser](airnow-parser.xml). Import `xml` into ATSD.
+* [FILE job configuration](airnow-job.xml). Import XML into Collector.
+* [CSV Parser](airnow-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

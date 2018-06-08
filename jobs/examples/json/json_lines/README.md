@@ -13,7 +13,7 @@ JSON Lines is a text format, also called [newline-delimited JSON](http://jsonlin
 
 [JSON Lines](json_lines.txt) file.
 
-Before processing `JSON` Lines are converted to a `JSON` array:
+Before processing JSON Lines are converted to a JSON array:
 
 ```json
 [
@@ -61,7 +61,7 @@ Excluded Fields    | pitagvalue
 Metric Name Field  | pitagname
 Metric Value Field | pitagvalue
 
-[JSON Job Configuration](json_job_configuration.xml) file. Import `xml` into Collector.
+[JSON Job Configuration](json_job_configuration.xml) file. Import XML into Collector.
 
 ## Matched Objects
 

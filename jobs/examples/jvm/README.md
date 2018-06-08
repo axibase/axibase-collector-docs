@@ -28,13 +28,13 @@ Configure your Java application for JMX data collection as described by the [JMX
 
 ![](./images/jvm_jmx_configuration.png)
 
-* Click the **Test** button:
+* Click **Test**:
 
 ![](./images/jvm_test_jmx_configuration.png)
 
 ### Schedule the Job
 
-* Open the **JMX Job** page and click the **Run** button for the JVM JMX job.
+* Open the **JMX Job** page and click **Run** for the JVM JMX job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
@@ -75,7 +75,7 @@ Configure your Java application for JMX data collection as described by the [JMX
 
 ### Portal
 
-* Open the **Portals** menu and select **Configure**, click the **Import** button, and upload [`jvm_portal.xml`](configs/jvm_portal.xml).
+* Open the **Portals** menu and select **Configure**, click **Import**, and upload [`jvm_portal.xml`](configs/jvm_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the Entity tab, find the java application by name, and click the **Portal** icon:
 
@@ -92,7 +92,7 @@ Configure your Java application for JMX data collection as described by the [JMX
 
 #### Import Rules
 
-* Open the **Alerts** menu and select **Rules**, click the **Import** button, and upload [`jvm_rules.xml`](configs/jvm_rules.xml).
+* Open the **Alerts** menu and select **Rules**, click **Import**, and upload [`jvm_rules.xml`](configs/jvm_rules.xml).
 * For each created rule: open the rule in the **Rule Editor** and change recipient address on the **Email Notifications** tab.
 * These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
 

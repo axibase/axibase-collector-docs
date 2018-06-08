@@ -8,7 +8,7 @@ The latest release is available at the following [link](https://axibase.com/publ
 wget -O axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz
 ```
 
-If `wget` is not installed, use `curl`:
+If `wget` is not installed, use curl:
 
 ```bash
 curl -o axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz

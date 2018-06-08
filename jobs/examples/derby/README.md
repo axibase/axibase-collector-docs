@@ -64,10 +64,10 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 
 ### Entity Views
 
-* Open **Entity Views** page, click the **Import** button, and upload  [derby_entity_view.xml](configs/derby_entity_view.xml)
+* Open **Entity Views** page, click **Import** and upload  [derby_entity_view.xml](configs/derby_entity_view.xml)
 * Select the imported `Apache Derby Databases` view.
 * Select the Entity Group that you created earlier.
-* Click **View** button and browse information about existing entities:
+* Click **View** and browse information about existing entities:
 
 ![](./images/derby_entity_view.png)
 

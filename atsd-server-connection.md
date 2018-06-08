@@ -14,7 +14,7 @@ This document describes how to add a storage driver for sending data into ATSD.
 
 Since Axibase Collector transmits data to ATSD using the http/https protocol, you need to configure a HTTP connection pool by specifying connection properties, as well as various timeouts and limits.
 
-* Open **Data Sources > HTTP Pools** and click the **Add** button to arrive at the appropriate form.
+* Open **Data Sources > HTTP Pools** and click **Add** to arrive at the appropriate form.
 * Enter a pool name.
 * Set connection parameters to the target ATSD instance: hostname/IP address; port (8443); https protocol.
 * Check 'Ignore SSL Certificate Errors' to ignore certificate errors since ATSD certificate is self-signed by default.
@@ -26,9 +26,9 @@ Since Axibase Collector transmits data to ATSD using the http/https protocol, yo
 
 Click **Test** to verify the settings:
 
-* Response code is 200 if the connection is successful and credentials are valid.
-* Response code is 401 if credentials are not valid.
-* Response code is 403 if the specified user is not authorized to access the specified Test Path.
+* Response code is `200` if the connection is successful and credentials are valid.
+* Response code is `401` if credentials are not valid.
+* Response code is `403` if the specified user is not authorized to access the specified Test Path.
 
 #### Recommended HTTP Pool Settings
 
@@ -50,10 +50,10 @@ Socket Keep-Alive | true
 
 ## Storage Driver Configuration
 
-* Open the **Admin > Storage Drivers** page and click the **Add** button.
+* Open the **Admin > Storage Drivers** page and click **Add**.
 * Choose ATSD HTTP pool configured previously.
 * Set **Transport Type** to **HTTP_BATCH**.
 * Keep API path as `/api/v1`.
-* Click **Test**. Collector returns Response Code 200 if the connection was successful.
+* Click **Test**. ATSD returns Response Code `200` if the connection was successful.
 
 ![ATSD Server Test](./images/atsd_server.png)

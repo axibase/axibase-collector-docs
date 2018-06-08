@@ -24,8 +24,8 @@ Download Sunspot Daily Count report in a CSV file and upload the file into ATSD.
 
 ## Configuration
 
-* [FILE job configuration](ssn-job.xml). Import `xml` into Collector.
-* [CSV Parser](ssn-parser.xml). Import `xml` into ATSD.
+* [FILE job configuration](ssn-job.xml). Import XML into Collector.
+* [CSV Parser](ssn-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

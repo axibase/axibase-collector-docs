@@ -238,7 +238,7 @@ docker ps -a | grep axibase-collector
 
 ## Validation
 
-Log in to ATSD and verify that connected Docker hosts are displayed on the **Entities** > **Docker Hosts** page.
+Log in to ATSD and verify that connected Docker hosts are displayed on the **Entities > Docker Hosts** page.
 
 If the Docker host is missing in ATSD, open the **Jobs** page in Collector, check the **Result** column, and review the **Execution Details** page for any errors.
 

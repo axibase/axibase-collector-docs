@@ -18,7 +18,7 @@ Just like the general [JDBC job](jdbc.md), PI job has a **Data Source** field. T
 
 ### PI Configuration
 
-To configure a PI job, click the **Create Configuration** button.
+To configure a PI job, click **Create Configuration**.
 Use the table below to set configuration parameters.
 
 | FIELD              | DESCRIPTION  |

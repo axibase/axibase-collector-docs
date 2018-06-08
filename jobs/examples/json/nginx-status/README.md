@@ -20,7 +20,7 @@ Example: `http://demo.nginx.com/status`
 
 ## Configuration
 
-[JSON Job Configuration](nginx_status_job.xml) file. Import `xml` into Collector.
+[JSON Job Configuration](nginx_status_job.xml) file. Import XML into Collector.
 
 ### Matched Objects
 

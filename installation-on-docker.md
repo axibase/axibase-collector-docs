@@ -34,7 +34,7 @@ gzip docker-axibase-collector.tar
 docker load < docker-axibase-collector.tar.gz
 ```
 
-Alternatively, download a pre-built image file from the [Axibase Website](https://axibase.com/public/docker-axibase-collector.tar.gz).
+Alternatively, download a pre-built image file from the [`axibase.com`](https://axibase.com/public/docker-axibase-collector.tar.gz).
 
 ## Start Container
 

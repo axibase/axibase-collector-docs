@@ -71,7 +71,7 @@ $AXIBASE_COLLECTOR_HOME/bin/start-collector.sh
 
 ### Configure PI Server Database Connection
 
-* Open the **Data Sources** > **Databases** page and select the **`PI_JDBC`** database.
+* Open the **Data Sources > Databases** page and select the **`PI_JDBC`** database.
 * Provide connection parameters to the target PI Server are below:
 
 ![](./images/pijdbc-datasource.png)
@@ -93,13 +93,13 @@ SELECT 1
 
 * Choose one of the target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click the **Test** button, and review the output.
+* Open each configuration, click **Test**, and review the output.
 
 ![](./images/pi-metric-test.png)
 
 ### Schedule the Job
 
-* Open the **JDBC Job** page and click the **Run** button for the PI Server jobs.
+* Open the **JDBC Job** page and click **Run** for the PI Server jobs.
 * Make sure that the job status is `COMPLETED`, and **Items Read** and **Sent Commands** are greater than 0.
 
 ![](./images/pi-metric-exec-status.png)

@@ -123,7 +123,7 @@ FILE protocol supports directory traversal.
 
 | **Name** | **Description** |
 |:---|:---|
-| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings** > **CSV Parser** page in ATSD. The parser should exist and be enabled.|
+| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings > CSV Parser** page in ATSD. The parser should exist and be enabled.|
 | Auto Detect Encoding | Automatically detect file charset based on leading bytes, the header, and the heuristics. ATSD accepts the charset and the file is correctly parsed by the database. |
 | Encoding | Specify the file charset so that the file is correctly parsed by the database. |
 | Metric Prefix | Text added to all metrics names extracted from the CSV file, typically to column headers.<br>For example, if the Metric Prefix is set to `custom.`, and the file contains the `PageViews` column, the resulting metric name is `custom.Pageviews`.|

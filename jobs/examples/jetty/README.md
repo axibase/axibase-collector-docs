@@ -26,13 +26,13 @@ Configure your Java application for JMX monitoring as described by the [JMX Job 
 
 ![](./images/jetty_jmx_configuration.png)
 
-* Click the **Test** button and make sure that the result is correct:
+* Click **Test** and make sure that the result is correct:
 
 ![](./images/jetty_test_jmx_configuration.png)
 
 ### Schedule the Job
 
-* Open the `JMX Job` page and click the **Run** button for the Jetty JMX job.
+* Open the `JMX Job` page and click **Run** for the Jetty JMX job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
@@ -58,22 +58,22 @@ Configure your Java application for JMX monitoring as described by the [JMX Job 
 
 ### Entity Group
 
-* Open **Admin** menu and select **Entity Groups**, click the **Import** button, and upload  [jetty_entity_group.xml](configs/jetty_entity_group.xml).
+* Open **Admin** menu and select **Entity Groups**, click **Import**, and upload  [jetty_entity_group.xml](configs/jetty_entity_group.xml).
 * Select the imported `jetty-web-server` group.
 * Verify that the group contains your Jetty hosts.
 
 ### Entity Views
 
-* Open **Entity Views** menu and select **Configuration**, click the **Import** button, and upload  [jetty_entity_view.xml](configs/jetty_entity_view.xml).
+* Open **Entity Views** menu and select **Configuration**, click **Import** and upload  [jetty_entity_view.xml](configs/jetty_entity_view.xml).
 * Select the imported `Java Applications` view.
 * Select the Entity Group that you created earlier.
-* Click the **View** button and browse information about your entities.
+* Click **View** and browse information about your entities.
 
 ![](./images/jetty_entity_view.png)
 
 ### Portal
 
-* Open the **Portals** and select **Configure**, click the **Import** button, and upload [jetty_portal.xml](configs/jetty_portal.xml).
+* Open the **Portals** and select **Configure**, click **Import** and upload [jetty_portal.xml](configs/jetty_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open **Entities** tabs, find the java application by name, and click on the portal icon.
 

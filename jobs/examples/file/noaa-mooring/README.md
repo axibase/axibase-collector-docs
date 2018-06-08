@@ -39,8 +39,8 @@ CCE2_121W_34N,34.324,-120.816,3/24/12,15:17,563.1,2,2.78,399.1,2,2.62,1015.7,11.
 
 ## Configuration
 
-* [FILE job configuration](noaa-mooring-job.xml). Import `xml` into Collector.
-* [CSV Parser](noaa-mooring-parser.xml). Import `xml` into ATSD.
+* [FILE job configuration](noaa-mooring-job.xml). Import XML into Collector.
+* [CSV Parser](noaa-mooring-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

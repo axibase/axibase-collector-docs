@@ -65,7 +65,7 @@ Time Format    | yyyy-MM-dd
 Time Zone      | UTC
 Metric Prefix  | github-status.
 
-[JSON Job Configuration](github_daily_summary_job.xml) file. Import `xml` into Collector.
+[JSON Job Configuration](github_daily_summary_job.xml) file. Import XML into Collector.
 
 ### Matched Objects
 

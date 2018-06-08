@@ -93,7 +93,7 @@ series e:bls d:2016-07-01T00:00:00.000Z m:CUSR0000SA0=239.81
 
 ## Configuration
 
-* [JSON job configuration](bls-job.xml). Import `xml` into Collector.
+* [JSON job configuration](bls-job.xml). Import XML into Collector.
 
 ## Screenshot
 

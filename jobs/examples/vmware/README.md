@@ -18,7 +18,7 @@ VMware vCenter collects and stores statistics from ESX servers in a Microsoft SQ
 
 ### Configure VMware Database Connection
 
-* Open the **Data Sources** > **Databases** page and select the `sql-vmware` database.
+* Open the **Data Sources > Databases** page and select the `sql-vmware` database.
 * Provide connection parameters to the target `VIM_VCDB` database as displayed below:
 
 ![](./images/vmware-datasource.png)
@@ -40,14 +40,14 @@ Query result must be `Query OK`.
 
 * Choose a target ATSD server if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click the **Test** button, and review the output. See [Data Queries](#data-queries) below.
+* Open each configuration, click **Test**, and review the output. See [Data Queries](#data-queries) below.
 
 ![](./images/test_result.png)
 
 ### Schedule the Job
 
-* Open the **JDBC Job** page and click the **Run** button for the VMware job.
-* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
+* Open the **JDBC Job** page and click **Run** for the VMware job.
+* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 

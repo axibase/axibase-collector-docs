@@ -57,7 +57,7 @@ listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
 
 ### Configure PostgreSQL Database Connection
 
-* Open the **Data Sources** > **Databases** page and select the `postgresql` database.
+* Open the **Data Sources > Databases** page and select the `postgresql` database.
 * Provide connection parameters to the target PostgreSQL database displayed below:
 
 ![](./images/postgres-datasource.png)
@@ -79,7 +79,7 @@ SELECT 1
 
 * Choose one of the target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click on the **Test** button, and review the output. See [Data Queries](#data-queries).
+* Open each configuration, click **Test**, and review the output. See [Data Queries](#data-queries).
 
 ![](./images/test_result.png)
 
@@ -111,7 +111,7 @@ SELECT 1
 
 ### Entity Groups
 
-* Open **Settings** > **Entity Groups**.
+* Open **Settings > Entity Groups**.
 * Create a new Entity Group with the split button at the bottom of the page, navigate to the **Expression** tab under **Members**, and enter the following expression:
 
 ```javascript

@@ -26,8 +26,8 @@ API key is required.
 
 ## Configuration
 
-* [FILE job configuration](pvout-job.xml). Import `xml` into Collector.
-* [CSV Parser](pvout-parser.xml). Import `xml` into ATSD.
+* [FILE job configuration](pvout-job.xml). Import XML into Collector.
+* [CSV Parser](pvout-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

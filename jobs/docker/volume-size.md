@@ -134,7 +134,7 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
 
 ## Volume View
 
-To display volume sizes, import the updated [Entity View](volume-entity-view.xml) for Docker Volumes. Open **Entity Views** > **Configure**  and click **Import** on the split button at the bottom of the screen with the **Replace Existing Entity Views** option enabled.
+To display volume sizes, import the updated [Entity View](volume-entity-view.xml) for Docker Volumes. Open **Entity Views > Configure**  and click **Import** on the split button at the bottom of the screen with the **Replace Existing Entity Views** option enabled.
 
 ![volume-view](./volume-view.png)
 

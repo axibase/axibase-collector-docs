@@ -27,8 +27,8 @@ Reading: 0 Writing: 1 Waiting: 6
 
 ## Configuration
 
-* [FILE job configuration](nginx-job.xml). Import `xml` into Collector.
-* [CSV Parser](nginx-parser.xml). Import `xml` into ATSD.
+* [FILE job configuration](nginx-job.xml). Import XML into Collector.
+* [CSV Parser](nginx-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

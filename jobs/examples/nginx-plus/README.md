@@ -25,9 +25,9 @@ Log in to Axibase Collector web interface.
 
 ### Create Item List for nginx PLUS servers
 
-* Open the **Collections** > **Item Lists** page.
+* Open the **Collections > Item Lists** page.
 * Add a new TEXT [Item List](../../../collections.md) named `nginx-plus-servers` containing DNS names or IP addresses of the monitored nginx PLUS servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path `/status`. If the protocols and ports are different, move the entire url to the list and set Path field equal to the`${ITEM}` placeholder.
-* Click the **Save** button.
+* Click **Save**.
 
 ![Server list example](./images/ngp_item_list.png)
 
@@ -37,7 +37,7 @@ Log in to Axibase Collector web interface.
 * Open the `nginx-plus-statistics` JSON job.
 * If the **Storage** drop-down is set to **None**, select the target ATSD server.
 * Set **Status** to **Enabled**.
-* Click the **Save** button.
+* Click **Save**.
 
 The job consists of several settings blocks, each of which is responsible for processing specific data from the nginx PLUS status page. Each block forms special `series` and `property` commands for ATSD depending on what is being processed by the block. For example, the first settings block is responsible for processing general information about an nginx PLUS Server. This block fetches different metrics: `connection`, `ssl handshakes`, `requests`, `respawned processses` of the server and general properties such as `address`, `nginx_version`, `load_timestamp`, etc.
 
@@ -78,13 +78,13 @@ List of collected [nginx PLUS Server Metrics](./nginx-plus-server-metrics.md).
 
 ## Entity Group
 
-* Open the **Settings** menu and select **Entity Groups**, click the **Import** button, and upload [`nginx_plus_entity_group.xml`](./configs/nginx-plus-entity-group.xml).
+* Open the **Settings** menu and select **Entity Groups**, click **Import**, and upload [`nginx_plus_entity_group.xml`](./configs/nginx-plus-entity-group.xml).
 * Select the imported `nginx-plus-servers` group.
 * Verify that the group contains your nginx servers.
 
 ## Portal
 
-* Open the **Portals** menu and select **Configure**, click the **Import** button, and upload [nginx-plus-portal.xml](./configs/nginx-plus-portal.xml).
+* Open the **Portals** menu and select **Configure**, click **Import**, and upload [nginx-plus-portal.xml](./configs/nginx-plus-portal.xml).
 * Click the **Assign** link and associate the portal with the entity group created earlier.
 * Open **Entity** tabs, find the nginx PLUS servers you would like to see information about, and click the **Portal** icon.
 

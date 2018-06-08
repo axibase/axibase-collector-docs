@@ -44,7 +44,7 @@ Add `cloudwatch-ro-user` to the `cloudwatch-ro-group`.
 
 Open the **Group** page and click **Create Group Policy**
 
-Enter the following policy text in `JSON` format, click **Validate Policy** and save the configuration.
+Enter the following policy text in JSON format, click **Validate Policy** and save the configuration.
 
 ```json
 {

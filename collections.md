@@ -30,7 +30,7 @@ Job types with support for Item List automation:
 
 ### Configuration
 
-To create a new list, open the **Collections** > **Item Lists** page, and click **Add**:
+To create a new list, open the **Collections > Item Lists** page, and click **Add**:
 
 | **Field** | **Description**|
 |:----|:---|
@@ -204,7 +204,7 @@ result:
 2513839
 ```
 
-##### Example with `JSON` content
+##### Example with JSON content
 
 ![URL Type JSON](./images/collection_url_type_json.png)
 

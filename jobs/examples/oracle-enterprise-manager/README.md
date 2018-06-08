@@ -30,7 +30,7 @@ Oracle EM collects and stores statistics from remote databases, applications, an
 SELECT NULL FROM dual
 ```
 
-* Click on the **Meta Data** button and check that the `SYSMAN` schema is present in the list of schemas.
+* Click **Meta Data** and check that the `SYSMAN` schema is present in the list of schemas.
 
 ### Verify Job Configuration
 
@@ -41,14 +41,14 @@ SELECT NULL FROM dual
 
 * Choose one of target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click the **Test** button, and review the output. See [Data Queries](#data-queries) for more information.
+* Open each configuration, click **Test**, and review the output. See [Data Queries](#data-queries) for more information.
 
 ![](./images/test_result.png)
 
 ### Schedule the Job
 
-* Open the **JDBC Job** page and click the **Run** button for the Oracle EM JDBC job.
-* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
+* Open the **JDBC Job** page and click **Run** for the Oracle EM JDBC job.
+* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 

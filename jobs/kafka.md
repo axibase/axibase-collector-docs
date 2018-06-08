@@ -13,7 +13,7 @@ In comparison to [Generic job](../job-generic.md), Kafka job has an additional *
 
 ### Job Configuration
 
-To configure a Kafka job, click the **Create Configuration** button.
+To configure a Kafka job, click **Create Configuration**.
 Use the table below to set configuration parameters.
 
 **Field** | **Description**

@@ -173,22 +173,22 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Entity group
 
-* Open **Admin:Entity Groups**, click the **Import**, button and upload  [activemq_entity_group.xml](configs/activemq_entity_group.xml).
+* Open **Settings > Entity Groups**, select **Import** from the split button and upload  [activemq_entity_group.xml](configs/activemq_entity_group.xml).
 * Select the imported `apache-activemq-brokers` group.
 * Verify that the group contains your Active MQ hosts.
 
 ### Entity Views
 
-* Open **Configuration:Entity Views**, click the **Import** button and upload  [activemq_entity_view.xml](configs/activemq_entity_view.xml).
+* Open **Entity Views > Configure**, select **Import** from the split button and upload  [activemq_entity_view.xml](configs/activemq_entity_view.xml).
 * Select the imported `Apache ActiveMQ Brokers` view.
 * Select the Entity Group that you created earlier.
-* Click the **View** button and browse information about your entities.
+* Click **View** and browse information about your entities.
 
 ![](./images/activemq_entity_view.png)
 
 ### Portal
 
-* Open **Configuration: Portals** and click the **Import** button and upload [activemq_portal.xml](configs/activemq_portal.xml).
+* Open the **Portals** menu and select **Configure**. Select **Import** from the split button and upload [activemq_portal.xml](configs/activemq_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the **Entities** tab, find the java application by name, and click the **Portal** icon.
 
@@ -205,7 +205,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 #### Import Rules
 
-* Open the **Configuration: Rules** page, click the **Import**, button and upload [jvm_rules.xml](configs/activemq_rules.xml).
+* Open the **Configuration > Rules** page, click **Import** and upload [jvm_rules.xml](configs/activemq_rules.xml).
 * For each created rule, open the rule in the **Rule Editor**, and change the recipient address on the **Email Notifications** tab.
 * These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
 

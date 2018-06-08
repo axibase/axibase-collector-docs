@@ -22,20 +22,20 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 
 ### Configure Tomcat JMX Connection
 
-* Open the **Jobs** > **JMX** page and select the `jmx-tomcat` job.
+* Open the **Jobs > JMX** page and select the `jmx-tomcat` job.
 * For each JMX Configuration:
   * Provide connection parameters to the target Tomcat:
 
 ![](./images/tomcat_jmx_configuration.png)
 
-* Click the **Test** button and make sure that the result is similar to the below screenshot:
+* Click **Test** and make sure that the result is similar to the below screenshot:
 
 ![](./images/tomcat_test_jmx_configuration.png)
 
 ### Schedule the Job
 
-* Open the **JMX Job** page and click the **Run** button for the Tomcat JMX job.
-* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
+* Open the **JMX Job** page and click **Run** for the Tomcat JMX job.
+* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -60,16 +60,16 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 
 ### Entity group
 
-* Open the **Settings** menu and select **Entity Groups**, click the **Import** button, and upload  [`tomcat_entity_group.xml`](configs/tomcat_entity_group.xml).
+* Open the **Settings** menu and select **Entity Groups**, click **Import**, and upload  [`tomcat_entity_group.xml`](configs/tomcat_entity_group.xml).
 * Select the imported `apache-tomcat` group.
 * Verify that the group contains your Tomcat hosts.
 
 ### Entity Views
 
-* Open the **Entity Views** menu and select **Configure**, click the **Import** button, and upload  [`tomcat_entity_view.xml`](configs/tomcat_entity_view.xml).
+* Open the **Entity Views** menu and select **Configure**, click **Import**, and upload  [`tomcat_entity_view.xml`](configs/tomcat_entity_view.xml).
 * Select the imported **Apache Tomcat Containers** view.
 * Select the Entity Group that you created earlier.
-* Click the **View** button and browse information about your entities:
+* Click **View** and browse information about your entities:
 
 ![](./images/tomcat_entity_view.png)
 

@@ -12,7 +12,7 @@ Use the table below to create HTTP job configuration.
 | HTTP Pool |  Name of one of the configured HTTP pools that you want to use. |
 | Path |   Path to target files located on the remote or local file system from which HTTP Job reads.  |
 | Response Text |  Text for which Axibase Collector searches in the response from the server.   |
-| Response Text Match Type |  Defines how Collector searches for the necessary response text. <br> Possible options: <br>  `CONTAINS` - select this option if you want Collector to search for a partial match. <br>  `EQUALS` - select this option if you want to search for the exact match. <br> `REGEXP` - select this option if you want to use regular expressions for the search. |
+| Response Text Match Type |  Defines how Collector searches for the necessary response text. <br> Possible options: <br>  **CONTAINS** - select this option if you want Collector to search for a partial match. <br>  **EQUALS** - select this option if you want to search for the exact match. <br> **REGEXP** - select this option if you want to use regular expressions for the search. |
 | Failure Retest |  Number of attempts to re-establish the connection.   |
 | Failure Retest Interval |   Delay between attempts to re-establish connection.    |
 | Enable Web Driver |  Defines whether you want to enable the Web Driver tool.  |
@@ -33,7 +33,7 @@ Use the table below to create HTTP job configuration.
 | 4 | `SocketTimeoutException` |
 | 5 | Other exceptions without HTTP response status |
 | 200 | `HTTP response status = 200`, but response text failed to match. |
-| xxx | HTTP response status. For example 500 (Server Error). |
+| xxx | HTTP response status. For example `500` (Server Error). |
 
 ### Configuration Example
 

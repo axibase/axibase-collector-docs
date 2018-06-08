@@ -22,7 +22,7 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 
 ### Configure Microsoft SCOM Database Connection
 
-* Open the **Data Sources** > **Databases** page and select the `scom` database.
+* Open the **Data Sources > Databases** page and select the `scom` database.
 * Provide connection parameters to the target `scom-2012` database as displayed below:
 
 ![](./images/scom-datasource.png)
@@ -44,13 +44,13 @@ SELECT 1
 
 * Choose one of target ATSD instances if the Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click on the **Test** button, and review the output. See [Data Queries](#data-queries) below.
+* Open each configuration, click **Test** and review the output. See [Data Queries](#data-queries) below.
 
 ![](./images/test_result.png)
 
 ### Schedule the Job
 
-* Open the **JDBC Job** page and click the **Run** button for the Microsoft SCOM JDBC job.
+* Open the **JDBC Job** page and click **Run** for the Microsoft SCOM JDBC job.
 * Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)

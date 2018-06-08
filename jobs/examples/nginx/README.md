@@ -47,7 +47,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 
 ### Create Item List for nginx servers
 
-* Open the **Collections** > **Item Lists** page.
+* Open the **Collections > Item Lists** page.
 * Add a new TEXT [Item List](../../../collections.md) named **nginx-servers**, containing DNS names or IP addresses of the monitored nginx servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire url to the list and set the **Path** field equal to the `${ITEM}` placeholder.
 * **Save** the list.
 
@@ -103,13 +103,13 @@ List of collected [nginx server metrics](./nginx-basic-server-metrics.md).
 
 ## Entity Group
 
-* Open **Settings > Entity Groups**, click the **Import** button, and upload [nginx_basic_entity_group.xml](./configs/nginx_entity_group.xml).
+* Open **Settings > Entity Groups**, click **Import**, and upload [nginx_basic_entity_group.xml](./configs/nginx_entity_group.xml).
 * Select imported `nginx-servers` group.
 * Verify that the group contains your nginx servers.
 
 ## Portal
 
-* Open the **Portals** page, click the **Import** button, and upload [`nginx_portal.xml`](./configs/nginx_portal.xml).
+* Open the **Portals** page, click **Import**, and upload [`nginx_portal.xml`](./configs/nginx_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the **Entity** tab, find the nginx servers you would like to see information about, and click the **Portal** icon.
 
