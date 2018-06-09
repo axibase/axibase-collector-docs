@@ -160,7 +160,7 @@ Reads lines from a remote file/page.
 **Field** | **Description**
 :--- | :---
 `HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records are retrieved.
-`Path` | HTTP(s) Path to file. If HTTP Pool is enabled, the path should be relative. Otherwise the Path should be a full URI including the protocol, host, port and path.
+`Path` | HTTP or HTTPS Path to file. If HTTP Pool is enabled, the path should be relative. Otherwise the Path should be a full URI including the protocol, host, port and path.
 `Content Format` | Content format in the file. Supported formats: `MULTILINE_TEXT` and JSON.
 `Item Filter`| Expression for matching item. This field also supports regex expression, for example: REGEXP(expression).
 `JSON Path` | JSON Path expression to match a list of items in the JSON document.

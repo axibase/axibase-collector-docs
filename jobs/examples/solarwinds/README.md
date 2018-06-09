@@ -81,9 +81,9 @@ SELECT 1
 
 ![](./images/solarwinds_base_portal_31.png)
 
-* SolarWinds - VMware VM
-* SolarWinds - VMware Host
-* SolarWinds - VMware Cluster
+* SolarWinds: VMware VM
+* SolarWinds: VMware Host
+* SolarWinds: VMware Cluster
 
 ## Data Queries
 

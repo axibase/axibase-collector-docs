@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 class Collector():
     def __init__(self, configuration):
         '''
-        Build a collector to collect data from nginx-plus server and store the data in ATSD.
+        Build aCollectorto collect data from nginx-plus server and store the data in ATSD.
         All the required data is provided via config object passed to the constructor.
         See :class:`Configuration` for more details.
         '''

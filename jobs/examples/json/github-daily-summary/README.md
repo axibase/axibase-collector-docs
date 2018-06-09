@@ -113,7 +113,7 @@ series e:github-status d:2016-07-08T00:00:00.000Z m:github-status.major=0 m:gith
 
 ![](./images/settings.png)
 
-### Viewer
+### **Viewer**
 
 ![](./images/viewer.png)
 

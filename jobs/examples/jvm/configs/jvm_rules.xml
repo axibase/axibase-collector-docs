@@ -134,7 +134,7 @@
         <disableEntityGrouping>false</disableEntityGrouping>
         <leavingEvents>false</leavingEvents>
         <description>
-            <![CDATA[Notifies when Java memory garbage collector (Sweep) is invoked too frequently]]></description>
+            <![CDATA[Notifies when Java memory garbageCollector(Sweep) is invoked too frequently]]></description>
         <minimumInterval>
             <intervalCount>1</intervalCount>
             <intervalUnit>MINUTE</intervalUnit>

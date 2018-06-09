@@ -233,7 +233,7 @@ docker ps -a | grep axibase-collector
 
 * Log in to the Axibase Collector web interface at `https://hostname:port`.
 * Open the **Jobs > Docker** page and click **Add Job**. Enter the job name. Click **Enabled** to enable the job. Click **Save**.
-* Click the **Use Wizard** button, specify the Docker Engine hostname, API port (2376), and attach `{cert,key,ca}.pem` files.
+* Click **Use Wizard**, specify the Docker Engine hostname, API port (2376), and attach `{cert,key,ca}.pem` files.
 * Click **Validate** and then **Save** if the test is successful.
 
 ## Validation
@@ -254,7 +254,7 @@ The following message indicates that the initial configuration is finished:
 
 ## UI
 
-Verify the https port that is assigned to the collector and open the application in your browser: `https://container-ip:port`
+Verify the https port that is assigned to theCollectorand open the application in your browser: `https://container-ip:port`
 
 ```sh
 docker ps | grep axibase-collector

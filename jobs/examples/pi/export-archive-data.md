@@ -21,10 +21,10 @@ Select **PI** in the **Jobs** drop-down list. Click **Add Job**. Fill in all the
 
 Click **Create Configuration**.
 Provide tag-to-entity mapping. You can use freemarker expressions in the `Entity` field for string manipulations.
-If you want to query only a subset of available tags or get picomp2 values satisfying the condition, fill in the `WHERE Filter` fields.
+If you want to query only a subset of available tags or get `picomp2` values satisfying the condition, fill in the `WHERE Filter` fields.
 ![](./images/pi-config.png)
 
-When you finish, click **Test** to see the queries executed by the job, returned result set, and generated ATSD network commands. During the test mode the number of queried picomp2 rows is limited by 1000.
+When you finish, click **Test** to see the queries executed by the job, returned result set, and generated ATSD network commands. During the test mode the number of queried `picomp2` rows is limited by 1000.
 
 ![](./images/pi-test-1a.png)
 

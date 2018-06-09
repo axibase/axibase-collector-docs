@@ -36,7 +36,7 @@ State or Province Name (full name) [Some-State]:CA
 Locality Name (eg, city) []:Cupertino
 Organization Name (eg, company) [Internet Widgits Pty Ltd]:MyCompany
 Organizational Unit Name (eg, section) []:
-Common Name (e.g. server FQDN or YOUR name) []:$HOST
+Common Name (for example server FQDN or YOUR name) []:$HOST
 Email Address []:
 ```
 

@@ -90,7 +90,7 @@ The launch command is different if the Collector container is used to [monitor s
 `--restart` | No | Auto-restart policy. **Not supported in all Docker Engine versions.**
 `--name` | No | Assign a host-unique name to the container.
 
-To bind the collector to a particular port instead of a random one, replace `--publish-all` with `--publish 10443:9443`, where the first number indicates an available port on the Docker host.
+To bind theCollectorto a particular port instead of a random one, replace `--publish-all` with `--publish 10443:9443`, where the first number indicates an available port on the Docker host.
 
 ## Environment Variables
 
@@ -101,9 +101,9 @@ To bind the collector to a particular port instead of a random one, replace `--p
 |`ATSD_SERVICE_PORT_TCP` | No | Tcp port for [network commands](https://axibase.com/docs/atsd/api/network/). |
 |`ATSD_URL` | No | URL (protocol://host:port) for the Axibase Time Series Database connection.|
 |`COLLECTOR_USER_NAME` | No | User name for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
-|`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data collector account.|
+|`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the dataCollectoraccount.|
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
-|`JAVA_OPTS` | No| Java VM options.<br>By default the collector starts with an option `-Xmx256m` |
+|`JAVA_OPTS` | No| Java VM options.<br>By default theCollectorstarts with an option `-Xmx256m` |
 
 For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://10.102.0.6:8443`, specify:
 
@@ -156,7 +156,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ee15099d9f88        axibase/collector   "/bin/bash /opt/axiba"   33 seconds ago      Up 32 seconds       0.0.0.0:32769->9443/tcp   axibase-collector
 ```
 
-Take note of the public https port assigned to axibase-collector container, i.e. **32769** in the example above.
+Take note of the public https port assigned to axibase-collector container, for example **32769** in the example above.
 
 ## Login
 

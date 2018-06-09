@@ -118,7 +118,7 @@ Metric Value Field | x.['a.b'].[2]
 
 ![](./images/settings.png)
 
-### Viewer
+### **Viewer**
 
 ![](./images/viewer.png)
 

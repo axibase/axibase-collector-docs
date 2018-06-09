@@ -101,7 +101,7 @@ series e:json_lines d:2016-07-01T10:28:07.638Z m:metric2=250
 
 ![](./images/settings.png)
 
-### Viewer
+### **Viewer**
 
 ![](./images/viewer.png)
 

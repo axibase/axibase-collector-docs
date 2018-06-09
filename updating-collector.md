@@ -14,7 +14,7 @@ Copy the `axibase-collector.tar.gz` file to the server where Axibase Collector i
 
 ## Switch User
 
-Switch to the user under which collector java processes execute.
+Switch to the user under whichCollectorjava processes execute.
 
 To look up the Axibase Collector installation directory, run:
 

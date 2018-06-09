@@ -28,16 +28,16 @@ The files are parsed by ATSD using a [CSV Parser](https://axibase.com/docs/atsd/
 
 | **Protocol** | **Scheme** | **Wildcards** | **Description** |
 |:---|:---|:---|:---|
-| FILE | `file://` | yes | Read file(s) from the local file system.<br>`/tmp/report/daily*.csv` |
-| HTTP | `http(s)://` | no | Download a file from a web server.<br>`https://example.com/traffic/direct.csv` |
-| HTTP_POOL | `http(s)://` | no | Download a file from a web server using pre-configured HTTP pool.<br>`/traffic/direct.csv` |
-| FTP | `ftp://` | yes | Download file(s) from an FTP server.<br>`ftp://example.com/data/CCE2_121W_*.csv` |
-| SFTP | `sftp://` | yes | Download file(s) from a UNIX server over STFP protocol.<br>`sftp://ftp-reader:my-pwd@10.52.0.10:22/home/ftp-reader/*.csv` |
+| FILE | `file://` | yes | Read file or files from the local file system.<br>`/tmp/report/daily*.csv` |
+| HTTP | `http://` or `https://` | no | Download a file from a web server.<br>`https://example.com/traffic/direct.csv` |
+| HTTP_POOL | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br>`/traffic/direct.csv` |
+| FTP | `ftp://` | yes | Download file or files from an FTP server.<br>`ftp://example.com/data/CCE2_121W_*.csv` |
+| SFTP | `sftp://` | yes | Download file or files from a UNIX server over STFP protocol.<br>`sftp://ftp-reader:my-pwd@10.52.0.10:22/home/ftp-reader/*.csv` |
 | SCP | `scp://` | no | Download a file from a UNIX server over SCP protocol.<br>`scp://user-1:my-pwd@example.com:4022/home/user-1/r20160617.csv` |
 
 ## File Watch
 
-In addition to scheduled checks, the FILE protocol exposes a setting to continuously watch the target path(s) for file creation and modification events.
+In addition to scheduled checks, the FILE protocol exposes a setting to continuously watch the target path or paths for file creation and modification events.
 
 When some creates or changes the file in the watched directory, the job is processed with the same workflow as files identified with the scheduled execution, except that the job continues running and watching for subsequent changes until the next job start time or until the watch interval expires.
 
@@ -115,7 +115,7 @@ FILE protocol supports directory traversal.
 | **Name** | **Description** |
 |:---|:---|
 | JSON Path | JSONPath expression to match an object or a list of objects in the JSON document. <br>Default path is `$`, which stands for the root object.<br>Collector attempts to convert fields of the matched objects to a tabular structure, using field names as column names and field values as cell values. For fields in the nested objects, column names are formed by concatenating parent object names using dot notation. Each matched objects returned by the JSON path expression is represented as a separate line in a CSV file. |
-| Traversal Depth | Limit traversal of the matched object(s). <br>If **Depth** is set to a positive number, nested objects are included in the CSV files up to their depth level measured as the distance between the nested object and the matched object. When **Depth** is set to 1, the collector includes only direct fields of the matched objects. If **Depth** is set to 0 or a negative number, the collector traverses and includes all nested object in the CSV files. |
+| Traversal Depth | Limit traversal of the matched object or objects. <br>If **Depth** is set to a positive number, nested objects are included in the CSV files up to their depth level measured as the distance between the nested object and the matched object. When **Depth** is set to 1, theCollectorincludes only direct fields of the matched objects. If **Depth** is set to 0 or a negative number, theCollectortraverses and includes all nested object in the CSV files. |
 | Included Fields | By default, all fields with primitive data types (number, string, boolean) are included in the CSV file. Array fields are ignored. The list of included fields can be overridden explicitly by specifying particular field names, separated by comma. |
 | Excluded Fields | List of field names to be excluded from the CSV file. Applies if **Included Fields** is empty. |
 
@@ -124,23 +124,23 @@ FILE protocol supports directory traversal.
 | **Name** | **Description** |
 |:---|:---|
 | Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings > CSV Parser** page in ATSD. The parser should exist and be enabled.|
-| Auto Detect Encoding | Automatically detect file charset based on leading bytes, the header, and the heuristics. ATSD accepts the charset and the file is correctly parsed by the database. |
-| Encoding | Specify the file charset so that the file is correctly parsed by the database. |
+| Auto Detect Encoding | Automatically detect file `charset` based on leading bytes, the header, and the heuristics. ATSD accepts the `charset` and the file is correctly parsed by the database. |
+| Encoding | Specify the file `charset` so that the file is correctly parsed by the database. |
 | Metric Prefix | Text added to all metrics names extracted from the CSV file, typically to column headers.<br>For example, if the Metric Prefix is set to `custom.`, and the file contains the `PageViews` column, the resulting metric name is `custom.Pageviews`.|
 | Default Entity | Default Entity name to use if the file does not contain information about the entity name. <br>The Default Entity name may include placeholders, such as `${ITEM}`, which are substituted by an element value when the Item List is selected. <br>Supported placeholders are: `${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
 | Custom Tags | List of `name=value` tag pairs, one per line. The tags are be stored by the database as additional series/property/message tags.<br>Supported placeholders are:`${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
 | Use Current Time | Enables all data contained in the CSV file to be stored with the current time of the Collector instead of the date/time possibly contained in the file. This option should be used when the CSV file does not contain any time/date information.|
 | Time Zone | Timezone which should be used by ATSD when parsing the datetime column in the CSV file, if the datetime format does not contain information about the time zone.|
-| Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, the collector job may not know if the upload file is valid or if there are errors. |
+| Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, theCollectorjob may not know if the upload file is valid or if there are errors. |
 | Process in Rule Engine | Process parsed commands in the [ATSD Rule Engine](https://axibase.com/docs/atsd/rule-engine/). If enabled, allows the data in the CSV file to be checked by rules. |
-| Ignore Unchanged Files | Prevents unchanged files from being repeatedly uploaded into the database. When enabled, the collector compares the downloaded file's last modified time (FILE, FTP, SFTP) or MD5 hashcode (HTTP, HTTP_POOL, SCP) with the previously stored information and ignores the upload if the file has not changed. For FTP and SFTP protocols, the remote files with unchanged last modified times are not downloaded to the collector host.|
+| Ignore Unchanged Files | Prevents unchanged files from being repeatedly uploaded into the database. When enabled, theCollectorcompares the downloaded file's last modified time (FILE, FTP, SFTP) or MD5 hashcode (HTTP, HTTP_POOL, SCP) with the previously stored information and ignores the upload if the file has not changed. For FTP and SFTP protocols, the remote files with unchanged last modified times are not downloaded to theCollectorhost.|
 
 ### Post-Processing
 
 | **Name** | **Description** |
 |:---|:---|
 | Delete Files on Upload | Applies to FILE protocol. Delete source files after you upload them to the database.|
-| Copy Files | Copy downloaded file(s) into a **Success** or **Error** directory based on a local or remote status code. For example, if the file failed during validation, the file is copied to the **Error** directory.|
+| Copy Files | Copy downloaded file or files into a **Success** or **Error** directory based on a local or remote status code. For example, if the file failed during validation, the file is copied to the **Error** directory.|
 | Success Directory | Absolute path to a directory for storing successfully uploaded files.<br>If the directory is specified but does not exist, the system creates the directory.<br>Supported placeholders: `${ITEM}`, `${TIME()}`.|
 | Error Directory | Absolute path to a directory for storing a file that failed to get uploaded successfully for any reason.<br>If the directory is specified but does not exist, the system creates the directory.<br>Supported placeholders: `${ITEM}`, `${TIME()}`.|
 

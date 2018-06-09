@@ -34,9 +34,9 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
    -Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_BASE}/conf/jmx.access"
 ```
 
-To verify connectivity with the remote host, click the **Test** or **Viewer** buttons.
+To verify connectivity with the remote host, click **Test** or **Viewer**.
 
-Add hostname to the `/etc/hosts` file directory on the collector machine in case of `UnknownHostException`.
+Add hostname to the `/etc/hosts` file directory on theCollectormachine in case of `UnknownHostException`.
 
 ```java
 Failed to retrieve RMIServer stub: javax.naming.ConfigurationException [Root exception is java.rmi.UnknownHostException: Unknown host: NURSWGVML011; nested exception is: java.net.UnknownHostException: NURSWGVML011]
@@ -72,7 +72,7 @@ java.lang:type=Runtime>SystemProperties.java.rmi.server.hostname.value
 
 Configuration includes a list of MBean queries consisting of two parts: object name pattern and attribute list.
 
-The list of queries can be entered manually or by opening [Viewer](#viewer), expanding MBean hierarchy, and choosing attributes of interest.
+The list of queries can be entered manually or by opening [**Viewer**](#viewer), expanding MBean hierarchy, and choosing attributes of interest.
 
 Both parts of the query support wildcards:
 
@@ -154,7 +154,7 @@ The each row is splitted by [freemarker function](https://freemarker.apache.org/
 
 ![](./images/jmx_configuration_example.png)
 
-## Viewer
+## **Viewer**
 
 Click **Viewer** to open a tree-based MBean navigator displaying available Management Beans and their attributes.
 
@@ -164,10 +164,10 @@ Select a checkbox next to an attribute name to add to the list of collected attr
 
 ## Ignored MBean Attributes
 
-The following MBean attributes are ignored from Viewer and the commands:
+The following MBean attributes are ignored from **Viewer** and the commands:
 
 * Attribute value cannot be obtained due to a processing error: <br>- `UnsupportedOperationException`<br>- `UnmarshalException`<br>- `ReflectionException`<br>- `RuntimeOperationsException`<br>- `InstanceNotFoundException`
-* Attribute value is NaN (Not a Number) for numeric attributes in case of a **series** command. <br>NaN can occur, for example, on division by zero.
+* Attribute value is NaN (Not a Number) for numeric attributes in case of a **series** command. <br>`NaN` can occur, for example, on division by zero.
 
 To view attributes ignored due to processing errors, enable debugging for the `MBeansInfoExtractor` class:
 

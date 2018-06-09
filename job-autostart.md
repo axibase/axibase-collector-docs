@@ -7,7 +7,7 @@ To automatically import and enable a job, use the following parameters:
 **Name** | **Description**
 ----- | -----
 `-job-enable` | Enable specified job by name. Support job names separated by commas.
-`-job-path` | Import a job from a specified file or HTTP(s) content. Supports comma separated files. If the `job-enable` parameter is not defined, **ALL** jobs in the file start.
+`-job-path` | Import a job from a specified file or HTTP or HTTPS content. Supports comma separated files. If the `job-enable` parameter is not defined, **ALL** jobs in the file start.
 `-job-execute` | Run specified jobs by name after the start-up. Multiple job names can be specified, separated by comma.
 
 > Note that the imported jobs are enabled but only run according to the schedule. To run a job manually, add the `-job-execute` parameter.
