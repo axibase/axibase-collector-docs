@@ -250,11 +250,11 @@ docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-co
 
 The following message indicates that the initial configuration is finished:
 
-> FrameworkServlet 'dispatcher': initialization completed.
+> **FrameworkServlet 'dispatcher': initialization completed**.
 
 ## UI
 
-Verify the https port that is assigned to theCollectorand open the application in your browser: `https://container-ip:port`
+Verify the `HTTPS` port that is assigned to the Collector and open the application in your browser: `https://container-ip:port`
 
 ```sh
 docker ps | grep axibase-collector

@@ -82,8 +82,8 @@ FILE protocol supports directory traversal.
 | **Name** | **Description** |
 |:---|:---|
 | HTTP Pool | Pre-defined HTTP connection parameters with optional authentication credentials and custom network/connection settings. |
-| HTTP Method | HTTP method executed: GET or POST. <br>POST method provides a way to specify request headers and payload parameters.|
-| Payload | POST method payload.|
+| HTTP Method | HTTP method executed: `GET` or `POST`. <br>`POST` method provides a way to specify request headers and payload parameters.|
+| Payload | `POST` method payload.|
 | Headers | HTTP request headers.|
 | Enable Web Driver | Executes Web Driver Script to download the file.|
 | Driver Script | Downloads the file by executing pre-recorded browser actions such as opening a page and clicking on a button to export a file.<br>The script can be recorded in Selenium IDE and exported into Java format. |
@@ -115,7 +115,7 @@ FILE protocol supports directory traversal.
 | **Name** | **Description** |
 |:---|:---|
 | JSON Path | JSONPath expression to match an object or a list of objects in the JSON document. <br>Default path is `$`, which stands for the root object.<br>Collector attempts to convert fields of the matched objects to a tabular structure, using field names as column names and field values as cell values. For fields in the nested objects, column names are formed by concatenating parent object names using dot notation. Each matched objects returned by the JSON path expression is represented as a separate line in a CSV file. |
-| Traversal Depth | Limit traversal of the matched object or objects. <br>If **Depth** is set to a positive number, nested objects are included in the CSV files up to their depth level measured as the distance between the nested object and the matched object. When **Depth** is set to 1, theCollectorincludes only direct fields of the matched objects. If **Depth** is set to 0 or a negative number, theCollectortraverses and includes all nested object in the CSV files. |
+| Traversal Depth | Limit traversal of the matched object or objects. <br>If **Depth** is set to a positive number, nested objects are included in the CSV files up to their depth level measured as the distance between the nested object and the matched object. When **Depth** is set to 1, the Collector includes only direct fields of the matched objects. If **Depth** is set to 0 or a negative number, the Collector traverses and includes all nested object in the CSV files. |
 | Included Fields | By default, all fields with primitive data types (number, string, boolean) are included in the CSV file. Array fields are ignored. The list of included fields can be overridden explicitly by specifying particular field names, separated by comma. |
 | Excluded Fields | List of field names to be excluded from the CSV file. Applies if **Included Fields** is empty. |
 
@@ -131,9 +131,9 @@ FILE protocol supports directory traversal.
 | Custom Tags | List of `name=value` tag pairs, one per line. The tags are be stored by the database as additional series/property/message tags.<br>Supported placeholders are:`${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
 | Use Current Time | Enables all data contained in the CSV file to be stored with the current time of the Collector instead of the date/time possibly contained in the file. This option should be used when the CSV file does not contain any time/date information.|
 | Time Zone | Timezone which should be used by ATSD when parsing the datetime column in the CSV file, if the datetime format does not contain information about the time zone.|
-| Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, theCollectorjob may not know if the upload file is valid or if there are errors. |
+| Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, the Collector job may not know if the upload file is valid or if there are errors. |
 | Process in Rule Engine | Process parsed commands in the [ATSD Rule Engine](https://axibase.com/docs/atsd/rule-engine/). If enabled, allows the data in the CSV file to be checked by rules. |
-| Ignore Unchanged Files | Prevents unchanged files from being repeatedly uploaded into the database. When enabled, theCollectorcompares the downloaded file's last modified time (FILE, FTP, SFTP) or MD5 hashcode (HTTP, HTTP_POOL, SCP) with the previously stored information and ignores the upload if the file has not changed. For FTP and SFTP protocols, the remote files with unchanged last modified times are not downloaded to theCollectorhost.|
+| Ignore Unchanged Files | Prevents unchanged files from being repeatedly uploaded into the database. When enabled, the Collector compares the last modified time of the downloaded file (FILE, FTP, SFTP) or MD5 hashcode (HTTP, HTTP_POOL, SCP) with the previously stored information and ignores the upload if the file has not changed. For FTP and SFTP protocols, the remote files with unchanged last modified times are not downloaded to the Collector host.|
 
 ### Post-Processing
 

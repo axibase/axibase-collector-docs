@@ -36,7 +36,7 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
 
 To verify connectivity with the remote host, click **Test** or **Viewer**.
 
-Add hostname to the `/etc/hosts` file directory on theCollectormachine in case of `UnknownHostException`.
+Add hostname to the `/etc/hosts` file directory on the Collector machine in case of `UnknownHostException`.
 
 ```java
 Failed to retrieve RMIServer stub: javax.naming.ConfigurationException [Root exception is java.rmi.UnknownHostException: Unknown host: NURSWGVML011; nested exception is: java.net.UnknownHostException: NURSWGVML011]
