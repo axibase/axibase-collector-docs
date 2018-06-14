@@ -101,7 +101,7 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 |`ATSD_SERVICE_PORT_TCP` | No | Tcp port for [network commands](https://axibase.com/docs/atsd/api/network/). |
 |`ATSD_URL` | No | URL (protocol://host:port) for the Axibase Time Series Database connection.|
 |`COLLECTOR_USER_NAME` | No | User name for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
-|`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the dataCollectoraccount.|
+|`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
 |`JAVA_OPTS` | No| Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
 

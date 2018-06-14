@@ -84,7 +84,7 @@ Use the table below to fill in the fields and configure the query.
 | Ignored Metric Columns | Metric columns that you want to skip. |
 | Default Metric Name  | Assign a default metric to the collected series. All series are stored in ATSD with this metric. |
 | Metric Name Column | Column containing metric (series) names. |
-| Metric Value Column | Column containing metric (series) values. Collect multiple value columns for the same metric if needed, as is common in aggregation queries. For example: cnt, avg, max, min, sum. <br> Example query: <br> `SELECT st.SAMPLE_TIME`, `e.ENTITY_NAME`, `sd.NAME AS METRIC,` <br> `COUNT(hs.STAT_VAL) AS "cnt",` <br> `AVG(hs.STAT_VAL) AS "avg",` <br> `SUM(hs.STAT_VAL) AS "sum",` <br> `MAX(hs.STAT_VAL) AS "max",` <br> `MIN(hs.STAT_VAL) AS "min",` <br> `FROM VPX_HIST_STAT1 ...`|
+| Metric Value Column | Column containing metric (series) values. Collect multiple value columns for the same metric if needed, as is common in aggregation queries. For example: `cnt`, `avg`, `max`, `min`, `sum`. <br> Example query: <br> `SELECT st.SAMPLE_TIME`, `e.ENTITY_NAME`, `sd.NAME AS METRIC,` <br> `COUNT(hs.STAT_VAL) AS "cnt",` <br> `AVG(hs.STAT_VAL) AS "avg",` <br> `SUM(hs.STAT_VAL) AS "sum",` <br> `MAX(hs.STAT_VAL) AS "max",` <br> `MIN(hs.STAT_VAL) AS "min",` <br> `FROM VPX_HIST_STAT1 ...`|
 | Metric Prefix | Metric prefix can be assigned to easily sort and differentiate metrics in ATSD. |
 | Ignore Number Parse Errors | Ignore cells that fail to parse from string into number without raising error. Default: false.  |
 

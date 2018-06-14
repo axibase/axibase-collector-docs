@@ -112,20 +112,20 @@ The job assigns each metric to an entity which is determined based on the [prima
 
 ## Sample AWS EC2 CloudWatch Metrics
 
-* aws_ec2.cpucreditbalance
-* aws_ec2.cpucreditusage
-* aws_ec2.cpuutilization
-* aws_ec2.diskreadbytes
-* aws_ec2.diskreadops
-* aws_ec2.diskwritebytes
-* aws_ec2.diskwriteops
-* aws_ec2.networkin
-* aws_ec2.networkout
-* aws_ec2.networkpacketsin
-* aws_ec2.networkpacketsout
-* aws_ec2.statuscheckfailed
-* aws_ec2.statuscheckfailed_instance
-* aws_ec2.statuscheckfailed_system
+* `aws_ec2.cpucreditbalance`
+* `aws_ec2.cpucreditusage`
+* `aws_ec2.cpuutilization`
+* `aws_ec2.diskreadbytes`
+* `aws_ec2.diskreadops`
+* `aws_ec2.diskwritebytes`
+* `aws_ec2.diskwriteops`
+* `aws_ec2.networkin`
+* `aws_ec2.networkout`
+* `aws_ec2.networkpacketsin`
+* `aws_ec2.networkpacketsout`
+* `aws_ec2.statuscheckfailed`
+* `aws_ec2.statuscheckfailed_instance`
+* `aws_ec2.statuscheckfailed_system`
 
 ## AWS CloudWatch API Fees
 
@@ -139,61 +139,61 @@ The primary dimension determines entity name in ATSD.
 
 |**Namespace**|**Primary Dimension**|
 |---|---|
-| AWS/Route53 | HealthCheckId |
-| AWS/ApiGateway | ApiName |
-| AWS/AppStream | Fleet |
-| AWS/AutoScaling | AutoScalingGroupName |
-| AWS/Billing | ServiceName |
-| AWS//CloudFront | DistributionId |
-| AWS/CloudSearch | ClientId |
-| CWAgent | InstanceId |
-| AWS/Events | RuleName |
-| AWS/Logs | LogGroupName |
-| AWS/Connect | InstanceId |
-| AWS/DMS --> extract *id* or *arn* |
-| AWS/DX | ConnectionId |
-| AWS/DynamoDB | TableName |
-| AWS/EC2 | InstanceId |
-| AWS/EC2Spot | AvailabilityZone |
-| AWS/ECS | ClusterName |
-| AWS/ElasticBeanstalk | InstanceId |
-| AWS/EBS | VolumeId |
-| AWS/EFS | FileSystemId |
-| AWS/ELB | LoadBalancerName  |
-| AWS/ApplicationELB | LoadBalancerName |
-| AWS/NetworkELB  | LoadBalancer |
-| AWS/ElasticTranscoder | PipelineId |
-| AWS/ElastiCache | CacheClusterId |
-| AWS/ES | ClientId |
-| AWS/ElasticMapReduce | JobId |
-| AWS/GameLift | FleetId |
-| AWS/Inspector | ??? |
-| AWS/IoT | RuleName |
-| AWS/KMS | KeyId |
-| AWS/KinesisAnalytics | Flow |
-| AWS/Firehose | DeliveryStreamName |
-| AWS/Kinesis | StreamName |
-| AWS/KinesisVideo | StreamName |
-| AWS/Lambda | FunctionName |
-| AWS/Lex | BotName |
-| AWS/ML | MLModelId |
-| AWS/OpsWorks | InstanceId |
-| AWS/Polly | Operation |
-| AWS/Redshift | NodeID |
-| AWS/RDS | DBInstanceIdentifier |
-| AWS/Route53 | HealthCheckId |
-| AWS/SageMaker | Host |
-| AWS/DDoSProtection |  |
-| AWS/SES | |
-| AWS/SNS | Application |
-| AWS/SQS | QueueName |
-| AWS/S3 | BucketName |
-| AWS/SWF | Domain |
-| AWS/States | *arn |
-| AWS/StorageGateway | GatewayName |
-| AWS/NATGateway | NatGatewayId |
-| AWS/VPN | VpnId |
-| WAF | Rule |
-| AWS/WorkSpaces | WorkspaceId |
-| AWS/AmazonMQ | Topic  |
-| AWS/TrustedAdvisor | ServiceName |
+| `AWS/Route53` | `HealthCheckId` |
+| `AWS/ApiGateway` | `ApiName` |
+| `AWS/AppStream` | `Fleet` |
+| `AWS/AutoScaling` | `AutoScalingGroupName` |
+| `AWS/Billing` | `ServiceName` |
+| `AWS//CloudFront` | `DistributionId` |
+| `AWS/CloudSearch` | `ClientId` |
+| `CWAgent` | `InstanceId` |
+| `AWS/Events` | `RuleName` |
+| `AWS/Logs` | `LogGroupName` |
+| `AWS/Connect` | `InstanceId` |
+| `AWS/DMS` --> extract `id` or `arn` |
+| `AWS/DX` | `ConnectionId` |
+| `AWS/DynamoDB` | `TableName` |
+| `AWS/EC2` | `InstanceId` |
+| `AWS/EC2Spot` | `AvailabilityZone` |
+| `AWS/ECS` | `ClusterName` |
+| `AWS/ElasticBeanstalk` | `InstanceId` |
+| `AWS/EBS` | `VolumeId` |
+| `AWS/EFS`| `FileSystemId` |
+| `AWS/ELB` | `LoadBalancerName`  |
+| `AWS/ApplicationELB` | `LoadBalancerName` |
+| `AWS/NetworkELB` | `LoadBalancer` |
+| `AWS/ElasticTranscoder` | `PipelineId` |
+| `AWS/ElastiCache` | `CacheClusterId` |
+| `AWS/ES` | `ClientId` |
+| `AWS/ElasticMapReduce` | `JobId` |
+| `AWS/GameLift` | `FleetId` |
+| `AWS/Inspector` | ??? |
+| `AWS/IoT` | `RuleName` |
+| `AWS/KMS` | `KeyId` |
+| `AWS/KinesisAnalytics` | `Flow` |
+| `AWS/Firehose` | `DeliveryStreamName` |
+| `AWS/Kinesis` | `StreamName` |
+| `AWS/KinesisVideo` | `StreamName` |
+| `AWS/Lambda` | `FunctionName` |
+| `AWS/Lex` | `BotName` |
+| `AWS/ML` | `MLModelId` |
+| `AWS/OpsWorks` | `InstanceId` |
+| `AWS/Polly` | `Operation` |
+| `AWS/Redshift` | `NodeID` |
+| `AWS/RDS` | `DBInstanceIdentifier` |
+| `AWS/Route53` | `HealthCheckId` |
+| `AWS/SageMaker` | `Host` |
+| `AWS/DDoSProtection` |  |
+| `AWS/SES` | |
+| `AWS/SNS` | Application |
+| `AWS/SQS` | `QueueName` |
+| `AWS/S3` | `BucketName` |
+| `AWS/SWF` | Domain |
+| `AWS/States` | `*arn` |
+| `AWS/StorageGateway` | `GatewayName` |
+| `AWS/NATGateway` | `NatGatewayId` |
+| `AWS/VPN` | `VpnId` |
+| `WAF` | Rule |
+| `AWS/WorkSpaces` | `WorkspaceId` |
+| `AWS/AmazonMQ` | Topic  |
+| `AWS/TrustedAdvisor` | `ServiceName` |

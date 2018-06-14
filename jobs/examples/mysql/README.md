@@ -34,7 +34,7 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 
 ### Import MySQL Server Job into Axibase Collector
 
-* Open the **Jobs** menu and select **Import** from the split button at the botton of the screen to upload the [mysql-server-jobs.xml](mysql-server-jobs.xml) file.
+* Open the **Jobs** menu and select **Import** from the split button at the bottom of the screen to upload the [mysql-server-jobs.xml](mysql-server-jobs.xml) file.
 
 ### Configure MySQL Server Database Connection
 
@@ -107,7 +107,7 @@ hasMetric('mysql.global_status.uptime')
 
 ![](./images/mysql-portal-icon.png)
 
-[**MySQL Server Perfomance Live Portal**](http://apps.axibase.com/chartlab/cf72dec3)
+[**MySQL Server Performance Live Portal**](http://apps.axibase.com/chartlab/cf72dec3)
 ![](./images/mysql-portal.png)
 
 ## Data Queries

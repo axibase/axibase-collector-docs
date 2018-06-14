@@ -6,7 +6,7 @@
 
 * [column](#column)
 
-### `column`
+### column
 
 Retrieves column value for the item from list. [Item Lists](collections.md#item-lists) are defined on the **Collections > Item Lists** page.
 

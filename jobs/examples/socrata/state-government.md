@@ -510,7 +510,7 @@ m:amer_indian=117 m:hispanic=2956 m:black=6559 m:asian=568
 | Attribution | New York State Higher Education Services Corporation |
 | Category | Education |
 | Date Range | 2009-2014 |
-| Links | [catalog](http://catalog.data.gov/dataset/scholarship-recipients-and-dollars-by-sector-group-beginning-2009), [atribution](http://www.hesc.ny.gov/content.nsf/SFC/Grants_Scholarships_and_Awards), [metadata](https://data.ny.gov/api/views/d8hf-wqd9),  [data](https://data.ny.gov/api/views/d8hf-wqd9/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/9026c3d7) |
+| Links | [catalog](http://catalog.data.gov/dataset/scholarship-recipients-and-dollars-by-sector-group-beginning-2009), [attribution](http://www.hesc.ny.gov/content.nsf/SFC/Grants_Scholarships_and_Awards), [metadata](https://data.ny.gov/api/views/d8hf-wqd9),  [data](https://data.ny.gov/api/views/d8hf-wqd9/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/9026c3d7) |
 
 * Command
 
@@ -948,7 +948,7 @@ t:entity_type=ORG t:mail_addr_1="4910 TIEDEMAN ROAD" t:cntry_cd_txt=USA t:origin
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | kwxv-fwze |
+| Id | `kwxv-fwze` |
 | Name | Lottery Cash 4 Life Winning Numbers: Beginning 2014 |
 | State | [New York](https://data.ny.gov) |
 | Description | Go to `http://on.ny.gov/1xRIvPz` on the New York Lottery website for past Cash 4 Life results and payouts. |
@@ -978,7 +978,7 @@ t:type="Government & Finance" t:cash_ball=03 m:"09 36 44 53 59"
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | rybz-nyjw |
+| Id | `rybz-nyjw` |
 | Name | Accidental Drug Related Deaths  2012-2015 |
 | State | [Connecticut](https://data.ct.gov) |
 | Description | A listing of each accidental death associated with drug overdose in Connecticut from 2012 to 2015. A "Y" value under the different substance columns indicates whether that particular substance was detected. Data is derived from an investigation by the Office of the Chief Medical Examiner which includes the toxicity report, death certificate, as well as a scene investigation. The "Morphine (Not Heroin)" values are related to the differences between how Morphine and Heroin are metabolized and therefore detected in the toxicity results. Heroin metabolizes to 6-MAM which then metabolizes to morphine.  6-MAM is unique to heroin, and has a short half-life (as does heroin itself). Thus, in some heroin deaths, the toxicity results will not indicate whether the morphine is from heroin or prescription morphine. In these cases the Medical Examiner may be able to determine the cause based on the scene investigation (such as  finding heroin needles). If the examiner finds prescription morphine at the scene the drug is certified as "Morphine (not heroin)." Therefore, the Cause of Death may indicate Morphine, but the Heroin or Morphine (Not Heroin) may not be indicated. "Any Opioid" – if the Medical Examiner cannot conclude whether the cause of death is from RX Morphine or heroin based morphine in the toxicity results, that column may be checked |
@@ -1039,7 +1039,7 @@ t:type="Health and Human Services" t:fentanyl=Y m:"Acute fent, hydrocod, benzodi
 | Id | 2ix7-8hwk |
 | Name | Oregon Consumer Complaints |
 | State | [Oregon](https://data.oregon.gov) |
-| Description | Consumer complaints registered with the Oregon Deptartment of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database may not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, may affect the likelihood of a consumer complaint being filed. The number of complaints about a business may not be a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints may not be immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see `http://www.doj.state.or.us/finfraud/index.shtml` |
+| Description | Consumer complaints registered with the Oregon Department of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database may not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, may affect the likelihood of a consumer complaint being filed. The number of complaints about a business may not be a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints may not be immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see `http://www.doj.state.or.us/finfraud/index.shtml` |
 | Attribution | Oregon Department of Justice |
 | Category | Public Safety |
 | Date Range | 2013-2016 |
@@ -1081,7 +1081,7 @@ m:"Provided goods or services different than the ones complainant ordered; unaut
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | qkvm-skze |
+| Id | `qkvm-skze` |
 | Name | OAHU Food Establishments |
 | State | [Hawaii](https://data.hawaii.gov) |
 | Description | Lists represent all of the permitted Food Establishments.  These include everything from restaurants, take out, fast-food, convenience stores, mom and pop markets, shave ice stands, supermarkets, mega markets (such as Costco, Sam’s, and Walmart), lunch wagons, food manufacturers, etc. |
@@ -1141,7 +1141,7 @@ t:mailing_address_city=HONOLULU
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | pmxm-gftz |
+| Id | `pmxm-gftz` |
 | Name | Parolees Under Community Supervision: Beginning 2008 |
 | State | [New York](https://data.ny.gov) |
 | Description | Provides data about parolees under community supervision on March 31 of the snapshot year. Information includes region of supervision, county of residence, snapshot year, supervision level, gender, age as of the file date, and crime type for most serious instant offense. |

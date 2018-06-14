@@ -30,7 +30,7 @@ The Collector supports data markers to minimize the load on the source systems a
 * OSISoft PIOleDBEnt
 * Custom
 
-## Supported Data/Network Protocols
+## Supported Data and Network Protocols
 
 * JDBC
 * SNMP

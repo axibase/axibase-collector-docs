@@ -79,7 +79,7 @@ Both parts of the query support wildcards:
 * Asterisk `*` replaces any number (including zero) of characters.
 * Question mark `?` replaces any one character.
 
-### [Object Name](https://docs.oracle.com/javase/7/docs/api/javax/management/ObjectName.html) pattern
+### [Object Name](https://docs.oracle.com/javase/7/docs/api/javax/management/ObjectName.html) Pattern
 
 The pattern pattern matches MBean instances of specified type and name.
 
@@ -103,7 +103,7 @@ kafka.cluster:name=*,partition=*,topic!=_*,type=Partition
 | `d:type=Foo,name="B*"`| matches for example `d:type=Foo,name="Bling"`. Wildcards are recognized inside quotes and can be escaped with `\`.|
 | `d:type=Foo,name!=B*` | matches names that does not start with `B`, for example `d:type=Foo,name=Store`.|
 
-### Attribute Name list
+### Attribute Name List
 
 The list specifies attributes whose values are retrieved by the application and sent to the database.
 
@@ -146,7 +146,7 @@ The `kafka-cluster-jmx` list contains items (`host,port,entity`):
 172.17.0.3,1099,kafka3
 ```
 
-The each row is splitted by [freemarker function](https://freemarker.apache.org/docs/ref_builtins_string.html#ref_builtin_split) to extract values:
+Each row is split by [freemarker function](https://freemarker.apache.org/docs/ref_builtins_string.html#ref_builtin_split) to extract values:
 
 ![image](./images/jmx_configuration_item_list_example.png)
 

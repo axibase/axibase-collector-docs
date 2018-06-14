@@ -1,8 +1,8 @@
 # Installation on Kubernetes Cluster
 
-## Create secrets
+## Create Secrets
 
-Create a [secret object](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) for the ATSD [collector user](https://axibase.com/docs/atsd/administration/collector-account.html). This account is used byCollectorinstances to transmit metrics securely into the database.
+Create a [secret object](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) for the ATSD [collector user](https://axibase.com/docs/atsd/administration/collector-account.html). This account is used by Collector instances to transmit metrics securely into the database.
 
 Create a [`secret.yaml`](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-manually) file with the [following content](./files/secret.yaml):
 

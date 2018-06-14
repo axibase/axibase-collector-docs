@@ -20,7 +20,7 @@ Use the table below to set configuration parameters.
 ----- | -----------
 Group Id | A unique string that identifies the consumer group this consumer belongs to.
 Topic Name | A topic is a category or feed name to which messages are published.
-Offset Reset Strategy | Initial offset:<br>\* `EARLIEST`: automatically reset the offset to the earliest offset<br>\* `LATEST`: automatically reset the offset to the latest offset<br>\* `LAST_N`: reset the offset to the latest offset and substract `Last Cont` value from offset value.<br><br>Offset strategies (`EARLIEST`, `LATEST`) use at first job running, then job uses the last committed offset.<br>The `LAST_N` offset strategy does not use last committed offset, but last `N` records each time job executes.
+Offset Reset Strategy | Initial offset:<br>\* `EARLIEST`: automatically reset the offset to the earliest offset<br>\* `LATEST`: automatically reset the offset to the latest offset<br>\* `LAST_N`: reset the offset to the latest offset and subtract `Last Cont` value from offset value.<br><br>Offset strategies (`EARLIEST`, `LATEST`) use at first job running, then job uses the last committed offset.<br>The `LAST_N` offset strategy does not use last committed offset, but last `N` records each time job executes.
 Last Count | The number of last messages.
 Message Format | [Network API Command](https://axibase.com/docs/atsd/api/network/) or JSON. Network API Command will be stored in ATSD as is. The JSON message will be parsed into one or more commands.
 Use Listener | Enable continuous listener of messages instead of scheduled polling.

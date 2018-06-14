@@ -14,7 +14,7 @@ Copy the `axibase-collector.tar.gz` file to the server where Axibase Collector i
 
 ## Switch User
 
-Switch to the user under whichCollectorjava processes execute.
+Switch to the user under which Collector java processes execute.
 
 To look up the Axibase Collector installation directory, run:
 
@@ -49,7 +49,7 @@ The installation directory is `/opt/axibase-collector` in the above example.
 /opt/axibase-collector/bin/stop-collector.sh
 ```
 
-## Replace `axibase-collector.war` File
+## Replace axibase-collector.war File
 
 Replace `/opt/axibase-collector/lib/axibase-collector.war` with the version contained in the archive:
 

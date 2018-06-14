@@ -165,7 +165,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Metrics
 
-* List of collected [AcriveMQ metrics](metric-list.md)
+* List of collected [ActiveMQ metrics](metric-list.md)
 
 ### Properties
 

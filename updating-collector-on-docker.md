@@ -36,7 +36,7 @@ docker exec axibase-collector /opt/axibase-collector/bin/stop-collector.sh
 
 > Make sure the container is running when you run the command.
 
-## Replace war File
+## Replace axibase-collector.war File
 
 Copy `axibase-collector.war` into the container to replace the old version:
 

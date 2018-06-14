@@ -2,7 +2,7 @@
 
 Launch linked ATSD and Axibase Collector containers on the same Docker host with `docker-compose`.
 
-## Create `docker-compose.yml` file
+## Create docker-compose.yml File
 
 ```yaml
 version: '2'

@@ -12,7 +12,7 @@ To automatically import and enable a job, use the following parameters:
 
 > Note that the imported jobs are enabled but only run according to the schedule. To run a job manually, add the `-job-execute` parameter.
 
-## Enable Pre-configured Job
+## Enable Pre-Configured Job
 
 To enable one of the [pre-configured jobs](pre-configured-jobs.md), set the `-job-enable` parameter:
 

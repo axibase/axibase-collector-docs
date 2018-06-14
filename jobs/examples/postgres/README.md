@@ -135,4 +135,4 @@ hasMetric('postgres.global_status.uptime')
 
 ## Data Queries
 
-Metrics Queries select most recent statistics as described in the [Data Queries Doucmentation](data-queries.md).
+Metrics Queries select most recent statistics as described in the [Data Queries Documentation](data-queries.md).

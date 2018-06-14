@@ -80,7 +80,7 @@ tail -f ./axibase-collector/logs/axibase-collector.log
 
 Open `https://hostname:9443` in your browser and [configure](configure-administrator-account.md) an administrator account.
 
-## Setup ATSD connection
+## Setup ATSD Connection
 
 Configure Axibase Collector to send data into an Axibase Time Series Database instance.
 

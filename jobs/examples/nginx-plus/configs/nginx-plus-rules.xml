@@ -148,7 +148,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <ruleTable/>
 </rule>
 <rule>
-<name>nginx_plus_droppped_high</name>
+<name>nginx_plus_dropped_high</name>
 <metric>nginx-plus.connections.dropped</metric>
 <expression><![CDATA[(avg() > 50) AND (count() >= 0.6 * window_length_time() / 5)]]></expression>
 <window>time(10 minute)</window>
@@ -173,7 +173,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 </actionStrategy>
 <groupFilter>nginx-plus-servers</groupFilter>
 <emailNotification>
-<rule-name>nginx_plus_droppped_high</rule-name>
+<rule-name>nginx_plus_dropped_high</rule-name>
 <repeat-interval>
 <type>INTERVAL</type>
 <intervalCount>3</intervalCount>

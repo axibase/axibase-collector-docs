@@ -149,9 +149,9 @@ The expression selects all elements of the `book` array in the root's child name
 
 | **Name** | **Description** |
 |:---|:---|
-| `${ITEM}` | Current element in the Item List.|
+| `${ITEM}` | Current element in the **Item List**.|
 | `${TIME()}` | Text output of the `TIME` function. |
-| `${DATE_ITEM()}` | Current element in the Date Item List.|
+| `${DATE_ITEM()}` | Current element in the **Date Item** List.|
 | `${HOST}` | Host name. |
 | `${PARENT}` | Shortcut for `${PARENT(1)}` |
 | `${PARENT(n)}` | Parent name from JSON Path of the matched object. |
@@ -193,7 +193,7 @@ The expression selects all elements of the `book` array in the root's child name
 
 ### Json Fields Examples
 
-#### Custom tags
+#### Custom Tags
 
 JSON:
 
@@ -219,10 +219,10 @@ JSON:
 
 Field Name      | Field Value
 :-------------- | :----------
-Default Entity  | tst
-JSON Path       | $.upstreams.demo-backend.peers.*
+Default Entity  | `tst`
+JSON Path       | `$.upstreams.demo-backend.peers.*`
 Depth           | 2
-**Custom Tags** | **server=${server}<br>name=${PARENT(2)}<br>type=${PARENT(3)}.${PARENT}**
+**Custom Tags** | **`server=${server}<br>name=${PARENT(2)}<br>type=${PARENT(3)}.${PARENT}`**
 
 Result:
 
@@ -261,8 +261,8 @@ JSON:
   Field Name         | Field Value
   :----------------- | :----------
   Path               | `http://example.com`
-  **Default Entity** | **${HOST}**
-  JSON Path          | $.upstreams.demo-backend.peers.*
+  **Default Entity** | **`${HOST}`**
+  JSON Path          | `$.upstreams.demo-backend.peers.*`
   Depth              | 2
 
   Result:
@@ -276,8 +276,8 @@ JSON:
   Field Name         | Field Value
   :----------------- | :----------
   Path               | `http://example.com`
-  **Default Entity** | **${PARENT(2)}**
-  JSON Path          | $.upstreams.demo-backend.peers.*
+  **Default Entity** | **`${PARENT(2)}`**
+  JSON Path          | `$.upstreams.demo-backend.peers.*`
   Depth              | 2
 
   Result:
@@ -291,8 +291,8 @@ JSON:
   Field Name         | Field Value
   :----------------- | :----------
   Path               | `http://example.com`
-  **Default Entity** | **tst**
-  JSON Path          | $.upstreams.demo-backend.peers.*
+  **Default Entity** | **`tst`**
+  JSON Path          | `$.upstreams.demo-backend.peers.*`
   Depth              | 2
 
   Result:
@@ -330,8 +330,8 @@ Field Name       | Field Value
 :--------------- | :----------
 Path             | `http://example.com`
 **Entity Field** | **type**
-Entity Prefix    | tst.
-JSON Path        | $.upstreams.demo-backend.peers.*
+Entity Prefix    | `tst.`
+JSON Path        | `$.upstreams.demo-backend.peers.*`
 Depth            | 1
 
 Result:
@@ -362,7 +362,7 @@ JSON:
 
 Field Name        | Field Value
 :---------------- | :----------
-Default Entity    | tst
+Default Entity    | `tst`
 JSON Path         | $
 Depth             | 0
 **Metric Prefix** | **mp.**
@@ -393,10 +393,10 @@ JSON:
 
 Field Name          | Field Value
 :------------------ | :----------
-Default Entity      | tst
+Default Entity      | `tst`
 JSON Path           | $
 Depth               | 1
-**Included Fields** | **quota_remaining,has_more**
+**Included Fields** | **`quota_remaining,has_more`**
 
 Result:
 
@@ -424,10 +424,10 @@ JSON:
 
 Field Name          | Field Value
 :------------------ | :----------
-Default Entity      | tst
+Default Entity      | `tst`
 JSON Path           | $
 Depth               | 0
-**Excluded Fields** | **quota_remaining**
+**Excluded Fields** | **`quota_remaining`**
 
 Result:
 
@@ -446,14 +446,14 @@ JSON Lines:
 
 Field Name             | Field Value
 :--------------------- | :----------
-Default Entity         | tst
-JSON Path              | $..data.*
+Default Entity         | `tst`
+JSON Path              | `$..data.*`
 Depth                  | 1
 Time Field             | timestamp
-Time Format            | yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ
-Excluded Fields        | pitagvalue
-**Metric Name Field**  | **pitagname**
-**Metric Value Field** | **pitagvalue**
+Time Format            | `yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ`
+Excluded Fields        | `pitagvalue`
+**Metric Name Field**  | **`pitagname`**
+**Metric Value Field** | **`pitagvalue`**
 
 Result:
 
@@ -637,7 +637,7 @@ series e:tst d:2016-01-01T00:00:00.000Z m:fail=2 m:ok=10
 series e:tst d:2016-01-02T00:00:00.000Z m:fail=2 m:ok=15
 ```
 
-#### Minimum time
+#### Minimum Time
 
 JSON:
 
@@ -668,12 +668,12 @@ JSON:
 
 Field Name       | Field Value
 :--------------- | :----------
-Default Entity   | ${ITEM}
-JSON Path        | $.views
+Default Entity   | `${ITEM}`
+JSON Path        | `$.views`
 **Time Field**   | timestamp
-Time Format      | yyyy-MM-dd'T'HH:mm:ssZ
-Minimum Time     | NOW-1*DAY
-Metric Prefix    | repo.traffic.
+Time Format      | `yyyy-MM-dd'T'HH:mm:ssZ`
+Minimum Time     | `NOW-1*DAY`
+Metric Prefix    | `repo.traffic.`
 
 If current time is `2018-05-23T17:00:00Z`, the job adds the following commands to ATSD.
 
@@ -793,8 +793,8 @@ JSON:
 
 Field Nam                | Field Value
 :----------------------- | :----------
-Default Entity           | tst
-JSON Path                | $.upstreams.*.peers.*
+Default Entity           | `tst`
+JSON Path                | `$.upstreams.*.peers.*`
 Depth                    | 1
 **Message Type Field**   | **type**
 **Message Source Field** | **server**

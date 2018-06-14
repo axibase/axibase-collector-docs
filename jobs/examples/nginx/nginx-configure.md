@@ -1,6 +1,6 @@
 # nginx Server Configuration
 
-## Verify that `ngx_http_stub_status_module` is Present
+## Verify that ngx_http_stub_status_module is Present
 
 ```sh
 nginx -V 2>&1 | grep -o with-http_stub_status_module
@@ -62,7 +62,7 @@ Add the following lines at the **beginning** of the `location /nginx_status` dir
    deny all;
 ```
 
- For example, if yourCollectoris located at `10.102.0.6`, the configuration should appear thus:
+ For example, if your Collector is located at `10.102.0.6`, the configuration should appear thus:
 
 ```ls
 location /nginx_status {

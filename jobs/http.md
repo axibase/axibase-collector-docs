@@ -22,7 +22,7 @@ Use the table below to create HTTP job configuration.
 
 > *These fields become available if you select the **Enable Web Driver** check box.
 
-### <code>http.status</code> Metric Values Based on HTTP Response Codes
+### http.status Metric Values Based on HTTP Response Codes
 
 | Metric Value | Response Code |
 |:------------- |:-------------|

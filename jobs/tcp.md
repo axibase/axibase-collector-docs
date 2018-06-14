@@ -31,7 +31,7 @@ In case of failure retests, the values for the above metrics are based on the la
 | Field          | Description   |
 | :--------------- |:-------------|
 | Configuration Name | Name of the configuration. |
-| Default TCP Port           | Default TCP port to whichCollectorconnects,<br>unless a specific port is included in the remote system address. |
+| Default TCP Port           | Default TCP port to which Collector connects,<br>unless a specific port is included in the remote system address. |
 | Item List | Collection of remote system hostnames or IP addresses with an optional `:{port}` suffix, to be used instead of the default port. |
 | Metric Prefix     | Metric prefix prepended to the [collected metric](#collected-metrics) names. |
 | Default Tags      | Predefined series tags added to all series commands. |

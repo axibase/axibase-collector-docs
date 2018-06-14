@@ -46,7 +46,7 @@ file:///opt/files/inbound/${TIME("previous_day", "yyyy-MM-dd")}/daily.csv
 
 ## Functions
 
-### `TIME` Function
+### TIME Function
 
 The `TIME` function calculates time based on the [calendar](https://axibase.com/docs/atsd/shared/calendar.html) expression. The syntax outputs the value in the specified `time_format`.
 
@@ -60,7 +60,7 @@ If the `TIME` function returns a number, use the function in addition or subtrac
 
 Example: `${TIME("2016-01-01","M") - 1}` (subtract 1 from month).
 
-### `DATE_ITEM` Function
+### DATE_ITEM Function
 
 The `DATE_ITEM` function returns an array of strings.
 
@@ -182,7 +182,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 |:---|:---|
 | /opt/files/nurswgvml106.cpu_busy.csv<br>/opt/files/nurswgvml107.cpu_busy.csv | nurswgvml106<br>nurswgvml107 |
 
-### `LOOKUP` function
+### LOOKUP function
 
 The `LOOKUP` function provides key-to-value mapping in the specified Item List. Use the function in [JSON](json.md), [JDBC](jdbc.md), [PI](pi.md) jobs to resolve entities.
 
@@ -206,11 +206,11 @@ Treat Item List as a CSV structure.
 
 | Parameter name | Parameter type | Description |
 | :--------------|:---------------|:------------|
-| itemList       | String         | Name of the Item List |
-| key            | String         | Lookup Key  |
-| keyColumnIndex | Integer        | Index of column in a CSV row used as the key column, starting with 1 |
-| valueColumnIndex | Integer      | Index of column in a CSV row used as the value column, starting with 1 |
-| separator      | String (optional) | CSV columns separator |
+| `itemList`       | String         | Name of the Item List |
+| `key`            | String         | Lookup Key  |
+| `keyColumnIndex` | Integer        | Index of column in a CSV row used as the key column, starting with 1 |
+| `valueColumnIndex` | Integer      | Index of column in a CSV row used as the value column, starting with 1 |
+| `separator`      | String (optional) | CSV columns separator |
 
 #### LOOKUP Examples
 

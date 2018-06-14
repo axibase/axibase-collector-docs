@@ -13,7 +13,7 @@ The document contains instructions for the first method of configuration.
 
 ## Requirements
 
-* NGINX PLUS server with [ngx_http_status_module](http://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
+* NGINX PLUS server with [`ngx_http_status_module`](http://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
 * [Axibase Collector](../../../README.md) for scheduled polling of the NGINX status page.
 * [Axibase Time Series Database](https://axibase.com/docs/atsd/installation/) as a centralized data repository.
 
@@ -113,11 +113,11 @@ The following rules are provided in the `nginx_plus_rules.xml` file:
 
 | **Rule**                                     |                                      **Description**                        |
 |:----------------------------------------:|:------------------------------------------------------------------------|
-|nginx_plus_respawned_proc_increase        | Raise an alert when an NGINX PLUS server's total number of abnormally terminated and respawned child processes increases.|
-| nginx_plus_fails_high                    | Raise an alert when an NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high.|
-| nginx_plus_droppped_high                 | Raise an alert when an NGINX PLUS server dropped sufficient amount of connections. |
-| nginx_plus_downtime_long                 | Raise an alert indicating NGINX PLUS server's peer is in "unavail" and "unhealthy" states during a specified period of time (default: 15 minutes). |
-|nginx_plus_active_connection_low          | Raise an alert when an NGINX PLUS server average active connection count is below the specified threshold (default: 10) over the last 15 minutes.|
-| nginx_plus_active_connection_heartbeat   | Raise an alert when status page statistics are no longer being received by ATSD. Check that the server is reachable and Axibase Collector job is running. |
+|`nginx_plus_respawned_proc_increase`        | Raise an alert when an NGINX PLUS server's total number of abnormally terminated and respawned child processes increases.|
+| `nginx_plus_fails_high`                    | Raise an alert when an NGINX PLUS server's total number of unsuccessful attempts to communicate with some peer server is high.|
+| `nginx_plus_dropped_high`                 | Raise an alert when an NGINX PLUS server dropped sufficient amount of connections. |
+| `nginx_plus_downtime_long`                 | Raise an alert indicating NGINX PLUS server's peer is in "unavail" and "unhealthy" states during a specified period of time (default: 15 minutes). |
+|`nginx_plus_active_connection_low`          | Raise an alert when an NGINX PLUS server average active connection count is below the specified threshold (default: 10) over the last 15 minutes.|
+| `nginx_plus_active_connection_heartbeat`   | Raise an alert when status page statistics are no longer being received by ATSD. Check that the server is reachable and Axibase Collector job is running. |
 
-To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).
+To create your own rules, refer to [Rule Engine Documentation](https://axibase.com/docs/atsd/rule-engine/).
