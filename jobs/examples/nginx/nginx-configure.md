@@ -1,6 +1,6 @@
-# NGINX Server Configuration
+# nginx Server Configuration
 
-## Verify that `ngx_http_stub_status_module` is Present
+## Verify that ngx_http_stub_status_module is Present
 
 ```sh
 nginx -V 2>&1 | grep -o with-http_stub_status_module
@@ -8,7 +8,7 @@ nginx -V 2>&1 | grep -o with-http_stub_status_module
 
 If the output contains the module name, the module is installed.
 
-If the response is empty, upgrade to a [newer version of NGINX](http://nginx.org/en/CHANGES) or recompile your NGINX server with the *-with-http_stub_status_module* option.
+If the response is empty, upgrade to a [newer version of nginx](http://nginx.org/en/CHANGES) or recompile your nginx server with the `-with-http_stub_status_module` option.
 
 Sample `nginx -V` output:
 
@@ -22,13 +22,13 @@ configure arguments: --with-cc-opt='-g -O2 -fstack-protector --param=ssp-buffer-
 
 ## Configure Status Page
 
-Open the `nginx.conf` file and review the [configuration example](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html#example) provided in NGINX documentation.
+Open the `nginx.conf` file and review the [configuration example](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html#example) provided in nginx documentation.
 
 ```sh
 sudo nano /etc/nginx/nginx.conf
 ```
 
-Enable the page on the `/nginx_status` URL so that it's accessible at *<your_server_address>/nginx_status*.
+Enable the page on the `/nginx_status` URL so you can access the page at `<your_server_address>/nginx_status`.
 
 ```ls
 location /nginx_status {
@@ -42,7 +42,7 @@ Reload the server to apply changes:
 sudo nginx -s reload
 ```
 
-Verify that status page is accessible by opening *<your_server_address>/nginx_status*:
+Verify that status page is accessible by opening `<your_server_address>/nginx_status`:
 
 ```ls
 Active connections: 291
@@ -55,14 +55,14 @@ Reading: 6 Writing: 179 Waiting: 106
 
 Once you verify that the status page is enabled, restrict access to this page only to the IP address of the server where Axibase Collector is installed.
 
-Add the following lines at the **beginning** of the *location /nginx_status* directive:
+Add the following lines at the **beginning** of the `location /nginx_status` directive:
 
 ```java
    allow <collector_ip_address>;
    deny all;
 ```
 
- For example, if your collector is located at `10.102.0.6`, the configuration should look as follows:
+ For example, if your Collector is located at `10.102.0.6`, the configuration should appear thus:
 
 ```ls
 location /nginx_status {
@@ -78,4 +78,4 @@ Reload the server:
 sudo nginx -s reload
 ```
 
-Repeat the process for each NGINX server that you would like to monitor.
+Repeat the process for each nginx server that you would like to monitor.

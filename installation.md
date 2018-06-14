@@ -29,7 +29,7 @@ sudo rpm -i jdk-8u131-linux-x64.rpm
 
 ## Verify Java Installation
 
-Verify that the `java` command displays version 1.8.x.
+Verify that the `java` command displays version `1.8.x`.
 
 ```sh
 java -version
@@ -66,11 +66,11 @@ COLLECTOR_OPTS="-httpsPort=10443"
 ./axibase-collector/bin/start-collector.sh
 ```
 
-It may take up to 5 minutes for collector to initialize.
+Collector initialization may take up to five minutes.
 
 ## Check Installation
 
-Check the collector log file for the message FrameworkServlet 'dispatcher': initialization completed.
+Check the Collector log file for the message **FrameworkServlet 'dispatcher': initialization completed**.
 
 ```sh
 tail -f ./axibase-collector/logs/axibase-collector.log
@@ -80,7 +80,7 @@ tail -f ./axibase-collector/logs/axibase-collector.log
 
 Open `https://hostname:9443` in your browser and [configure](configure-administrator-account.md) an administrator account.
 
-## Setup ATSD connection
+## Setup ATSD Connection
 
 Configure Axibase Collector to send data into an Axibase Time Series Database instance.
 

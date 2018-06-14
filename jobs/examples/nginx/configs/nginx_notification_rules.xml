@@ -38,7 +38,7 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
             <body-first>An alert when status page statistics are no longer being received by ATSD has been raised.&#13;
                 Check that the server is reachable and Axibase Collector job is running.
             </body-first>
-            <body-cancel>Sufficient amount of statistics data about NGINX server has been received during last 3
+            <body-cancel>Sufficient amount of statistics data about nginx server has been received during last 3
                 minutes.
             </body-cancel>
             <name>Email Notification id=1</name>
@@ -80,7 +80,7 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
         <disableEntityGrouping>false</disableEntityGrouping>
         <leavingEvents>false</leavingEvents>
         <description>
-            <![CDATA[Raise an alert when an NGINX server average Active Connection count is below 10 over the last 15 minutes.]]></description>
+            <![CDATA[Raise an alert when an nginx server average Active Connection count is below 10 over the last 15 minutes.]]></description>
         <actionStrategy>
             <type>NONE</type>
             <intervalCount>5</intervalCount>
@@ -94,10 +94,10 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
                 <intervalCount>5</intervalCount>
                 <intervalUnit>MINUTE</intervalUnit>
             </repeat-interval>
-            <body-first>An alert when an NGINX server average Active Connection count is below 10 over the last 15
+            <body-first>An alert when an nginx server average Active Connection count is below 10 over the last 15
                 minutes has been raised.
             </body-first>
-            <body-cancel>Your NGINX server Active Connection count is above 10 over the last 15 minutes.&#13;
+            <body-cancel>Your nginx server Active Connection count is above 10 over the last 15 minutes.&#13;
                 Your server is likely to have no problems with accessibility.
             </body-cancel>
             <name>Email Notification id=3</name>
@@ -158,7 +158,7 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
                 contains error codes has been raised.&#13;
                 Check that the server is reachable and Axibase Collector job is running.
             </body-first>
-            <body-cancel>Now NGINX server is responding to tcp connections as expected.</body-cancel>
+            <body-cancel>Now nginx server is responding to tcp connections as expected.</body-cancel>
             <name>Email Notification id=1</name>
             <use-in-threshold-only>false</use-in-threshold-only>
             <recipients>address@domain</recipients>
@@ -198,7 +198,7 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
         <disableEntityGrouping>false</disableEntityGrouping>
         <leavingEvents>false</leavingEvents>
         <description>
-            <![CDATA[Raise an alert when an NGINX server unhandled connection percentage is above 2%.]]></description>
+            <![CDATA[Raise an alert when an nginx server unhandled connection percentage is above 2%.]]></description>
         <actionStrategy>
             <type>NONE</type>
             <intervalCount>5</intervalCount>
@@ -212,7 +212,7 @@ Check that the server is reachable and Axibase Collector job is running.]]></des
                 <intervalCount>3</intervalCount>
                 <intervalUnit>HOUR</intervalUnit>
             </repeat-interval>
-            <body-first>An alert when an NGINX server unhandled connection percentage is above 2% has been raised.
+            <body-first>An alert when an nginx server unhandled connection percentage is above 2% has been raised.
             </body-first>
             <body-cancel>Now your server's unhandled connection percentage is below 2%.</body-cancel>
             <name>Email Notification id=1</name>

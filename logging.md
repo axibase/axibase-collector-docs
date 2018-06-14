@@ -1,6 +1,6 @@
 # Logging
 
-## Copy log file
+## Copy Log File
 
 Copy log file to the Docker host on which Axibase Collector container is running:
 
@@ -8,7 +8,7 @@ Copy log file to the Docker host on which Axibase Collector container is running
 docker cp axibase-collector:/opt/axibase-collector/logs/axibase-collector.log ./
 ```
 
-## Copy all log files
+## Copy All Log Files
 
 Archive log files from the Docker host on which Axibase Collector container is running:
 

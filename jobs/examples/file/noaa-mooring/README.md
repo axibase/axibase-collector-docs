@@ -2,18 +2,18 @@
 
 ## Overview
 
-Download high-resolution ocean and atmosphere pCO2 time-series measurements for a particular
-mooring **CCE2_121W_34N** from a NOAA FTP server at `ftp://ftp.nodc.noaa.gov/nodc/archive/arc0047/0084099/3.3/data/0-data/`.
+Download high-resolution ocean and atmosphere `pCO2` time-series measurements for a particular
+mooring `CCE2_121W_34N` from a NOAA FTP server at `ftp://ftp.nodc.noaa.gov/nodc/archive/arc0047/0084099/3.3/data/0-data/`.
 
 FTP server access is anonymous.
 
-The Path field contains a wildcard to match multiple files that provide data in the expected format.
+The **Path** field contains a wildcard to match multiple files that provide data in the expected format.
 
 Default Entity is extracted from the file name.
 
 The files are copied to a success or error directory on completion.
 
-The parser discards reserved (invalid) values: -999 and -9.999.
+The parser discards reserved (invalid) values: `-999` and `-9.999`.
 
 ## File
 
@@ -39,8 +39,8 @@ CCE2_121W_34N,34.324,-120.816,3/24/12,15:17,563.1,2,2.78,399.1,2,2.62,1015.7,11.
 
 ## Configuration
 
-* [FILE job configuration](noaa-mooring-job.xml). Import xml into Collector.
-* [CSV Parser](noaa-mooring-parser.xml). Import xml into ATSD.
+* [FILE job configuration](noaa-mooring-job.xml). Import XML into Collector.
+* [CSV Parser](noaa-mooring-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

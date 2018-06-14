@@ -73,7 +73,7 @@
         </included>
         <excluded/>
         <entitySet>
-          <name>Australia VIC meteo stations</name>
+          <name>Australia VIC metro stations</name>
           <type>TEXT</type>
           <discardDuplicates>false</discardDuplicates>
           <entities>

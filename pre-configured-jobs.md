@@ -1,4 +1,4 @@
-# Pre-configured Jobs
+# Pre-Configured Jobs
 
 * [aws-cloudwatch](./job-templates/aws-cloudwatch.xml)
 * [docker-remote-api-keystore](./job-templates/docker-remote-api-keystore.xml)

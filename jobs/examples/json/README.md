@@ -1,6 +1,6 @@
 # JSON Job Examples
 
-## List of examples
+## Examples
 
 * [Australia Bureau of Meteorology](australia-weather)
 * [Bureau of Labor Statistics](bls)

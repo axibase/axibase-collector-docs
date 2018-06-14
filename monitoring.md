@@ -4,14 +4,16 @@ Axibase Collector sends job status messages to ATSD upon completion so that job 
 
 Job status messages contain the following fields:
 
-* Type: collector-job
-* Source: job_name
-* Severity: NORMAL if okay, MAJOR on PARTIAL_FAIL, and CRITICAL in case of ERROR
-* Entity: Axibase Collector hostname
-* Tag `status`: COMPLETED, PARTIAL_FAIL, FAIL
-* Tag `job_name`
-* Tag `job_type`
-* Message: Completed in `N` ms. Items read: `N`. Commands sent: `N`. An error will be included in the message if an error was raised.
+Field | Description
+---|---
+Type | `collector-job`
+Source | `job_name`
+Severity | `NORMAL` if okay, `MAJOR` on `PARTIAL_FAIL`, and `CRITICAL` in case of `ERROR`
+Entity | Axibase Collector hostname
+Tag `status` | COMPLETED, PARTIAL_FAIL, FAIL
+Tag `job_name` |
+Tag `job_type` |
+Message | Completed in `N` ms. Items read: `N`. Commands sent: `N`. The Collector includes an error in the message if an error was raised.
 
 Some job types provide an extended set of tags and a modified message:
 

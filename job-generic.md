@@ -8,7 +8,7 @@ Each job has the following generic properties:
 |:--- |:---|
 | Type | Job type, such as JDBC, JMX, FILE, etc.|
 | Name | Job name. |
-| Enabled | Job schedule status. The job must be enabled to be executed according to its schedule. |
+| Enabled | Job schedule status. The job must be enabled to execute on schedule. |
 | Cron Expression | [Cron Expression](scheduling.md#cron-expressions) determines how frequently the job is executed.
 | Storage | Target ATSD server for sending collected data. |
 
@@ -29,12 +29,12 @@ The job may include multiple configurations. For example, a JDBC job may be conf
 
 ## Cloning Jobs
 
-You can create the exact copy of the job by clicking 'Clone'.
+You can create the exact copy of the job by clicking **Clone**.
 
-The copied job will have the same name as the original job but with the '-cloned' postfix.
+The copied job has the same name as the original job but with the `-cloned` postfix.
 
 By default, cloned jobs are disabled.
 
-You can change the necessary settings and enable the job by selecting the Enabled check box.
+You can change the necessary settings and enable the job by selecting the check box and selecting **Enable** from the split button below the table.
 
-A cloned job has its own primary key and can run concurrently with the original job.
+A cloned job has a unique primary key and may run concurrently with the original job.

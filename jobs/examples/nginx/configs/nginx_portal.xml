@@ -5,7 +5,7 @@
     <showInMenu>false</showInMenu>
     <displayIndex>0</displayIndex>
     <content>[configuration]
-  title = NGINX Status
+  title = nginx Status
   step-line = false
   markers = false
   height-units = 3

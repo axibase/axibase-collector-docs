@@ -4,47 +4,47 @@
 
 This document describes how to collect JMX metrics exposed by Java applications for long-term retention and monitoring in Axibase Time Series Database.
 
-This integration enables both performance monitoring (garbage collection, load, threads, heap/offheap memory), availability monitoring (system uptime counter), as well as configuration tracking by notifying any changes in the system properties.
+This integration enables both performance monitoring (garbage collection, load, threads, heap/offheap memory), availability monitoring (system uptime counter), as well as configuration tracking by notifying of any changes in the system properties.
 
 ## Requirements
 
-* JRE/JDK 6+
+* JRE/JDK `6+`
 
 ## Installation Steps
 
 ### Enable JMX in Java Application
 
-Configure your Java application for JMX data collection as described [here](../../jmx.md).
+Configure your Java application for JMX data collection as described by the [JMX Job Documentation](../../jmx.md).
 
 ### Import JVM Job into Axibase Collector
 
-* Open **Jobs:Import** and upload the [jmx-jvm-job.xml](configs/jvm_job.xml) file.
+* On the **Jobs** page, select **Import** from the split button at the bottom of the page and upload the [jmx-jvm-job.xml](configs/jvm_job.xml) file.
 
 ### Configure JMV JMX Connection
 
-* Open the **Jobs:JMX** page and select the `jmx-jvm` job.
+* Open the **Jobs** menu and select **JMX**. Click the `jmx-jvm` job.
 * For each JMX Configuration:
 * Provide connection parameters to the target JVM:
 
 ![](./images/jvm_jmx_configuration.png)
 
-* Click the [Test] button:
+* Click **Test**:
 
 ![](./images/jvm_test_jmx_configuration.png)
 
 ### Schedule the Job
 
-* Open the `JMX Job` page and click the [Run] button for the JVM JMX job.
-* Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than 0.
+* Open the **JMX Job** page and click **Run** for the JVM JMX job.
+* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
-* If there are no errors, set the job status to 'Enabled' and save the job.
+* If there are no errors, set the job status to **Enabled** and save.
 
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on Metrics tab and filter metrics by name `jmx.jvm*`.
+* Click on **Metrics** tab and filter metrics by name `jmx.jvm*`.
 
 ![](./images/jvm_metrics.png)
 
@@ -60,24 +60,24 @@ Configure your Java application for JMX data collection as described [here](../.
 
 ### Entity group
 
-* Open **Admin:Entity Groups**, click the [Import] button, and upload  [jvm_entity_group.xml](configs/jvm_entity_group.xml).
+* Open **Settings** menu and click **Entity Groups**, select **Import** from the split button, and upload  [`jvm_entity_group.xml`](configs/jvm_entity_group.xml).
 * Select the imported `java-virtual-machine` group.
 * Verify that the group contains your JVM hosts.
 
 ### Entity Views
 
-* Open **Configuration:Entity Views**, click the [Import] button, and upload  [jvm_entity_view.xml](configs/jvm_entity_view.xml).
+* Open the **Entity Views** menu and select **Configuration**, click **Import**, and upload  [`jvm_entity_view.xml`](configs/jvm_entity_view.xml).
 * Select the imported `Java Applications` view.
 * Select the Entity Group that you created earlier.
-* Click on the [View] button and browse information about your entities:
+* Click **View** and browse information about your entities:
 
 ![](./images/jvm_entity_view.png)
 
 ### Portal
 
-* Open **Configuration: Portals**, click the [Import] button, and upload [jvm_portal.xml](configs/jvm_portal.xml).
-* Click the Assign link and associate the portal with the entity group you created earlier.
-* Open the Entity tab, find the java application by name, and click on its portal icon:
+* Open the **Portals** menu and select **Configure**, click **Import**, and upload [`jvm_portal.xml`](configs/jvm_portal.xml).
+* Click the **Assign** link and associate the portal with the entity group you created earlier.
+* Open the Entity tab, find the java application by name, and click the **Portal** icon:
 
 ![](./images/jvm_portal_icon.png)
 
@@ -92,9 +92,9 @@ Configure your Java application for JMX data collection as described [here](../.
 
 #### Import Rules
 
-* Open the **Configuration: Rules** page, click the [Import] button, and upload [jvm_rules.xml](configs/jvm_rules.xml).
-* For each created rule: open it in the Rule Editor and change recipient address on the *Email Notifications* tab.
-* These rules will automatically apply to all JVM based applications monitored by Axibase Collector.
+* Open the **Alerts** menu and select **Rules**, click **Import**, and upload [`jvm_rules.xml`](configs/jvm_rules.xml).
+* For each created rule: open the rule in the **Rule Editor** and change recipient address on the **Email Notifications** tab.
+* These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
 
 Imported rules:
 

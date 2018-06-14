@@ -13,7 +13,7 @@ Field Name | Field Value
 Message Format | Network API Command
 Use Listener | true
 
-[Kafka Job Configuration](kafka_job_configuration.xml) file. Import xml into Collector.
+[Kafka Job Configuration](kafka_job_configuration.xml) file. Import XML into Collector.
 
 ## Command
 

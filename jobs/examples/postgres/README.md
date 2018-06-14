@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to collect statistics' metrics introduced in [PostgreSQL](http://www.mysql.com/) 9.1+ for long-term retention and monitoring in Axibase Time Series Database.
+This document describes how to collect statistical metrics introduced in [PostgreSQL](http://www.mysql.com/) `9.1+` for long-term retention and monitoring in Axibase Time Series Database.
 
 The process involves enabling a JDBC job in Axibase Collector to poll [statistics views](https://www.postgresql.org/docs/9.1/static/monitoring-stats.html) in the PostgreSQL database and uploading the counters and properties into ATSD for processing.
 
@@ -14,7 +14,7 @@ The process involves enabling a JDBC job in Axibase Collector to poll [statistic
 
 ## Create a readonly user for Axibase Collector
 
-* Create user:
+* Create a user:
 
 ```sh
 adduser readonly
@@ -37,15 +37,15 @@ ALTER USER readonly VALID UNTIL 'infinity';
 ALTER ROLE readonly login;
 ```
 
-* Open the file **/etc/postgresql/${POSTGRES_VERSION}/main/pg_hba.conf**.
+* Open the file `/etc/postgresql/${POSTGRES_VERSION}/main/pg_hba.conf`.
 * Add the following record to allow remote access from the Axibase Collector machine:
 
 ```txt
 host    all             readonly        10.102.0.12           trust
 ```
 
-* Open the file **/etc/postgresql/${POSTGRES_VERSION}/main/postgresql.conf**.
-* Enable the database to accept remote connections by specifying its external IP address:
+* Open the file `/etc/postgresql/${POSTGRES_VERSION}/main/postgresql.conf`.
+* Enable the database to accept remote connections by specifying the external IP address:
 
 ```sh
 listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
@@ -53,12 +53,12 @@ listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
 
 ### Import PostgreSQL Job into Axibase Collector
 
-* Open **Jobs:Import** and upload the [postgres-jobs.xml](postgres-jobs.xml) file.
+* On **Jobs** page, select **Import** from the split button below the table and upload the [`postgres-jobs.xml`](postgres-jobs.xml) file.
 
 ### Configure PostgreSQL Database Connection
 
-* Open the **Data Sources:Databases** page and select the `postgresql` database.
-* Provide connection parameters to the target PostgreSQL database as displayed below:
+* Open the **Data Sources > Databases** page and select the `postgresql` database.
+* Provide connection parameters to the target PostgreSQL database displayed below:
 
 ![](./images/postgres-datasource.png)
 
@@ -72,30 +72,30 @@ SELECT 1
 
 ### Verify Job Configuration
 
-* Open the PostgreSQL job.
-* Set the Data Source to `postgresql`.
+* Open the **PostgreSQL** job.
+* Set **Data Source** to `postgresql`.
 
 ![](./images/postgres-jdbc-job.png)
 
 * Choose one of the target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click on the [Test] button, and review the output. See [Data Queries](#data-queries) below.
+* Open each configuration, click **Test**, and review the output. See [Data Queries](#data-queries).
 
 ![](./images/test_result.png)
 
 ### Schedule the Job
 
-* Open the `JDBC Job` page and click the [Run] button for the PostgreSQL JDBC job.
-* Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than 0.
+* Open the **JDBC Job** page and click **Run** for the **PostgreSQL JDBC** job.
+* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
-* If there are no errors, set the job status to 'Enabled' and save the job.
+* If there are no errors, set the job status to **Enabled** and save.
 
 ### Verify Metrics in ATSD
 
-* Login to ATSD.
-* Click on the Metrics tab and filter metrics by name `postgres.*`.
+* Log in to ATSD.
+* Click the **Metrics** tab and filter metrics by name `postgres.*`.
 
 ![](./images/postgres-metrics.png)
 
@@ -111,22 +111,22 @@ SELECT 1
 
 ### Entity Groups
 
-* Open the **Admin: Entity Groups** page.
-* Create a new Entity Group, click on the Expression 'Edit mode', and enter the following expression:
+* Open **Settings > Entity Groups**.
+* Create a new Entity Group with the split button at the bottom of the page, navigate to the **Expression** tab under **Members**, and enter the following expression:
 
 ```javascript
 hasMetric('postgres.global_status.uptime')
 ```
 
-* Save and verify that the group contains your PostgreSQL database hosts:
+* Save and verify that the group contains PostgreSQL database hosts:
 
 ![](./images/postgres-entity-group.png)
 
 ### Portals
 
-* Open the **Configuration: Portals** page and import a `postgresql` portal from [portal-postgres.xml](portal-postgres.xml).
-* Click the Assign link and associate the portal with the entity group you created earlier.
-* Open Entity tabs, find the `postgresql` database by name, and click on its portal icon.
+* Open the **Portals** menu and select **Configure**. Import a `postgresql` portal from [`portal-postgres.xml`](portal-postgres.xml).
+* Click the **Assign** link and associate the portal with the entity group you created earlier.
+* Open **Entities** tabs, find the `postgresql` database by name, and click the **Portal** icon.
 
 ![](./images/postgres-portal-icon.png)
 
@@ -135,4 +135,4 @@ hasMetric('postgres.global_status.uptime')
 
 ## Data Queries
 
-Metrics Queries select most recent statistics as described in this [file](data-queries.md).
+Metrics Queries select most recent statistics as described in the [Data Queries Documentation](data-queries.md).

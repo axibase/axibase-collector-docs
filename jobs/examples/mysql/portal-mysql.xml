@@ -5,7 +5,7 @@
     <showInMenu>false</showInMenu>
     <displayIndex>0</displayIndex>
     <content>  [configuration]
-    title = MySQL Server Perfomance Portal
+    title = MySQL Server Performance Portal
     height-units = 3
     width-units = 5
     step-line = false

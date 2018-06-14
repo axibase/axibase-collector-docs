@@ -2,7 +2,7 @@
 
 ## Overview
 
-Download Q&A activity statistics for a set of stackoverflow tags in JSON format.
+Download Q&A activity statistics for a set of `stackoverflow` tags in JSON format.
 
 API key is required.
 
@@ -48,8 +48,8 @@ count,name
 
 ## Configuration
 
-* [FILE job configuration](stackoverflow-job.xml). Import xml into Collector.
-* [CSV Parser](stackoverflow-parser.xml). Import xml into ATSD.
+* [FILE job configuration](stackoverflow-job.xml). Import XML into Collector.
+* [CSV Parser](stackoverflow-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

@@ -7,7 +7,7 @@
 [File](./file/) | File | Download CSV files
 [HP OpenView](./hp-openview/) | OVPM | Offload CODA metrics from OVPM
 [Jetty](./jetty/) | JMX | Collect sessions, requests, status from the Jetty server
-[JSON](./json/) | JSON | Download JSON file and convert it to CSV format
+[JSON](./json/) | JSON | Download JSON file and convert the file to CSV format
 [JVM](./jvm/) | JMX | Collect key JVM performance metrics
 [MySQL](./mysql/) | JDBC | Collect database performance metrics
 [nginx](./nginx/) | File | Collect key web server metrics for nginx

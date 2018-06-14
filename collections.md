@@ -30,14 +30,14 @@ Job types with support for Item List automation:
 
 ### Configuration
 
-To create a new list, open the **Collections:Item Lists** page, and click **Add**:
+To create a new list, open the **Collections > Item Lists** page, and click **Add**:
 
 | **Field** | **Description**|
 |:----|:---|
 |`Name` | Item List name.|
 |`Description` | Item List description.|
 | `Type` | Method used to retrieve list items. See [types](#types).|
-|`Discard Duplicates` | Discard items with the same name.<br>If true, the list discards duplicate items regardless of type (TEXT, FILE, SCRIPT).<br>String comparison for duplicate checks is case-sensitive.|
+|`Discard Duplicates` | Discard items with the same name.<br>If true, the list discards duplicate items regardless of type (`TEXT`, `FILE`, `SCRIPT`).<br>String comparison for duplicate checks is case-sensitive.|
 |`Items`, `Path`, `Command`... | Type-specific fields to configure the source for reading list items.|
 
 ### Usage
@@ -74,7 +74,7 @@ Item Lists may receive items from different sources. Currently the following typ
 
 #### TEXT
 
-An Item List which stores strings entered in the `Items` field on the form.
+An Item List which stores strings entered in the **Items** field on the form.
 
 List items should be separated by a line break.
 
@@ -99,16 +99,16 @@ Exclude items which end with `axibase.com`:
 
 #### SCRIPT
 
-Executes a script specified in the `Command` field and reads lines from a standard output as list items.
+Executes a script specified in the **Command** field and reads lines from a standard output as list items.
 
 **Field** | **Description**
 :--- | :---
-`Path to the Script` | Relative path to a script file returning Item List elements.<br>Scripts should be located in $AXIBASE_COLLECTOR_HOME/conf/scripts directory.
-`Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory $AXIBASE_COLLECTOR_HOME/conf/scripts, also this directory is used as working directory.<br>It is recommended to specify a command interpreter by providing a shebang on the first line, e.g. #!/usr/bin/env bash.<br>You must provide the setting 'script.text.execute.allow=true' in server.properties file in order to be able to use this feature.
+`Path to the Script` | Relative path to a script file returning Item List elements.<br>Scripts should be located in `$AXIBASE_COLLECTOR_HOME/conf/scripts` directory.
+`Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory `$AXIBASE_COLLECTOR_HOME/conf/scripts`, also this directory is used as working directory.<br>Specify a command interpreter by providing a shebang on the first line, for example `#!/usr/bin/env bash`.<br>You must provide the setting `script.text.execute.allow=true` in `server.properties` file in order to use this feature.
 
-The `Command` field should start with the script file name (absolute path not supported) and optional script arguments.
+The **Command** field should start with the script file name (absolute path not supported) and optional script arguments.
 
-The script should print items separated by line breaks to 'stdout'.
+The script should print items separated by line breaks to `stdout`.
 
 ![SCRIPT Type](./images/collection_script_type.png)
 
@@ -159,9 +159,9 @@ Reads lines from a remote file/page.
 
 **Field** | **Description**
 :--- | :---
-`HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records will be retrieved.
-`Path` | HTTP(s) Path to file. If HTTP Pool is enabled, the path should be relative. Otherwise the Path should be a full URI including the protocol, host, port and path.
-`Content Format` | Content format in the file. Supported formats: `MULTILINE_TEXT` and `JSON`.
+`HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records are retrieved.
+`Path` | HTTP or HTTPS Path to file. If HTTP Pool is enabled, the path should be relative. Otherwise the Path should be a full URI including the protocol, host, port and path.
+`Content Format` | Content format in the file. Supported formats: `MULTILINE_TEXT` and JSON.
 `Item Filter`| Expression for matching item. This field also supports regex expression, for example: REGEXP(expression).
 `JSON Path` | JSON Path expression to match a list of items in the JSON document.
 `Separator` | Separator used when concatenating multiple field values.
@@ -173,7 +173,7 @@ Examples:
 * [MULTILINE_TEXT](#example-with-multiline-text-content)
 * [JSON](#example-with-json-content)
 
-##### Example with `MULTILINE_TEXT` content
+##### Example with MULTILINE TEXT Content
 
 ![URL Type](./images/collection_url_type.png)
 
@@ -204,7 +204,7 @@ result:
 2513839
 ```
 
-##### Example with `JSON` content
+##### Example with JSON Content
 
 ![URL Type JSON](./images/collection_url_type_json.png)
 
@@ -214,13 +214,13 @@ Selects data from a database with a SELECT query.
 
 **Field** | **Description**
 :--- | :---
-`Database` | Database from which the item list records will be selected.
+`Database` | Database from which the item list records are selected.
 `Query` | SELECT query for retrieving item list elements. Values contained in multiple columns are concatenated using specified separator.
 `Separator` | Separator used when concatenating multiple column values.
 
 Each item is created by concatenating values from **all** columns in a given row separated by the specified token.
 
-If the result set is empty, an empty list is returned.
+If the result set is empty, Collector returns an empty list.
 
 ![QUERY Type](./images/collection_query_type.png)
 
@@ -230,7 +230,7 @@ Requests a list of property records from ATSD with the [property query](https://
 
 **Field** | **Description**
 :--- | :---
-`HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records will be retrieved.
+`HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records are retrieved.
 `Property Type` | Property type to be retrieved.
 `Entity` | Entity name or pattern containing * as a wildcard.
 `Entity Group` | Entity group name to filter records for entities that are members of this group.
@@ -242,6 +242,6 @@ Requests a list of property records from ATSD with the [property query](https://
 
 Each item is created by concatenating field values (Keys/Tags + Entity Tags) separated by the specified token.
 
-If no property records are found, an empty list is returned.
+If no property records are found, Collector returns an empty list.
 
 ![ATSD_PROPERTY Type](./images/collection_atsd_property_type.png)

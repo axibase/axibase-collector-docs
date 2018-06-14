@@ -14,7 +14,7 @@
         <path>http://www.bom.gov.au/fwo/IDN60801/IDN60801.${ITEM}.json</path>
         <format>JSON</format>
         <entitySet>
-          <name>Australia NSW and ACT meteo stations</name>
+          <name>Australia NSW and ACT metro stations</name>
           <type>TEXT</type>
           <discardDuplicates>false</discardDuplicates>
           <entities>

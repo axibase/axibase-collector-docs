@@ -42,12 +42,12 @@ EOF
 See [Aggregation Log Filter](https://github.com/axibase/aggregation-log-filter) for additional configuration options.
 
 * Modify JMX settings in ActiveMQ JVM launch options.
-  * Search for the `ACTIVEMQ_SUNJMX_START` setting and change it as specified below.
+  * Search for the `ACTIVEMQ_SUNJMX_START` setting and modify the setting as specified below.
   * Replace `activemq_hostname` with the full hostname or the IP address of the ActiveMQ server.
-  * This should be the same hostname that Axibase Collector will be using when connecting to the ActiveMQ server.
-  * For more information on configuring JMX in ActiveMQ, see [https://activemq.apache.org/jmx.html](https://activemq.apache.org/jmx.html)
+  * This should be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
+  * For more information on configuring JMX in ActiveMQ, see [Apache ActiveMQ Documentation](http://activemq.apache.org/jmx.html)
 
-ActiveMQ 5.11.x and later:
+ActiveMQ `5.11.x` and later:
 
 ```sh
 vi ./bin/env
@@ -63,7 +63,7 @@ ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote.pas
 ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_CONF}/jmx.access"
 ```
 
-ActiveMQ 5.10.x and earlier:
+ActiveMQ `5.10.x` and earlier:
 
 ```sh
 vi ./bin/activemq
@@ -79,7 +79,7 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
    -Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_BASE}/conf/jmx.access"
 ```
 
-The result should be as shown on the image below:
+This should be the result:
 
 ![SUN_JMX_START_IMAGE](./images/very_new_screen.png)
 
@@ -115,25 +115,32 @@ chmod 600 ./conf/jmx.password
 #### Configure ActiveMQ JMX Job
 
 1. Log in to Axibase Collector at `https://collector_hostname:9443`.
-1. Click the Jobs tab in the top menu.
+1. Click the **Jobs** tab in the top menu.
 1. Locate the `jmx-activemq` job.
-1. On the JMX Job page, enable its status by checking on the 'Enabled' check box.
-1. Adjust the cron expression if required. By default, the job will be executed every 10 seconds.
+1. On the **JMX Job** page, enable job status by checking the box and selecting **Enabled** from the split button at the bottom of the screen.
+1. Adjust the cron expression if required. By default, the job is executed every 10 seconds.
 
-* For more information on cron expressions, see [Scheduling](../../../scheduling.md).
+> For more information on cron expressions, see [Scheduling](../../../scheduling.md).
 
 ![JMX_JOB](./images/jmx_job_to_configuration.png)
 
 ##### Configuring activemq-series
 
 1. Select the `activemq-series` configuration.
-1. On the JMX Configuration page, enter the JMX connection parameters as above:
+1. On the **JMX Configuration** page, enter the JMX connection parameters as above:
 
 * **Host** — ActiveMQ hostname. Must be the same as the `activemq_hostname`.
 * **Port** — JMX port.
 * **User Name** — JMX user name such as `monitorRole`. Read-only permissions are sufficient.
 * **Password** — Password for JMX user.
-* **Entity** — Optionally, specify the output of the hostname command on the ActiveMQ server if it's different from `activemq_hostname` (for example if `activemq_hostname` represents a fully qualified name).
+* **Entity** — Optionally, specify the output of the hostname command on the ActiveMQ server if hostname is different from `activemq_hostname` (for example if `activemq_hostname` represents a fully qualified name).
+  Other parameters are optional. For more information on JMX configuration, see [JMX](../../../jobs/jmx.md).
+
+* **Host** — ActiveMQ hostname. Must be the same as the `activemq_hostname`.
+* **Port** — JMX port.
+* **User Name** — JMX user name such as `monitorRole`. Read-only permissions are sufficient.
+* **Password** — Password for JMX user.
+* **Entity** — Optionally, specify the output of the hostname command on the ActiveMQ server if it is different from `activemq_hostname` (for example if `activemq_hostname` represents a fully qualified name).
 
 Other parameters are optional. For more information on JMX configuration, see [JMX](../../../jobs/jmx.md).
 
@@ -147,10 +154,10 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ##### Configuring activemq-property
 
-1. From the table on the JMX Job page, click Edit next to the activemq-property configuration.
-1. Set Host, Port, User Name, Password, and Entity fields as described in the previous section.
-1. Click Test to validate the configuration.
-1. Click Save.
+1. From the table on the **JMX Job** page, click **Edit** next to the `activemq-property` configuration.
+1. Set **Host**, **Port**, **User Name**, **Password**, and **Entity** fields as described in the previous section.
+1. Click **Test** to validate the configuration.
+1. Click **Save**.
 
 ![](./images/enitites_list_full-450x132.png)
 
@@ -158,7 +165,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Metrics
 
-* List of collected [AcriveMQ metrics](metric-list.md)
+* List of collected [ActiveMQ metrics](metric-list.md)
 
 ### Properties
 
@@ -166,24 +173,24 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Entity group
 
-* Open **Admin:Entity Groups**, click the [Import], button and upload  [activemq_entity_group.xml](configs/activemq_entity_group.xml).
+* Open **Settings > Entity Groups**, select **Import** from the split button and upload  [activemq_entity_group.xml](configs/activemq_entity_group.xml).
 * Select the imported `apache-activemq-brokers` group.
 * Verify that the group contains your Active MQ hosts.
 
 ### Entity Views
 
-* Open **Configuration:Entity Views**, click the [Import] button and upload  [activemq_entity_view.xml](configs/activemq_entity_view.xml).
+* Open **Entity Views > Configure**, select **Import** from the split button and upload  [activemq_entity_view.xml](configs/activemq_entity_view.xml).
 * Select the imported `Apache ActiveMQ Brokers` view.
 * Select the Entity Group that you created earlier.
-* Click on the [View] button and browse information about your entities.
+* Click **View** and browse information about your entities.
 
 ![](./images/activemq_entity_view.png)
 
 ### Portal
 
-* Open **Configuration: Portals** and click the [Import] button and upload [activemq_portal.xml](configs/activemq_portal.xml).
-* Click the Assign link and associate the portal with the entity group you created earlier.
-* Open the Entity tabs, find the java application by name, and click on its portal icon.
+* Open the **Portals** menu and select **Configure**. Select **Import** from the split button and upload [activemq_portal.xml](configs/activemq_portal.xml).
+* Click the **Assign** link and associate the portal with the entity group you created earlier.
+* Open the **Entities** tab, find the java application by name, and click the **Portal** icon.
 
 ![](./images/activemq_portal_icon.png)
 
@@ -192,24 +199,24 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Rules
 
-### Setting up Mail Client
+### Setting up **Mail Client**
 
 * Configure [Mail Client](https://axibase.com/docs/atsd/administration/mail-client.html).
 
 #### Import Rules
 
-* Open the **Configuration: Rules** page, click the [Import], button and upload [jvm_rules.xml](configs/activemq_rules.xml).
-* For each created rule, open it in the Rule Editor, and change the recipient address on the *Email Notifications* tab.
-* These rules will automatically apply to all JVM based applications monitored by Axibase Collector.
+* Open the **Configuration > Rules** page, click **Import** and upload [jvm_rules.xml](configs/activemq_rules.xml).
+* For each created rule, open the rule in the **Rule Editor**, and change the recipient address on the **Email Notifications** tab.
+* These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
 
 Imported rules:
 
 | **Rule** |  **Description** |
 | :--- | :--- |
-| *activemq_broker_configuration_change* | Send a notification on configuration change. |
-| *activemq_connection_count* | Raise an alert when connection count exceeds the specified threshold. |
-| *activemq_enqueue_stopped* |  Raise an alert when enqueueing stops (no new messages are received). |
-| *activemq_health_status* |   Raise an alert when Activemq health status is abnormal. |
-| *activemq_unauthorized_connection* | Raise an alert when connection from unauthorized IP adddress is detected. |
+| activemq_broker_configuration_change | Send a notification on configuration change. |
+| activemq_connection_count | Raise an alert when connection count exceeds the specified threshold. |
+| activemq_enqueue_stopped |  Raise an alert when enqueueing stops (no new messages are received). |
+| activemq_health_status |   Raise an alert when Activemq health status is abnormal. |
+| activemq_unauthorized_connection | Raise an alert when connection from unauthorized IP address is detected. |
 
 To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).

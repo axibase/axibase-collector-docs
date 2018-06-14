@@ -1,5 +1,5 @@
 #===============================================================================
-# Axibase NGINX plus Collector main script.
+# Axibase nginx plus Collector main script.
 # Run: 
 #        python axibase_nginx_plus_collector.py -h 
 # for more information.

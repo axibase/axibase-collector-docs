@@ -1,8 +1,8 @@
 # Installation on Kubernetes Cluster
 
-## Create secrets
+## Create Secrets
 
-Create a [secret object](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) for the ATSD [collector user](https://axibase.com/docs/atsd/administration/collector-account.html). This account will be used by collector instances to transmit metrics securely into the database.
+Create a [secret object](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) for the ATSD [collector user](https://axibase.com/docs/atsd/administration/collector-account.html). This account is used by Collector instances to transmit metrics securely into the database.
 
 Create a [`secret.yaml`](https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret-manually) file with the [following content](./files/secret.yaml):
 
@@ -76,18 +76,18 @@ spec:
 
 Notes:
 
-* `atsd` deployment is defined in `metadata: name` field.
+* `atsd` deployment is defined in **metadata: name** field.
 * The deployment consists of one pod.
-* The `selector` field defines how the deployment finds pods to be managed. In this case, we simply select a pod based on the label defined in the Pod template (`app: atsd`).
-* The pod template’s specification, or `template: spec` field, indicates that the Pod should run one container, named `atsd`, which runs the latest [atsd](https://hub.docker.com/r/axibase/atsd/) image from Docker Hub.
+* The **selector** field defines how the deployment finds pods to be managed. In this case, simply select a pod based on the label defined in the Pod template (`app: atsd`).
+* The pod template specification, or **template: spec** field, indicates that the Pod should run one container, named `atsd`, which runs the latest [ATSD](https://hub.docker.com/r/axibase/atsd/) image from Docker Hub.
 * The deployment opens ports 8081 and 8443.
 
-The `template` field contains the following instructions for the pod:
+The **template** field contains the following instructions for the pod:
 
 * Add label `app: atsd` to the container.
-* Create one container and name it `atsd`.
+* Create one container named `atsd`.
 * Run a container from the latest `axibase/atsd` image.
-* The container should use [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by `valueFrom.secretKeyRef` field.
+* The container should use [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by **`valueFrom.secretKeyRef`** field.
 * The container has a memory request of 600 MiB and a memory limit of 1200 MiB.
 * Open ports 8081 and 8443 to accept incoming TCP traffic.
 
@@ -125,13 +125,13 @@ spec:
   type: NodePort
 ```
 
-This specification will create a new Service object named `atsd` which opens TCP ports on any Pod with the `app=atsd` label.
+This specification creates a new Service object named `atsd` which opens TCP ports on any Pod with the `app=atsd` label.
 
-The service type is specified as [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), whereas each node will redirect traffic to the atsd service on the same port.
+The service type is specified as [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), whereas each node redirects traffic to the ATSD service on the same port.
 The Service automatically creates environment variables, which are [supported by Collector](installation-on-docker.md#environment-variables):
 
-* ATSD_SERVICE_HOST (variable pattern '{service_name}_SERVICE_HOST')
-* ATSD_SERVICE_PORT_HTTPS (variable pattern '{service_name}\_SERVICE_PORT_{port_name}'), specified by the `spec.ports` field:
+* `ATSD_SERVICE_HOST (variable pattern '{service_name}_SERVICE_HOST')`
+* `ATSD_SERVICE_PORT_HTTPS (variable pattern '{service_name}\_SERVICE_PORT_{port_name}')`, specified by the `spec.ports` field:
 
   ```yaml
   spec:
@@ -141,7 +141,7 @@ The Service automatically creates environment variables, which are [supported by
         name: https
   ```
 
-* ATSD_SERVICE_PORT_TCP (variable pattern '{service_name}\_SERVICE_PORT_{port_name}'), specified by the `spec.ports` field:
+* `ATSD_SERVICE_PORT_TCP (variable pattern '{service_name}\_SERVICE_PORT_{port_name}')`, specified by the `spec.ports` field:
 
   ```yaml
   spec:
@@ -158,7 +158,7 @@ $ kubectl create -f ./atsd-service.yaml
 service "atsd" created
 ```
 
-**Note** When using type [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), the firewall is not opened by default. You need to add firewall rules to allow access for ports, indicated in the `nodePort:` field.
+> Pro Tip. When using type [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), the firewall is not opened by default. You need to add firewall rules to allow access for ports, indicated in the **`nodePort:`** field.
 
 ## Install Collector
 
@@ -230,22 +230,22 @@ spec:
 
 Notes:
 
-* `axibase-collector` deployment is defined in `metadata: name` field.
-* The Deployment creates **three** replicated Pods, indicated by the [`replicas`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#replicas) field. If you want to install the Collector on each node, the replicas value must be equal node count.
-* The `selector` field defines how the deployment finds pods to be managed. In this case, we select a pod based on the label defined in the Pod template (`app: axibase-collector`).
-* The pod template’s specification, or `template: spec` field, indicates that the Pod should run one container, named `axibase-collector`, which runs the latest [axibase-collector](https://hub.docker.com/r/axibase/collector/) image from Docker Hub.
+* `axibase-collector` deployment is defined in **metadata: name** field.
+* The Deployment creates **three** replicated Pods, indicated by the [**replicas**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#replicas) field. If you want to install the Collector on each node, the replicas value must equal node count.
+* The **selector** field defines how the deployment finds pods to be managed. In this case, select a pod based on the label defined in the Pod template (`app: axibase-collector`).
+* The pod template’s specification, or **template: spec** field, indicates that the Pod should run one container, named `axibase-collector`, which runs the latest [axibase-collector](https://hub.docker.com/r/axibase/collector/) image from Docker Hub.
 * The deployment opens port 9443.
 
-The `template` field contains the following instructions:
+The **template** field contains the following instructions:
 
 * Add label `app: axibase-collector` to each pod.
-* Pods use [`affinity`](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity). We have `podAntiAffinity` that will restrict to have two same pods (label `app:axibase-collector`) in one node.
-* Create one container and name it `axibase-collector`.
-* Create one volume and name it `docker-socket`.
+* Pods use [`affinity`](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity). `podAntiAffinity` restricts having two identical pods (label `app:axibase-collector`) in one node.
+* Create one container named `axibase-collector`.
+* Create one volume named `docker-socket`.
 * Run the `axibase/collector` image at latest version.
 * The container uses [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by `valueFrom.secretKeyRef` field.
 * The container has a memory request of 200 MiB and a memory limit of 600 MiB.
-* The container uses the `docker-socket` volume, indicated by the `volumeMounts` field.
+* The container uses the `docker-socket` volume, indicated by the **volumeMounts** field.
 * Open ports 9443 so that the container can send and accept traffic. The port is also opened on each Node, specified by the `hostPort: 9443` field.
 
 Create the deployment using the [kubectl create](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#create) command:

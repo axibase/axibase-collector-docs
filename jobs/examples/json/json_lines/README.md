@@ -52,16 +52,16 @@ Format     | JSON_LINES
 
 Field Name         | Field Value
 :----------------- | :----------
-Default Entity     | json_lines
+Default Entity     | `json_lines`
 JSON Path          | $..data.*
 Depth              | 1
 Time Field         | timestamp
-Time Format        | yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ
-Excluded Fields    | pitagvalue
-Metric Name Field  | pitagname
-Metric Value Field | pitagvalue
+Time Format        | `yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ`
+Excluded Fields    | `pitagvalue`
+Metric Name Field  | `pitagname`
+Metric Value Field | `pitagvalue`
 
-[JSON Job Configuration](json_job_configuration.xml) file. Import xml into Collector.
+[JSON Job Configuration](json_job_configuration.xml) file. Import XML into Collector.
 
 ## Matched Objects
 
@@ -101,7 +101,7 @@ series e:json_lines d:2016-07-01T10:28:07.638Z m:metric2=250
 
 ![](./images/settings.png)
 
-### Viewer
+### **Viewer**
 
 ![](./images/viewer.png)
 

@@ -14,50 +14,50 @@ Oracle EM collects and stores statistics from remote databases, applications, an
 
 ### Import Oracle EM JDBC Job
 
-* Open **Jobs:Import** and upload the [oracle-em-jobs.xml](oracle-em-jobs.xml) file.
+* On the **Jobs** page select **Import** from the split button below the table and upload the [`oracle-em-jobs.xml`](oracle-em-jobs.xml) file.
 
 ### Configure Oracle EM Database Connection
 
-* Open the **Data Sources:Databases** page and select the `OracleEM` database.
+* Open the **Data Sources > Databases** page and select the `OracleEM` database.
 * Provide connection parameters to the target Oracle EM database as displayed below:
 
 ![](./images/oracle_database_example.png)
 
-* Read-only/SELECT privileges to `SYSMAN.GC$TARGET` and `SYSMAN.gc$metric_values` tables are sufficient.
+* Read-only/`SELECT` privileges to `SYSMAN.GC$TARGET` and `SYSMAN.gc$metric_values` tables are sufficient.
 * Execute the following test query to check the connection:
 
 ```SQL
 SELECT NULL FROM dual
 ```
 
-* Click on the [Meta Data] button and check that the **SYSMAN** schema is present in the list of schemas.
+* Click **Meta Data** and check that the `SYSMAN` schema is present in the list of schemas.
 
 ### Verify Job Configuration
 
 * Open Oracle EM JDBC job.
-* Set the Data Source to OracleEM.
+* Set **Data Source** to OracleEM.
 
 ![](./images/oracle_job_ds.png)
 
 * Choose one of target ATSD instances if your Collector instance is connected to multiple ATSD servers.
 * Save the Job.
-* Open each configuration, click on the [Test] button, and review the output. See [Data Queries](#data-queries) below.
+* Open each configuration, click **Test**, and review the output. See [Data Queries](#data-queries) for more information.
 
 ![](./images/test_result.png)
 
 ### Schedule the Job
 
-* Open the `JDBC Job` page and click the [Run] button for the Oracle EM JDBC job.
-* Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than 0.
+* Open the **JDBC Job** page and click **Run** for the Oracle EM JDBC job.
+* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
-* If there are no errors, set job status to 'Enabled' and save the job.
+* If there are no errors, set job status to **Enabled** and save the job.
 
 ### Verify Metrics in ATSD
 
-* Login into ATSD.
-* Click on the Metrics tab and filter metrics by name `oem.*`.
+* Log in to ATSD.
+* Click the **Metrics** tab and filter metrics by name `oem.*`.
 
 ![](./images/metrics_atsd.png)
 
@@ -73,8 +73,8 @@ SELECT NULL FROM dual
 
 ### Entity Groups
 
-* oracle-databases
-* oracle-hosts
+* `oracle-databases`
+* `oracle-hosts`
 
 ### Portals
 

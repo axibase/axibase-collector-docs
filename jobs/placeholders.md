@@ -2,18 +2,18 @@
 
 ## Overview
 
-The following placeholders are supported to format strings, calculate dates, and download multiple files.
+Collector supports the following placeholders to format strings, calculate dates, and download multiple files.
 
 | **Name** | **Description** |
 |:---|:---|
 | `${ITEM}` | Current element in the Item List.|
 | `${PATH}` | URL path or the file's absolute path. |
-| `${FILE}` | File's name (1). |
-| `${DIRECTORY}` | File's parent directory. |
+| `${FILE}` | Name of the file `*`. |
+| `${DIRECTORY}` | Parent directory of the file. |
 | `${TIME()}` | Text output of the `TIME` function. |
 | `${DATE_ITEM()}` | Current element in the Date Item list.|
 
-* (1) In the case of HTTP protocol, the placeholder `${FILE}` returns part of the URL after the last slash and before query string. For example: `http://examples.com/data/stats.csv?city=Denver` -> `${FILE}` = `stats.csv`
+* `*` In the case of HTTP protocol, the placeholder `${FILE}` returns part of the URL after the last slash and before query string. For example: `http://examples.com/data/stats.csv?city=Denver` -> `${FILE}` = `stats.csv`
 
 ## Usage
 
@@ -26,7 +26,7 @@ The following placeholders are supported to format strings, calculate dates, and
 | `${TIME()}` | First Line Contains, Path, Success Directory, Error Directory | All |
 | `${DATE_ITEM()}` | Path | All |
 
-* To URL-encode placeholder value, for example, if it may contain special characters and is included in the Path, apply the `url` function as follows: `${ITEM?url}`.
+* To URL-encode placeholder value, for example, if the placeholder may contain special characters and is included in the Path, apply the `url` function as follows: `${ITEM?url}`.
 
 ## Syntax
 
@@ -46,27 +46,27 @@ file:///opt/files/inbound/${TIME("previous_day", "yyyy-MM-dd")}/daily.csv
 
 ## Functions
 
-### `TIME` Function
+### TIME Function
 
-The `TIME` function calculates time based on the [calendar](https://axibase.com/docs/atsd/shared/calendar.html) expression. The syntax outputs its value in the specified `time_format`.
+The `TIME` function calculates time based on the [calendar](https://axibase.com/docs/atsd/shared/calendar.html) expression. The syntax outputs the value in the specified `time_format`.
 
 Syntax: `${TIME("end_time_syntax", "time_format")}`
 
 Example: `${TIME("previous_hour", "yyyy-MM-dd/HH")}`
 
-The time format can be specified using `y`, `M`, `d`, `H`, `m`, or `s`. See [SimpleDateFormat](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) for reference.
+Specify the time format using `y`, `M`, `d`, `H`, `m`, or `s`. See [SimpleDateFormat](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) for reference.
 
-If the `TIME` function returns a number, it can be used in addition or subtraction expressions:
+If the `TIME` function returns a number, use the function in addition or subtraction expressions:
 
-Example: `${TIME("2016-01-01","M") - 1}` -- subtract 1 from month.
+Example: `${TIME("2016-01-01","M") - 1}` (subtract 1 from month).
 
-### `DATE_ITEM` Function
+### DATE_ITEM Function
 
 The `DATE_ITEM` function returns an array of strings.
 
-It creates an array of dates between start and end time arguments, and formats these dates into strings with the specified date format.
+Function creates an array of dates between start and end time arguments, and formats these dates into strings with the specified date format.
 
-If the path contains the `${DATE_ITEM()}` placeholder, it should execute a separate file request for each string in the array.
+If the path contains the `${DATE_ITEM()}` placeholder, the function executes a separate file request for each string in the array.
 
 Syntax: `${DATE_ITEM(startDate, endDate, periodCount, periodUnit, timeFormat)}`
 
@@ -102,7 +102,7 @@ ${PLACEHOLDER?functionA(arguments)?functionB(arguments)}
 
 Example: `${FILE?keep_before("_")?replace(".csv", "")}`
 
-Input: **ftp.example.com/data/95014_Cupertino_20160625_DAILY.csv**
+Input: `ftp.example.com/data/95014_Cupertino_20160625_DAILY.csv`
 
 | **Expression** | **Result** |
 |:---|:---|
@@ -116,8 +116,8 @@ Input: **ftp.example.com/data/95014_Cupertino_20160625_DAILY.csv**
 
 ### String Function Examples
 
-The following examples are based on the [`Path`](file.md#download) field.
-The Path field can be used to define [`Default Entity`](file.md#upload).
+The following examples are based on the [**Path**](file.md#download) field.
+The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 #### keep_after
 
@@ -182,17 +182,17 @@ The Path field can be used to define [`Default Entity`](file.md#upload).
 |:---|:---|
 | /opt/files/nurswgvml106.cpu_busy.csv<br>/opt/files/nurswgvml107.cpu_busy.csv | nurswgvml106<br>nurswgvml107 |
 
-### `LOOKUP` function
+### LOOKUP function
 
-The `LOOKUP` function provides key-to-value mapping in the specified Item List. It is available in [JSON](json.md), [JDBC](jdbc.md), [PI](pi.md) jobs to resolve entities.
+The `LOOKUP` function provides key-to-value mapping in the specified Item List. Use the function in [JSON](json.md), [JDBC](jdbc.md), [PI](pi.md) jobs to resolve entities.
 
 * Syntax
 
-The LOOKUP function has several implementations.
+The `LOOKUP` function has several implementations.
 
 `LOOKUP(itemList, key, separator='=')`
 
-Treat Item List as a properties file. Key is a substring of item list row before the separator, value is a substring after the separator. If `separator` parameter is not specified, '=' will be used as a separator.
+Treat Item List as a properties file. Key is a substring of item list row before the separator, value is a substring after the separator. If **Separator** parameter is not specified, `=` is the separator.
 
 | Parameter name | Parameter type | Description |
 | :--------------|:---------------|:------------|
@@ -206,11 +206,11 @@ Treat Item List as a CSV structure.
 
 | Parameter name | Parameter type | Description |
 | :--------------|:---------------|:------------|
-| itemList       | String         | Name of the Item List |
-| key            | String         | Lookup Key  |
-| keyColumnIndex | Integer        | Index of column in a CSV row that will be used as the key column, starting with 1 |
-| valueColumnIndex | Integer      | Index of column in a CSV row that will be used as the value column, starting with 1 |
-| separator      | String (optional) | CSV columns separator |
+| `itemList`       | String         | Name of the Item List |
+| `key`            | String         | Lookup Key  |
+| `keyColumnIndex` | Integer        | Index of column in a CSV row used as the key column, starting with 1 |
+| `valueColumnIndex` | Integer      | Index of column in a CSV row used as the value column, starting with 1 |
+| `separator`      | String (optional) | CSV columns separator |
 
 #### LOOKUP Examples
 

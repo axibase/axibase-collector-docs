@@ -31,13 +31,13 @@ Use Listener | true
 Field Name         | Field Value
 :----------------- | :----------
 Entity     | path
-Time Field         | localtime
-Time Format        | yyyy-MM-dd'T'HH:mm:ss.SSS
-Excluded Fields    | timestamp, pointtype, original_timestamp_from_sdk, questionable, annotated, substituted
-Metric Name Field  | pitagname
-Metric Value Field | pitagvalue
+Time Field         | `localtime`
+Time Format        | `yyyy-MM-dd'T'HH:mm:ss.SSS`
+Excluded Fields    | timestamp, `pointtype`, `original_timestamp_from_sdk`, questionable, annotated, substituted
+Metric Name Field  | `pitagname`
+Metric Value Field | `pitagvalue`
 
-[Kafka Job Configuration](kafka_job_configuration.xml) file. Import xml into Collector.
+[Kafka Job Configuration](kafka_job_configuration.xml) file. Import XML into Collector.
 
 ## Command
 

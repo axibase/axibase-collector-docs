@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 class Collector():
     def __init__(self, configuration):
         '''
-        Build a collector to collect data from NGINX-plus server and store it in ATSD.
+        Build aCollectorto collect data from nginx-plus server and store the data in ATSD.
         All the required data is provided via config object passed to the constructor.
         See :class:`Configuration` for more details.
         '''
@@ -38,7 +38,7 @@ class Configuration:
     def __init__(self, addresses=["http://demo.nginx.com"], metric_prefix="nginx-plus.", atsd_url="tcp://localhost:8081", quiet=False):
         '''
         Args:
-            addresses (list)       : Item list of all NGINX-plus servers to collect data from.
+            addresses (list)       : Item list of all nginx-plus servers to collect data from.
             prefix (str)           : Metric prefix for all metrics 
             atsd_url (str)         : ATSD url to store data at
             quiet (bool)           : Flag indicating if program should not generate output  

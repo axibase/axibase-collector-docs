@@ -2,15 +2,15 @@
 
 ## Overview
 
-Download airport traffic, passenger, and cargo statistics from the UK's [Civil Aviation Authority](http://www.caa.co.uk/Data-and-analysis/UK-aviation-market/Airports/Datasets/UK-Airport-data/Airport-data-2016-03/).
+Download airport traffic, passenger, and cargo statistics from the UK [Civil Aviation Authority](http://www.caa.co.uk/Data-and-analysis/UK-aviation-market/Airports/Datasets/UK-Airport-data/Airport-data-2016-03/).
 
-The data is available to be downloaded starting with January 2015 onwards.
+The data is available for download from January 2015 onwards.
 
-The Path field contains both `${DATE_ITEM()}` and `${ITEM}` placeholders so that different reports for multiple reporting periods can be queried with one configuration.
+The **Path** field contains both `${DATE_ITEM()}` and `${ITEM}` placeholders so that different reports for multiple reporting periods can be queried with one configuration.
 
-The `${ITEM}` placeholder returns files which are included in the Path and is also used in the metric prefix, so that metrics contained in one file are grouped together with a metric naming convention.
+The `${ITEM}` placeholder returns files which are included in the **Path** and is also used in the metric prefix, so that metrics contained in one file are grouped together with a metric naming convention.
 
-`${DATE_ITEM()}` function returns an array of dates, for example from 2015_01 until 2016_03. The last date in the list is determined dynamically based on current time.
+`${DATE_ITEM()}` function returns an array of dates, for example from `2015_01` until `2016_03`. The last date in the list is determined dynamically based on current time.
 
 ## Item List Contents
 

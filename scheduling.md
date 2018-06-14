@@ -2,19 +2,19 @@
 
 ## Scheduled Execution
 
-Axibase Collector executes enabled jobs based on a schedule.
+Axibase Collector executes enabled jobs on a schedule.
 
 The number of concurrently executing jobs is set to 32 by default and is controlled with `quartz.properties`.
 
-Jobs execute simultaneously, whereas configurations inside the same job are executed sequentially.
+Jobs execute simultaneously and configurations within the same job execute sequentially.
 
-Multiple instances of the same job may not run at the same time. If the job is in STARTED status and it is scheduled to execute again, the new execution will not be triggered until the current job instance finishes processing.
+Multiple instances of the same job may not run at the same time. If the job is in `STARTED` status and is scheduled to execute again, the new execution will not be triggered by Collector until the current job instance finishes processing.
 
 ## Manual Execution
 
-Jobs can be executed manually with the `Run` action, regardless of its schedule or status.
+Jobs are executed manually with the `Run` action, regardless of job schedule or status.
 
-Manual execution produces the same results as a scheduled execution.
+Manual execution produces the same results as scheduled execution.
 
 The manual mode is useful for running temporarily disabled jobs (for example when developing new jobs or troubleshooting existing jobs).
 
@@ -54,8 +54,8 @@ Field Constraints:
 | month | 1-12 or JAN-DEC |
 | day-of-week | 1-7 or MON-SUN, ?  |
 
-* If the specific value is set in `day-of-week`, `day-of-month` should be set to `?`, e.g. `0 0 6 ? * MON`.
-* If the specific value is set in `day-of-month`, `day-of-week` should be set to `?`, e.g. `0 0 6 */2 * ?`.
+* If the specific value is set in `day-of-week`, `day-of-month` should be set to `?`, for example `0 0 6 ? * MON`.
+* If the specific value is set in `day-of-month`, `day-of-week` should be set to `?`, for example `0 0 6 */2 * ?`.
 
 Second, minute, and hour fields support **R** (random) symbol to randomize execution time.
 

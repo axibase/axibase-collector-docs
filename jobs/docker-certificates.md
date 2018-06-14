@@ -26,9 +26,9 @@ Generate a certificate request using the pass phrase for `ca-key.pem`:
 openssl req -new -x509 -days 365 -key ca-key.pem -sha256 -out ca.pem
 ```
 
-Fill out the fields.
+Fill out all fields.
 
-Make sure you set Common Name to the DNS name of the Docker host: **`$HOST`**
+Make sure you set **Common Name** to the DNS name of the Docker host: **`$HOST`**
 
 ```properties
 Country Name (2 letter code) [AU]:US
@@ -36,7 +36,7 @@ State or Province Name (full name) [Some-State]:CA
 Locality Name (eg, city) []:Cupertino
 Organization Name (eg, company) [Internet Widgits Pty Ltd]:MyCompany
 Organizational Unit Name (eg, section) []:
-Common Name (e.g. server FQDN or YOUR name) []:$HOST
+Common Name (for example server FQDN or YOUR name) []:$HOST
 Email Address []:
 ```
 
@@ -52,7 +52,7 @@ openssl req -subj "/CN=$HOST" -sha256 -new -key server-key.pem -out server.csr
 
 ## Sign the Public Key with our CA
 
-TLS connections need to be specified when creating the certificate, as they can be made via the IP address as well as the DNS name. For example, to allow connections
+TLS connections need to be specified when creating the certificate, as the connections can be made via IP address as well as DNS name. For example, to allow connections
 using `10.10.10.20` and `127.0.0.1`:
 
 ```sh
@@ -96,11 +96,9 @@ rm -v client.csr server.csr
 
 ## Set Permissions to Private Keys
 
-With a default `umask` of 022, your secret keys will be *world-readable* and
-writable for you and your group.
+With a default `umask` of 022, secret keys are **world-readable** and writable for you and your group.
 
-In order to protect your keys from accidental damage, you will want to remove their
-write permissions. To make them only readable by you, change file modes as follows:
+In order to protect your keys from accidental damage, remove write permissions. To make them only readable by you, change file modes as follows:
 
 ```sh
 chmod -v 0400 ca-key.pem key.pem server-key.pem
@@ -113,5 +111,4 @@ prevent accidental damage:
 chmod -v 0444 ca.pem server-cert.pem cert.pem
 ```
 
-Now you can make the Docker daemon only accept connections from clients
-providing a certificate trusted by our CA.
+Now you can make the Docker daemon only accept connections from clients providing a certificate trusted by our CA.

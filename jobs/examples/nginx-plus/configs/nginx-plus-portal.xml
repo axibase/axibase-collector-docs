@@ -6,7 +6,7 @@
     <displayIndex>0</displayIndex>
     <style>black.css</style>
     <content>[configuration]
-  title = NGINX Plus Status
+  title = nginx Plus Status
   update-interval=5
   step-line = false
   markers = false

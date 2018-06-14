@@ -6,43 +6,43 @@ This document describes how to collect JMX metrics exposed by [Jetty (Web server
 
 ## Requirements
 
-* Jetty 6.+
+* Jetty `6.+`
 
 ## Installation Steps
 
 ### Enable JMX in Java Application
 
-Configure your Java application for JMX monitoring as described [here](../../jmx.md).
+Configure your Java application for JMX monitoring as described by the [JMX Job Documentation](../../jmx.md).
 
 ### Import Jetty job into Axibase Collector
 
-* Open **Jobs:Import** and upload the [jetty-job.xml](configs/jetty_job.xml) file.
+* Open the **Jobs** menu and click **Import**. Upload the [jetty-job.xml](configs/jetty_job.xml) file.
 
 ### Configure Jetty JMX Connection
 
-* Open the **Jobs:JMX** page and select the `jmx-jetty` job.
+* Open the **Jobs** menu and select **JMX**. Open the `jmx-jetty` job.
 * For each JMX Configuration:
 * Provide connection parameters to the target Jetty:
 
 ![](./images/jetty_jmx_configuration.png)
 
-* Click the [Test] button and make sure that the result is correct:
+* Click **Test** and make sure that the result is correct:
 
 ![](./images/jetty_test_jmx_configuration.png)
 
 ### Schedule the Job
 
-* Open the `JMX Job` page and click the [Run] button for the Jetty JMX job.
-* Make sure that the job status is `COMPLETED` and `Items Read` and `Sent commands` are greater than 0.
+* Open the `JMX Job` page and click **Run** for the Jetty JMX job.
+* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
-* If there are no errors, set job status to 'Enabled' and save the job.
+* If there are no errors, set job status to **Enabled** and save the job.
 
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on Metrics tab and filter metrics by name `jmx.jetty*`.
+* Click the **Metrics** tab and filter metrics by name `jmx.jetty*`.
 
 ![](./images/jetty_metrics.png)
 
@@ -58,24 +58,24 @@ Configure your Java application for JMX monitoring as described [here](../../jmx
 
 ### Entity Group
 
-* Open **Admin:Entity Groups**, click the [Import] button, and upload  [jetty_entity_group.xml](configs/jetty_entity_group.xml).
+* Open **Admin** menu and select **Entity Groups**, click **Import**, and upload  [jetty_entity_group.xml](configs/jetty_entity_group.xml).
 * Select the imported `jetty-web-server` group.
 * Verify that the group contains your Jetty hosts.
 
 ### Entity Views
 
-* Open **Configuration:Entity Views**, click the [Import] button, and upload  [jetty_entity_view.xml](configs/jetty_entity_view.xml).
+* Open **Entity Views** menu and select **Configuration**, click **Import** and upload  [jetty_entity_view.xml](configs/jetty_entity_view.xml).
 * Select the imported `Java Applications` view.
 * Select the Entity Group that you created earlier.
-* Click on the [View] button and browse information about your entities.
+* Click **View** and browse information about your entities.
 
 ![](./images/jetty_entity_view.png)
 
 ### Portal
 
-* Open the **Configuration: Portals**, click the [Import] button, and upload [jetty_portal.xml](configs/jetty_portal.xml).
-* Click the Assign link and associate the portal with the entity group you created earlier.
-* Open Entity tabs, find the java application by name, and click on its portal icon.
+* Open the **Portals** and select **Configure**, click **Import** and upload [jetty_portal.xml](configs/jetty_portal.xml).
+* Click the **Assign** link and associate the portal with the entity group you created earlier.
+* Open **Entities** tabs, find the java application by name, and click on the portal icon.
 
 ![](./images/jetty_portal_icon.png)
 

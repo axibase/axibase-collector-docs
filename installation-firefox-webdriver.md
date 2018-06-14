@@ -10,7 +10,7 @@ Repository: `https://ftp.mozilla.org/pub/firefox/releases/26.0/`
 wget -qO- https://ftp.mozilla.org/pub/firefox/releases/26.0/linux-x86_64/en-US/firefox-26.0.tar.bz2 | tar -C /opt -xvj
 ```
 
-## Install Xvfb (X virtual framebuffer)
+## Install Xvfb (X Virtual Framebuffer)
 
 ### Xvfb on Ubuntu or Debian
 
@@ -33,7 +33,7 @@ Xvfb :99
 
 ## Setup Collector Script
 
-Before starting collector with the Firefox webdriver, modify the startup script (uncomment and set path to firefox bin file):
+Before starting Collector with the Firefox webdriver, modify the startup script (uncomment and set path to firefox bin file):
 
 ```sh
 #COLLECTOR_JAVA_OPTS="$COLLECTOR_JAVA_OPTS -Dwebdriver.firefox.bin="

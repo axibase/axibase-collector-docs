@@ -1,4 +1,4 @@
-# NGINX Server Metrics
+# nginx Server Metrics
 
 ## Status Page Metrics
 
