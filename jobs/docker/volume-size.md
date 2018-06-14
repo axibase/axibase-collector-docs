@@ -55,7 +55,7 @@ Axibase Collector collects sizes for both individual containers as well as the t
 `docker.fs.running.size.rw` | The total size of all the files for all running containers, in bytes. Σ `docker.fs.size.rw` for running containers.
 `docker.fs.running.size.rootfs` | The size of the files which have been created or changed for running containers. Σ `docker.fs.size.rootfs` for running containers.
 
-[Chartlab example](https://apps.axibase.com/chartlab/81932cd6/2/)
+[ChartLab example](https://apps.axibase.com/chartlab/81932cd6/2/)
 
 ## Alternative Method
 

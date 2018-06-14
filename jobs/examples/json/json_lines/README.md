@@ -52,14 +52,14 @@ Format     | JSON_LINES
 
 Field Name         | Field Value
 :----------------- | :----------
-Default Entity     | json_lines
+Default Entity     | `json_lines`
 JSON Path          | $..data.*
 Depth              | 1
 Time Field         | timestamp
-Time Format        | yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ
-Excluded Fields    | pitagvalue
-Metric Name Field  | pitagname
-Metric Value Field | pitagvalue
+Time Format        | `yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ`
+Excluded Fields    | `pitagvalue`
+Metric Name Field  | `pitagname`
+Metric Value Field | `pitagvalue`
 
 [JSON Job Configuration](json_job_configuration.xml) file. Import XML into Collector.
 

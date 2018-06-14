@@ -59,8 +59,8 @@ Name | Category | Description
 `docker.cpu.throttlingdata.throttledperiods` | CPU | The number of periods when the container hit the throttling limit.
 `docker.cpu.throttlingdata.throttledtime` | CPU | Total time that a container's CPU usage was throttled.
 `docker.cpu.avg.usage.total.percent` | CPU | The average value of `docker.cpu.usage.total.percent`.
-`docker.cpu.avg.usage.allocated.percent` | CPU | The avarage value `docker.cpu.usage.total.percent` for allocated CPU core.
-`docker.cpu.avg.usage.host.percent` | CPU | The avarage value of `docker.cpu.usage.total.percent` for CPU core.
+`docker.cpu.avg.usage.allocated.percent` | CPU | The average value `docker.cpu.usage.total.percent` for allocated CPU core.
+`docker.cpu.avg.usage.host.percent` | CPU | The average value of `docker.cpu.usage.total.percent` for CPU core.
 `docker.cpu.avg.usage.kernel.percent` | CPU | The average value for `docker.cpu.usage.kernel.percent`.
 `docker.cpu.avg.usage.user.percent` | CPU | The average value for `docker.cpu.usage.user.percent`.
 `docker.memory.activeanon` | Memory | The number of bytes of active memory backed by anonymous pages, excluding sub-cgroups.
@@ -137,7 +137,7 @@ Name | Category | Description
 `docker.fs.size.rw` | File System | The total size of all the files in the container, in bytes. If you were to export the filesystem of the container as a tarball, the file would be about that size.
 `docker.fs.size.rootfs` | File System | The size of the files which have been created or changed, if you compare the container to the base image. Just after creation, this should be zero; as you modify (or create) files, this increases.
 `docker.process.all` | Process | The number of all processes for running container.
-`docker.process.filtered` | Process | The number of all processed which have been filtered by [field 'Excluded Processes'](./jobs/docker.md#job-settings) for running conteiner.
+`docker.process.filtered` | Process | The number of all processed which have been filtered by [field 'Excluded Processes'](./jobs/docker.md#job-settings) for running container.
 `docker.pids.current` | Process | The number of pids in the cgroup (Linux specific stats, not populated on Windows.)
 `docker.pids.limit` | Process | The hard limit on the number of pids in the cgroup. A "Limit" of 0 means that there is no limit. (Linux specific stats, not populated on Windows.)
 `docker.storage.read.count.normalized` | I/O | The disk stats on Windows.

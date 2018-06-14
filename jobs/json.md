@@ -365,7 +365,7 @@ Field Name        | Field Value
 Default Entity    | `tst`
 JSON Path         | $
 Depth             | 0
-**Metric Prefix** | **mp.**
+**Metric Prefix** | **`mp.`**
 
 Result:
 
@@ -592,10 +592,10 @@ JSON:
 
 Field Name     | Field Value
 :------------- | :----------
-Default Entity | tst
-JSON Path      | $.data.*
+Default Entity | `tst`
+JSON Path      | `$.data.*`
 **Time Field** | **date**
-Time Format    | yyyy-MM-dd
+Time Format    | `yyyy-MM-dd`
 Time Zone      | UTC
 
 Result:
@@ -624,10 +624,10 @@ JSON:
 
 Field Name       | Field Value
 :--------------- | :----------
-Default Entity   | tst
+Default Entity   | `tst`
 JSON Path        | $.*
-**Time Default** | **${PARENT}**
-Time Format      | yyyy-MM-dd
+**Time Default** | **`${PARENT}`**
+Time Format      | `yyyy-MM-dd`
 Time Zone        | UTC
 
 Result:
