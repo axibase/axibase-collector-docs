@@ -24,7 +24,7 @@
 
 ## activemq_connection
 
-```activemq_connection
+```json
 {
     "type": "activemq_connection",
     "entity": "325416e3d2d6",
