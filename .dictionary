@@ -146,7 +146,6 @@ uncharging
 hugepages
 mlocked
 DNS
-as a tarbell
 async
 tst
 ngx
@@ -160,3 +159,4 @@ ovpm
 snmp
 stackexchange
 ucd
+ns

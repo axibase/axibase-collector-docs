@@ -123,7 +123,7 @@ Name | Category | Description
 `docker.diskio.ioservicebytes.read` | I/O |
 `docker.diskio.ioservicebytes.sync` | I/O |
 `docker.diskio.ioservicebytes.total` | I/O |
-`docker.diskio.ioservicebytes.write ` | I/O |
+`docker.diskio.ioservicebytes.write` | I/O |
 `docker.diskio.ioservicetime.*` | I/O | The total time between request dispatch and request completion for I/O operations on specific devices by a cgroup as seen by the CFQ scheduler. Entries have four fields: major, minor, operation, and time. Major and minor are device types and node numbers specified in Linux Allocated Devices, operation represents the type of operation (read, write, sync, or async) and time is the length of time in nanoseconds (ns). The time is reported in nanoseconds rather than a larger unit so that this report is meaningful even for solid-state devices.
 `docker.diskio.ioserviced.*` | I/O | The number of I/O operations performed on specific devices by a cgroup as seen by the CFQ scheduler. Entries have four fields: major, minor, operation, and number. Major and minor are device types and node numbers specified in Linux Allocated Devices, operation represents the type of operation (read, write, sync, or async) and number represents the number of operations.
 `docker.diskio.ioserviced.async` | I/O |

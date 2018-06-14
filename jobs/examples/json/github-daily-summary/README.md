@@ -58,10 +58,10 @@ Format     | JSON
 Field Name     | Field Value
 :------------- | :----------
 Default Entity | github-status
-JSON Path      | $['${DATE_ITEM("current_day - 2 * day", "null", 1, "DAY", "yyyy-MM-dd")}']
+JSON Path      | `$['${DATE_ITEM("current_day - 2 * day", "null", 1, "DAY", "yyyy-MM-dd")}']`
 Depth          | 1
-Time Default   | ${PARENT}
-Time Format    | yyyy-MM-dd
+Time Default   | `${PARENT}`
+Time Format    | `yyyy-MM-dd`
 Time Zone      | UTC
 Metric Prefix  | github-status.
 
