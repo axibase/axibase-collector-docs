@@ -26,5 +26,4 @@ To add an HTTP Pool as a data source in Axibase Collector, navigate to **Data So
 * Headers
 * Request Parameters
 
-
 ![](./images/http-pool-main.png)
