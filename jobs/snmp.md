@@ -16,7 +16,7 @@ Use the table below to fill in the fields correctly.
 | Timeout, seconds | Number of seconds after which the Collector interrupts the query, `-1` is unlimited. |
 | Retries | Number of retries to establish a connection. |
 | Maximum Repetitions | Defines the maximum number of iterations over the repeating variables. |
-| Non Repeaters | Defines the number of supplied variables that should not be iterated over. |
+| Non Repeaters | Defines the number of supplied variables that must not be iterated over. |
 | Version | SNMP version. |
 | Community |  |
 | Metric Prefix | Prefix added to metric names, used to identify and group metrics. |

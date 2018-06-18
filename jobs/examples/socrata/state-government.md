@@ -353,7 +353,7 @@ t:physicalunit=Dollars m:price=2.314
 | Id | rkm7-uwkb |
 | Name | Sales and Use Tax per Town by NAICS (2013 and 2014) |
 | State | [Connecticut](https://data.ct.gov) |
-| Description | Sales and use tax data, by quarter, by town, disaggregated by the North America Industrial Classification (NAICS) groups for calendar years 2013 and 2014.  The data available is unique to each municipality as detailed NAICS information is only provided where there are ten or more taxpayers in a given category.<br>This data will be updated annually so that all four quarters of a calendar year are available at once.  This list reflects the tax collected at both the 6.35% and 7% rates, where applicable. |
+| Description | Sales and use tax data, by quarter, by town, disaggregated by the North America Industrial Classification (NAICS) groups for calendar years 2013 and 2014.  The data available is unique to each municipality as detailed NAICS information is only provided where there are ten or more taxpayers in a given category.<br>This data is updated annually so that all four quarters of a calendar year are available at once.  This list reflects the tax collected at both the 6.35% and 7% rates, where applicable. |
 | Attribution | Department of Revenue Services |
 | Category | Government |
 | Date Range | 2013-2014 |
@@ -908,7 +908,7 @@ t:city=ATLANTA t:registry_number=122151194
 | Id | snfi-f79b |
 | Name | UCC List of Filings Entered Last Month |
 | State | [Oregon](https://data.oregon.gov) |
-| Description | Updated 8/1/2016. List of New UCC filings entered during the previous month.  This list will be updated by the 9th of every month. |
+| Description | Updated 8/1/2016. List of New UCC filings entered during the previous month.  This list is updated by the 9th of every month. |
 | Category | Business |
 | Date Range | July 2016 |
 | Links | [catalog](http://catalog.data.gov/dataset/ucc-list-of-filings-entered-last-month-7c45d),  [metadata](https://data.oregon.gov/api/views/snfi-f79b),  [data](https://data.oregon.gov/api/views/snfi-f79b/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6e35e121) |
@@ -981,7 +981,7 @@ t:type="Government & Finance" t:cash_ball=03 m:"09 36 44 53 59"
 | Id | `rybz-nyjw` |
 | Name | Accidental Drug Related Deaths  2012-2015 |
 | State | [Connecticut](https://data.ct.gov) |
-| Description | A listing of each accidental death associated with drug overdose in Connecticut from 2012 to 2015. A "Y" value under the different substance columns indicates whether that particular substance was detected. Data is derived from an investigation by the Office of the Chief Medical Examiner which includes the toxicity report, death certificate, as well as a scene investigation. The "Morphine (Not Heroin)" values are related to the differences between how Morphine and Heroin are metabolized and therefore detected in the toxicity results. Heroin metabolizes to 6-MAM which then metabolizes to morphine.  6-MAM is unique to heroin, and has a short half-life (as does heroin itself). Thus, in some heroin deaths, the toxicity results will not indicate whether the morphine is from heroin or prescription morphine. In these cases the Medical Examiner may be able to determine the cause based on the scene investigation (such as  finding heroin needles). If the examiner finds prescription morphine at the scene the drug is certified as "Morphine (not heroin)." Therefore, the Cause of Death may indicate Morphine, but the Heroin or Morphine (Not Heroin) may not be indicated. "Any Opioid" – if the Medical Examiner cannot conclude whether the cause of death is from RX Morphine or heroin based morphine in the toxicity results, that column may be checked |
+| Description | A listing of each accidental death associated with drug overdose in Connecticut from 2012 to 2015. A "Y" value under the different substance columns indicates whether that particular substance was detected. Data is derived from an investigation by the Office of the Chief Medical Examiner which includes the toxicity report, death certificate, as well as a scene investigation. The "Morphine (Not Heroin)" values are related to the differences between how Morphine and Heroin are metabolized and therefore detected in the toxicity results. Heroin metabolizes to 6-MAM which then metabolizes to morphine.  6-MAM is unique to heroin, and has a short half-life (as does heroin itself). Thus, in some heroin deaths, the toxicity results do not indicate whether the morphine is from heroin or prescription morphine. In these cases the Medical Examiner may be able to determine the cause based on the scene investigation (such as  finding heroin needles). If the examiner finds prescription morphine at the scene the drug is certified as "Morphine (not heroin)." Therefore, the Cause of Death may indicate Morphine, but the Heroin or Morphine (Not Heroin) may not be indicated. "Any Opioid" – if the Medical Examiner cannot conclude whether the cause of death is from RX Morphine or heroin based morphine in the toxicity results, that column may be checked |
 | Attribution | Office of the Chief Medical Examiner |
 | Category | Health and Human Services |
 | Date Range | 2012-2015 |
@@ -1261,7 +1261,7 @@ m:"Pilot the use of virtual desktops or virtual applications in the agency."
 | Id | 2kf7-i54h |
 | Name | UCC Secured Parties List |
 | State | [Oregon](https://data.oregon.gov) |
-| Description | Updated 8/1/2016. List of All Active Filings and their associated Secured Parties. This Dataset will be updated monthly by the 9th of each month. |
+| Description | Updated 8/1/2016. List of All Active Filings and their associated Secured Parties. This Dataset is updated monthly by the 9th of each month. |
 | Category | Business |
 | Date Range | 1970-2016 |
 | Links | [catalog](http://catalog.data.gov/dataset/ucc-secured-parties-list-23e64),  [metadata](https://data.oregon.gov/api/views/2kf7-i54h),  [data](https://data.oregon.gov/api/views/2kf7-i54h/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/4a12f7d4) |

@@ -22,7 +22,7 @@ The JMX job can have one or multiple JMX configurations each describing connecti
 | Password | JMX password. |
 | Service Name | JMX service username. The default service name is `jmxrmi`. |
 
-Connection parameters should correspond to the `com.sun.management.jmxremote` settings specified by the target Java application.
+Connection parameters must correspond to the `com.sun.management.jmxremote` settings specified by the target Java application.
 
 ```sh
 ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \

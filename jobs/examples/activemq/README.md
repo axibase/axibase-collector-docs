@@ -44,7 +44,7 @@ See [Aggregation Log Filter](https://github.com/axibase/aggregation-log-filter) 
 * Modify JMX settings in ActiveMQ JVM launch options.
   * Search for the `ACTIVEMQ_SUNJMX_START` setting and modify the setting as specified below.
   * Replace `activemq_hostname` with the full hostname or the IP address of the ActiveMQ server.
-  * This should be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
+  * This must be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
   * For more information on configuring JMX in ActiveMQ, see [Apache ActiveMQ Documentation](http://activemq.apache.org/jmx.html)
 
 ActiveMQ `5.11.x` and later:
@@ -79,7 +79,7 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
    -Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_BASE}/conf/jmx.access"
 ```
 
-This should be the result:
+This must be the result:
 
 ![SUN_JMX_START_IMAGE](./images/very_new_screen.png)
 

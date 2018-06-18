@@ -53,7 +53,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
     ![Figure 10](./images/Figure10.png)
 
-11. After clicking **Test**, you should get the following output: Collector downloads a part of the JSON file (file limitation 1 MB) and generates commands based on
+11. After clicking **Test**, you must get the following output: Collector downloads a part of the JSON file (file limitation 1 MB) and generates commands based on
     the dataset configuration (series, property, message, metric, and entity tags). These commands are only for text purposes, and are not yet saved in ATSD.
 
     You may save this configuration by clicking **Save**, shown in the image from step 10.

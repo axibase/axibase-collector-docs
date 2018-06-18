@@ -58,10 +58,10 @@ Use the table below to fill in the fields and configure the query.
 | Time Round | Time is rounded before storing the series in ATSD. <br> Possible values: `MILLISECOND`, `SECONDS`, `MINUTE`, `HOUR`, `DAY` |
 | Time Zone | Time zone in which the data was originally collected and stored. |
 | Check Last Time | Ignore metrics that have time set to less than the previous entry. |
-| Query With Time | When executing the job, the server will be set to the maximum time of the previous data. |
+| Query With Time | When executing the job, the server is set to the maximum time of the previous data. |
 | Collection Start Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) defining the beginning of the data collection interval, for example, `previous_week`. |
-| Max Rows | Maximum number of rows that will be collected with each batch, `-1` is unlimited. |
-| Query Timeout Seconds| Number of seconds after which the query will be interrupted, `-1` is unlimited. |
+| Max Rows | Maximum number of rows collected with each batch, `-1` is unlimited. |
+| Query Timeout Seconds| Number of seconds after which the query is interrupted, `-1` is unlimited. |
 
 #### Placeholders
 
@@ -113,7 +113,7 @@ Use the table below to fill in the fields and configure the query.
 | Label Column | **Label Column**: Column containing metric or entity label.<br>**Default Label**: Label applied to all generated metrics or entities |
 | Description Column | Column containing metric or entity description. |
 | Data Type | Default metric data type, or column containing metric datatype. One of: short, integer, long, float, double, decimal |
-| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. Should contain a string value, case-insensitive. Possible values: LINEAR, PREVIOUS, or NONE  |
+| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. must contain a string value, case-insensitive. Possible values: LINEAR, PREVIOUS, or NONE  |
 | Filter Column | Column containing metric filter expression. |
 | Versioning | Default versioning behavior if versioning column is not specified, or column specifying if metric is versioned. |
 | Min and Max Value Columns | Minimum and Maximum Values |
@@ -125,7 +125,7 @@ Use the table below to fill in the fields and configure the query.
 | Field              | Description  |
 | :----------------- |:-------------|
 | Label Column | **Label Column**: Column containing metric or entity label.<br>**Default Label**: Label applied to all generated metrics or entities |
-| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. Should contain a string value, case-insensitive. Possible values: `LINEAR`, `PREVIOUS`, or `NONE`  |
+| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. must contain a string value, case-insensitive. Possible values: `LINEAR`, `PREVIOUS`, or `NONE`  |
 | Entity Time Zone | Default Time Zone or column containing the [Time Zone Identifier](https://github.com/axibase/atsd/blob/master/shared/timezone-list.md) |
 
 ### Configuration Example

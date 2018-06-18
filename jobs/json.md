@@ -68,8 +68,8 @@ The expression selects all elements of the `book` array in the root's child name
 |:---|:---|
 | Name     | Name of the configuration. |
 | Protocol | HTTP or File protocol to download JSON files from a remote server or read them from the local file system. File protocol supports wildcards in Path. |
-| HTTP Pool                | Pre-defined HTTP connection parameters to limit the number of open connections, to customize timeout settings, and to re-use connections across multiple requests.<br> When HTTP Pool is selected, the Path field should contain a relative URI: `[/]path[?query][#fragment]` |
-| Path                     | URI Path to JSON file, for example `https://example.com/api/daily-summary.json`, or the absolute path to the file or files on the local file system.<br> If the HTTP Pool is enabled, the path should be relative, for example `/api/daily-summary.json`. Otherwise, the Path should be a full URI including protocol, host, port, and the path.<br> The Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the Path, the job executes as many queries as there are elements returned by the `${DATE_ITEM()}` function, substituting the `${DATE_ITEM()}` placeholder with the element value for each request.<br> The Path can include either the `${DATE_ITEM()}` or `${ITEM}` function, but not both. |
+| HTTP Pool                | Pre-defined HTTP connection parameters to limit the number of open connections, to customize timeout settings, and to re-use connections across multiple requests.<br> When HTTP Pool is selected, the Path field must contain a relative URI: `[/]path[?query][#fragment]` |
+| Path                     | URI Path to JSON file, for example `https://example.com/api/daily-summary.json`, or the absolute path to the file or files on the local file system.<br> If the HTTP Pool is enabled, the path must be relative, for example `/api/daily-summary.json`. Otherwise, the Path must be a full URI including protocol, host, port, and the path.<br> The Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the Path, the job executes as many queries as there are elements returned by the `${DATE_ITEM()}` function, substituting the `${DATE_ITEM()}` placeholder with the element value for each request.<br> The Path can include either the `${DATE_ITEM()}` or `${ITEM}` function, but not both. |
 | Format                   | JSON or JSON Lines. If the **JSON Lines** format is selected, the database adds the input lines contained in the file to a parent array object and processes the lines as a single JSON document. |
 | Delete Files on Upload   | **Applies to FILE protocol**. Delete source file or files that were parsed into at least one command which was successfully sent to the database. |
 | Ignore Unchanged Files   | Prevents unchanged files or http entities from being repeatedly processed.<br>When enabled, the Collector compares the last modified time of the file (FILE) or **Last-Modified** header/MD5 hashcode (HTTP, HTTP_POOL) with the previously stored value and ignores the value if there were no changes.<br>In the case of HTTP and `HTTP_POOL` protocols, the Collector checks the **Last-Modified** response header. If the header is present and the value has not changed since the last execution, the response content is not downloaded. |
@@ -109,8 +109,8 @@ The expression selects all elements of the `book` array in the root's child name
 | **Name** | **Description** |
 |:---|:---|
 | Metric Prefix      | Text added to metric name.<br> For example, if Metric Prefix is set to `custom.` and the metric name is `cpu_busy`, the resulting metric name is `custom.cpu_busy`. |
-| Included Fields    | Specify fields that should be included into the Series command ([example](#included-fields)). If you leave the field empty, all values are included in the command. You can use the `.` symbol for nested fields. The wildcard `*` is supported. |
-| Excluded Fields    | Specify fields that should be excluded from the Series command ([example](#excluded-fields)). You can use the `.` symbol for nested fields. The wildcard `*` is supported. |
+| Included Fields    | Specify fields that must be included into the Series command ([example](#included-fields)). If you leave the field empty, all values are included in the command. You can use the `.` symbol for nested fields. The wildcard `*` is supported. |
+| Excluded Fields    | Specify fields that must be excluded from the Series command ([example](#excluded-fields)). You can use the `.` symbol for nested fields. The wildcard `*` is supported. |
 | Metric Name Field  | Metric name extracted from the given field in the matched object ([example](#metric-name-and-value-fields)).<br>This field supports additional option:<br>- `${ITEM}` = Current element in the Item List.|
 | Metric Value Field | Metric value extracted from the given field in the matched object ([example](#metric-name-and-value-fields)). |
 
@@ -120,8 +120,8 @@ The expression selects all elements of the `book` array in the root's child name
 |:---|:---|
 | Property Default Type | Property type that used as a default type for all properties ([example](#property-default-type)).<br> This field supports the following options:<br> - Text value<br> - `${ITEM}` placeholder - Current element in the Item List.<br> - `${PARENT(n)}` placeholder - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`. |
 | Property Type Field   | Field with value that used as property type ([example](#property-type-field)).<br> This field supports the following options:<br> - Name of the field containing property type in the matched object.<br> - JSON Path. |
-| Property Key Fields   | Fields that should be included into the Property command value collection ([example](#property-key-and-value-fields)). |
-| Property Value Fields | Fields that should be loaded to a collection as properties ([example](#property-key-and-value-fields)). |
+| Property Key Fields   | Fields that must be included into the Property command value collection ([example](#property-key-and-value-fields)). |
+| Property Value Fields | Fields that must be loaded to a collection as properties ([example](#property-key-and-value-fields)). |
 
 ### Time Fields
 
@@ -131,7 +131,7 @@ The expression selects all elements of the `book` array in the root's child name
 | Time Field   | Field with values that specify time for all commands ([example](#time-field)).<br> This field supports the following options:<br> - Name of the field containing date in the matched object<br> - JSON Path |
 | Time Format  | Date format applied when parsing time value ([example](#metric-name-and-value-fields)). |
 | Time Zone    | Time zone can be optionally applied if the extracted date is in local time, otherwise the local Collector time zone is in effect ([example](#time-field)). |
-| Minimum Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) to specify minimum time for commands. Commands with timestamp earlier than specified will be ignored. |
+| Minimum Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) to specify minimum time for commands. Commands with timestamp earlier than specified are ignored. |
 
 ### Message Fields
 

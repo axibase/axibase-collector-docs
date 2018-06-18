@@ -79,7 +79,7 @@ Notes:
 * `atsd` deployment is defined in **metadata: name** field.
 * The deployment consists of one pod.
 * The **selector** field defines how the deployment finds pods to be managed. In this case, simply select a pod based on the label defined in the Pod template (`app: atsd`).
-* The pod template specification, or **template: spec** field, indicates that the Pod should run one container, named `atsd`, which runs the latest [ATSD](https://hub.docker.com/r/axibase/atsd/) image from Docker Hub.
+* The pod template specification, or **template: spec** field, indicates that the Pod must run one container, named `atsd`, which runs the latest [ATSD](https://hub.docker.com/r/axibase/atsd/) image from Docker Hub.
 * The deployment opens ports 8081 and 8443.
 
 The **template** field contains the following instructions for the pod:
@@ -87,7 +87,7 @@ The **template** field contains the following instructions for the pod:
 * Add label `app: atsd` to the container.
 * Create one container named `atsd`.
 * Run a container from the latest `axibase/atsd` image.
-* The container should use [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by **`valueFrom.secretKeyRef`** field.
+* The container must use [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by **`valueFrom.secretKeyRef`** field.
 * The container has a memory request of 600 MiB and a memory limit of 1200 MiB.
 * Open ports 8081 and 8443 to accept incoming TCP traffic.
 
@@ -233,7 +233,7 @@ Notes:
 * `axibase-collector` deployment is defined in **metadata: name** field.
 * The Deployment creates **three** replicated Pods, indicated by the [**replicas**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#replicas) field. If you want to install the Collector on each node, the replicas value must equal node count.
 * The **selector** field defines how the deployment finds pods to be managed. In this case, select a pod based on the label defined in the Pod template (`app: axibase-collector`).
-* The pod template’s specification, or **template: spec** field, indicates that the Pod should run one container, named `axibase-collector`, which runs the latest [axibase-collector](https://hub.docker.com/r/axibase/collector/) image from Docker Hub.
+* The pod template’s specification, or **template: spec** field, indicates that the Pod must run one container, named `axibase-collector`, which runs the latest [axibase-collector](https://hub.docker.com/r/axibase/collector/) image from Docker Hub.
 * The deployment opens port 9443.
 
 The **template** field contains the following instructions:

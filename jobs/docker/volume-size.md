@@ -49,7 +49,7 @@ Axibase Collector collects sizes for both individual containers as well as the t
 **Metric Name** | **Description**
 ---|---
 `docker.fs.size.rw` | The total size of all the files in the container, in bytes. The entire filesystem of the container exported in tarball form is about this size.
-`docker.fs.size.rootfs` | The size of the files which have been created or changed, if you compare the container to the base image. Just after creation, this number should be zero; as you modify (or create) files, this number increases.
+`docker.fs.size.rootfs` | The size of the files which have been created or changed, if you compare the container to the base image. Just after creation, this number must be zero; as you modify (or create) files, this number increases.
 `docker.fs.total.size.rw` | The total size of all the files for all containers, in bytes. Σ `docker.fs.size.rw` for all containers.
 `docker.fs.total.size.rootfs` | The size of the files created or changed for all containers. Σ `docker.fs.size.rootfs` for all containers.
 `docker.fs.running.size.rw` | The total size of all the files for all running containers, in bytes. Σ `docker.fs.size.rw` for running containers.

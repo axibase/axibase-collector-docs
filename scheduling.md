@@ -8,7 +8,7 @@ The number of concurrently executing jobs is set to 32 by default and is control
 
 Jobs execute simultaneously and configurations within the same job execute sequentially.
 
-Multiple instances of the same job may not run at the same time. If the job is in `STARTED` status and is scheduled to execute again, the new execution will not be triggered by Collector until the current job instance finishes processing.
+Multiple instances of the same job may not run at the same time. If the job is in `STARTED` status and is scheduled to execute again, the new execution is not be triggered by Collector until the current job instance finishes processing.
 
 ## Manual Execution
 
@@ -54,8 +54,8 @@ Field Constraints:
 | month | 1-12 or JAN-DEC |
 | day-of-week | 1-7 or MON-SUN, ?  |
 
-* If the specific value is set in `day-of-week`, `day-of-month` should be set to `?`, for example `0 0 6 ? * MON`.
-* If the specific value is set in `day-of-month`, `day-of-week` should be set to `?`, for example `0 0 6 */2 * ?`.
+* If the specific value is set in `day-of-week`, `day-of-month` must be set to `?`, for example `0 0 6 ? * MON`.
+* If the specific value is set in `day-of-month`, `day-of-week` must be set to `?`, for example `0 0 6 */2 * ?`.
 
 Second, minute, and hour fields support **R** (random) symbol to randomize execution time.
 

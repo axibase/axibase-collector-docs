@@ -76,7 +76,7 @@ Item Lists may receive items from different sources. Currently the following typ
 
 An Item List which stores strings entered in the **Items** field on the form.
 
-List items should be separated by a line break.
+List items must be separated by a line break.
 
 ![TEXT Type](./images/collection_text_type.png)
 
@@ -89,7 +89,7 @@ Reads lines from a file on the local filesystem.
 `Path` | Absolute path to the text file containing Item List elements
 `Item Filter` | Expression for matching item. This field also supports regex expression, for example: REGEXP(expression).
 
-If the file is not found, an empty list is returned. List items in the file should be separated with a line break.
+If the file is not found, an empty list is returned. List items in the file must be separated with a line break.
 
 ![FILE Type](./images/collection_file_type.png)
 
@@ -103,18 +103,18 @@ Executes a script specified in the **Command** field and reads lines from a stan
 
 **Field** | **Description**
 :--- | :---
-`Path to the Script` | Relative path to a script file returning Item List elements.<br>Scripts should be located in `$AXIBASE_COLLECTOR_HOME/conf/scripts` directory.
+`Path to the Script` | Relative path to a script file returning Item List elements.<br>Scripts must be located in `$AXIBASE_COLLECTOR_HOME/conf/scripts` directory.
 `Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory `$AXIBASE_COLLECTOR_HOME/conf/scripts`, also this directory is used as working directory.<br>Specify a command interpreter by providing a shebang on the first line, for example `#!/usr/bin/env bash`.<br>You must provide the setting `script.text.execute.allow=true` in `server.properties` file in order to use this feature.
 
-The **Command** field should start with the script file name (absolute path not supported) and optional script arguments.
+The **Command** field must start with the script file name (absolute path not supported) and optional script arguments.
 
-The script should print items separated by line breaks to `stdout`.
+The script must print items separated by line breaks to `stdout`.
 
 ![SCRIPT Type](./images/collection_script_type.png)
 
 * **Example**
 
-The directory `/tmp/report/csv` contains CSV files. The Item List should contain a collection of file name prefixes before the underscore symbol.
+The directory `/tmp/report/csv` contains CSV files. The Item List must contain a collection of file name prefixes before the underscore symbol.
 
 ```txt
 ent-1_file-1.csv
@@ -160,13 +160,13 @@ Reads lines from a remote file/page.
 **Field** | **Description**
 :--- | :---
 `HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records are retrieved.
-`Path` | HTTP or HTTPS Path to file. If HTTP Pool is enabled, the path should be relative. Otherwise the Path should be a full URI including the protocol, host, port and path.
+`Path` | HTTP or HTTPS Path to file. If HTTP Pool is enabled, the path must be relative. Otherwise the Path must be a full URI including the protocol, host, port and path.
 `Content Format` | Content format in the file. Supported formats: `MULTILINE_TEXT` and JSON.
 `Item Filter`| Expression for matching item. This field also supports regex expression, for example: REGEXP(expression).
 `JSON Path` | JSON Path expression to match a list of items in the JSON document.
 `Separator` | Separator used when concatenating multiple field values.
 
-If the file is not found, an empty list is returned. List items should be separated with a line break when the `MULTILINE_TEXT` format is selected.
+If the file is not found, an empty list is returned. List items must be separated with a line break when the `MULTILINE_TEXT` format is selected.
 
 Examples:
 

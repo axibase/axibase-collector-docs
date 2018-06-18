@@ -9,7 +9,7 @@ This document describes how to export archive data from a [PI Server](http://www
 * PI SQL Data Access Server `1.5+`
 * PI JDBC Driver `1.5+`
 
-PI JDBC Driver should be installed and added as a data source in Collector. Follow the steps in [Axibase Pi Documentation](export-metrics.md#provide-axibase-collector-with-pi-jdbc-driver) to perform this task.
+PI JDBC Driver must be installed and added as a data source in Collector. Follow the steps in [Axibase Pi Documentation](export-metrics.md#provide-axibase-collector-with-pi-jdbc-driver) to perform this task.
 
 ## PI Job Configuration
 

@@ -109,6 +109,6 @@ SELECT 1
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the **Metrics** tab and filter metrics by name, for example find by prefix `ba:`. You should see a list of exported PI tags:
+* Click on the **Metrics** tab and filter metrics by name, for example find by prefix `ba:`. You must see a list of exported PI tags:
 
 ![](./images/pi-atsd-metrics.png)

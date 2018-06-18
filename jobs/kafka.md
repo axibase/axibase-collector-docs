@@ -22,7 +22,7 @@ Group Id | A unique string that identifies the consumer group this consumer belo
 Topic Name | A topic is a category or feed name to which messages are published.
 Offset Reset Strategy | Initial offset:<br>\* `EARLIEST`: automatically reset the offset to the earliest offset<br>\* `LATEST`: automatically reset the offset to the latest offset<br>\* `LAST_N`: reset the offset to the latest offset and subtract `Last Cont` value from offset value.<br><br>Offset strategies (`EARLIEST`, `LATEST`) use at first job running, then job uses the last committed offset.<br>The `LAST_N` offset strategy does not use last committed offset, but last `N` records each time job executes.
 Last Count | The number of last messages.
-Message Format | [Network API Command](https://axibase.com/docs/atsd/api/network/) or JSON. Network API Command will be stored in ATSD as is. The JSON message will be parsed into one or more commands.
+Message Format | [Network API Command](https://axibase.com/docs/atsd/api/network/) or JSON. Network API Command stored in ATSD as is. The JSON message parsed into one or more commands.
 Use Listener | Enable continuous listener of messages instead of scheduled polling.
 Ignore Invalid Commands | If enabled, job skips messages for which no valid command can be created.<br>If the message is invalid and this case is not enabled, the job fails with an error.,
 Commit | Send commands into ATSD synchronously and wait until the commands have been committed to the underlying storage.
@@ -66,8 +66,8 @@ Field Expressions | Freemarker expressions to convert metric fields.<br>For exam
 --- | ---
 Property Default Type | Property type used as a default type for all properties.
 Property Type Field   | Field with value used as property type.
-Property Key Fields   | Fields that should be included into the Property command value collection.
-Property Value Fields | Fields that should be loaded to a collection as properties.
+Property Key Fields   | Fields that must be included into the Property command value collection.
+Property Value Fields | Fields that must be loaded to a collection as properties.
 
 ### Message Fields
 

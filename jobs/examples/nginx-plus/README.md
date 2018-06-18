@@ -43,7 +43,7 @@ The job consists of several settings blocks, each of which is responsible for pr
 
 ![First settings block](./images/ngp_first_settings_block.png)
 
-The result `series` and `property`commands formed by the block should look like this:
+The result `series` and `property`commands formed by the block must look like this:
 
 ```ls
 series e:demo.nginx.com d:2016-08-02T10:35:46.608Z m:nginx-plus.connections.accepted=40750818 m:nginx-plus.connections.dropped=0 m:nginx-plus.requests.current=11 m:nginx-plus.ssl.handshakes=45602 m:nginx-plus.connections.idle=34 m:nginx-plus.requests.total=85010375 m:nginx-plus.processes.respawned=0 m:nginx-plus.ssl.session_reuses=7504 m:nginx-plus.connections.active=11 m:nginx-plus.ssl.handshakes_failed=6641
