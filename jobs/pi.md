@@ -14,7 +14,7 @@ Before starting to configure the PI job, a machine must have the PI JDBC driver 
 
 Just like the general [JDBC job](jdbc.md), PI job has a **Data Source** field. This allows a user to select the configured PI JDBC data source.
 
-![JDBC job settings](examples/pi/images/pi-job.png)
+![JDBC job settings](./examples/pi/images/pi-job.png)
 
 ### PI Configuration
 
@@ -42,8 +42,8 @@ Use the table below to set configuration parameters.
 ### Configuration Example
 
 The image below shows an example PI configuration.
-![](examples/pi/images/pi-config.png)
+![](./examples/pi/images/pi-config.png)
 
 ### Examples
 
-[PI Job](examples/pi/export-archive-data.md)
+[PI Job](./examples/pi/export-archive-data.md)
