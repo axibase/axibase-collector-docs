@@ -165,7 +165,8 @@ const confMenu = [
 module.exports = {
     base: '/docs/axibase-collector/',
     title: 'Axibase Collector',
-    description: "User manual and API reference for Axibase® Time Series Database",
+    titleNote: 'ATSD',
+    description: "User manual for Axibase Collector, ETL tool for Axibase® Time Series Database (ATSD)",
     head: [
         ['link', {rel: 'shortcut icon', href: '/favicon-96x96.png'}]
     ],
