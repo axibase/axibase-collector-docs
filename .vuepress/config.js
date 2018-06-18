@@ -170,7 +170,7 @@ module.exports = {
     head: [
         ['link', {rel: 'shortcut icon', href: '/favicon-96x96.png'}]
     ],
-    staticFilesExtensionsTest: /(?:tcollector|nginx_status|src|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service|yaml|sh|py))$/,
+    staticFilesExtensionsTest: /(?:tcollector|nginx_status|src|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service|ya?ml|sh|py))$/,
     themeConfig: {
         nav: topNavMenu,
         logo: '/favicon-96x96.png',
