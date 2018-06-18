@@ -37,7 +37,7 @@ ___
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | f7nd-jj28 |
+| Id | `f7nd-jj28` |
 | Name | Abortion Demographics, 1995-2012 |
 | State | [Illinois](https://data.illinois.gov) |
 | Description | The number of induced pregnancy terminations reported in Illinois by county (if in excess of 50), by age and marital status.<br>Note: Marital status and age are only for Illinois residents. |
@@ -95,7 +95,7 @@ series e:f7nd-jj28 d:1995-01-01T00:00:00.000Z t:year=TOTAL m:f7nd-jj28.value=523
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 3fys-ggpk |
+| Id | `3fys-ggpk` |
 | Name | Anne Arundel County Crime Rate By Type |
 | State | [Maryland](https://data.maryland.gov) |
 | Description | Historical crime rates per 100,000 people, 1975 - present. |
@@ -138,7 +138,7 @@ m:m_v_theft=599.3 m:violent_crime_rate=608.6 m:rape=22.3 m:population=331390
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | u49g-d7hw |
+| Id | `u49g-d7hw` |
 | Name | Automobiles Annual Imports and Exports Through Port Authority of NY NJ Maritime Terminals: Beginning 2000 |
 | State | [New York](https://data.ny.gov) |
 | Description | This dataset represents the total number of Automobiles Imported and Exported annually through maritime terminals located within Port Authority property in the Port of New York and New Jersey in vehicle units beginning in 2000. |
@@ -167,7 +167,7 @@ series e:u49g-d7hw d:2015-01-01T00:00:00.000Z t:type=Imports m:volume=433822
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | je5z-53wn |
+| Id | `je5z-53wn` |
 | Name | Employment Figures |
 | State | [Maryland](https://data.maryland.gov) |
 | Description | Figures from the Bureau of Labor Statistics, and are subject to revision. |
@@ -210,7 +210,7 @@ m:maryland_unemployment=126413
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 3pzs-2zsk |
+| Id | `3pzs-2zsk` |
 | Name | Solar Photovoltaic (PV) Incentive Program Completed Projects by City and Contractor: Beginning 2010 |
 | State | [New York](https://data.ny.gov) |
 | Description | The Solar Photovoltaic (PV) Incentive Program Completed Projects by City and Contractor Dataset provides market insight into the volume of work and photovoltaic (PV) capacity installed in New York State annually, by city and contractor, beginning August 2010 under the New York State Energy Research and Development Authority (NYSERDA)’s NY-Sun Solar Electric Incentive Program Opportunity Notice (PON) 2112. The dataset includes the following data points: Project Install Year, Contractor, County, City, Project Count by City, Project Cost, NYSERDA Incentives, Kilowatt Capacity, Expected Annual Kilowatt Hour Production, and NYSERDA Solicitation. |
@@ -248,7 +248,7 @@ m:total_nameplate_kw=4.6 m:expected_kwh_annual_production=5399.66 m:incentive_do
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | v48g-wbhi |
+| Id | `v48g-wbhi` |
 | Name | Table 17: Solid Waste Recycled (in tons) |
 | State | [Hawaii](https://data.hawaii.gov) |
 | Description | DOH Environmental Indicators |
@@ -281,7 +281,7 @@ m:diverted_statewide=688820 m:produced_statewide=2116724
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | f3h8-mnxi |
+| Id | `f3h8-mnxi` |
 | Name | Math And Reading Proficiency by School Year, Public School District and Grade Level |
 | State | [Iowa](https://data.iowa.gov) |
 | Description | Dataset contains information on public school districts academic progress of their students in reading and math annually starting with school year ending in 2003.  All public schools and districts report annually to the Iowa Department of Education through Adequate Yearly Progress (AYP).<br>All AYP determinations are made annually using reading and math student assessment data.  Proficiency is based on a standard score scale.  More information can be found at: `http://itp.education.uiowa.edu/ia/AYPInformation.aspx` |
@@ -318,7 +318,7 @@ m:district=1080 m:proficient_1=40
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | dqp6-3idi |
+| Id | `dqp6-3idi` |
 | Name | AAA Fuel Prices |
 | State | [Hawaii](https://data.hawaii.gov) |
 | Description | AAA Monthly Fuel Prices |
@@ -350,7 +350,7 @@ t:physicalunit=Dollars m:price=2.314
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | rkm7-uwkb |
+| Id | `rkm7-uwkb` |
 | Name | Sales and Use Tax per Town by NAICS (2013 and 2014) |
 | State | [Connecticut](https://data.ct.gov) |
 | Description | Sales and use tax data, by quarter, by town, disaggregated by the North America Industrial Classification (NAICS) groups for calendar years 2013 and 2014.  The data available is unique to each municipality as detailed NAICS information is only provided where there are ten or more taxpayers in a given category.<br>This data is updated annually so that all four quarters of a calendar year are available at once.  This list reflects the tax collected at both the 6.35% and 7% rates, where applicable. |
@@ -386,7 +386,7 @@ m:retail_sales_of_goods=0 m:total_tax_due_at_6_35=0
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 64jf-g2fe |
+| Id | `64jf-g2fe` |
 | Name | Per Capita Electricity Consumption |
 | State | [Maryland](https://data.maryland.gov) |
 | Description | Data are provided by the Maryland Energy Administration (MEA). The data shows per capita electricity usage overall and usage demand during times of peak electricity use (peak demand). |
@@ -435,7 +435,7 @@ m:actual_peak_demand=2.56 m:consumption_annual_goals_percent_below_baseline=0
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | un65-7ipd |
+| Id | `un65-7ipd` |
 | Name | MVA Vehicle Sales Counts by Month for CY 2002-2015 |
 | State | [Maryland](https://data.maryland.gov) |
 | Description | The number of new and used vehicles and the sales dollars respectively sold by month. Data as of October 2015. |
@@ -468,7 +468,7 @@ m:used=49927 m:total_sales_new=755015820
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | qm34-pq7e |
+| Id | `qm34-pq7e` |
 | Name | DAS HR Almanac - Executive Branch Employment By Race |
 | State | [Connecticut](https://data.ct.gov) |
 | Description | This data is reflective of the State of Connecticut Executive Branch workforce only.  The data does not reflect employees of the University of Connecticut Health Center, University of Connecticut, and Board of Regents which includes the state university system and community colleges.  Judicial Branch and Legislative Branch employees are also not reflected in this data. |
@@ -503,7 +503,7 @@ m:amer_indian=117 m:hispanic=2956 m:black=6559 m:asian=568
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | d8hf-wqd9 |
+| Id | `d8hf-wqd9` |
 | Name | Scholarship Recipients and Dollars by Sector Group: Beginning 2009 |
 | State | [New York](https://data.ny.gov) |
 | Description | This data includes the number of Scholarship award recipients and dollar amounts by TAP Sector Group beginning with the 2009 academic year (for HESC-administered scholarships only). |
@@ -537,10 +537,10 @@ m:scholarship_fte=2.5 m:scholarship_headcount=3
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | uubd-eei2 |
+| Id | `uubd-eei2` |
 | Name | Public Assistance and SNAP Fraud Prevention Performance Measures: Beginning 2013 |
 | State | [New York](https://data.ny.gov) |
-| Description | This dataset from the New York State Office of Temporary and Disability Assistance contains the results of several local district investigations initiated by flagged cases of the State’s cash public assistance programs and the Supplemental Nutrition Assistance Program (SNAP).  It includes information from the Front End Detection System (FEDS), the Intentional Program Violations (IPVs), Prison matches, and from the Public Assistance Reporting Information System (PARIS). |
+| Description | This dataset from the New York State Office of Temporary and Disability Assistance contains the results of several local district investigations initiated by flagged cases of the State’s cash public assistance programs and the Supplemental Nutrition Assistance Program (SNAP). The data includes information from the Front End Detection System (FEDS), the Intentional Program Violations (IPVs), Prison matches, and from the Public Assistance Reporting Information System (PARIS). |
 | Attribution | New York State Office of Temporary and Disability Assistance (OTDA) |
 | Category | Human Services |
 | Date Range | 2013-2016 |
@@ -590,7 +590,7 @@ m:paris_closed_prior_resolved=9
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | prxf-ppu5 |
+| Id | `prxf-ppu5` |
 | Name | Maryland Veterans Unemployment Rate |
 | State | [Maryland](https://data.maryland.gov) |
 | Description | This data set contains the veterans unemployment rate in Maryland. Figures come from the Bureau of Labor Statistics, and are subject to revision. |
@@ -620,7 +620,7 @@ m:national_veterans_unemployment_rate=8.7
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 5ymg-2p8u |
+| Id | `5ymg-2p8u` |
 | Name | Trips Taken on Public Transit by Transit Type - Monthly Total Trips |
 | State | [Maryland](https://data.maryland.gov) |
 | Description | Data are provided by the Maryland Transit Administration (MTA). This data set includes total trips taken by bus, metro, rail, and mobility/paratransit services. Beginning in FY2014, the Maryland Transit Administration (MTA) began counting Core Bus ridership using an Automated Passenger Count (APC) system to better track the number of people boarding and leaving the buses. In order to maintain the integrity of historical comparisons for the Transit Ridership Goal, the MTA used ridership estimate differences between the new APC system and previous counting estimates for MTA Bus Service to allow for apples-to-apples comparisons between fiscal years. |
@@ -661,10 +661,10 @@ m:commuter_bus_total=249082 m:taxi_access_trips=29592
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | yrss-ncc4 |
+| Id | `yrss-ncc4` |
 | Name | Employee Compensation by Industry in Iowa |
 | State | [Iowa](https://data.iowa.gov) |
-| Description | This dataset contains employee compensation estimates in thousands of dollars, seasonally adjusted at annual rates.  All dollar estimates are in current dollars (not adjusted for inflation).  Compensation is the total remuneration, both monetary and in kind, payable by employers to employees in return for their work during the period. It consists of wages and salaries and of supplements to wages and salaries. Compensation is presented on an accrual basis - that is, the number reflects compensation liabilities incurred by the employer in a given period regardless of when the compensation is actually received by the employee. The estimates of compensation by industry for 1998-2006 are based on the 2002 North American Industry Classification System (NAICS). The estimates for 2007-2010 are based on the 2007 NAICS. The estimates for 2011 forward are based on the 2012 NAICS. |
+| Description | This dataset contains employee compensation estimates in thousands of dollars, seasonally adjusted at annual rates.  All dollar estimates are in current dollars (not adjusted for inflation).  Compensation is the total remuneration, both monetary and in kind, payable by employers to employees in return for their work during the period. The data consists of wages and salaries and of supplements to wages and salaries. Compensation is presented on an accrual basis - that is, the number reflects compensation liabilities incurred by the employer in a given period regardless of when the compensation is actually received by the employee. The estimates of compensation by industry for 1998-2006 are based on the 2002 North American Industry Classification System (NAICS). The estimates for 2007-2010 are based on the 2007 NAICS. The estimates for 2011 forward are based on the 2012 NAICS. |
 | Attribution | U.S. Department of Commerce, Bureau of Economic Analysis, Compensation of Employees by Industry (SQ6, SQ6N) |
 | Category | Economy |
 | Date Range | 1998-2016 |
@@ -759,7 +759,7 @@ t:businesscity=Burien
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | t64r-mt64 |
+| Id | `t64r-mt64` |
 | Name | Insurance Company Complaints, Resolutions, Status, and Recoveries |
 | State | [Connecticut](https://data.ct.gov) |
 | Description | Listing of consumer complaints filed against Insurance companies licensed in Connecticut.<br>This dataset includes the Company, Line of Business, nature of complaint, outcome or resolution, and recovery. |
@@ -799,7 +799,7 @@ t:conclusion=Unjustified t:type=Business t:disposition="Claim Settled" t:recover
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | d6yy-54nr |
+| Id | `d6yy-54nr` |
 | Name | Lottery Powerball Winning Numbers: Beginning 2010 |
 | State | [New York](https://data.ny.gov) |
 | Description | Go to `http://on.ny.gov/1GpWiHD` on the New York Lottery website for past Powerball results and payouts. |
@@ -829,7 +829,7 @@ t:type="Government & Finance" t:multiplier=2.0 m:"17 22 36 37 52 24"
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 5xaw-6ayf |
+| Id | `5xaw-6ayf` |
 | Name | Lottery Mega Millions Winning Numbers: Beginning 2002 |
 | State | [New York](https://data.ny.gov) |
 | Description | Go to `http://on.ny.gov/1J8tPSN` on the New York Lottery website for past Mega Millions results and payouts.|
@@ -860,7 +860,7 @@ t:type="Government & Finance" t:mega_ball=30 m:"15 18 25 33 47"
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | i8h7-mn6v |
+| Id | `i8h7-mn6v` |
 | Name | New Business List - June |
 | State | [Oregon](https://data.oregon.gov) |
 | Description | Businesses registered with the Secretary of State Corporation Division during the month of June. |
@@ -905,7 +905,7 @@ t:city=ATLANTA t:registry_number=122151194
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | snfi-f79b |
+| Id | `snfi-f79b` |
 | Name | UCC List of Filings Entered Last Month |
 | State | [Oregon](https://data.oregon.gov) |
 | Description | Updated 8/1/2016. List of New UCC filings entered during the previous month.  This list is updated by the 9th of every month. |
@@ -1036,7 +1036,7 @@ t:type="Health and Human Services" t:fentanyl=Y m:"Acute fent, hydrocod, benzodi
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 2ix7-8hwk |
+| Id | `2ix7-8hwk` |
 | Name | Oregon Consumer Complaints |
 | State | [Oregon](https://data.oregon.gov) |
 | Description | Consumer complaints registered with the Oregon Department of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database may not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, may affect the likelihood of a consumer complaint being filed. The number of complaints about a business may not be a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints may not be immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see `http://www.doj.state.or.us/finfraud/index.shtml` |
@@ -1176,7 +1176,7 @@ t:crime="DRUG OFFENSES" t:age=29.0 t:gender=MALE t:type="Public Safety"
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | n2dz-pwuk |
+| Id | `n2dz-pwuk` |
 | Name | State Liquor Authority (SLA) Brand Label and Wholesaler Information for Alcoholic Beverage Products Registered in New York State |
 | State | [New York](https://data.ny.gov) |
 | Description | Brand Label and Wholesale Information for Alcohol Products Registered in New York State. The New York State Alcohol Beverage Control Law specifies that no manufacturer or wholesaler shall sell to any retailer nor shall any retailer purchase any alcoholic beverages unless these beverages are labeled in accordance with the Authority's Rules and Federal Regulations, and unless such labels shall be registered with and approved by the State Liquor Authority. Effective January 1, 1994, wine does not need to be brand label registered if the wine has received label approval from the Bureau of Alcohol, Tobacco, and Firearms (BATF). |
@@ -1216,7 +1216,7 @@ t:license_class_description=ALE
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | i7h5-rx65 |
+| Id | `i7h5-rx65` |
 | Name | Information Technology Project Portfolio |
 | State | [Connecticut](https://data.ct.gov) |
 | Description | This dataset includes Information Technology projects reported to the Office of Policy and Management by each state agency.  The dataset is updated on a quarterly basis minimally and includes active projects as well as completed projects (Post-Implementation). |
@@ -1258,7 +1258,7 @@ m:"Pilot the use of virtual desktops or virtual applications in the agency."
 
 | **Name** | **Value** |
 |:---|:---|
-| Id | 2kf7-i54h |
+| Id | `2kf7-i54h` |
 | Name | UCC Secured Parties List |
 | State | [Oregon](https://data.oregon.gov) |
 | Description | Updated 8/1/2016. List of All Active Filings and their associated Secured Parties. This Dataset is updated monthly by the 9th of each month. |
