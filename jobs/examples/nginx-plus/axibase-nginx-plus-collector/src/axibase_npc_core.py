@@ -41,7 +41,7 @@ class Configuration:
             addresses (list)       : Item list of all nginx-plus servers to collect data from.
             prefix (str)           : Metric prefix for all metrics 
             atsd_url (str)         : ATSD url to store data at
-            quiet (bool)           : Flag indicating if program should not generate output  
+            quiet (bool)           : Option indicating if program should not generate output  
         '''
         self.substitutions = {"server_zones/*/": "server_zone","stream/server_zones/*/": "status_zone","stream/upstreams/*/":"dyn_config_group","upstreams/*/":"backend","caches/*/":"cache"}
         self.nginx_properties = ["version", "nginx_version", "address", "generation", "load_timestamp", "pid"]

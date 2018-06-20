@@ -1,6 +1,6 @@
 # Collected Derby Properties
 
-## activemq_broker
+* `activemq_broker`
 
 ```json
 {
@@ -11,7 +11,7 @@
   }
 ```
 
-## activemq_client
+* `activemq_client`
 
 ```json
 {
@@ -22,7 +22,7 @@
   }
 ```
 
-## activemq_connection
+* `activemq_connection`
 
 ```json
 {
@@ -33,7 +33,7 @@
   }
 ```
 
-## activemq_service
+* `activemq_service`
 
 ```json
 {
@@ -44,7 +44,7 @@
   }
 ```
 
-## activemq_service_instance
+* `activemq_service_instance`
 
 ```json
 [

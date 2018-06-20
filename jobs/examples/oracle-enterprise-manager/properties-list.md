@@ -1,6 +1,6 @@
 # Collected Oracle Enterprise Manager Properties
 
-* oem.oracle_database
+* `oem.oracle_database`
 
 ```json
 [
@@ -19,7 +19,7 @@
 ]
 ```
 
-* oem.host
+* `oem.host`
 
 ```json
 [

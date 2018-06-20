@@ -1,6 +1,6 @@
 # Collected Tomcat Properties
 
-## jmx.tomcat.connector
+* `jmx.tomcat.connector`
 
 ```json
 {
@@ -44,7 +44,7 @@
   }
 ```
 
-## jmx.tomcat.engine
+* `jmx.tomcat.engine`
 
 ```json
 {
@@ -61,7 +61,7 @@
   }
 ```
 
-## jmx.tomcat.globalrequestprocessor
+* `jmx.tomcat.globalrequestprocessor`
 
 ```json
 {
@@ -83,7 +83,7 @@
   }
 ```
 
-## jmx.tomcat.protocolhandler
+* `jmx.tomcat.protocolhandler`
 
 ```json
 {
@@ -123,7 +123,7 @@
   }
 ```
 
-## jmx.tomcat.server
+* `jmx.tomcat.server`
 
 ```json
 {
@@ -141,7 +141,7 @@
     }
 ```
 
-## jmx.tomcat.threadpool
+* `jmx.tomcat.threadpool`
 
 ```json
 {

@@ -85,7 +85,7 @@ The job assigns each metric to an entity which is determined based on the [prima
 
 ![](./images/aws-test.png)
 
-* To view available metrics for a particular namespace, uncheck all namespaces except one and click **Test**.
+* To view available metrics for a particular namespace, remove all namespaces except one and click **Test**.
 
 ## Validation
 

@@ -1,6 +1,6 @@
 # Collected JVM Properties
 
-## jvm.bufferpool
+* `jvm.bufferpool`
 
 ```json
 {
@@ -19,7 +19,7 @@
   }
 ```
 
-## jvm.garbagecollector
+* `jvm.garbagecollector`
 
 ```json
 {
@@ -95,7 +95,7 @@
    }
 ```
 
-## jvm.memory
+* `jvm.memory`
 
 ```json
 {
@@ -118,7 +118,7 @@
   }
 ```
 
-## jvm.memorypool
+* `jvm.memorypool`
 
 ```json
 {
@@ -157,7 +157,7 @@
   }
 ```
 
-## jvm.operatingsyst
+* `jvm.operatingsyst`
 
 ```json
 {
@@ -185,7 +185,7 @@
   }
 ```
 
-## jvm.runtime
+* `jvm.runtime`
 
 ```json
     {

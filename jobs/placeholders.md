@@ -135,7 +135,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | ITEM value | Output |
 |:---|:---|
-| so-stackoverflow | stackoverflow |
+| `so-stackoverflow` | `stackoverflow` |
 
 #### keep_before
 

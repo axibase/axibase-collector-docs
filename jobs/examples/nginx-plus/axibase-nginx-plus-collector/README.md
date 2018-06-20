@@ -13,4 +13,4 @@ Supported options:
 |:----:|:-------------:|:------------------------------------------------------:|:-------------------------------------:|
 |-a    | --atsd-url    | URL of target ATSD                                     | `tcp://localhost:8081`                 |
 |-i    | --items       | Space separated nginx Plus servers item list           | `http://demo.nginx.com`                 |
-|-q    | --quiet       | Flag indicating the script does not generate output    | False                                 |
+|-q    | --quiet       | Option indicating the script does not generate output    | False                                 |

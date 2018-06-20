@@ -4,7 +4,7 @@
 
 Monitoring disk space usage with a breakdown by individual container ensures continuous service availability by preventing space leakages in containers with data (persistent) volumes.
 
-While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) includes a way to obtain container sizes using the `--size` flag, the command can take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host disk subsystem and slowing down Docker Engine API response times. The CLI output does not expose space usage by volume and requires parsing size units (KB, MB, GB).
+While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) includes a way to obtain container sizes using the `--size` option, the command can take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host disk subsystem and slowing down Docker Engine API response times. The CLI output does not expose space usage by volume and requires parsing size units (KB, MB, GB).
 
   ```sh
   axibase@NURSWGHBS001:~$ docker ps -s --format "{{.ID}}\t{{.Names}}\t{{.Size}}"

@@ -1,6 +1,6 @@
 # Collected Microsoft SCOM Properties
 
-## sw.node
+* `sw.node`
 
 ```json
 {
@@ -38,7 +38,7 @@
 }
 ```
 
-## sw.vmw.cluster
+* `sw.vmw.cluster`
 
 ```json
 {
@@ -72,7 +72,7 @@
 }
 ```
 
-## sw.vmw.cluster.vms
+* `sw.vmw.cluster.vms`
 
 ```json
 {
@@ -92,7 +92,7 @@
 }
 ```
 
-## sw.vmw.host.vms
+* `sw.vmw.host.vms`
 
 ```json
 {
@@ -112,7 +112,7 @@
 }
 ```
 
-## sm.vmware.cluster.vms
+* `sm.vmware.cluster.vms`
 
 ```json
 {
@@ -133,7 +133,7 @@
 }
 ```
 
-## sw.vmw.vm
+* `sw.vmw.vm`
 
 ```json
 {
@@ -190,7 +190,7 @@
 }
 ```
 
-## sw.apm.component
+* `sw.apm.component`
 
 ```json
 {
