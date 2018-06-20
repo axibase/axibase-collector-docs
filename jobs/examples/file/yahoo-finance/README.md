@@ -11,7 +11,7 @@ Download daily historical pricing information (OHLC) from [Yahoo! Finance](http:
 * FB
 * AMZN
 
-The **Path** field contains the `${ITEM}` placeholder so that multiple securities can be queried with one configuration.
+The **Path** field contains the `${ITEM}` placeholder to support multiple securities being queried by one configuration.
 
 ## File
 
@@ -23,7 +23,7 @@ Example: `http://real-chart.finance.yahoo.com/table.csv?s=MSFT&a=07&b=9&c=2015&d
 
 ### Local Copy
 
-[table.csv](table.csv)
+[table.csv](./table.csv)
 
 ### Content
 
@@ -38,8 +38,8 @@ Date,Open,High,Low,Close,Volume,Adj Close
 
 ## Configuration
 
-* [FILE job configuration](yahoo-finance-job.xml). Import xml into Collector.
-* [CSV Parser](yahoo-finance-parser.xml). Import xml into ATSD.
+* [FILE job configuration](./yahoo-finance-job.xml). Import xml into Collector.
+* [CSV Parser](./yahoo-finance-parser.xml). Import xml into ATSD.
 
 ## Screenshot
 

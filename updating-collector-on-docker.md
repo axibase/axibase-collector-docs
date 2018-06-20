@@ -34,7 +34,7 @@ Assuming `axibase-collector` is the name of the Collector container to be update
 docker exec axibase-collector /opt/axibase-collector/bin/stop-collector.sh
 ```
 
-> Make sure the container is running when you run the command.
+> Ensure the container is running when you run the command.
 
 ## Replace axibase-collector.war File
 

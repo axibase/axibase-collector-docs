@@ -52,7 +52,7 @@ For example, include the `${ITEM}` placeholder into the Path field in JSON job t
 
 ### Functions
 
-Item values can be further modified with built-in [string functions](jobs/placeholders.md#string-functions).
+Item values can be further modified with built-in [string functions](./jobs/placeholders.md#string-functions).
 
 ```ls
 ${ITEM?function(arguments)}
@@ -70,7 +70,7 @@ Example: `${ITEM?keep_before("_")?replace(".csv", "")}`
 
 ### Types
 
-Item Lists may receive items from different sources. Currently the following types are implemented:
+Item Lists can receive items from different sources. Currently the following types are implemented:
 
 #### TEXT
 
@@ -87,7 +87,7 @@ Reads lines from a file on the local filesystem.
 **Field** | **Description**
 :--- | :---
 `Path` | Absolute path to the text file containing Item List elements
-`Item Filter` | Expression for matching item. This field also supports regex expression, for example: REGEXP(expression).
+`Item Filter` | Expression for matching item. This field also supports regular expressions, for example: REGEXP(expression).
 
 If the file is not found, an empty list is returned. List items in the file must be separated with a line break.
 
@@ -104,7 +104,7 @@ Executes a script specified in the **Command** field and reads lines from a stan
 **Field** | **Description**
 :--- | :---
 `Path to the Script` | Relative path to a script file returning Item List elements.<br>Scripts must be located in `$AXIBASE_COLLECTOR_HOME/conf/scripts` directory.
-`Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory `$AXIBASE_COLLECTOR_HOME/conf/scripts`, also this directory is used as working directory.<br>Specify a command interpreter by providing a shebang on the first line, for example `#!/usr/bin/env bash`.<br>You must provide the setting `script.text.execute.allow=true` in `server.properties` file in order to use this feature.
+`Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory `$AXIBASE_COLLECTOR_HOME/conf/scripts`, also this directory is used as working directory.<br>Specify a command interpreter by providing a shebang on the first line, for example `#!/usr/bin/env bash`.<br>You must provide the setting `script.text.execute.allow=true` in `server.properties` file to use this feature.
 
 The **Command** field must start with the script file name (absolute path not supported) and optional script arguments.
 
@@ -162,7 +162,7 @@ Reads lines from a remote file/page.
 `HTTP Pool` | HTTP Pool specifying connection properties to ATSD from which the records are retrieved.
 `Path` | HTTP or HTTPS Path to file. If HTTP Pool is enabled, the path must be relative. Otherwise the Path must be a full URI including the protocol, host, port and path.
 `Content Format` | Content format in the file. Supported formats: `MULTILINE_TEXT` and JSON.
-`Item Filter`| Expression for matching item. This field also supports regex expression, for example: REGEXP(expression).
+`Item Filter`| Expression for matching item. This field also supports regular expressions, for example: REGEXP(expression).
 `JSON Path` | JSON Path expression to match a list of items in the JSON document.
 `Separator` | Separator used when concatenating multiple field values.
 

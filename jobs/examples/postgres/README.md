@@ -53,7 +53,7 @@ listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
 
 ### Import PostgreSQL Job into Axibase Collector
 
-* On **Jobs** page, select **Import** from the split button below the table and upload the [`postgres-jobs.xml`](postgres-jobs.xml) file.
+* On **Jobs** page, select **Import** from the split button below the table and upload the [`postgres-jobs.xml`](./postgres-jobs.xml) file.
 
 ### Configure PostgreSQL Database Connection
 
@@ -86,7 +86,7 @@ SELECT 1
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the **PostgreSQL JDBC** job.
-* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
+* Ensure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -103,11 +103,11 @@ SELECT 1
 
 ### Metrics
 
-* List of collected [PostgreSQL metrics](metric-list.md)
+* List of collected [PostgreSQL metrics](./metric-list.md)
 
 ### Properties
 
-* List of collected [PostgreSQL properties](properties-list.md)
+* List of collected [PostgreSQL properties](./properties-list.md)
 
 ### Entity Groups
 
@@ -124,7 +124,7 @@ hasMetric('postgres.global_status.uptime')
 
 ### Portals
 
-* Open the **Portals** menu and select **Configure**. Import a `postgresql` portal from [`portal-postgres.xml`](portal-postgres.xml).
+* Open the **Portals** menu and select **Configure**. Import a `postgresql` portal from [`portal-postgres.xml`](./portal-postgres.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open **Entities** tabs, find the `postgresql` database by name, and click the **Portal** icon.
 
@@ -135,4 +135,4 @@ hasMetric('postgres.global_status.uptime')
 
 ## Data Queries
 
-Metrics Queries select most recent statistics as described in the [Data Queries Documentation](data-queries.md).
+Metrics Queries select most recent statistics as described in the [Data Queries Documentation](./data-queries.md).

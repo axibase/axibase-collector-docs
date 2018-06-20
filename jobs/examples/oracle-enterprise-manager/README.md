@@ -14,7 +14,7 @@ Oracle EM collects and stores statistics from remote databases, applications, an
 
 ### Import Oracle EM JDBC Job
 
-* On the **Jobs** page select **Import** from the split button below the table and upload the [`oracle-em-jobs.xml`](oracle-em-jobs.xml) file.
+* On the **Jobs** page select **Import** from the split button below the table and upload the [`oracle-em-jobs.xml`](./oracle-em-jobs.xml) file.
 
 ### Configure Oracle EM Database Connection
 
@@ -48,7 +48,7 @@ SELECT NULL FROM dual
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the Oracle EM JDBC job.
-* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
+* Ensure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -65,11 +65,11 @@ SELECT NULL FROM dual
 
 ### Metrics
 
-* List of collected [Oracle EM metrics](metric-list.md)
+* List of collected [Oracle EM metrics](./metric-list.md)
 
 ### Properties
 
-* List of collected [Oracle EM properties](properties-list.md)
+* List of collected [Oracle EM properties](./properties-list.md)
 
 ### Entity Groups
 

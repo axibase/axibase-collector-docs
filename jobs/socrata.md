@@ -30,7 +30,7 @@ The most important part that the Socrata job relies on for processing is the `co
 ## Job Settings
 
 The [settings](../job-generic.md) implemented at the job level are the same as for other job types.
-The [**Cron Schedule**](../scheduling.md) defines how often the dataset must be checked for new records and [**Storage**](../atsd-server-connection.md) determines the target ATSD instance where the commands must be sent.
+The [**`cron` Schedule**](../scheduling.md) defines how often the dataset must be checked for new records and [**Storage**](../atsd-server-connection.md) determines the target ATSD instance where the commands must be sent.
 
 If the source dataset is static and never updated by the collecting entity, do not enable the job since the data remains unchanged. To load data once for a static dataset, save the job and click **Run** to execute the job manually. If, however, the underlying dataset is regularly updated with new rows by the collecting entity, enabling the job and specifying an appropriate schedule ensures that new data is continuously propagated into ATSD.
 
@@ -52,7 +52,7 @@ The configuration instructs Collector how to convert fields in the JSON document
 | Check Each Row | Check each row when **Skip Old Data** is enabled. Use this field when dataset is not ordered.
 | Item List | A collection of elements to execute multiple requests for different SOCRATA files in a loop. The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.|
 | Custom Tags | Additional series, property, and message tags, specified as name=value, one tag per line. Examples: `region=${region}`, `class=${graduating_class}` |
-| Row Filter | The row filter expression excludes matching rows for which the expression evaluates to `true`.<br>The expression must return a boolean value and may reference field values using ${field-name} placeholder, for example:<br>- compare string: `${sat_math_avg_score} == 's'`, this means that all rows with field `sat_math_avg_score equal` to `'s'` are ignored.<br>- compare number: `${mobility} > 2000`, this means that all rows with field mobility greater than 2000 are ignored.<br>- matches regex: `${start_date} matches \'^\d{5,}-.*$\'`, this means that all rows with field start_date like `\'20132-08-07T00:00:00.000Z\'` are ignored',
+| Row Filter | The row filter expression excludes matching rows for which the expression evaluates to `true`.<br>The expression must return a boolean value and can reference field values using ${field-name} placeholder, for example:<br>- compare string: `${sat_math_avg_score} == 's'`, this means that all rows with field `sat_math_avg_score equal` to `'s'` are ignored.<br>- compare number: `${mobility} > 2000`, this means that all rows with field mobility greater than 2000 are ignored.<br>- matches regular expression: `${start_date} matches \'^\d{5,}-.*$\'`, this means that all rows with field start_date like `\'20132-08-07T00:00:00.000Z\'` are ignored',
 | Add Row Number | An extra metric with name `{prefix}row_number` added by the job to series commands in case the data row does not contain any numeric columns.|
 
 ### Conversion Settings
@@ -61,7 +61,7 @@ The configuration instructs Collector how to convert fields in the JSON document
 
 | **Name** | **Description** |
 |:---|:---|
-| Default Entity | Entity used in all commands.<br> This field  supports the following options:<br> - Text value<br> - `${HOST}` placeholder - Hostname from which the JSON document was loaded.<br> - `${ITEM}` placeholder - Current element in the Item List.<br> - `${PARENT(n)}` placeholder - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.|
+| Default Entity | Entity used in all commands.<br> This field  supports the following options:<br> - Text value<br> - `${HOST}` placeholder - Hostname from which the JSON document is loaded.<br> - `${ITEM}` placeholder - Current element in the Item List.<br> - `${PARENT(n)}` placeholder - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.|
 | Entity | Entity name, specified literally or extracted from the specific field in the matched object (usually `$.meta.view.id`).<br>Entity Field supports the following options:<br>- Name of the field containing entity.<br>- JSON Path|
 | Entity Prefix | Text added to the entity name, retrieved from the specified field. For example, if Entity Prefix is set to `custom.`, and the field value is `my-host`, the resulting entity name is `custom.my-host`.|
 

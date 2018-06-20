@@ -131,7 +131,7 @@ Your server is likely to have no problems with accessibility.</body-cancel>
 <intervalCount>3</intervalCount>
 <intervalUnit>HOUR</intervalUnit>
 </repeat-interval>
-<body-first>An alert indicating nginx PLUS server's peer  was in the “unavail” and “unhealthy” states during whole last 15 minutes.</body-first>
+<body-first>An alert indicating nginx PLUS server peer is in the “unavail” and “unhealthy” states during whole last 15 minutes.</body-first>
 <body-cancel>Now the peer is healthy/available again.</body-cancel>
 <name>Email Notification id=1</name>
 <use-in-threshold-only>false</use-in-threshold-only>

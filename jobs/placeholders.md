@@ -26,7 +26,7 @@ Collector supports the following placeholders to format strings, calculate dates
 | `${TIME()}` | First Line Contains, Path, Success Directory, Error Directory | All |
 | `${DATE_ITEM()}` | Path | All |
 
-* To URL-encode placeholder value, for example, if the placeholder may contain special characters and is included in the Path, apply the `url` function as follows: `${ITEM?url}`.
+* To URL-encode placeholder value, for example, if the placeholder contains special characters and is included in the **Path**, apply the `url` function as follows: `${ITEM?url}`.
 
 ## Syntax
 
@@ -184,7 +184,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 ### LOOKUP function
 
-The `LOOKUP` function provides key-to-value mapping in the specified Item List. Use the function in [JSON](json.md), [JDBC](jdbc.md), [PI](pi.md) jobs to resolve entities.
+The `LOOKUP` function provides key-to-value mapping in the specified Item List. Use the function in [JSON](./json.md), [JDBC](./jdbc.md), [PI](./pi.md) jobs to resolve entities.
 
 * Syntax
 

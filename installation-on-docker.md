@@ -133,7 +133,7 @@ docker run \
 
 ## Check Installation
 
-Initializing the application may take up to five minutes.
+Initializing the application can take up to five minutes.
 
 ```sh
 docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-collector.log
@@ -160,13 +160,13 @@ Take note of the public https port assigned to axibase-collector container, for 
 
 ## Login
 
-Open `https://docker_hostname:32769` in your browser and create an [administrator account](configure-administrator-account.md).
+Open `https://docker_hostname:32769` in your browser and create an [administrator account](./configure-administrator-account.md).
 
 `docker_hostname` is the hostname or IP address of the Docker host and **32769** is the external port number assigned to the Collector container in the previous step.
 
 ## Setup ATSD Connection
 
-Configure the [ATSD Server connection](atsd-server-connection.md) to send data into an Axibase Time Series Database instance.
+Configure the [ATSD Server connection](./atsd-server-connection.md) to send data into an Axibase Time Series Database instance.
 
 ## Troubleshooting
 

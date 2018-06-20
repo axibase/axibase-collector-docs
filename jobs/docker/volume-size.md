@@ -4,7 +4,7 @@
 
 Monitoring disk space usage with a breakdown by individual container ensures continuous service availability by preventing space leakages in containers with data (persistent) volumes.
 
-While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) includes a way to obtain container sizes using the `--size` flag, the command may take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host disk subsystem and slowing down Docker Engine API response times. The CLI output does not expose space usage by volume and requires parsing size units (KB, MB, GB).
+While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) includes a way to obtain container sizes using the `--size` flag, the command can take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host disk subsystem and slowing down Docker Engine API response times. The CLI output does not expose space usage by volume and requires parsing size units (KB, MB, GB).
 
   ```sh
   axibase@NURSWGHBS001:~$ docker ps -s --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
@@ -34,7 +34,7 @@ For example, on a Docker host where the `/var/lib/docker` size is 30 GB with 20 
 
 ![docker-ps](./docker-ps-as.png)
 
-Executing API requests with the `&size=1` parameter typically requires even more time than the `docker ps -as` command and may cause timeout issues for API clients.
+Executing API requests with the `&size=1` parameter typically requires even more time than the `docker ps -as` command and can cause timeout issues for API clients.
 
 ## Collecting Container Sizes with Axibase Collector
 
@@ -76,7 +76,7 @@ One of the "lesser evil" alternatives is to calculate disk usage of `/var/lib/do
   307M /var/lib/docker/volumes/eb3952dec29e293cfae8149b20c40859ac944723abd28666e093ab1d76b43a0c
   ```
 
-The following [collector](docker_volume_collect.sh) script executes the `ds` command to calculate total disk usage of each subdirectory in the `/var/lib/docker/volumes/` directory, as well as computes the percentage of the total size of the underlying file system, used by each volume.
+The following [collector](./docker_volume_collect.sh) script executes the `ds` command to calculate total disk usage of each subdirectory in the `/var/lib/docker/volumes/` directory, as well as computes the percentage of the total size of the underlying file system, used by each volume.
 
 ### Running
 
@@ -109,7 +109,7 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
 
 ### Scheduling
 
-* To send commands to ATSD on schedule, open crontab:
+* To send commands to ATSD on schedule, open `crontab`:
 
   ```sh
   su root
@@ -134,13 +134,13 @@ The following [collector](docker_volume_collect.sh) script executes the `ds` com
 
 ## Volume View
 
-To display volume sizes, import the updated [Entity View](volume-entity-view.xml) for Docker Volumes. Open **Entity Views > Configure**  and click **Import** on the split button at the bottom of the screen with the **Replace Existing Entity Views** option enabled.
+To display volume sizes, import the updated [Entity View](./volume-entity-view.xml) for Docker Volumes. Open **Entity Views > Configure**  and click **Import** on the split button at the bottom of the screen with the **Replace Existing Entity Views** option enabled.
 
 ![volume-view](./volume-view.png)
 
 ## Volume Disk Rules
 
-Import the [rules](volume-rules.xml) file to raise an alert whenever a volume consumes more than 50% of total file system size.
+Import the [rules](./volume-rules.xml) file to raise an alert whenever a volume consumes more than 50% of total file system size.
 
 | Rule Name | Description |
 |---|---|
@@ -204,13 +204,13 @@ As an alternative to running the `du` script on the Docker host, you can launch 
         docker.volume.used
         docker.volume.used_percent
 
-* Open the cron file in the container shell:
+* Open the `cron` file in the container shell:
 
    ```sh
    docker exec -it axibase-collector crontab -e
    ```
 
-* Add the following lines to cron schedule:
+* Add the following lines to `cron` schedule:
 
    ```sh
    # Replace 'docker_hostname' with the hostname of the Docker host
@@ -220,4 +220,4 @@ As an alternative to running the `du` script on the Docker host, you can launch 
    # Empty line is required at the end of this file for a valid cron file
    ```
 
-* Save the cron file.
+* Save the `cron` file.

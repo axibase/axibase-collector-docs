@@ -2,5 +2,5 @@
 
 ## Examples
 
-* [Network API Command](network-format)
-* [JSON](json-format)
+* [Network API Command](./network-format)
+* [JSON](./json-format)

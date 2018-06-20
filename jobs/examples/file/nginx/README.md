@@ -4,7 +4,7 @@
 
 Download basic statistics from an nginx web server. Parse plain text file into series commands.
 
-The Path field contains the `${ITEM}` placeholder so that multiple nginx servers, defined in an item list, are queried by one configuration.
+The Path field contains the `${ITEM}` placeholder whic allows multiple nginx servers, defined in an item list, to be queried by one configuration.
 
 ## File
 
@@ -14,7 +14,7 @@ The Path field contains the `${ITEM}` placeholder so that multiple nginx servers
 
 ### Local Copy
 
-[nginx_status](nginx_status)
+[nginx_status](./nginx_status)
 
 ### Content
 
@@ -27,8 +27,8 @@ Reading: 0 Writing: 1 Waiting: 6
 
 ## Configuration
 
-* [FILE job configuration](nginx-job.xml). Import XML into Collector.
-* [CSV Parser](nginx-parser.xml). Import XML into ATSD.
+* [FILE job configuration](./nginx-job.xml). Import XML into Collector.
+* [CSV Parser](./nginx-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

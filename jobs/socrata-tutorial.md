@@ -7,7 +7,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 1](./images/Figure1.png)
 
-2. Click on the **Jobs** tab in Collector.
+2. Open the **Jobs** tab in Collector.
 
    ![Figure 2](./images/Figure2.png)
 
@@ -15,7 +15,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 3](./images/Figure3.png)
 
-4. To select the type of job you would like to add, you may complete either of the following steps.
+4. To select the type of job you want to add, complete either of the following steps.
 
    * Before completing the previous step, filter by desired job type (Socrata) in the **Jobs** tab. After clicking **Add Job**, the desired job type is specified.
 
@@ -25,14 +25,14 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 5](./images/Figure5.png)
 
-5. As shown in the image below, there are four fields to specify: **Enabled**, **Name**, **Cron Expression**, and **Storage**.
+5. As shown in the image below, there are four fields to specify: **Enabled**, **Name**, **`cron` Expression**, and **Storage**.
 
    ![Figure 6](./images/Figure6.png)
 
-   * **Enabled**: job status. You may enable the job, and schedule the job for data collection with the period specified in the Cron Expression, by clicking the check box. To
+   * **Enabled**: job status. Enable the job, and schedule the job for data collection with the period specified in the **`cron` Expression**, by clicking the check box. To
       have the job disabled, do not click the check box. Leave unchecked for this tutorial.
    * **Name**: job name. Enter in a relevant name for your new Socrata job. For this tutorial, use the name `NYC-Social-Media-Usage`.
-   * **`cron` Expression**: job execution time period. Cron fields are specified in the following order: second, minute, hour, day-of-month, month, and day-of-week. You can randomize time of execution by putting `R` onto time placeholders. Click
+   * **`cron` Expression**: job execution time period. `cron` fields are specified in the following order: second, minute, hour, day-of-month, month, and day-of-week. You can randomize time of execution by putting `R` onto time placeholders. Click
       the field to see time periods in human-readable formats, as shown in the image below.
    * **Storage**: database for storing data collected by this job.
 
@@ -56,7 +56,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 11. After clicking **Test**, you must get the following output: Collector downloads a part of the JSON file (file limitation 1 MB) and generates commands based on
     the dataset configuration (series, property, message, metric, and entity tags). These commands are only for text purposes, and are not yet saved in ATSD.
 
-    You may save this configuration by clicking **Save**, shown in the image from step 10.
+    Save this configuration by clicking **Save**, shown in the image from step 10.
 
     ![Figure 11](./images/Figure11.png)
 

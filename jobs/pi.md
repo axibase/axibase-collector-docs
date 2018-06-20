@@ -8,11 +8,11 @@ Axibase Collector can be configured to extract data from the PI Server via JDBC,
 
 ## Preconditions
 
-Before starting to configure the PI job, a machine must have the PI JDBC driver installed and stored in the Collector classpath. To perform this task, see [Axibase Collector Documentation](examples/pi/export-metrics.md#provide-axibase-collector-with-pi-jdbc-driver).
+Before starting to configure the PI job, a machine must have the PI JDBC driver installed and stored in the Collector classpath. To perform this task, see [Axibase Collector Documentation](./examples/pi/export-metrics.md#provide-axibase-collector-with-pi-jdbc-driver).
 
 ## Job Settings
 
-Just like the general [JDBC job](jdbc.md), PI job has a **Data Source** field. This allows a user to select the configured PI JDBC data source.
+Just like the general [JDBC job](./jdbc.md), PI job has a **Data Source** field. This allows a user to select the configured PI JDBC data source.
 
 ![JDBC job settings](./examples/pi/images/pi-job.png)
 
@@ -23,7 +23,7 @@ Use the table below to set configuration parameters.
 
 | FIELD              | DESCRIPTION  |
 | :----------------- |:-------------|
-| Entity | The expression to retrieve entity name from PI tag name. Supported placeholders:<BR>- `${TAG}` = current processed PI tag<BR>- [`${LOOKUP()}`](placeholders.md#lookup-function) = function to retrieve a value for key from an Item List |
+| Entity | The expression to retrieve entity name from PI tag name. Supported placeholders:<BR>- `${TAG}` = current processed PI tag<BR>- [`${LOOKUP()}`](./placeholders.md#lookup-function) = function to retrieve a value for key from an Item List |
 | Default Entity | Default entity applied if Entity Expression is not specified or entity is not found in the **Item List**. |
 | Default Tags | List of `name=value` tag pairs, one per line, stored as series tags. Tag value can refer to the `${TAG}` placeholder. |
 | `pisnapshot WHERE` Filter | An expression included in the `WHERE` clause when querying the `pisnapshot` table. The expression must return a boolean value. |

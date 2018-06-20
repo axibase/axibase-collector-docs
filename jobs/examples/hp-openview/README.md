@@ -16,7 +16,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 
 ### Import HP OpenView JDBC job
 
-* Open the **Jobs** drop-down list and click **Import** at the bottom of the screen. Upload the [collector-jobs-ovpm-jobs.xml](collector-jobs-ovpm-jobs.xml) file.
+* Open the **Jobs** drop-down list and click **Import** at the bottom of the screen. Upload the [collector-jobs-ovpm-jobs.xml](./collector-jobs-ovpm-jobs.xml) file.
 
 ### Configure HP Open View HTTP Pool
 
@@ -35,7 +35,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 * Choose an ATSD server if you have connected your Collector to multiple ATSD servers.
 * Save the Job.
 * Open each configuration.
-* Open the `ovpm` Item List and define servers whose statistics you would like to collect.
+* Open the `ovpm` Item List and define servers whose statistics you want to collect.
 * Click **Test** and review the output.
 
 <!---
@@ -45,7 +45,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 ### Schedule the Job
 
 * Open the **OVPM Job** page and click **Run** for the `ovpm-global` job.
-* Make sure that the job status is `COMPLETED` and the `Items Read` and `Sent commands` fields show a value greater than 0.
+* Ensure that the job status is `COMPLETED` and the `Items Read` and `Sent commands` fields show a value greater than 0.
 
 ![](./images/ovmp-global.png)
 
@@ -54,7 +54,7 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on Metrics tab and filter metrics by the prefix `gbl_.*`
+* Open **Metrics** tab and filter metrics by the prefix `gbl_.*`
 
 ![](./images/metrics.png)
 
@@ -62,10 +62,10 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 
 ### Metrics
 
-* List of collected [HP OpenView metrics](metric-list.md)
+* List of collected [HP OpenView metrics](./metric-list.md)
 
 <!--- ### Properties
-* List of collected [HP OpenView properties](properties-list.md)
+* List of collected [HP OpenView properties](./properties-list.md)
 -->
 
 ## Entity Group List

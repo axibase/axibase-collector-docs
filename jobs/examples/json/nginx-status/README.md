@@ -2,9 +2,9 @@
 
 ## Overview
 
-Download nginx statistics using [api](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+Download nginx statistics using [api]http://nginx.org/en/docs/http/ngx_http_status_module.html).
 
-The **Path** field contains the `${ITEM}` placeholder so that a user may query multiple servers with one configuration.
+The **Path** field contains the `${ITEM}` placeholder to allow a user to query multiple servers with one configuration.
 
 ## File
 
@@ -16,11 +16,11 @@ Example: `http://demo.nginx.com/status`
 
 ### Local Copy
 
-[JSON](nginx_status.json) file.
+[JSON](./nginx_status.json) file.
 
 ## Configuration
 
-[JSON Job Configuration](nginx_status_job.xml) file. Import XML into Collector.
+[JSON Job Configuration](./nginx_status_job.xml) file. Import XML into Collector.
 
 ### Matched Objects
 
@@ -30,7 +30,7 @@ Example: `http://demo.nginx.com/status`
   $
   ```
 
-  [JSON](nginx_status.json) file.
+  [JSON](./nginx_status.json) file.
 
 ### Commands
 
@@ -134,7 +134,7 @@ Example: `http://demo.nginx.com/status`
   ]
   ```
 
-  [JSON](matched_objects_2.json) file.
+  [JSON](./matched_objects_2.json) file.
 
 ### Other Commands
 
@@ -254,7 +254,7 @@ Example: `http://demo.nginx.com/status`
   ]
   ```
 
-  [JSON](matched_objects_3.json) file.
+  [JSON](./matched_objects_3.json) file.
 
 ### Additional Commands
 
@@ -349,7 +349,7 @@ Example: `http://demo.nginx.com/status`
   ]
   ```
 
-  [JSON](matched_objects_5.json) file.
+  [JSON](./matched_objects_5.json) file.
 
 ### More Commands
 

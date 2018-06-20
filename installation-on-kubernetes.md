@@ -128,7 +128,7 @@ spec:
 This specification creates a new Service object named `atsd` which opens TCP ports on any Pod with the `app=atsd` label.
 
 The service type is specified as [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), whereas each node redirects traffic to the ATSD service on the same port.
-The Service automatically creates environment variables, which are [supported by Collector](installation-on-docker.md#environment-variables):
+The Service automatically creates environment variables, which are [supported by Collector](./installation-on-docker.md#environment-variables):
 
 * `ATSD_SERVICE_HOST (variable pattern '{service_name}_SERVICE_HOST')`
 * `ATSD_SERVICE_PORT_HTTPS (variable pattern '{service_name}\_SERVICE_PORT_{port_name}')`, specified by the `spec.ports` field:
@@ -246,7 +246,7 @@ The **template** field contains the following instructions:
 * The container uses [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by `valueFrom.secretKeyRef` field.
 * The container has a memory request of 200 MiB and a memory limit of 600 MiB.
 * The container uses the `docker-socket` volume, indicated by the **volumeMounts** field.
-* Open ports 9443 so that the container can send and accept traffic. The port is also opened on each Node, specified by the `hostPort: 9443` field.
+* Open ports 9443 for the container to send and accept traffic. The port is also opened on each Node, specified by the `hostPort: 9443` field.
 
 Create the deployment using the [kubectl create](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#create) command:
 

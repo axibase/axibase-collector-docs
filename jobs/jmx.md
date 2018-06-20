@@ -58,7 +58,7 @@ Failed to retrieve RMIServer stub: javax.naming.ConfigurationException [Root exc
 
 ### Entity Name
 
-If not specified by the user, the entity name is set to the value of the **Host** field by the database. The user may override this feature, for example, if the **Host** field contains a DNS hostname, but the user needs to collect data under a short hostname of the server where the Java application is running.
+If not specified by the user, the entity name is set to the value of the **Host** field by the database. The user can override this feature, for example, if the **Host** field contains a DNS hostname, but the user needs to collect data under a short hostname of the server where the Java application is running.
 
 In addition, the entity name can be retrieved dynamically by specifying the MBean Object Name followed by `>` and the attribute name (`mbean>attribute`). For example:
 

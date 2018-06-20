@@ -8,7 +8,7 @@ The number of concurrently executing jobs is set to 32 by default and is control
 
 Jobs execute simultaneously and configurations within the same job execute sequentially.
 
-Multiple instances of the same job may not run at the same time. If the job is in `STARTED` status and is scheduled to execute again, the new execution is not be triggered by Collector until the current job instance finishes processing.
+Multiple instances of the same job cannot run at the same time. If the job is in `STARTED` status and is scheduled to execute again, the new execution is not be triggered by Collector until the current job instance finishes processing.
 
 ## Manual Execution
 
@@ -18,17 +18,17 @@ Manual execution produces the same results as scheduled execution.
 
 The manual mode is useful for running temporarily disabled jobs (for example when developing new jobs or troubleshooting existing jobs).
 
-## Cron Expressions
+## cron Expressions
 
-A cron expression is a string that determines a schedule for executing a job.
+A `cron` expression is a string that determines a schedule for executing a job.
 
-Fields in a cron expression have the following order:
+Fields in a `cron` expression have the following order:
 
 ```ls
 [seconds] [minutes] [hours] [day-of-month] [month] [day-of-week]
 ```
 
-![Cron Expressions](./images/cron_expressions.png)
+![`cron` Expressions](./images/cron_expressions.png)
 
 Field Control Symbols:
 
@@ -59,7 +59,7 @@ Field Constraints:
 
 Second, minute, and hour fields support **R** (random) symbol to randomize execution time.
 
-### Cron Expression Examples
+### cron Expression Examples
 
 | **Expression** | **Second** | **Minute** | **Hour** | **Day of Month** | **Month** | **Day of Week** | **Description** |
 |:---|---:|---:|---:|---:|---:|---:|:---|

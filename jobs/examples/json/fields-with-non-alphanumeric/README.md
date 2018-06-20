@@ -28,7 +28,7 @@ Since fields with non-alphanumeric characters, excluding `_` and `-`, are not ac
 }{
 ```
 
-[JSON](fields_with_non_alphanumeric.json) file.
+[JSON](./fields_with_non_alphanumeric.json) file.
 
 ## Configuration
 
@@ -72,7 +72,7 @@ Excluded Fields    | ['x.y'],['x y'],x.['a.b'].*
 Metric Name Field  | m
 Metric Value Field | x.['a.b'].[2]
 
-  [JSON Job Configuration](fields_with_non_alphanumeric.xml) file. Import the XML file into Collector.
+  [JSON Job Configuration](./fields_with_non_alphanumeric.xml) file. Import the XML file into Collector.
 
 ## Matched Object
 

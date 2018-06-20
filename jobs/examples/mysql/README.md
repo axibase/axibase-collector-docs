@@ -34,7 +34,7 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 
 ### Import MySQL Server Job into Axibase Collector
 
-* Open the **Jobs** menu and select **Import** from the split button at the bottom of the screen to upload the [mysql-server-jobs.xml](mysql-server-jobs.xml) file.
+* Open the **Jobs** menu and select **Import** from the split button at the bottom of the screen to upload the [mysql-server-jobs.xml](./mysql-server-jobs.xml) file.
 
 ### Configure MySQL Server Database Connection
 
@@ -67,7 +67,7 @@ SELECT 1
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the MySQL Server JDBC job.
-* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
+* Ensure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -76,7 +76,7 @@ SELECT 1
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the **Metrics** tab and filter metrics by name `mysql.*`.
+* Open the **Metrics** tab and filter metrics by name `mysql.*`.
 
 ![](./images/mysql-metrics.png)
 
@@ -84,7 +84,7 @@ SELECT 1
 
 ### Metrics
 
-* List of collected [MySQL Server metrics](metric-list.md).
+* List of collected [MySQL Server metrics](./metric-list.md).
 
 ### Entity Groups
 
@@ -103,7 +103,7 @@ hasMetric('mysql.global_status.uptime')
 
 * Open the **Portals** page and import a MySQL portal from [portal-mysql.xml](portal-mysql.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
-* Open the **Entities** tabs, find the `mysql` database by name, and click on the portal icon.
+* Open the **Entities** tabs, find the `mysql` database by name, and click the portal icon.
 
 ![](./images/mysql-portal-icon.png)
 

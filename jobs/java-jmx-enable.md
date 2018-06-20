@@ -63,7 +63,7 @@ Change to `./conf` directory.
 
 Add/edit the `jmx.access` and `jmx.password` files as follows.
 
-Make sure the owner of these files is the same as the ActiveMQ user.
+Ensure that the owner of these files is the same as the ActiveMQ user.
 
 `jmx.access`:
 

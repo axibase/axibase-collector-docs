@@ -76,7 +76,7 @@
         <disableEntityGrouping>false</disableEntityGrouping>
         <leavingEvents>false</leavingEvents>
         <description>
-            <![CDATA[Notify when less than 2 client applications are connected concurrently during the interval. This condition of too few clients may indicate that either clients cannot connect to the broker or clients have stopped working. This rule is evaluated only between 08:00 and 19:00 on working days.]]></description>
+            <![CDATA[Notify when less than 2 client applications are connected concurrently during the interval. This condition of too few clients can indicate that either clients cannot connect to the broker or clients have stopped working. This rule is evaluated only between 08:00 and 19:00 on working days.]]></description>
         <schedule>* 8-18 * * MON-FRI</schedule>
         <minimumInterval>
             <intervalCount>10</intervalCount>

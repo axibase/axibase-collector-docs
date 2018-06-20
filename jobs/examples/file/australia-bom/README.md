@@ -4,7 +4,7 @@
 
 Download climate observations for the Australian Bureau of Meteorology (BOM) stations located in Victoria province.
 
-The Path field contains the `${ITEM}` placeholder so that multiple stations, defined in an item list, can be queried with one configuration.
+The Path field contains the `${ITEM}` placeholder that allows multiple stations, defined in an item list, to be queried by one configuration.
 
 ## File
 
@@ -16,7 +16,7 @@ Template: `http://www.bom.gov.au:80/fwo/IDV60801/IDV60801.${ITEM}.json`
 
 ### Local Copy
 
-[`IDV60801.94693.json`](IDV60801.94693.json)
+[`IDV60801.94693.json`](./IDV60801.94693.json)
 
 ### Content
 
@@ -125,8 +125,8 @@ Template: `http://www.bom.gov.au:80/fwo/IDV60801/IDV60801.${ITEM}.json`
 
 ## Configuration
 
-* [FILE job configuration](australia-bom-job.xml). Import XML into Collector.
-* [CSV Parser](australia-bom-parser.xml). Import XML into ATSD.
+* [FILE job configuration](./australia-bom-job.xml). Import XML into Collector.
+* [CSV Parser](./australia-bom-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

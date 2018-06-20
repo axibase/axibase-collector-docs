@@ -71,7 +71,7 @@ The expression selects all elements of the `book` array in the root's child name
 | HTTP Pool                | Pre-defined HTTP connection parameters to limit the number of open connections, to customize timeout settings, and to re-use connections across multiple requests.<br> When HTTP Pool is selected, the Path field must contain a relative URI: `[/]path[?query][#fragment]` |
 | Path                     | URI Path to JSON file, for example `https://example.com/api/daily-summary.json`, or the absolute path to the file or files on the local file system.<br> If the HTTP Pool is enabled, the path must be relative, for example `/api/daily-summary.json`. Otherwise, the Path must be a full URI including protocol, host, port, and the path.<br> The Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the Path, the job executes as many queries as there are elements returned by the `${DATE_ITEM()}` function, substituting the `${DATE_ITEM()}` placeholder with the element value for each request.<br> The Path can include either the `${DATE_ITEM()}` or `${ITEM}` function, but not both. |
 | Format                   | JSON or JSON Lines. If the **JSON Lines** format is selected, the database adds the input lines contained in the file to a parent array object and processes the lines as a single JSON document. |
-| Delete Files on Upload   | **Applies to FILE protocol**. Delete source file or files that were parsed into at least one command which was successfully sent to the database. |
+| Delete Files on Upload   | **Applies to FILE protocol**. Delete source files parsed into at least one command and successfully sent to the database. |
 | Ignore Unchanged Files   | Prevents unchanged files or http entities from being repeatedly processed.<br>When enabled, the Collector compares the last modified time of the file (FILE) or **Last-Modified** header/MD5 hashcode (HTTP, HTTP_POOL) with the previously stored value and ignores the value if there were no changes.<br>In the case of HTTP and `HTTP_POOL` protocols, the Collector checks the **Last-Modified** response header. If the header is present and the value has not changed since the last execution, the response content is not downloaded. |
 | Ignore Invalid Commands  | If enabled, invalid commands are ignored. |
 | Item List                | A collection of elements to execute multiple requests for different JSON files in a loop.<br> The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.<br> When Item List is selected and `${ITEM}` is present in the Path, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with the element value for each request.<br>The placeholder `${ITEM}` supports [standard functions](../collections.md#functions) and [column](../functions-freemarker.md#column) function. |
@@ -94,13 +94,13 @@ The expression selects all elements of the `book` array in the root's child name
 | JSON Path       | JSON Path expression to match an object or a list of objects in the JSON document. The default path is `$`, which stands for the root object.<br> JSON Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the JSON Path, the JSON Path expression returns a combined list of objects that matched any of the elements returned by `${DATE_ITEM()}` function. |
 | Traversal Depth | Maximum traversal limit measured as the difference between the matched object and nested objects. When **Depth** is set to one, the Collector includes only direct fields of the matched object. If **Depth** is set to zero or a negative number, all nested objects are traversed and included into the commands by the collector. |
 | Renamed Fields  | Pairs of `oldname=newname` mappings, one per line, to rename fields in the matched object. |
-| Custom Tags     | Additional series, property, and message tags. Supported placeholders:<br> - `${HOST}` - Hostname from which the JSON document was loaded.<br> - `${PARENT(n)}` - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.<br> - `${field_name}` - Value of the specified filed in the matched object. |
+| Custom Tags     | Additional series, property, and message tags. Supported placeholders:<br> - `${HOST}` - Hostname from which the JSON document is loaded.<br> - `${PARENT(n)}` - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.<br> - `${field_name}` - Value of the specified filed in the matched object. |
 
 ### Entity Fields
 
 | **Name** | **Description** |
 |:---|:---|
-| Default Entity | Entity used in all commands ([example](#default-entity)).<br> This field  supports the following options:<br> - Text value<br> - `${HOST}` placeholder - Hostname from which the JSON document was loaded.<br> - `${ITEM}` placeholder - Current element in the Item List.<br> - `${PARENT(n)}` placeholder - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.|
+| Default Entity | Entity used in all commands ([example](#default-entity)).<br> This field  supports the following options:<br> - Text value<br> - `${HOST}` placeholder - Hostname from which the JSON document is loaded.<br> - `${ITEM}` placeholder - Current element in the Item List.<br> - `${PARENT(n)}` placeholder - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.|
 | Entity Field   | Value used as the entity in all commands ([example](#entity-field)).<br> This field supports the following options:<br> - Name of the field containing entity in the matched object.<br> - JSON Path. |
 | Entity Prefix  | Text added to entity name extracted retrieved from the specified field ([example](#entity-field)).<br> For example, if the Entity Prefix is set to `custom.`, and the field value is `my-host`, the resulting entity name is `custom.my-host`. |
 
@@ -161,12 +161,12 @@ The expression selects all elements of the `book` array in the root's child name
 
 ## Examples
 
-* [Australia Bureau of Meteorology Weather](examples/json/australia-weather/README.md#overview)
-* [JSON Lines](examples/json/json_lines/README.md#overview)
-* [GitHub Daily Summary](examples/json/github-daily-summary/README.md#overview)
-* [Nginx Status](examples/json/nginx-status/README.md#overview)
-* [BLS](examples/json/bls/README.md#overview)
-* [Fields with non alphanumeric characters](examples/json/fields-with-non-alphanumeric/README.md#overview)
+* [Australia Bureau of Meteorology Weather](./examples/json/australia-weather/README.md#overview)
+* [JSON Lines](./examples/json/json_lines/README.md#overview)
+* [GitHub Daily Summary](./examples/json/github-daily-summary/README.md#overview)
+* [Nginx Status](./examples/json/nginx-status/README.md#overview)
+* [BLS](./examples/json/bls/README.md#overview)
+* [Fields with non alphanumeric characters](./examples/json/fields-with-non-alphanumeric/README.md#overview)
 
 ## Additional Examples
 
