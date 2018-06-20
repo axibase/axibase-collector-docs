@@ -62,7 +62,7 @@ Add the following lines at the **beginning** of the `location /nginx_status` dir
    deny all;
 ```
 
- For example, if your Collector is located at `10.102.0.6`, the configuration must appear thus:
+ For example, if your Collector is located at `10.102.0.6`, the configuration appears thus:
 
 ```ls
 location /nginx_status {

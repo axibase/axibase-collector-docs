@@ -79,7 +79,7 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
    -Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_BASE}/conf/jmx.access"
 ```
 
-This must be the result:
+The expected result is:
 
 ![SUN_JMX_START_IMAGE](./images/very_new_screen.png)
 

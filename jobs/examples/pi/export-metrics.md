@@ -82,7 +82,7 @@ $AXIBASE_COLLECTOR_HOME/bin/start-collector.sh
 SELECT 1
 ```
 
-* Query result must be `Query OK`.
+* Query result are `Query OK`.
 
 ### Verify Job Configuration
 
@@ -109,6 +109,6 @@ SELECT 1
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the **Metrics** tab and filter metrics by name, for example find by prefix `ba:`. You must see a list of exported PI tags:
+* Click on the **Metrics** tab and filter metrics by name, for example find by prefix `ba:`. There is a list of exported PI tags:
 
 ![](./images/pi-atsd-metrics.png)

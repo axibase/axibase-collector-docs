@@ -47,7 +47,7 @@ tar xvf axibase-collector-v${VERSION}.tar.gz
 
 ## Check Ports
 
-Check that port `9443` is available. If the port is available, output of this command must be blank.
+Check that port `9443` is available. If the port is available, output of this command is blank.
 
 ```sh
 sudo netstat -tulnp | grep "9443"
