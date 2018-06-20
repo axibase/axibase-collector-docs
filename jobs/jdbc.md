@@ -69,10 +69,10 @@ Use the table below to fill in the fields and configure the query.
 
 | **Placeholder** | **Description** |
 | --- | :--- |
-| `${DB_CONFIG_NAME}` | Data source [Name](./jdbc-data-source.md#db-name). |
-| `${DB_SERVER}` | Data source [Server](./jdbc-data-source.md#db-server). |
-| `${DB_PORT}` | Data source [Port](./jdbc-data-source.md#db-port).|
-| `${DB_NAME}` | Data source [Database Name](./jdbc-data-source.md#db-database). |
+| `${DB_CONFIG_NAME}` | Data source [Name](./jdbc-data-source.md). |
+| `${DB_SERVER}` | Data source [Server](./jdbc-data-source.md). |
+| `${DB_PORT}` | Data source [Port](./jdbc-data-source.md).|
+| `${DB_NAME}` | Data source [Database Name](./jdbc-data-source.md). |
 
 #### Type-Specific options
 
