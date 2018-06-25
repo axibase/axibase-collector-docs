@@ -214,7 +214,7 @@ Treat Item List as a CSV structure.
 
 #### LOOKUP Examples
 
-Consider the Item List **'us-regions'** with items:
+Consider the Item List **us-regions** with items:
 
 ```txt
 1=New-England

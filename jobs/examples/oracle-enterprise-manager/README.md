@@ -24,7 +24,7 @@ Oracle EM collects and stores statistics from remote databases, applications, an
 ![](./images/oracle_database_example.png)
 
 * Read-only/`SELECT` privileges to `SYSMAN.GC$TARGET` and `SYSMAN.gc$metric_values` tables are sufficient.
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT NULL FROM dual

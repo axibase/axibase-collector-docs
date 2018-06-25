@@ -76,7 +76,7 @@ $AXIBASE_COLLECTOR_HOME/bin/start-collector.sh
 
 ![](./images/pijdbc-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1

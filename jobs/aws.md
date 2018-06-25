@@ -16,7 +16,7 @@ When an AWS job is started for the first time, the job loads available historica
 
 Each AWS [namespace](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html) provides a set of metrics available for resources of a particular type.
 
-You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you actually use.
+You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you actively use.
 
 Available namespaces:
 

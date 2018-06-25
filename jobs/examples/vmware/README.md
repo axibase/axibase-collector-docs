@@ -23,7 +23,7 @@ VMware vCenter collects and stores statistics from ESX servers in a Microsoft SQ
 
 ![](./images/vmware-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1

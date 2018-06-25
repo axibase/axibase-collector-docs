@@ -88,7 +88,7 @@ Configure Axibase Collector to send data into an Axibase Time Series Database in
 
 ## Stopping Axibase Collector
 
-Stop Axibase Collector with the following command:
+Stop Axibase Collector:
 
 ```sh
 ./axibase-collector/bin/stop-collector.sh

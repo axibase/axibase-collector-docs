@@ -25,7 +25,7 @@ The JSON job provides a way to download JSON files from remote systems or read f
 5. Each matched object is translated into a separate set of commands.
 6. Repeat Steps 3-5 for each configuration setting/JSON expression.
 7. Send commands into Axibase Time Series Database.
-8. If the **Delete on Upload** setting is enabled and commands were accepted by ATSD, **delete** the source file.
+8. If the **Delete on Upload** setting is enabled and commands are accepted by ATSD, **delete** the source file.
 9. Repeat Steps two through eight for each matched file.
 
 ## JSON Path
@@ -72,7 +72,7 @@ The expression selects all elements of the `book` array in the root's child name
 | Path                     | URI Path to JSON file, for example `https://example.com/api/daily-summary.json`, or the absolute path to the file or files on the local file system.<br> If the HTTP Pool is enabled, the path must be relative, for example `/api/daily-summary.json`. Otherwise, the Path must be a full URI including protocol, host, port, and the path.<br> The Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the Path, the job executes as many queries as there are elements returned by the `${DATE_ITEM()}` function, substituting the `${DATE_ITEM()}` placeholder with the element value for each request.<br> The Path can include either the `${DATE_ITEM()}` or `${ITEM}` function, but not both. |
 | Format                   | JSON or JSON Lines. If the **JSON Lines** format is selected, the database adds the input lines contained in the file to a parent array object and processes the lines as a single JSON document. |
 | Delete Files on Upload   | **Applies to FILE protocol**. Delete source files parsed into at least one command and successfully sent to the database. |
-| Ignore Unchanged Files   | Prevents unchanged files or http entities from being repeatedly processed.<br>When enabled, the Collector compares the last modified time of the file (FILE) or **Last-Modified** header/MD5 hashcode (HTTP, HTTP_POOL) with the previously stored value and ignores the value if there were no changes.<br>In the case of HTTP and `HTTP_POOL` protocols, the Collector checks the **Last-Modified** response header. If the header is present and the value has not changed since the last execution, the response content is not downloaded. |
+| Ignore Unchanged Files   | Prevents unchanged files or http entities from being repeatedly processed.<br>When enabled, the Collector compares the last modified time of the file (FILE) or **Last-Modified** header/MD5 hashcode (HTTP, `HTTP_POOL`) with the previously stored value and ignores the value if there are no changes.<br>In the case of HTTP and `HTTP_POOL` protocols, the Collector checks the **Last-Modified** response header. If the header is present and the value has not changed since the last execution, the response content is not downloaded. |
 | Ignore Invalid Commands  | If enabled, invalid commands are ignored. |
 | Item List                | A collection of elements to execute multiple requests for different JSON files in a loop.<br> The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.<br> When Item List is selected and `${ITEM}` is present in the Path, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with the element value for each request.<br>The placeholder `${ITEM}` supports [standard functions](../collections.md#functions) and [column](../functions-freemarker.md#column) function. |
 | Replacement Table        | A set of mappings for converting entity names retrieved from the JSON document into entity names to be stored in the database. |
@@ -82,7 +82,7 @@ The expression selects all elements of the `book` array in the root's child name
 | HTTP Headers             | Specify request headers. |
 | Enable Web Driver        | When enabled, executes the Driver Script. |
 | Driver Script*           | Downloads the file by executing a set of pre-recorded browser actions such as opening a page and clicking on a button to export a file.<br> The script is recorded in Selenium IDE and exported into Java format. |
-| Driver Timeout, seconds* | Maximum time allowed for the Driver Script to run before driver aborts process. |
+| Driver Timeout, seconds* | Maximum time allowed for the Driver Script to run before driver stops process. |
 | Driver File Encoding*    | File Encoding to use when saving a file downloaded with Driver Script. |
 
 ## Conversion Settings
@@ -675,7 +675,7 @@ Time Format      | `yyyy-MM-dd'T'HH:mm:ssZ`
 Minimum Time     | `NOW-1*DAY`
 Metric Prefix    | `repo.traffic.`
 
-If current time is `2018-05-23T17:00:00Z`, the job adds the following commands to ATSD.
+If current time is `2018-05-23T17:00:00Z`, the job adds these commands to ATSD.
 
 Result:
 

@@ -15,7 +15,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 3](./images/Figure3.png)
 
-4. To select the type of job you want to add, complete either of the following steps.
+4. To select the type of job you want to add, complete either of these steps.
 
    * Before completing the previous step, filter by desired job type (Socrata) in the **Jobs** tab. After clicking **Add Job**, the desired job type is specified.
 
@@ -68,6 +68,6 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
     ![Figure 13](./images/Figure13.png)
 
 13. Navigate to your local ATSD instance and log in. Open the **Entities** tab to verify that metrics from the dataset are present in ATSD. You can search by your `dataset id`, which
-    is assigned by the database from the original JSON file, in this case the id is `5b3a-rs48`. You can see that metrics were successfully sent from Collector to ATSD and begin analyzing this dataset.
+    is assigned by the database from the original JSON file, in this case the id is `5b3a-rs48`. You can see that metrics are successfully sent from Collector to ATSD and begin analyzing this dataset.
 
     ![Figure 14](./images/Figure14.png)

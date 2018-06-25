@@ -190,7 +190,7 @@ As an alternative to running the `du` script on the Docker host, you can launch 
    docker exec axibase-collector chmod +x  /opt/axibase-collector/ext/docker_volume_collect.sh
    ```
 
-* Run the script once manually to validate ingestion:
+* Run the script once manually to validate import:
 
    ```sh
    docker exec axibase-collector /opt/axibase-collector/ext/docker_volume_collect.sh docker_hostname tcp://atsd_host:8081

@@ -43,7 +43,7 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 
 ![](./images/mysql-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1

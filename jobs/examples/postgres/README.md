@@ -27,7 +27,7 @@ sudo su postgres
 psql
 ```
 
-* Run the following commands in the `psql` console:
+* Run these commands in the `psql` console:
 
 ```sql
 CREATE ROLE readonly;
@@ -62,7 +62,7 @@ listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
 
 ![](./images/postgres-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1

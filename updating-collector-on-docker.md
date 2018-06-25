@@ -28,7 +28,7 @@ tar xvf axibase-collector.tar.gz
 
 ## Stop the Collector Process
 
-Assuming `axibase-collector` is the name of the Collector container to be updated, execute the following command.
+Assuming `axibase-collector` is the name of the Collector container to be updated, execute this command:
 
 ```bash
 docker exec axibase-collector /opt/axibase-collector/bin/stop-collector.sh

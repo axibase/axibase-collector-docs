@@ -27,7 +27,7 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 
 ![](./images/scom-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1

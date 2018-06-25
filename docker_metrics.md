@@ -137,9 +137,9 @@ Name | Category | Description
 `docker.fs.size.rw` | File System | The total size of all the files in the container, in bytes. If you exported the filesystem of the container in tarball form, the file is about that size.
 `docker.fs.size.rootfs` | File System | The size of the files which have been created or changed, if you compare the container to the base image. Just after creation, this must be zero; as you modify (or create) files, this increases.
 `docker.process.all` | Process | The number of all processes for running container.
-`docker.process.filtered` | Process | The number of all processed which have been filtered by [field 'Excluded Processes'](./jobs/docker.md#job-settings) for running container.
-`docker.pids.current` | Process | The number of pids in the cgroup (Linux specific stats, not populated on Windows.)
-`docker.pids.limit` | Process | The hard limit on the number of pids in the cgroup. A "Limit" of 0 means that there is no limit. (Linux specific stats, not populated on Windows.)
+`docker.process.filtered` | Process | The number of all processed which have been filtered by [field **Excluded Processes**](./jobs/docker.md#job-settings) for running container.
+`docker.pids.current` | Process | The number of `pids` in the cgroup (Linux specific stats, not populated on Windows.)
+`docker.pids.limit` | Process | The hard limit on the number of `pids` in the cgroup. A **Limit** of 0 means that there is no limit. (Linux specific stats, not populated on Windows.)
 `docker.storage.read.count.normalized` | I/O | The disk stats on Windows.
 `docker.storage.read.size` | I/O | The disk stats on Windows.
 `docker.storage.write.count.normalized` | I/O | The disk stats on Windows.

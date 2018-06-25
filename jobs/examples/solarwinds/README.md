@@ -23,7 +23,7 @@ SolarWinds Monitor products collect and store statistics from target devices in 
 
 ![](./images/solarwinds-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1

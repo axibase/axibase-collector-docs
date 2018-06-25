@@ -16,7 +16,7 @@ For a quick installation of pre-integrated Axibase Collector and ATSD instances 
 
 ## Importing an Image in Restricted Environments
 
-If the target Docker host has no direct connectivity to [Docker Hub](https://hub.docker.com), execute the following steps to prepare and load the Collector image:
+If the target Docker host has no direct connectivity to [Docker Hub](https://hub.docker.com), prepare and load the Collector image:
 
 * Log in to a Docker host which is connected to Docker Hub.
 * Pull the Collector image from Docker Hub and export into an archive file:
