@@ -20,7 +20,7 @@ Since Axibase Collector transmits data to ATSD using the http/https protocol, yo
 * Check **Ignore SSL Certificate Errors** to ignore certificate errors since ATSD certificate is self-signed by default.
 * Apply connection limits using the [recommended settings](#recommended-http-pool-settings) below.
 * Select `Authentication Type=BASIC`. Set **Test Path** to `/ping`.
-* Enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials. <br>Make sure that the user has roles `API_DATA_WRITE` and `API_META_WRITE`, as well as **All Access: Write** permission.
+* Enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials. <br>Ensure that the user has roles `API_DATA_WRITE` and `API_META_WRITE`, as well as **All Access: Write** permission.
 
 ### Test HTTP Pool
 
@@ -54,6 +54,6 @@ Socket Keep-Alive | true
 * Choose ATSD HTTP pool configured previously.
 * Set **Transport Type** to **HTTP_BATCH**.
 * Keep API path as `/api/v1`.
-* Click **Test**. ATSD returns response code `200 OK` if the connection was successful.
+* Click **Test**. ATSD returns response code `200 OK` if the connection is successful.
 
 ![ATSD Server Test](./images/atsd_server.png)

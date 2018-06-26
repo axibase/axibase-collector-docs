@@ -26,7 +26,7 @@ Log in to Axibase Collector web interface.
 ### Create Item List for nginx PLUS servers
 
 * Open the **Collections > Item Lists** page.
-* Add a new TEXT [Item List](../../../collections.md) named `nginx-plus-servers` containing DNS names or IP addresses of the monitored nginx PLUS servers, one server per line. Make sure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path `/status`. If the protocols and ports are different, move the entire url to the list and set Path field equal to the`${ITEM}` placeholder.
+* Add a new TEXT [Item List](../../../collections.md) named `nginx-plus-servers` containing DNS names or IP addresses of the monitored nginx PLUS servers, one server per line. Ensure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path `/status`. If the protocols and ports are different, move the entire url to the list and set Path field equal to the`${ITEM}` placeholder.
 * Click **Save**.
 
 ![Server list example](./images/ngp_item_list.png)
@@ -43,7 +43,7 @@ The job consists of several settings blocks, each of which is responsible for pr
 
 ![First settings block](./images/ngp_first_settings_block.png)
 
-The result `series` and `property`commands formed by the block should look like this:
+The result `series` and `property` commands formed by the block looks like this:
 
 ```ls
 series e:demo.nginx.com d:2016-08-02T10:35:46.608Z m:nginx-plus.connections.accepted=40750818 m:nginx-plus.connections.dropped=0 m:nginx-plus.requests.current=11 m:nginx-plus.ssl.handshakes=45602 m:nginx-plus.connections.idle=34 m:nginx-plus.requests.total=85010375 m:nginx-plus.processes.respawned=0 m:nginx-plus.ssl.session_reuses=7504 m:nginx-plus.connections.active=11 m:nginx-plus.ssl.handshakes_failed=6641
@@ -66,7 +66,7 @@ Other settings blocks in the provided [Collector Job Configuration File](./confi
 
 * Log in to the ATSD web interface.
 * Open the **Metrics** tab and apply the `nginx-plus*` name mask to view nginx metrics received by ATSD.
-* Click on **Series** link and check that metrics are present for each server in the **`nginx-plus-servers`** list.
+* Click **Series** link and check that metrics are present for each server in the **`nginx-plus-servers`** list.
 
 ![nginx metrics](./images/ngp_verify_metrics.png)
 
@@ -86,7 +86,7 @@ List of collected [nginx PLUS Server Metrics](./nginx-plus-server-metrics.md).
 
 * Open the **Portals** menu and select **Configure**, click **Import**, and upload [nginx-plus-portal.xml](./configs/nginx-plus-portal.xml).
 * Click the **Assign** link and associate the portal with the entity group created earlier.
-* Open **Entity** tabs, find the nginx PLUS servers you would like to see information about, and click the **Portal** icon.
+* Open **Entity** tabs, find the nginx PLUS servers you want to see information about, and click the **Portal** icon.
 
 ![](./images/ngp_portal_selection.png)
 [nginx PLUS Status portal example](http://apps.axibase.com/chartlab/0adf6705)

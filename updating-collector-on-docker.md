@@ -8,7 +8,7 @@ The latest release is available at the following [link](https://axibase.com/publ
 wget -O axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz
 ```
 
-If `wget` is not installed, use curl:
+If `wget` is not installed, use `curl`:
 
 ```bash
 curl -o axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz
@@ -28,13 +28,13 @@ tar xvf axibase-collector.tar.gz
 
 ## Stop the Collector Process
 
-Assuming `axibase-collector` is the name of the Collector container to be updated, execute the following command.
+Assuming `axibase-collector` is the name of the Collector container to be updated, execute this command:
 
 ```bash
 docker exec axibase-collector /opt/axibase-collector/bin/stop-collector.sh
 ```
 
-> Make sure the container is running when you run the command.
+> Ensure the container is running when you run the command.
 
 ## Replace axibase-collector.war File
 

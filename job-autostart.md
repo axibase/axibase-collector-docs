@@ -14,7 +14,7 @@ To automatically import and enable a job, use the following parameters:
 
 ## Enable Pre-Configured Job
 
-To enable one of the [pre-configured jobs](pre-configured-jobs.md), set the `-job-enable` parameter:
+To enable one of the [pre-configured jobs](./pre-configured-jobs.md), set the `-job-enable` parameter:
 
 ```sh
 ./axibase-collector/bin/start-collector.sh -job-enable=job_name

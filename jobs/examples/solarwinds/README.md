@@ -14,7 +14,7 @@ SolarWinds Monitor products collect and store statistics from target devices in 
 
 ### Import SolarWinds JDBC job
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the [`collector-jobs-solarwinds-base-jobs.xml`](collector-jobs-solarwinds-base-jobs.xml) file.
+* On the **Jobs** page, select **Import** from the split button below the table and upload the [`collector-jobs-solarwinds-base-jobs.xml`](./collector-jobs-solarwinds-base-jobs.xml) file.
 
 ### Configure SolarWinds Database Connection
 
@@ -23,7 +23,7 @@ SolarWinds Monitor products collect and store statistics from target devices in 
 
 ![](./images/solarwinds-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1
@@ -47,7 +47,7 @@ SELECT 1
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the SolarWinds job.
-* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
+* Ensure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -62,11 +62,11 @@ SELECT 1
 
 ### Metrics
 
-* List of collected [SolarWinds metrics](metric-list.md)
+* List of collected [SolarWinds metrics](./metric-list.md)
 
 ### Properties
 
-* List of collected [SolarWinds properties](properties-list.md)
+* List of collected [SolarWinds properties](./properties-list.md)
 
 ### Entity Groups
 
@@ -87,4 +87,4 @@ SELECT 1
 
 ## Data Queries
 
-[Data queries](data-queries.md) that offload recent metrics and properties.
+[Data queries](./data-queries.md) that offload recent metrics and properties.

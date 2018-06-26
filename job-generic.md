@@ -9,7 +9,7 @@ Each job has the following generic properties:
 | Type | Job type, such as JDBC, JMX, FILE, etc.|
 | Name | Job name. |
 | Enabled | Job schedule status. The job must be enabled to execute on schedule. |
-| Cron Expression | [Cron Expression](scheduling.md#cron-expressions) determines how frequently the job is executed.
+| `cron` Expression | [`cron` Expression](./scheduling.md#cron-expressions) determines how frequently the job is executed.
 | Storage | Target ATSD server for sending collected data. |
 
 Type-specific properties, such as a SQL query in a JDBC job or a CSV parser in a FILE job, are specified in nested configuration objects.
@@ -23,7 +23,7 @@ Type-specific properties, such as a SQL query in a JDBC job or a CSV parser in a
 ...
 ```
 
-The job may include multiple configurations. For example, a JDBC job may be configured to execute multiple SQL queries.
+The job can include multiple configurations. For example, a JDBC job can be configured to execute multiple SQL queries.
 
 ![](./images/job-properties.png)
 
@@ -37,4 +37,4 @@ By default, cloned jobs are disabled.
 
 You can change the necessary settings and enable the job by selecting the check box and selecting **Enable** from the split button below the table.
 
-A cloned job has a unique primary key and may run concurrently with the original job.
+A cloned job has a unique primary key and can run concurrently with the original job.

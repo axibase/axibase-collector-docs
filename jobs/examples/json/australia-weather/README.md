@@ -4,7 +4,7 @@
 
 Download historical weather information from the [Bureau of Meteorology](http://www.bom.gov.au) for a set of stations in the New South Wales province.
 
-The **Path** field contains the `${ITEM}` placeholder so that multiple stations in New South Wales province can be queried with one configuration.
+The **Path** field contains the `${ITEM}` placeholder to support multiple stations in New South Wales province can being queried by one configuration.
 
 ## File
 
@@ -16,7 +16,7 @@ Example: `http://www.bom.gov.au/fwo/IDN60801/IDN60801.95695.json`
 
 ### Local Copy
 
-[IDN60801.95695.json](IDN60801.95695.json)
+[IDN60801.95695.json](./IDN60801.95695.json)
 
 ### JSON Path
 

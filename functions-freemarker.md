@@ -8,7 +8,7 @@
 
 ### column
 
-Retrieves column value for the item from list. [Item Lists](collections.md#item-lists) are defined on the **Collections > Item Lists** page.
+Retrieves column value for the item from list. [Item Lists](./collections.md#item-lists) are defined on the **Collections > Item Lists** page.
 
 ```javascript
   ${ITEM?column(column_index)}

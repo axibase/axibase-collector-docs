@@ -47,7 +47,7 @@ tar xvf axibase-collector-v${VERSION}.tar.gz
 
 ## Check Ports
 
-Check that port `9443` is available. If the port is available, output of this command should be blank.
+Check that port `9443` is available. If the port is available, output of this command is blank.
 
 ```sh
 sudo netstat -tulnp | grep "9443"
@@ -66,7 +66,7 @@ COLLECTOR_OPTS="-httpsPort=10443"
 ./axibase-collector/bin/start-collector.sh
 ```
 
-Collector initialization may take up to five minutes.
+Collector initialization takes up to five minutes.
 
 ## Check Installation
 
@@ -78,17 +78,17 @@ tail -f ./axibase-collector/logs/axibase-collector.log
 
 ## Login
 
-Open `https://hostname:9443` in your browser and [configure](configure-administrator-account.md) an administrator account.
+Open `https://hostname:9443` in your browser and [configure](./configure-administrator-account.md) an administrator account.
 
 ## Setup ATSD Connection
 
 Configure Axibase Collector to send data into an Axibase Time Series Database instance.
 
-* [ATSD Server connection](atsd-server-connection.md)
+* [ATSD Server connection](./atsd-server-connection.md)
 
 ## Stopping Axibase Collector
 
-In order to stop Axibase Collector, execute the following command:
+Stop Axibase Collector:
 
 ```sh
 ./axibase-collector/bin/stop-collector.sh

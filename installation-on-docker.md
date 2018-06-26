@@ -16,7 +16,7 @@ For a quick installation of pre-integrated Axibase Collector and ATSD instances 
 
 ## Importing an Image in Restricted Environments
 
-If the target Docker host has no direct connectivity to [Docker Hub](https://hub.docker.com), execute the following steps to prepare and load the Collector image:
+If the Docker host has no connectivity to [Docker Hub](https://hub.docker.com), download and import the Collector image manually.
 
 * Log in to a Docker host which is connected to Docker Hub.
 * Pull the Collector image from Docker Hub and export into an archive file:
@@ -34,7 +34,7 @@ gzip docker-axibase-collector.tar
 docker load < docker-axibase-collector.tar.gz
 ```
 
-Alternatively, download a pre-built image file from the [`axibase.com`](https://axibase.com/public/docker-axibase-collector.tar.gz).
+Alternatively, download a pre-built image from the [`axibase.com`](https://axibase.com/public/docker-axibase-collector.tar.gz).
 
 ## Start Container
 
@@ -49,7 +49,7 @@ docker run \
  axibase/collector:latest
 ```
 
-To automatically configure a connection to the Axibase Time Series Database, add the `-atsd-url` parameter containing the ATSD hostname and https port (default 8443), as well as [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials:
+To automatically configure a connection to the Axibase Time Series Database, add the `-atsd-url` parameter containing the ATSD hostname and https port (default 8443), as well as [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
 ```properties
 docker run \
@@ -63,7 +63,7 @@ docker run \
 
 If the user name or password contains a `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
 
-The password must contain at least **six** (6) characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
+The password must contain at least **six** (`6`) characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
 For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://10.102.0.6:8443`, specify:
 
@@ -133,7 +133,7 @@ docker run \
 
 ## Check Installation
 
-Initializing the application may take up to five minutes.
+Initializing the application can take up to five minutes.
 
 ```sh
 docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-collector.log
@@ -160,13 +160,13 @@ Take note of the public https port assigned to axibase-collector container, for 
 
 ## Login
 
-Open `https://docker_hostname:32769` in your browser and create an [administrator account](configure-administrator-account.md).
+Open `https://docker_hostname:32769` in your browser and create an [administrator account](./configure-administrator-account.md).
 
 `docker_hostname` is the hostname or IP address of the Docker host and **32769** is the external port number assigned to the Collector container in the previous step.
 
 ## Setup ATSD Connection
 
-Configure the [ATSD Server connection](atsd-server-connection.md) to send data into an Axibase Time Series Database instance.
+Configure the [ATSD Server connection](./atsd-server-connection.md) to send data into an Axibase Time Series Database instance.
 
 ## Troubleshooting
 

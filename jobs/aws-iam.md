@@ -34,7 +34,7 @@ The keys are required for the AWS Job in Axibase Collector.
 
 ### Add User To Group
 
-Open the **Group** page and click on **Add Users to Group**.
+Open the **Group** page and click **Add Users to Group**.
 
 Add `cloudwatch-ro-user` to the `cloudwatch-ro-group`.
 

@@ -51,9 +51,9 @@ ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
 ```
 
 > Replace `activemq_hostname` with the full hostname or IP address of the ActiveMQ server.
-> This should be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
+> This must be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
 
-The result should be as shown in the image below:
+The result must be as shown in the image below:
 
 ![SUN_JMX_START_IMAGE](./images/very_new_screen.png)
 
@@ -63,7 +63,7 @@ Change to `./conf` directory.
 
 Add/edit the `jmx.access` and `jmx.password` files as follows.
 
-Make sure the owner of these files is the same as the ActiveMQ user.
+Ensure that the owner of these files is the same as the ActiveMQ user.
 
 `jmx.access`:
 

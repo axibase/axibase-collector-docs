@@ -1,7 +1,7 @@
 # Docker Certificates
 
 Protecting the Docker daemon socket with OpenSSL.
-Make sure you replace **`$HOST`** in the following examples with the DNS name of the target Docker host.
+Ensure that you replace **`$HOST`** in the following examples with the DNS name of the target Docker host.
 
 > Credit: [https://docs.docker.com/engine/security/https/#create-a-ca-server-and-client-keys-with-openssl](https://docs.docker.com/engine/security/https/#create-a-ca-server-and-client-keys-with-openssl)
 
@@ -28,7 +28,7 @@ openssl req -new -x509 -days 365 -key ca-key.pem -sha256 -out ca.pem
 
 Fill out all fields.
 
-Make sure you set **Common Name** to the DNS name of the Docker host: **`$HOST`**
+Ensure that you set **Common Name** to the DNS name of the Docker host: **`$HOST`**
 
 ```properties
 Country Name (2 letter code) [AU]:US
@@ -98,7 +98,7 @@ rm -v client.csr server.csr
 
 With a default `umask` of 022, secret keys are **world-readable** and writable for you and your group.
 
-In order to protect your keys from accidental damage, remove write permissions. To make them only readable by you, change file modes as follows:
+To protect your keys from accidental damage, remove write permissions. To make them only readable by you, change file modes as follows:
 
 ```sh
 chmod -v 0400 ca-key.pem key.pem server-key.pem

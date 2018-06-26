@@ -23,11 +23,11 @@ Axibase Collector can be configured to query a remote database to either obtain 
 
 ## Examples
 
-* [Oracle EM](examples/oracle-enterprise-manager)
-* [Microsoft SCOM](examples/scom)
-* [SolarWinds](examples/solarwinds)
-* [VMware](examples/vmware)
-* [MySQL Database](examples/mysql)
+* [Oracle EM](./examples/oracle-enterprise-manager)
+* [Microsoft SCOM](./examples/scom)
+* [SolarWinds](./examples/solarwinds)
+* [VMware](./examples/vmware)
+* [MySQL Database](./examples/mysql)
 
 ## Job Settings
 
@@ -47,7 +47,7 @@ Use the table below to fill in the fields and configure the query.
 | Command Type    | Type of command sent to ATSD. Possible values: `SERIES`, `PROPERTY`, `MESSAGE`, `METRIC`, `ENTITY`. |
 | Default Entity  | Default entity assigned to the collected commands. |
 | Entity Column   | Retrieve entity value from the specified entity column. |
-| Entity Replacement Expression | Freemarker expression to extract entity name from an input string or to retrieve the entity name from a lookup table using [`LOOKUP`](placeholders.md#functions). |
+| Entity Replacement Expression | Freemarker expression to extract entity name from an input string or to retrieve the entity name from a lookup table using [`LOOKUP`](./placeholders.md#functions). |
 | Split Condition  | One or multiple WHERE conditions to copy the base query into multiple queries returning smaller resultsets.  |
 | Tag Columns     | Columns that contain series tags. |
 | Predefined Tags    | Assign predefined tags to all series. |
@@ -56,12 +56,12 @@ Use the table below to fill in the fields and configure the query.
 | Time Type | Timestamp type. <br> Possible values: `TIMESTAMP`, `TIVOLI`, `TEXT`, `UNIX` |
 | Time Format | Format of the timestamp. |
 | Time Round | Time is rounded before storing the series in ATSD. <br> Possible values: `MILLISECOND`, `SECONDS`, `MINUTE`, `HOUR`, `DAY` |
-| Time Zone | Time zone in which the data was originally collected and stored. |
+| Time Zone | Time zone in which the data is collected and stored. |
 | Check Last Time | Ignore metrics that have time set to less than the previous entry. |
-| Query With Time | When executing the job, the server will be set to the maximum time of the previous data. |
+| Query With Time | When executing the job, the server is set to the maximum time of the previous data. |
 | Collection Start Time | [Calendar expression](https://axibase.com/docs/atsd/shared/calendar.html) defining the beginning of the data collection interval, for example, `previous_week`. |
-| Max Rows | Maximum number of rows that will be collected with each batch, `-1` is unlimited. |
-| Query Timeout Seconds| Number of seconds after which the query will be interrupted, `-1` is unlimited. |
+| Max Rows | Maximum number of rows collected with each batch, `-1` is unlimited. |
+| Query Timeout Seconds| Number of seconds after which the query is interrupted, `-1` is unlimited. |
 
 #### Placeholders
 
@@ -69,10 +69,10 @@ Use the table below to fill in the fields and configure the query.
 
 | **Placeholder** | **Description** |
 | --- | :--- |
-| `${DB_CONFIG_NAME}` | Data source [Name](jdbc-data-source.md#db-name). |
-| `${DB_SERVER}` | Data source [Server](jdbc-data-source.md#db-server). |
-| `${DB_PORT}` | Data source [Port](jdbc-data-source.md#db-port).|
-| `${DB_NAME}` | Data source [Database Name](jdbc-data-source.md#db-database). |
+| `${DB_CONFIG_NAME}` | Data source [Name](./jdbc-data-source.md). |
+| `${DB_SERVER}` | Data source [Server](./jdbc-data-source.md). |
+| `${DB_PORT}` | Data source [Port](./jdbc-data-source.md).|
+| `${DB_NAME}` | Data source [Database Name](./jdbc-data-source.md). |
 
 #### Type-Specific options
 
@@ -84,7 +84,7 @@ Use the table below to fill in the fields and configure the query.
 | Ignored Metric Columns | Metric columns that you want to skip. |
 | Default Metric Name  | Assign a default metric to the collected series. All series are stored in ATSD with this metric. |
 | Metric Name Column | Column containing metric (series) names. |
-| Metric Value Column | Column containing metric (series) values. Collect multiple value columns for the same metric if needed, as is common in aggregation queries. For example: `cnt`, `avg`, `max`, `min`, `sum`. <br> Example query: <br> `SELECT st.SAMPLE_TIME`, `e.ENTITY_NAME`, `sd.NAME AS METRIC,` <br> `COUNT(hs.STAT_VAL) AS "cnt",` <br> `AVG(hs.STAT_VAL) AS "avg",` <br> `SUM(hs.STAT_VAL) AS "sum",` <br> `MAX(hs.STAT_VAL) AS "max",` <br> `MIN(hs.STAT_VAL) AS "min",` <br> `FROM VPX_HIST_STAT1 ...`|
+| Metric Value Column | Column containing metric (series) values. Collect multiple value columns for the same metric if needed, which is common in aggregation queries. For example: `cnt`, `avg`, `max`, `min`, `sum`. <br> Example query: <br> `SELECT st.SAMPLE_TIME`, `e.ENTITY_NAME`, `sd.NAME AS METRIC,` <br> `COUNT(hs.STAT_VAL) AS "cnt",` <br> `AVG(hs.STAT_VAL) AS "avg",` <br> `SUM(hs.STAT_VAL) AS "sum",` <br> `MAX(hs.STAT_VAL) AS "max",` <br> `MIN(hs.STAT_VAL) AS "min",` <br> `FROM VPX_HIST_STAT1 ...`|
 | Metric Prefix | Metric prefix can be assigned to easily sort and differentiate metrics in ATSD. |
 | Ignore Number Parse Errors | Ignore cells that fail to parse from string into number without raising error. Default: false.  |
 
@@ -113,7 +113,7 @@ Use the table below to fill in the fields and configure the query.
 | Label Column | **Label Column**: Column containing metric or entity label.<br>**Default Label**: Label applied to all generated metrics or entities |
 | Description Column | Column containing metric or entity description. |
 | Data Type | Default metric data type, or column containing metric datatype. One of: short, integer, long, float, double, decimal |
-| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. Should contain a string value, case-insensitive. Possible values: LINEAR, PREVIOUS, or NONE  |
+| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. must contain a string value, case-insensitive. Possible values: LINEAR, PREVIOUS, or NONE  |
 | Filter Column | Column containing metric filter expression. |
 | Versioning | Default versioning behavior if versioning column is not specified, or column specifying if metric is versioned. |
 | Min and Max Value Columns | Minimum and Maximum Values |
@@ -125,7 +125,7 @@ Use the table below to fill in the fields and configure the query.
 | Field              | Description  |
 | :----------------- |:-------------|
 | Label Column | **Label Column**: Column containing metric or entity label.<br>**Default Label**: Label applied to all generated metrics or entities |
-| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. Should contain a string value, case-insensitive. Possible values: `LINEAR`, `PREVIOUS`, or `NONE`  |
+| Interpolation Mode | Default interpolation mode setting or column containing interpolation mode setting. must contain a string value, case-insensitive. Possible values: `LINEAR`, `PREVIOUS`, or `NONE`  |
 | Entity Time Zone | Default Time Zone or column containing the [Time Zone Identifier](https://github.com/axibase/atsd/blob/master/shared/timezone-list.md) |
 
 ### Configuration Example

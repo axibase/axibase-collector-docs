@@ -20,7 +20,7 @@ Records are timestamped with the current time.
 
 ### Local Copy
 
-[info.json](info.json)
+[info.json](./info.json)
 
 ### Content
 
@@ -48,8 +48,8 @@ count,name
 
 ## Configuration
 
-* [FILE job configuration](stackoverflow-job.xml). Import XML into Collector.
-* [CSV Parser](stackoverflow-parser.xml). Import XML into ATSD.
+* [FILE job configuration](./stackoverflow-job.xml). Import XML into Collector.
+* [CSV Parser](./stackoverflow-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

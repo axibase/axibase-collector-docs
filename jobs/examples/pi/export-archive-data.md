@@ -9,7 +9,7 @@ This document describes how to export archive data from a [PI Server](http://www
 * PI SQL Data Access Server `1.5+`
 * PI JDBC Driver `1.5+`
 
-PI JDBC Driver should be installed and added as a data source in Collector. Follow the steps in [Axibase Pi Documentation](export-metrics.md#provide-axibase-collector-with-pi-jdbc-driver) to perform this task.
+Install PI JDBC driver and add the driver as a data source in Collector. Follow the steps in [Axibase Pi Documentation](./export-metrics.md#provide-axibase-collector-with-pi-jdbc-driver) to perform this task.
 
 ## PI Job Configuration
 
@@ -41,7 +41,7 @@ If the option **Use JOIN Clause while Fetching Tag Names** is enabled, only one 
 ![](./images/pi-test-5.png)
 
 When configuration is done, save the job and click **Run**.
-You may see the execution details by clicking on the **View** link in the **Execution Details** column.
+View execution details by clicking on the **View** link in the **Execution Details** column.
 
 ![](./images/pi-jobs-list.png)
 
@@ -56,7 +56,7 @@ You can see executed queries info by following the **Details** link.
 ## Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the **Entities** tab and filter entities by name, for example `temp`.
+* Open the **Entities** tab and filter entities by name, for example `temp`.
 
 ![](./images/atsd-entity-temp.png)
 

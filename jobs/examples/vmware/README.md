@@ -14,7 +14,7 @@ VMware vCenter collects and stores statistics from ESX servers in a Microsoft SQ
 
 ### Import VMware JDBC job
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the [`collector-jobs-vmware-jobs.xml`](collector-jobs-vmware-jobs.xml) file.
+* On the **Jobs** page, select **Import** from the split button below the table and upload the [`collector-jobs-vmware-jobs.xml`](./collector-jobs-vmware-jobs.xml) file.
 
 ### Configure VMware Database Connection
 
@@ -23,7 +23,7 @@ VMware vCenter collects and stores statistics from ESX servers in a Microsoft SQ
 
 ![](./images/vmware-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1
@@ -47,7 +47,7 @@ Query result must be `Query OK`.
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the VMware job.
-* Make sure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
+* Ensure that the job status is **COMPLETED** and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -64,11 +64,11 @@ Query result must be `Query OK`.
 
 ### Metrics
 
-* List of collected [VMware metrics](metric-list.md)
+* List of collected [VMware metrics](./metric-list.md)
 
 ### Properties
 
-* List of collected [VMware properties](properties-list.md)
+* List of collected [VMware properties](./properties-list.md)
 
 ### Entity Groups
 
@@ -96,4 +96,4 @@ Query result must be `Query OK`.
 
 ## Data Queries
 
-[Data queries](data-queries.md) that offload recent metrics and properties.
+[Data queries](./data-queries.md) that offload recent metrics and properties.

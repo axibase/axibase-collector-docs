@@ -1,6 +1,6 @@
 # Collected Derby Properties
 
-## jmx.derby.cachemanager
+* jmx.derby.cachemanager
 
 ```json
 {
@@ -23,7 +23,7 @@
   }
 ```
 
-## jmx.derby.jdbc
+* `jmx.derby.jdbc`
 
 ```json
 {
@@ -40,7 +40,7 @@
   }
 ```
 
-## jmx.derby.management
+* `jmx.derby.management`
 
 ```json
 {
@@ -55,7 +55,7 @@
     }
 ```
 
-## jmx.derby.networkserver
+* `jmx.derby.networkserver`
 
 ```json
 {
@@ -88,7 +88,7 @@
   }
 ```
 
-## jmx.derby.version
+* `jmx.derby.version`
 
 ```json
 {

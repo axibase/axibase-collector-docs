@@ -6,9 +6,9 @@ Download airport traffic, passenger, and cargo statistics from the UK [Civil Avi
 
 The data is available for download from January 2015 onwards.
 
-The **Path** field contains both `${DATE_ITEM()}` and `${ITEM}` placeholders so that different reports for multiple reporting periods can be queried with one configuration.
+The **Path** field contains both `${DATE_ITEM()}` and `${ITEM}` placeholders which allows different reports for multiple reporting periods to be queried by one configuration.
 
-The `${ITEM}` placeholder returns files which are included in the **Path** and is also used in the metric prefix, so that metrics contained in one file are grouped together with a metric naming convention.
+The `${ITEM}` placeholder returns files which are included in the **Path** and is also used in the metric prefix. Metrics contained in one file are grouped together with a metric naming convention.
 
 `${DATE_ITEM()}` function returns an array of dates, for example from `2015_01` until `2016_03`. The last date in the list is determined dynamically based on current time.
 
@@ -105,28 +105,28 @@ http://www.caa.co.uk/uploadedFiles/CAA/Content/Standard_Content/Data_and_analysi
 
 ### Local Copy
 
-* [Table_01_Size_of_UK_Airports.csv](Table_01_Size_of_UK_Airports.csv)
-* [Table_02_1_Main_Outputs_of_UK_Airports.csv](Table_02_1_Main_Outputs_of_UK_Airports.csv)
-* [Table_02_2_Summary_of_Activity_at_UK_Airports.csv](Table_02_2_Summary_of_Activity_at_UK_Airports.csv)
-* [Table_03_Aircraft_Movements.csv](Table_03_Aircraft_Movements.csv)
-* [Table_04_Transport_Movements_by_Type.csv](Table_04_Transport_Movements_by_Type.csv)
-* [Table_05_Air_Transport_Movements.csv](Table_05_Air_Transport_Movements.csv)
-* [Table_06_Air_Transport_Movements_vs_Prev_Year.csv](Table_06_Air_Transport_Movements_vs_Prev_Year.csv)
-* [Table_07_Airport_Landings_Diverted.csv](Table_07_Airport_Landings_Diverted.csv)
-* [Table_08_Air_Pax_by_Type_and_Nat_of_Op.csv](Table_08_Air_Pax_by_Type_and_Nat_of_Op.csv)
-* [Table_09_Terminal_and_Transit_Pax.csv](Table_09_Terminal_and_Transit_Pax.csv)
-* [Table_10_1_EU_and_Other_Intl_Terminal_Pax_Traffic.csv](Table_10_1_EU_and_Other_Intl_Terminal_Pax_Traffic.csv)
-* [Table_10_2_Domestic_Terminal_Pax_Traffic.csv](Table_10_2_Domestic_Terminal_Pax_Traffic.csv)
-* [Table_11_International_Air_Pax_Traffic_to_from_UK_by_Country.csv](Table_11_International_Air_Pax_Traffic_to_from_UK_by_Country.csv)
-* [Table_12_1_Intl_Air_Pax_Traffic_Route_Analysis.csv](Table_12_1_Intl_Air_Pax_Traffic_Route_Analysis.csv)
-* [Table_12_3_Domestic_Air_Pax_Route_Analysis_by_Each_Reporting_Airport.csv](Table_12_3_Domestic_Air_Pax_Route_Analysis_by_Each_Reporting_Airport.csv)
-* [Table_13_Freight_by_type_and_Nat_of_Op.csv](Table_13_Freight_by_type_and_Nat_of_Op.csv)
-* [Table_14_Intl_and_Domestic_Freight.csv](Table_14_Intl_and_Domestic_Freight.csv)
-* [Table_15_Freight_by_Aircraft_Configuration.csv](Table_15_Freight_by_Aircraft_Configuration.csv)
-* [Table_16_Mail_by_Type_and_Nat_of_Op.csv](Table_16_Mail_by_Type_and_Nat_of_Op.csv)
-* [Table_17_Intl_and_Domestic_Mail.csv](Table_17_Intl_and_Domestic_Mail.csv)
-* [Table_18_Mail_by_Aircraft_Configuration.csv](Table_18_Mail_by_Aircraft_Configuration.csv)
-* [Table_19_Pax_and_Air_Transport_Movements_Split_by_Fixed_and_Rotary_Wing_Aircraft.csv](Table_19_Pax_and_Air_Transport_Movements_Split_by_Fixed_and_Rotary_Wing_Aircraft.csv)
+* [Table_01_Size_of_UK_Airports.csv](./Table_01_Size_of_UK_Airports.csv)
+* [Table_02_1_Main_Outputs_of_UK_Airports.csv](./Table_02_1_Main_Outputs_of_UK_Airports.csv)
+* [Table_02_2_Summary_of_Activity_at_UK_Airports.csv](./Table_02_2_Summary_of_Activity_at_UK_Airports.csv)
+* [Table_03_Aircraft_Movements.csv](./Table_03_Aircraft_Movements.csv)
+* [Table_04_Transport_Movements_by_Type.csv](./Table_04_Transport_Movements_by_Type.csv)
+* [Table_05_Air_Transport_Movements.csv](./Table_05_Air_Transport_Movements.csv)
+* [Table_06_Air_Transport_Movements_vs_Prev_Year.csv](./Table_06_Air_Transport_Movements_vs_Prev_Year.csv)
+* [Table_07_Airport_Landings_Diverted.csv](./Table_07_Airport_Landings_Diverted.csv)
+* [Table_08_Air_Pax_by_Type_and_Nat_of_Op.csv](./Table_08_Air_Pax_by_Type_and_Nat_of_Op.csv)
+* [Table_09_Terminal_and_Transit_Pax.csv](./Table_09_Terminal_and_Transit_Pax.csv)
+* [Table_10_1_EU_and_Other_Intl_Terminal_Pax_Traffic.csv](./Table_10_1_EU_and_Other_Intl_Terminal_Pax_Traffic.csv)
+* [Table_10_2_Domestic_Terminal_Pax_Traffic.csv](./Table_10_2_Domestic_Terminal_Pax_Traffic.csv)
+* [Table_11_International_Air_Pax_Traffic_to_from_UK_by_Country.csv](./Table_11_International_Air_Pax_Traffic_to_from_UK_by_Country.csv)
+* [Table_12_1_Intl_Air_Pax_Traffic_Route_Analysis.csv](./Table_12_1_Intl_Air_Pax_Traffic_Route_Analysis.csv)
+* [Table_12_3_Domestic_Air_Pax_Route_Analysis_by_Each_Reporting_Airport.csv](./Table_12_3_Domestic_Air_Pax_Route_Analysis_by_Each_Reporting_Airport.csv)
+* [Table_13_Freight_by_type_and_Nat_of_Op.csv](./Table_13_Freight_by_type_and_Nat_of_Op.csv)
+* [Table_14_Intl_and_Domestic_Freight.csv](./Table_14_Intl_and_Domestic_Freight.csv)
+* [Table_15_Freight_by_Aircraft_Configuration.csv](./Table_15_Freight_by_Aircraft_Configuration.csv)
+* [Table_16_Mail_by_Type_and_Nat_of_Op.csv](./Table_16_Mail_by_Type_and_Nat_of_Op.csv)
+* [Table_17_Intl_and_Domestic_Mail.csv](./Table_17_Intl_and_Domestic_Mail.csv)
+* [Table_18_Mail_by_Aircraft_Configuration.csv](./Table_18_Mail_by_Aircraft_Configuration.csv)
+* [Table_19_Pax_and_Air_Transport_Movements_Split_by_Fixed_and_Rotary_Wing_Aircraft.csv](./Table_19_Pax_and_Air_Transport_Movements_Split_by_Fixed_and_Rotary_Wing_Aircraft.csv)
 
 ### Content: Table_01_Size_of_UK_Airports.csv
 
@@ -140,8 +140,8 @@ rundate,reporting_period,airport_name,this_year_pax,this_year_total_pax_UK_airpo
 
 ## Configuration
 
-* [FILE job configuration](uk-caa-job.xml). Import xml into Collector.
-* [CSV Parser](uk-caa-parser.xml). Import xml into ATSD.
+* [FILE job configuration](./uk-caa-job.xml). Import xml into Collector.
+* [CSV Parser](./uk-caa-parser.xml). Import xml into ATSD.
 
 ## Screenshot
 
