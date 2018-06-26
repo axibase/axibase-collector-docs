@@ -4,7 +4,7 @@
 
 Repository: `https://ftp.mozilla.org/pub/firefox/releases/26.0/`
 
-### Wget
+### wget
 
 ```sh
 wget -qO- https://ftp.mozilla.org/pub/firefox/releases/26.0/linux-x86_64/en-US/firefox-26.0.tar.bz2 | tar -C /opt -xvj

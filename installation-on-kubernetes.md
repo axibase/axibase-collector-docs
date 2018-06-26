@@ -244,7 +244,7 @@ The **template** field contains the following instructions:
 * Create one volume named `docker-socket`.
 * Run the `axibase/collector` image at latest version.
 * The container uses [secrets as environment variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables), indicated by `valueFrom.secretKeyRef` field.
-* The container has a memory request of 200 MiB and a memory limit of 600 MiB.
+* The container has a memory request of 200 MIB and a memory limit of 600 MIB.
 * The container uses the `docker-socket` volume, indicated by the **volumeMounts** field.
 * Open ports 9443 for the container to send and accept traffic. The port is also opened on each Node, specified by the `hostPort: 9443` field.
 

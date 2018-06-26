@@ -32,7 +32,7 @@ The JSON job provides a way to download JSON files from remote systems or read f
 
 [JSONPath](https://github.com/jayway/JsonPath#operators) is an expression evaluated against the JSON document to select objects or specific fields.
 
-* The expression starts with `$`, which represents the root object followed by a dot-separated path to matched objects.
+* The expression starts with `$`, which represents the `root` object followed by a dot-separated path to matched objects.
 * `.{cname}` denotes a selector of the given object's child object with name `cname`.
 * `{arr-name}[*]` stands for all elements of the specified array `arr-name`.
 
@@ -42,7 +42,7 @@ Example:
 $.store.book[*]
 ```
 
-The expression selects all elements of the `book` array in the root's child named `store`.
+The expression selects all elements of the `book` array in the `root`'s child named `store`.
 
 ```json
 {
@@ -91,7 +91,7 @@ The expression selects all elements of the `book` array in the root's child name
 
 | **Name** | **Description** |
 |:---|:---|
-| JSON Path       | JSON Path expression to match an object or a list of objects in the JSON document. The default path is `$`, which stands for the root object.<br> JSON Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the JSON Path, the JSON Path expression returns a combined list of objects that matched any of the elements returned by `${DATE_ITEM()}` function. |
+| JSON Path       | JSON Path expression to match an object or a list of objects in the JSON document. The default path is `$`, which stands for the `root` object.<br> JSON Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the JSON Path, the JSON Path expression returns a combined list of objects that matched any of the elements returned by `${DATE_ITEM()}` function. |
 | Traversal Depth | Maximum traversal limit measured as the difference between the matched object and nested objects. When **Depth** is set to one, the Collector includes only direct fields of the matched object. If **Depth** is set to zero or a negative number, all nested objects are traversed and included into the commands by the collector. |
 | Renamed Fields  | Pairs of `oldname=newname` mappings, one per line, to rename fields in the matched object. |
 | Custom Tags     | Additional series, property, and message tags. Supported placeholders:<br> - `${HOST}` - Hostname from which the JSON document is loaded.<br> - `${PARENT(n)}` - Name of the Nth parent of the matched object. `{PARENT}` is a shortcut for `${PARENT(1)}`.<br> - `${field_name}` - Value of the specified filed in the matched object. |

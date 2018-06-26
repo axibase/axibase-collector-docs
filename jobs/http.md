@@ -32,7 +32,7 @@ Use the table below to create HTTP job configuration.
 | 3 | `UnknownHostException` |
 | 4 | `SocketTimeoutException` |
 | 5 | Other exceptions without HTTP response status |
-| 200 | `HTTP response status = 200`, but response text failed to match. |
+| `200` | `HTTP response status = 200`, but response text failed to match. |
 | xxx | HTTP response status. For example `500` (Server Error). |
 
 ### Configuration Example

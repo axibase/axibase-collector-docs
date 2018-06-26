@@ -167,7 +167,7 @@ Select a checkbox next to an attribute name to add to the list of collected attr
 The following MBean attributes are ignored from **Viewer** and the commands:
 
 * Attribute value cannot be obtained due to a processing error: <br>- `UnsupportedOperationException`<br>- `UnmarshalException`<br>- `ReflectionException`<br>- `RuntimeOperationsException`<br>- `InstanceNotFoundException`
-* Attribute value is NaN (Not a Number) for numeric attributes in case of a **series** command. <br>`NaN` can occur, for example, on division by zero.
+* Attribute value is `NaN` (Not a Number) for numeric attributes in case of a **series** command. <br>`NaN` can occur, for example, on division by zero.
 
 To view attributes ignored due to processing errors, enable debugging for the `MBeansInfoExtractor` class:
 
