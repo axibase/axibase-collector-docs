@@ -9,7 +9,7 @@ ICMP (Internet Control Message Protocol) is one of the main protocols of the TCP
 | Configuration Name     | Name of the configuration. |
 | Collection     |  Name of the collection you want to use. |
 | Metric Name | Name of the metric you want to use. |
-| Ping Type | Type of ping request. |
+| `ping` Type | Type of `ping` request. |
 | Request Timeout, seconds | Time Axibase Collector waits for the response before the request expires. |
 | Failure Retests | Number of attempts to re-establish the connection.  |
 | Failure Retest Delay, seconds|  Delay between attempts to re-establish the connection.  |

@@ -26,12 +26,12 @@ Use the table below to create HTTP job configuration.
 
 | Metric Value | Response Code |
 |:------------- |:-------------|
-| 0 | No error. `HTTP status = 200`. No match configured or response text matched. |
-| 1 | `ConnectException` |
-| 2 | `NoRouteToHostException` |
-| 3 | `UnknownHostException` |
-| 4 | `SocketTimeoutException` |
-| 5 | Other exceptions without HTTP response status |
+| `0` | No error. `HTTP status = 200`. No match configured or response text matched. |
+| `1` | `ConnectException` |
+| `2` | `NoRouteToHostException` |
+| `3` | `UnknownHostException` |
+| `4` | `SocketTimeoutException` |
+| `5` | Other exceptions without HTTP response status |
 | `200` | `HTTP response status = 200`, but response text failed to match. |
 | xxx | HTTP response status. For example `500` (Server Error). |
 
