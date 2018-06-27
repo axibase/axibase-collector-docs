@@ -163,7 +163,7 @@ IMPORTS
     IANAifType                               FROM IANAifType-MIB;
 ```
 
-When you import the MIB file the Collector is searching for parent files among the previously loaded MIB files as MIB files stored on the underlying Linux operating system, typically in the `/usr/share/snmp` directory.
+When you import the MIB file the Collector searches for any parent files, specified in the `IMPORTS` section, among the previously loaded MIB files as well as MIB files stored on the underlying Linux operating system, typically in the `/usr/share/snmp` directory.
 
 ### Base MIB Files
 
