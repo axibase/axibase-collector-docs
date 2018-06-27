@@ -32,7 +32,7 @@ The settings specify the list of devices to query as well as connection properti
 | Port | TCP or UDP port. |
 | Version | SNMP protocol version. |
 | Community |  SNMP community name, such as `public`.|
-| Timeout, seconds | Number of seconds after which the Collector interrupts the query.<br>`-1` is unlimited. |
+| Timeout, seconds | Number of seconds after which the Collector interrupts the query.<br> `-1` is unlimited. |
 | Retries | Number of connection retries in case of network failure. |
 | Maximum Repetitions | Maximum number of iterations over the repeating variables. |
 | Non Repeaters | Number of supplied variables that should not be iterated over. |
@@ -41,7 +41,7 @@ The settings specify the list of devices to query as well as connection properti
 
 | Field          | Description  |
 | :------------- |:-------------|
-| Authentication Protocol | Encryption protocol for authentication.<br >Allowed values: `MD5`, `SHA`. |
+| Authentication Protocol | Encryption protocol for authentication.<br>Allowed values: `MD5`, `SHA`. |
 | Security Name | Username. |
 | Authentication Pass Phrase | Password. |
 | Privacy Pass Phrase| Pass phrase for data transmission. |
@@ -88,13 +88,13 @@ laLoad .1.3.6.1.4.1.2021.10.1.3
 
 enterprises.ucdavis.laTable.laEntry.laLoad
 laLoad OBJECT-TYPE
-  -- FROM	UCD-SNMP-MIB
+  -- FROM UCD-SNMP-MIB
   -- TEXTUAL CONVENTION DisplayString
-  SYNTAX	OCTET STRING (0..255)
-  DISPLAY-HINT	"255a"
-  MAX-ACCESS	read-only
-  STATUS	current
-  DESCRIPTION	"The 1,5 and 15 minute load averages (one per row)."
+  SYNTAX  OCTET STRING (0..255)
+  DISPLAY-HINT  "255a"
+  MAX-ACCESS  read-only
+  STATUS  current
+  DESCRIPTION "The 1,5 and 15 minute load averages (one per row)."
 ::= { iso(1) org(3) dod(6) internet(1) private(4) enterprises(1) ucdavis(2021) laTable(10) laEntry(1) 3 }
 ```
 
