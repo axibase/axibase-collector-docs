@@ -50,9 +50,11 @@ The settings specify the list of devices to query as well as connection properti
 
 ## Testing Connections
 
-Network connectivity between the Collector instance and a remote system is required.
+Network connectivity between the Collector and a remote system is required.
 
-To check that the SNMP daemon on a target device is reachable from the Collector instance, open the SNMP configuration page, select a MIB in the drop-down list, and click **View**.
+To check that the SNMP daemon on the target device is reachable, open the SNMP configuration page, select a MIB in the drop-down list, click **Save & Edit**.
+
+Enter the target hostname or IP address and click **Load All Values**.
 
 ## Configuration Example
 
@@ -63,14 +65,14 @@ SNMP configuration example:
 Click **Test** to view sample series commands for the given configuration.
 
 ```ls
+series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.laLoad=1.56 t:laNames=Load-1
+series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.laLoad=2.14 t:laNames=Load-15
+series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.laLoad=1.97 t:laNames=Load-5
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memShared=494356
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memBuffer=403904
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memTotalReal=65124968
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memAvailReal=16156972
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memCached=25270224
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z t:laNames=Load-1 m:snmp.laLoad=1.56
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z t:laNames=Load-15 m:snmp.laLoad=2.14
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z t:laNames=Load-5 m:snmp.laLoad=1.97
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memTotalFree=49637572
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memAvailSwap=33480600
 series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memTotalSwap=33537916
@@ -154,5 +156,5 @@ The following table contains links to MIB files for monitoring core operating sy
 
 | MIB  | Description  |
 |:---|:---|
-| [`UCD-DEMO-MIB`](./resources/UCD-DEMO-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used |
-| [`IF-MIB`](./resources/UCD-DEMO-MIB.txt) | Network interface counters |
+| [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. |
+| [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters |
