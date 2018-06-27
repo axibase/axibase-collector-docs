@@ -24,6 +24,12 @@ The settings specify the list of devices to query as well as connection properti
 | Metric OIDs | Object names containing numeric metric values. |
 | Series Tag OIDs | Object names containing series tags. |
 
+To populate the list of collected metric objects, click **Configure** button to view the editor.
+
+Enter a hostname or IP address for one of the target systems and click **Load All Values**. Choose which objects to collect. If the object has an additional dimension such as interface or disk name, classify such OID as `tag`.
+
+![](./images/snmp-configure.png)
+
 ### Connection Settings
 
 | Field          | Description  |
@@ -32,12 +38,19 @@ The settings specify the list of devices to query as well as connection properti
 | Port | TCP or UDP port. |
 | Version | SNMP protocol version. |
 | Community |  SNMP community name, such as `public`.|
-| Timeout, seconds | Number of seconds after which the Collector interrupts the query.<br> `-1` is unlimited. |
+| Timeout, seconds | Number of seconds after which the Collector interrupts the query. `0` or `-1` is unlimited. |
 | Retries | Number of connection retries in case of network failure. |
 | Maximum Repetitions | Maximum number of iterations over the repeating variables. |
 | Non Repeaters | Number of supplied variables that should not be iterated over. |
 
-### Version3c Extended Settings
+Supported SNMP protocol versions:
+
+* SNMP `v2`
+* SNMP `v3c`
+
+### Security Settings
+
+The following settings apply to SNMP protocol `v3c`.
 
 | Field          | Description  |
 | :------------- |:-------------|
@@ -46,13 +59,17 @@ The settings specify the list of devices to query as well as connection properti
 | Authentication Pass Phrase | Password. |
 | Privacy Pass Phrase| Pass phrase for data transmission. |
 | Privacy Protocol | Data encryption protocol.<br>Allowed values: `DES`, `TRIPLE_DES`, `AES128`, `AES192`, `AES256`. |
-| Security Level | Security level. Allowed values:<br>`NO_AUTH_NO_PRIV`: no authentication, no encryption. <br> `AUTH_NO_PRIV`: authentication, no encryption. <br> `AUTH_PRIV`: authentication and encryption. |
+| Security Level | Allowed values:<br>`NO_AUTH_NO_PRIV`: no authentication, no encryption. <br> `AUTH_NO_PRIV`: authentication, no encryption. <br> `AUTH_PRIV`: authentication and encryption. |
 
 ## Testing Connections
 
 Network connectivity between the Collector and a remote system is required.
 
-To check that the SNMP daemon on the target device is reachable, open the SNMP configuration page, select a MIB in the drop-down list, click **Save & Edit**.
+To check that the SNMP daemon on the target device is reachable, open the SNMP configuration page.
+
+Select a MIB file in the drop-down list.
+
+Fill out connection properties and click **Configure**. The configuration settings are saved automatically, when the configuration editor is launched.
 
 Enter the target hostname or IP address and click **Load All Values**.
 
