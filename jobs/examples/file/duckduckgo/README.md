@@ -12,7 +12,7 @@ Download a Sunspot Daily Count report in a CSV file and upload the file into ATS
 
 ### Local Copy
 
-[direct.csv](direct.csv)
+[direct.csv](./direct.csv)
 
 ### First Lines
 
@@ -25,8 +25,8 @@ Date,Queries
 
 ## Configuration
 
-* [FILE job configuration](duckduckgo-job.xml). Import XML into Collector.
-* [CSV Parser](duckduckgo-parser.xml). Import XML into ATSD.
+* [FILE job configuration](./duckduckgo-job.xml). Import XML into Collector.
+* [CSV Parser](./duckduckgo-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

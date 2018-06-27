@@ -17,7 +17,7 @@
 }
 ```
 
-[Kafka Message](message.json) file.
+[Kafka Message](./message.json) file.
 
 ## Configuration
 
@@ -37,7 +37,7 @@ Excluded Fields    | timestamp, `pointtype`, `original_timestamp_from_sdk`, ques
 Metric Name Field  | `pitagname`
 Metric Value Field | `pitagvalue`
 
-[Kafka Job Configuration](kafka_job_configuration.xml) file. Import XML into Collector.
+[Kafka Job Configuration](./kafka_job_configuration.xml) file. Import XML into Collector.
 
 ## Command
 

@@ -6,9 +6,9 @@ AWS job allows you to copy [Amazon Web Services CloudWatch](https://aws.amazon.c
 
 Refer to [AWS Documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
 
-The AWS job stores markers for each CloudWatch metric so that API requests are incremental and load only the most recent data. These markers allow the job to build optimized queries and to avoid data gaps in case of network outages.
+The AWS job stores markers for each CloudWatch metric to ensure API requests are incremental and load only the most recent data. These markers allow the job to build optimized queries and to avoid data gaps in case of network outages.
 
-Each job can be configured to execute multiple configurations in order to retrieve metrics from different [regions](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region). The configurations are processed sequentially within each job iteration.
+Each job can be configured to execute multiple configurations to retrieve metrics from different [regions](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region). The configurations are processed sequentially within each job iteration.
 
 When an AWS job is started for the first time, the job loads available historical data from CloudWatch, available for up to 2 weeks.
 
@@ -16,7 +16,7 @@ When an AWS job is started for the first time, the job loads available historica
 
 Each AWS [namespace](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html) provides a set of metrics available for resources of a particular type.
 
-You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you actually use.
+You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you actively use.
 
 Available namespaces:
 
@@ -73,7 +73,7 @@ The job assigns each metric to an entity which is determined based on the [prima
 
 ## Configuration Steps
 
-* Create a read-only [IAM account](aws-iam.md) for querying CloudWatch statistics.
+* Create a read-only [IAM account](./aws-iam.md) for querying CloudWatch statistics.
 * Open the **Jobs** page, click **Add Job** and select **Use Wizard**.
 * Specify access and secret keys.
 * Select AWS regions from which you want to collect data. <br>The wizard creates a separate AWS configuration for each region within the same job.
@@ -85,13 +85,13 @@ The job assigns each metric to an entity which is determined based on the [prima
 
 ![](./images/aws-test.png)
 
-* To view available metrics for a particular namespace, uncheck all namespaces except one and click **Test**.
+* To view available metrics for a particular namespace, remove all namespaces except one and click **Test**.
 
 ## Validation
 
 * Open the AWS job page and set the schedule to `R 0/5 * * * ?` to execute the job every five minutes with random seconds.
 * On the AWS Jobs list page, check that Items Read and Commands Sent are greater than 0.
-* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job may take a while to load backlogged historical data for all metrics after the job is created.
+* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job takes a while to load backlogged historical data for all metrics after the job is created.
 * Open the **Entities** tab and locate one of AWS EC2 instances. Click the **Portal** links to access pre-defined AWS portals.
 
 ![](./images/metric_list.png)

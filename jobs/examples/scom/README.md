@@ -18,7 +18,7 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 
 ### Import Microsoft SCOM JDBC job
 
-* On the **Jobs** page select **Import** from the split button below the table and upload the [`collector-jobs-scom-jobs.xml`](collector-jobs-scom-jobs.xml) file.
+* On the **Jobs** page select **Import** from the split button below the table and upload the [`collector-jobs-scom-jobs.xml`](./collector-jobs-scom-jobs.xml) file.
 
 ### Configure Microsoft SCOM Database Connection
 
@@ -27,7 +27,7 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 
 ![](./images/scom-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1
@@ -51,7 +51,7 @@ SELECT 1
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the Microsoft SCOM JDBC job.
-* Make sure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
+* Ensure that the job status is `COMPLETED` and **Items Read** and **Sent commands** are greater than 0.
 
 ![](./images/test_run.png)
 
@@ -60,7 +60,7 @@ SELECT 1
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the **Metrics** tab and filter metrics by prefix `scom.*`.
+* Open the **Metrics** tab and filter metrics by prefix `scom.*`.
 
 ![](./images/atsd_metrics.png)
 
@@ -68,11 +68,11 @@ SELECT 1
 
 ### Metrics
 
-* List of collected [Microsoft SCOM metrics](metric-list.md)
+* List of collected [Microsoft SCOM metrics](./metric-list.md)
 
 ### Properties
 
-* List of collected [Microsoft SCOM properties](properties-list.md)
+* List of collected [Microsoft SCOM properties](./properties-list.md)
 
 ### Entity Groups
 
@@ -91,4 +91,4 @@ SELECT 1
 
 ## Data Queries
 
-[Data queries](data-queries.md) that offload recent metrics and properties.
+[Data queries](./data-queries.md) that offload recent metrics and properties.

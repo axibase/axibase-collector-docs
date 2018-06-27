@@ -67,7 +67,7 @@ $AXIBASE_COLLECTOR_HOME/bin/start-collector.sh
 
 ### Import PI Server job into Axibase Collector
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the file [pi_jdbc_metric.xml](pi_jdbc_metric.xml).
+* On the **Jobs** page, select **Import** from the split button below the table and upload the file [pi_jdbc_metric.xml](./pi_jdbc_metric.xml).
 
 ### Configure PI Server Database Connection
 
@@ -76,13 +76,13 @@ $AXIBASE_COLLECTOR_HOME/bin/start-collector.sh
 
 ![](./images/pijdbc-datasource.png)
 
-* Execute the following test query to check the connection:
+* Execute test query to check the connection:
 
 ```SQL
 SELECT 1
 ```
 
-* Query result must be `Query OK`.
+* Query result are `Query OK`.
 
 ### Verify Job Configuration
 
@@ -100,7 +100,7 @@ SELECT 1
 ### Schedule the Job
 
 * Open the **JDBC Job** page and click **Run** for the PI Server jobs.
-* Make sure that the job status is `COMPLETED`, and **Items Read** and **Sent Commands** are greater than 0.
+* Ensure that the job status is `COMPLETED`, and **Items Read** and **Sent Commands** are greater than 0.
 
 ![](./images/pi-metric-exec-status.png)
 
@@ -109,6 +109,6 @@ SELECT 1
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click on the **Metrics** tab and filter metrics by name, for example find by prefix `ba:`. You should see a list of exported PI tags:
+* Open the **Metrics** tab and filter metrics by name, for example find by prefix `ba:`. There is a list of exported PI tags:
 
 ![](./images/pi-atsd-metrics.png)

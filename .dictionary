@@ -102,7 +102,6 @@ TIVOLI
 TLS
 TSV
 UK
-uncheck
 uncomment
 Unix
 URI
@@ -160,3 +159,4 @@ snmp
 stackexchange
 ucd
 ns
+cachemanager

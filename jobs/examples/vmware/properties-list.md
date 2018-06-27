@@ -1,6 +1,6 @@
 # Collected VMware Properties
 
-## vmware.cluster
+* `vmware.cluster`
 
 ```json
 
@@ -25,7 +25,7 @@
 }
 ```
 
-## vmware.cluster.hosts
+* `vmware.cluster.hosts`
 
 ```json
 {
@@ -47,7 +47,7 @@
 }
 ```
 
-## vmware.cluster.vms
+* `vmware.cluster.vms`
 
 ```json
 {
@@ -68,7 +68,7 @@
 }
 ```
 
-## vmware.host
+* `vmware.host`
 
 ```json
 {
@@ -115,7 +115,7 @@
 }
 ```
 
-## vmware.host.vms
+* `vmware.host.vms`
 
 ```json
 {
@@ -136,7 +136,7 @@
 }
 ```
 
-## vmware.vm
+* `vmware.vm`
 
 ```json
 {

@@ -28,7 +28,7 @@ Open the `nginx.conf` file and review the [configuration example](http://nginx.o
 sudo nano /etc/nginx/nginx.conf
 ```
 
-Enable the page on the `/nginx_status` URL so you can access the page at `<your_server_address>/nginx_status`.
+Enable the page on the `/nginx_status` URL to access `<your_server_address>/nginx_status`.
 
 ```ls
 location /nginx_status {
@@ -62,7 +62,7 @@ Add the following lines at the **beginning** of the `location /nginx_status` dir
    deny all;
 ```
 
- For example, if your Collector is located at `10.102.0.6`, the configuration should appear thus:
+ For example, if your Collector is located at `10.102.0.6`, the configuration appears thus:
 
 ```ls
 location /nginx_status {
@@ -78,4 +78,4 @@ Reload the server:
 sudo nginx -s reload
 ```
 
-Repeat the process for each nginx server that you would like to monitor.
+Repeat the process for each nginx server that you want to monitor.

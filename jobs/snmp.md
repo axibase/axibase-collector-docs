@@ -95,8 +95,6 @@ Each configuration retrieves pre-selected OID values from the **Device List** co
 
 SNMP job configuration settings.
 
-
-
 ### Query Settings
 
 | Field          | Description  |

@@ -72,7 +72,7 @@ docker run \
    -job-enable=docker-socket
 ```
 
-Initializing the Collector database may take up to five minutes upon initial startup.
+Initializing the Collector database takes up to five minutes upon initial startup.
 
 The Docker job begins executing immediately.
 
@@ -105,7 +105,7 @@ In remote collection mode Axibase Collector fetches data from multiple remote Do
 
 ### Enable Remote API Access on Docker Hosts
 
-* Log in to the Docker host via SSH and generate [client and server certificates](docker-certificates.md).
+* Log in to the Docker host via SSH and generate [client and server certificates](./docker-certificates.md).
 
 * Configure the Docker daemon for secure access over https.
 
@@ -233,7 +233,7 @@ docker ps -a | grep axibase-collector
 
 * Log in to the Axibase Collector web interface at `https://hostname:port`.
 * Open the **Jobs > Docker** page and click **Add Job**. Enter the job name. Click **Enabled** to enable the job. Click **Save**.
-* Click **Use Wizard**, specify the Docker Engine hostname, API port (2376), and attach `{cert,key,ca}.pem` files.
+* Click **Use Wizard**, specify the Docker Engine hostname, API port (`2376`), and attach `{cert,key,ca}.pem` files.
 * Click **Validate** and then **Save** if the test is successful.
 
 ## Validation
@@ -264,4 +264,4 @@ Locate the **docker-socket** job on the **Jobs** page and verify that the job is
 
 ## Testing and Evaluating
 
-Optionally launch either the **atsd** and **axibase-collector** containers in a [test environment](docker-compose.md) using  `docker-compose`.
+Optionally launch either the **atsd** and **axibase-collector** containers in a [test environment](./docker-compose.md) using  `docker-compose`.

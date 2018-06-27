@@ -1,6 +1,6 @@
 # Collected JVM Properties
 
-## jvm.bufferpool
+* `jvm.bufferpool`
 
 ```json
 {
@@ -19,7 +19,7 @@
   }
 ```
 
-## jvm.garbagecollector
+* `jvm.garbagecollector`
 
 ```json
 {
@@ -95,7 +95,7 @@
    }
 ```
 
-## jvm.memory
+* `jvm.memory`
 
 ```json
 {
@@ -118,7 +118,7 @@
   }
 ```
 
-## jvm.memorypool
+* `jvm.memorypool`
 
 ```json
 {
@@ -157,7 +157,7 @@
   }
 ```
 
-## jvm.operatingsyst
+* `jvm.operatingsyst`
 
 ```json
 {
@@ -185,7 +185,7 @@
   }
 ```
 
-## jvm.runtime
+* `jvm.runtime`
 
 ```json
     {
@@ -267,7 +267,7 @@
         "systemproperties.java.rmi.server.randomids.key": "java.rmi.server.randomIDs",
         "systemproperties.java.rmi.server.randomids.value": "true",
         "systemproperties.java.runtime.name.key": "java.runtime.name",
-        "systemproperties.java.runtime.name.value": "Java(TM) SE Runtime Environment",
+        "systemproperties.java.runtime.name.value": "JavaTM) SE Runtime Environment",
         "systemproperties.java.runtime.version.key": "java.runtime.version",
         "systemproperties.java.runtime.version.value": "1.7.0_80-b15",
         "systemproperties.java.specification.name.key": "java.specification.name",

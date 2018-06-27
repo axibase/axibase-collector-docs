@@ -16,7 +16,7 @@ Example: `ftp000148:my-pwd@10.102.0.51:21/onlinedata/20160609_onlinedata.txt`
 
 ### Local Copy
 
-[20160609_onlinedata.txt](20160609_onlinedata.txt)
+[20160609_onlinedata.txt](./20160609_onlinedata.txt)
 
 ### First Lines
 
@@ -51,8 +51,8 @@ Dato og tid      ;      1 ;      2 ;      3 ;      4 ;      5 ;      6 ;      7 
 
 ## Configuration
 
-* [FILE job configuration](energinet-ftp-job.xml). Import xml into Collector.
-* [CSV Parser](energinet-ftp-parser.xml). Import xml into ATSD.
+* [FILE job configuration](./energinet-ftp-job.xml). Import xml into Collector.
+* [CSV Parser](./energinet-ftp-parser.xml). Import xml into ATSD.
 
 ## Screenshot
 

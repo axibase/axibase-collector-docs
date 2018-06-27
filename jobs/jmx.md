@@ -22,7 +22,7 @@ The JMX job can have one or multiple JMX configurations each describing connecti
 | Password | JMX password. |
 | Service Name | JMX service username. The default service name is `jmxrmi`. |
 
-Connection parameters should correspond to the `com.sun.management.jmxremote` settings specified by the target Java application.
+Connection parameters must correspond to the `com.sun.management.jmxremote` settings specified by the target Java application.
 
 ```sh
 ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote \
@@ -58,7 +58,7 @@ Failed to retrieve RMIServer stub: javax.naming.ConfigurationException [Root exc
 
 ### Entity Name
 
-If not specified by the user, the entity name is set to the value of the **Host** field by the database. The user may override this feature, for example, if the **Host** field contains a DNS hostname, but the user needs to collect data under a short hostname of the server where the Java application is running.
+If not specified by the user, the entity name is set to the value of the **Host** field by the database. The user can override this feature, for example, if the **Host** field contains a DNS hostname, but the user needs to collect data under a short hostname of the server where the Java application is running.
 
 In addition, the entity name can be retrieved dynamically by specifying the MBean Object Name followed by `>` and the attribute name (`mbean>attribute`). For example:
 

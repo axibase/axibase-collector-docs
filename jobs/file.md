@@ -74,7 +74,7 @@ FILE protocol supports directory traversal.
 |:---|:---|
 | File Format | CSV or JSON. JSON files are converted into CSV files prior to uploading.|
 | Protocol | Network or file protocol to download the file from a remote server or read from the local file system.|
-| Path | URI to the data file in RFC 3986 form: `[user:password@]host[:port][/]path[?query][#fragment]`.<br>Example: `https://example.com/traffic/direct.csv`.<br>If `HTTP_POOL` is selected, the URI should be relative: `/path[?query][#fragment]`.<br>If the `FILE` protocol is selected, the Path to files on the local file system should be absolute.<br>Supported placeholders: `${ITEM}`, `${TIME()}`, `${DATE_ITEM()}`.|
+| Path | URI to the data file in RFC 3986 form: `[user:password@]host[:port][/]path[?query][#fragment]`.<br>Example: `https://example.com/traffic/direct.csv`.<br>If `HTTP_POOL` is selected, the URI must be relative: `/path[?query][#fragment]`.<br>If the `FILE` protocol is selected, the Path to files on the local file system must be absolute.<br>Supported placeholders: `${ITEM}`, `${TIME()}`, `${DATE_ITEM()}`.|
 | Item List | A collection of elements to execute multiple file requests in a loop.<br>The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.<br>When Item List is selected and `${ITEM}` is present in the Path, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with an element value for each request.<br>`${ITEM}` value can be url-encoded as follows: `${ITEM?url}`|
 
 ### HTTP-specific Download Settings
@@ -123,15 +123,15 @@ FILE protocol supports directory traversal.
 
 | **Name** | **Description** |
 |:---|:---|
-| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings > CSV Parser** page in ATSD. The parser should exist and be enabled.|
+| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings > CSV Parser** page in ATSD. The parser must exist and be enabled.|
 | Auto Detect Encoding | Automatically detect file `charset` based on leading bytes, the header, and the heuristics. ATSD accepts the `charset` and the file is correctly parsed by the database. |
-| Encoding | Specify the file `charset` so that the file is correctly parsed by the database. |
+| Encoding | Specify the file `charset` to correctly parse the file in the database. |
 | Metric Prefix | Text added to all metrics names extracted from the CSV file, typically to column headers.<br>For example, if the Metric Prefix is set to `custom.`, and the file contains the `PageViews` column, the resulting metric name is `custom.Pageviews`.|
-| Default Entity | Default Entity name to use if the file does not contain information about the entity name. <br>The Default Entity name may include placeholders, such as `${ITEM}`, which are substituted by an element value when the Item List is selected. <br>Supported placeholders are: `${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
+| Default Entity | Default Entity name to use if the file does not contain information about the entity name. <br>The Default Entity name can include placeholders, such as `${ITEM}`, which are substituted by an element value when the Item List is selected. <br>Supported placeholders are: `${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
 | Custom Tags | List of `name=value` tag pairs, one per line. The tags are be stored by the database as additional series/property/message tags.<br>Supported placeholders are:`${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
-| Use Current Time | Enables all data contained in the CSV file to be stored with the current time of the Collector instead of the date/time possibly contained in the file. This option should be used when the CSV file does not contain any time/date information.|
-| Time Zone | Timezone which should be used by ATSD when parsing the datetime column in the CSV file, if the datetime format does not contain information about the time zone.|
-| Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, the Collector job may not know if the upload file is valid or if there are errors. |
+| Use Current Time | Enables all data contained in the CSV file to be stored with the current time of the Collector instead of the date/time possibly contained in the file. This option must be used when the CSV file does not contain any time/date information.|
+| Time Zone | Timezone which must be used by ATSD when parsing the datetime column in the CSV file, if the datetime format does not contain information about the time zone.|
+| Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code 200 (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, the Collector job does not know if the upload file is valid or if there are errors. |
 | Process in Rule Engine | Process parsed commands in the [ATSD Rule Engine](https://axibase.com/docs/atsd/rule-engine/). If enabled, allows the data in the CSV file to be checked by rules. |
 | Ignore Unchanged Files | Prevents unchanged files from being repeatedly uploaded into the database. When enabled, the Collector compares the last modified time of the downloaded file (FILE, FTP, SFTP) or MD5 hashcode (HTTP, HTTP_POOL, SCP) with the previously stored information and ignores the upload if the file has not changed. For FTP and SFTP protocols, the remote files with unchanged last modified times are not downloaded to the Collector host.|
 
@@ -155,18 +155,18 @@ FILE protocol supports directory traversal.
 | `${FILE}` | Name of the downloaded file. |
 | `${DIRECTORY}` | Parent directory of the downloaded file. |
 
-Refer to [placeholder examples](placeholders.md).
+Refer to [placeholder examples](./placeholders.md).
 
 ## Examples
 
-* [duckduckgo.com Search Statistics](examples/file/duckduckgo/README.md#overview)
-* [Sunspot Daily Count](examples/file/ssn/README.md#overview)
-* [nginx Web Server Basic Statistics](examples/file/nginx/README.md#overview)
-* [Australian Bureau of Meteorology: JSON](examples/file/australia-bom/README.md#overview)
-* [Energinet DK Market Data](examples/file/energinet-ftp/README.md#overview)
-* [pvoutput.org Solar System Statistics](examples/file/pvout/README.md#overview)
-* [Stackoverflow Tags: JSON](examples/file/stackoverflow/README.md#overview)
-* [UK Civil Aviation Authority](examples/file/uk-caa/README.md#overview)
-* [airnow.gov Climate and Pollution Statistics](examples/file/airnow/README.md#overview)
-* [National Oceanic and Atmospheric Administration (NOAA) Mooring Data](examples/file/noaa-mooring/README.md#overview)
-* [Yahoo! Finance Daily Quotes](examples/file/yahoo-finance/README.md#overview)
+* [duckduckgo.com Search Statistics](./examples/file/duckduckgo/README.md#overview)
+* [Sunspot Daily Count](./examples/file/ssn/README.md#overview)
+* [nginx Web Server Basic Statistics](./examples/file/nginx/README.md#overview)
+* [Australian Bureau of Meteorology: JSON](./examples/file/australia-bom/README.md#overview)
+* [Energinet DK Market Data](./examples/file/energinet-ftp/README.md#overview)
+* [pvoutput.org Solar System Statistics](./examples/file/pvout/README.md#overview)
+* [Stackoverflow Tags: JSON](./examples/file/stackoverflow/README.md#overview)
+* [UK Civil Aviation Authority](./examples/file/uk-caa/README.md#overview)
+* [airnow.gov Climate and Pollution Statistics](./examples/file/airnow/README.md#overview)
+* [National Oceanic and Atmospheric Administration (NOAA) Mooring Data](./examples/file/noaa-mooring/README.md#overview)
+* [Yahoo! Finance Daily Quotes](./examples/file/yahoo-finance/README.md#overview)

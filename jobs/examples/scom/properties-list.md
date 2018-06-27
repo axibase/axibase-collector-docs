@@ -1,6 +1,6 @@
 # Collected Microsoft SCOM Properties
 
-## scom.computer
+* `scom.computer`
 
 ```json
 {
@@ -26,7 +26,7 @@
 }
 ```
 
-## scom.database
+* `scom.database`
 
 ```json
 {
@@ -51,7 +51,7 @@
 }
 ```
 
-## scom.operating_systems
+* `scom.operating_systems`
 
 ```json
 {

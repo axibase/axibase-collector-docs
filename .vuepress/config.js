@@ -165,11 +165,12 @@ const confMenu = [
 module.exports = {
     base: '/docs/axibase-collector/',
     title: 'Axibase Collector',
-    description: "User manual and API reference for Axibase® Time Series Database",
+    titleNote: 'ATSD',
+    description: "User manual for Axibase Collector, ETL tool for Axibase® Time Series Database (ATSD)",
     head: [
         ['link', {rel: 'shortcut icon', href: '/favicon-96x96.png'}]
     ],
-    staticFilesExtensionsTest: /(?:tcollector|nginx_status|src|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service|yaml|sh|py))$/,
+    staticFilesExtensionsTest: /(?:tcollector|nginx_status|src|\.(?:pdf|xlsx?|xml|txt|csv|str|java|json|sql|sps|yxmd|htm|prpt|do|tdc|jsonld|ktr|service|ya?ml|sh|py))$/,
     themeConfig: {
         nav: topNavMenu,
         logo: '/favicon-96x96.png',
