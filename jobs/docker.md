@@ -20,7 +20,7 @@ Information is collected for the following object types:
 `Lifecycle Event Monitoring` | Enables continuous monitoring of container lifecycle events instead of scheduled polling.
 `Property Interval`, minutes | Interval for refreshing detailed image and container properties.
 `Statistics Interval`, seconds | Interval at which utilization statistics from running containers are collected.
-`Process Interval`, minutes | Interval at which top process list is collected from running docker containers.
+`Process Interval`, minutes | Interval at which `top` process list is collected from running docker containers.
 `Excluded Processes` | Lists processes, separated by comma, to exclude from collection. Expressions support the wildcard option (`*`).
 `Environment Tags` | List of `ENV` variables stored as entity tags.
 

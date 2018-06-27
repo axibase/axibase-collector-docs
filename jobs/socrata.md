@@ -51,7 +51,7 @@ The configuration instructs Collector how to convert fields in the JSON document
 | Skip Old Data | Do not re-send previously sent data when an updated dataset file is processed by the job.|
 | Check Each Row | Check each row when **Skip Old Data** is enabled. Use this field when dataset is not ordered.
 | Item List | A collection of elements to execute multiple requests for different SOCRATA files in a loop. The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.|
-| Custom Tags | Additional series, property, and message tags, specified as name=value, one tag per line. Examples: `region=${region}`, `class=${graduating_class}` |
+| Custom Tags | Additional series, property, and message tags, specified as `name=value`, one tag per line. Examples: `region=${region}`, `class=${graduating_class}` |
 | Row Filter | The row filter expression excludes matching rows for which the expression evaluates to `true`.<br>The expression must return a boolean value and can reference field values using ${field-name} placeholder, for example:<br>- compare string: `${sat_math_avg_score} == 's'`, this means that all rows with field `sat_math_avg_score equal` to `'s'` are ignored.<br>- compare number: `${mobility} > 2000`, this means that all rows with field mobility greater than 2000 are ignored.<br>- matches regular expression: `${start_date} matches \'^\d{5,}-.*$\'`, this means that all rows with field start_date like `\'20132-08-07T00:00:00.000Z\'` are ignored',
 | Add Row Number | An extra metric with name `{prefix}row_number` added by the job to series commands in case the data row does not contain any numeric columns.|
 
