@@ -233,7 +233,7 @@ ${LOOKUP('us-regions', '9')} => Pacific
 ${LOOKUP('us-regions', '2', '=')} => Middle-Atlantic
 ```
 
-Consider the Item List **'meteo-stations'**:
+Consider the Item List **`meteo-stations`**:
 
 ```txt
 94274,QLD,IDQ60801
