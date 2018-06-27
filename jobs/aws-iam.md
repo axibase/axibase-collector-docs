@@ -66,7 +66,7 @@ Enter the following policy text in JSON format, click **Validate Policy** and sa
 }
 ```
 
-The above policy grants users in the `cloudwatch-ro-group` permissions to execute various GET, LIST, and DESCRIBE API methods. This type of policy grants **read-only** access.
+The above policy grants users in the `cloudwatch-ro-group` permissions to execute various `GET`, `LIST`, and `DESCRIBE` API methods. This type of policy grants **read-only** access.
 
 The `cloudwatch:` actions are required to list available CloudWatch metrics and download statistics, whereas actions for the other namespaces are required to download AWS resource attributes and relationships and store them as metadata in ATSD.
 

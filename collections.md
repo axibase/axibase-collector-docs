@@ -37,7 +37,7 @@ To create a new list, open the **Collections > Item Lists** page, and click **Ad
 |`Name` | Item List name.|
 |`Description` | Item List description.|
 | `Type` | Method used to retrieve list items. See [types](#types).|
-|`Discard Duplicates` | Discard items with the same name.<br>If true, the list discards duplicate items regardless of type (`TEXT`, `FILE`, `SCRIPT`).<br>String comparison for duplicate checks is case-sensitive.|
+|`Discard Duplicates` | Discard items with the same name.<br>If `true`, the list discards duplicate items regardless of type (`TEXT`, `FILE`, `SCRIPT`).<br>String comparison for duplicate checks is case-sensitive.|
 |`Items`, `Path`, `Command`... | Type-specific fields to configure the source for reading list items.|
 
 ### Usage

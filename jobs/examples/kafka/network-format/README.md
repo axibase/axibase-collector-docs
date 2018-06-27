@@ -8,10 +8,10 @@ series e:default d:2017-03-08T14:12:40.653Z m:pref.ju001_70500_perf_lotrunningti
 
 ## Configuration
 
-Field Name | Field Value
-:--------- | :----------
-Message Format | Network API Command
-Use Listener | true
+| Field Name     | Field Value         |
+| :------------- | :------------------ |
+| Message Format | Network API Command |
+| Use Listener   | `true`              |
 
 [Kafka Job Configuration](./kafka_job_configuration.xml) file. Import XML into Collector.
 

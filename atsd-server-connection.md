@@ -34,15 +34,15 @@ Click **Test** to verify the settings:
 
 **Setting** | **Value**
 ----- | -----
-Max Connections | 16
-Use Cookies | false
-Connection Pool Timeout | 15
-Connect Timeout | 15
-Close Idle Connections interval | 60
-Read Timeout | 15
-Socket Linger | 0
-Socket Reuse | true
-Socket Keep-Alive | true
+Max Connections | `16`
+Use Cookies | `false`
+Connection Pool Timeout | `15`
+Connect Timeout | `15`
+Close Idle Connections interval | `60`
+Read Timeout | `15`
+Socket Linger | `0`
+Socket Reuse | `true`
+Socket Keep-Alive | `true`
 
 #### ATSD HTTP Pool Configuration Example
 
