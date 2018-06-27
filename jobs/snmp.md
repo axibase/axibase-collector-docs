@@ -158,3 +158,50 @@ The following table contains links to MIB files for monitoring core operating sy
 |:---|:---|
 | [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. |
 | [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters |
+
+## Troubleshooting
+
+### Connectivity
+
+Test that the target server is accessible using `snmpwalk` utility.
+
+```bash
+snmpwalk -v2c -c public -p 161 192.0.2.1
+```
+
+```txt
+iso.3.6.1.2.1.1.1.0 = STRING: "Linux NURSWGVML007 4.4.0-127-generic #153-Ubuntu SMP Sat May 19 10:58:46 UTC 2018 x86_64"
+iso.3.6.1.2.1.1.2.0 = OID: iso.3.6.1.4.1.8072.3.2.10
+iso.3.6.1.2.1.1.3.0 = Timeticks: (15651) 0:02:36.51
+iso.3.6.1.2.1.1.4.0 = STRING: "john.doe@example.org>"
+iso.3.6.1.2.1.1.5.0 = STRING: "192.0.2.1"
+...
+```
+
+### System View Restriction
+
+In case of `Bad value(endOfMibView)` error, modify SNMP daemon configuration on the target server.
+
+![](./images/snmp-lock-error.png)
+
+The error is displayed as `end of the MIB tree` at the end of the the `snmpwalk` output.
+
+```txt
+...
+iso.3.6.1.2.1.25.1.7.0 = No more variables left in this MIB View (It is past the end of the MIB tree)
+```
+
+Open the `/etc/snmp/snmpd.conf` file.
+
+Remove `-V systemonly` restriction from the `rocommunity` setting.
+
+```txt
+# rocommunity public default -V systemonly
+rocommunity public default
+```
+
+Restart the SNMP daemon.
+
+```bash
+service snmpd restart
+```
