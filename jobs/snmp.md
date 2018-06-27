@@ -41,7 +41,7 @@ Enter a hostname or IP address for one of the target systems and click **Load Al
 | Timeout, seconds | Number of seconds after which the Collector interrupts the query. `0` or `-1` is unlimited. |
 | Retries | Number of connection retries in case of network failure. |
 | Maximum Repetitions | Maximum number of iterations over the repeating variables. |
-| Non Repeaters | Number of supplied variables that should not be iterated over. |
+| Non Repeaters | Number of supplied variables that must not be iterated over. |
 
 Supported SNMP protocol versions:
 
@@ -163,7 +163,7 @@ IMPORTS
     IANAifType                               FROM IANAifType-MIB;
 ```
 
-When you import the MIB file the Collector will search for parent files among the previously loaded MIB files as MIB files stored on the underlying Linux operating system, typically in the `/usr/share/snmp` directory.
+When you import the MIB file the Collector is searching for parent files among the previously loaded MIB files as MIB files stored on the underlying Linux operating system, typically in the `/usr/share/snmp` directory.
 
 ### Base MIB Files
 
