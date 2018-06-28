@@ -13,7 +13,7 @@
     "domaindnsname": "Contoso.com",
     "forestdnsname": "Contoso.com",
     "fullname": "2013-LYNC-FE.Contoso.com",
-    "ipaddress": "192.168.0.170, fe80::1d8c:650:8699:273c, 192.168.1.91, fe80::c0f0:2624:5095:7614",
+    "ipaddress": "192.0.2.1, 2001:db8::1, 192.0.2.2, 2001:db8::2",
     "isvirtualmachine": "1",
     "logicalprocessors": "4",
     "netbioscomputername": "2013-LYNC-FE",
