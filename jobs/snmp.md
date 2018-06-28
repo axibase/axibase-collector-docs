@@ -2,9 +2,31 @@
 
 The SNMP job collects metrics from IP-addressable devices over the SNMP (Simple Network Management Protocol) protocol. It allows monitoring system availability and performance without installing a custom agent on the target system. The statistics are exposed by a SNMP daemon available by default on network devices and as a package for Linux, Windows, and HP-UX operating systems.
 
+## Prerequisites
+
+* Install `snmp` package in the Collector server.
+
+```bash
+apt-get install snmp
+```
+
+```bash
+yum -y install net-snmp net-snmp-utils
+```
+
+* Verify that `snmptranslate -h` utility is installed.
+
+```txt
+USAGE: snmptranslate [OPTIONS] OID [OID]...
+Version:  5.7.2
+...
+```
+
+* Import base [MIB files](#base-mib-files) into the Collector prior to creating SNMP jobs.
+
 ## Job Settings
 
-The SNMP job allows creating multiple configurations to query objects in different [MIB files](#mib-files). The configurations are executed sequentially, while SNMP requests to remote devices in each configuration are executed in parallel.
+The SNMP job allows creating multiple configurations to query objects in different [MIB files](#mib-files). The configurations are executed sequentially, while SNMP `GETBULK` operations to remote devices in each configuration are executed in parallel.
 
 Each configuration retrieves pre-defined object values, identified by OID (Object Identifier), from hostnames or IP addresses in the **Device List**. Metrics collected from the same device are sent into ATSD under an entity name based on the device hostname or IP address as specified in the **Device List**.
 
@@ -172,14 +194,16 @@ System MIB directory location:
 
 ### Base MIB Files
 
-The following table contains links to MIB files for monitoring core operating system performance metrics.
+The following table contains links to MIB files for monitoring operating system performance metrics.
+Upload the MIB files into your Collector instance in the order specified in the **Priority** column.
 
-* Linux
-
-| MIB  | Description  |
-|:---|:---|
-| [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. |
-| [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters |
+| Priority | MIB  | Description  | Dependencies |
+|:---|:---|:---|:---|
+| 1 | [`SNMPv2-SMI.txt`](./resources/SNMPv2-SMI.txt) | - | - |
+| 2 | [`SNMPv2-TC.txt`](./resources/SNMPv2-TC.txt) | Represents textual information taken from the NVT ASCII character set | [`SNMPv2-SMI.txt`](./resources/SNMPv2-SMI.txt) |
+| 3 | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) | The MIB module for SNMP entities | [`SNMPv2-TC.txt`](./resources/SNMPv2-SMI.txt) |
+| 4 | [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) |
+| 5 | [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) |
 
 ## Troubleshooting
 
@@ -202,7 +226,9 @@ iso.3.6.1.2.1.1.5.0 = STRING: "192.0.2.1"
 
 ### System View Restriction
 
-In case of `Bad value(endOfMibView)` error, modify SNMP daemon configuration on the target server.
+On some systems, access to OIDs other than those containing basic information is _disabled_ in by the SNMP daemon.
+
+In case of `Bad value(endOfMibView)` error, modify the SNMP daemon configuration on the target server.
 
 ![](./images/snmp-lock-error.png)
 
@@ -215,6 +241,8 @@ iso.3.6.1.2.1.25.1.7.0 = No more variables left in this MIB View (It is past the
 
 Open the `/etc/snmp/snmpd.conf` file.
 
+#### Ubuntu/Debian
+
 Remove `-V systemonly` restriction from the `rocommunity` setting.
 
 ```txt
@@ -226,4 +254,57 @@ Restart the SNMP daemon.
 
 ```bash
 service snmpd restart
+```
+
+#### RHEL/Centos
+
+```txt
+#       group          context sec.model sec.level prefix read   write  notif
+access  notConfigGroup ""      any       noauth    exact  systemview none none
+```
+
+Create a new view named `all` containing all OIDs.
+
+```txt
+#       name           incl/excl     subtree         mask(optional)
+view    systemview    included   .1.3.6.1.2.1.1
+view    systemview    included   .1.3.6.1.2.1.25.1.1
+view    all           included   .1
+```
+
+Grant the `public` community read-only permissions to the `all` view.
+
+```txt
+#       group          context sec.model sec.level prefix read   write  notif
+access  notConfigGroup ""      any       noauth    exact  all none none
+```
+
+Restart the SNMP daemon to apply the changes.
+
+### Unknown Objects
+
+To check that the remote system publishes operating system OIDs in the `UCD-SNMP-MIB` MIB, execute the `snmpwalk` command with the OID filter set to `1.3.6.1.4.1.2021` (`iso(1) org(3) dod(6) internet(1) private(4) enterprises(1) ucdavis(2021)`).
+
+```bash
+snmpwalk -v2c -c public udp:192.0.2.1:161 1.3.6.1.4.1.2021
+```
+
+The expected output contains a list of nested OIDs.
+
+```txt
+iso.3.6.1.4.1.2021.2.1.1.1 = INTEGER: 1
+iso.3.6.1.4.1.2021.2.1.1.2 = INTEGER: 2
+iso.3.6.1.4.1.2021.2.1.1.3 = INTEGER: 3
+iso.3.6.1.4.1.2021.2.1.2.1 = STRING: "mountd"
+iso.3.6.1.4.1.2021.2.1.2.2 = STRING: "ntalkd"
+iso.3.6.1.4.1.2021.2.1.2.3 = STRING: "sendmail"
+iso.3.6.1.4.1.2021.2.1.3.1 = INTEGER: 1
+iso.3.6.1.4.1.2021.2.1.3.2 = INTEGER: 0
+iso.3.6.1.4.1.2021.2.1.3.3 = INTEGER: 1
+iso.3.6.1.4.1.2021.2.1.4.1 = INTEGER: 0
+iso.3.6.1.4.1.2021.2.1.4.2 = INTEGER: 4
+iso.3.6.1.4.1.2021.2.1.4.3 = INTEGER: 10
+iso.3.6.1.4.1.2021.2.1.5.1 = INTEGER: 0
+iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
+...
 ```
