@@ -173,13 +173,17 @@ System MIB directory location:
 ### Base MIB Files
 
 The following table contains links to MIB files for monitoring core operating system performance metrics.
+Since some MIBs depends on others, they must be uploaded in particular order, represented by **Priority** column.
 
 * Linux
 
-| MIB  | Description  |
-|:---|:---|
-| [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. |
-| [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters |
+| Priority | MIB  | Description  | Dependencies |
+|:---|:---|:---|:---|
+| 1 | [`SNMPv2-SMI.txt`](./resources/SNMPv2-SMI.txt) | - | - |
+| 2 | [`SNMPv2-TC.txt`](./resources/SNMPv2-TC.txt) | Represents textual information taken from the NVT ASCII character set | [`SNMPv2-SMI.txt`](./resources/SNMPv2-SMI.txt) |
+| 3 | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) | The MIB module for SNMP entities | [`SNMPv2-TC.txt`](./resources/SNMPv2-SMI.txt) |
+| 4 | [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) |
+| 5 | [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) |
 
 ## Troubleshooting
 
