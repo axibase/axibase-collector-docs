@@ -1,6 +1,6 @@
 <list>
   <com.axibase.collector.model.job.snmp.SnmpJobConfig>
-    <name>snmp-щы</name>
+    <name>snmp-os</name>
     <cronExpression>R 0/5 * * * ?</cronExpression>
     <enabled>true</enabled>
     <jobType>SNMP</jobType>
