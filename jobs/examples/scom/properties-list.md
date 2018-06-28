@@ -5,22 +5,22 @@
 ```json
 {
   "type": "scom.computer",
-  "entity": "2013-lync-fe",
+  "entity": "test",
   "key": {},
   "tags": {
     "activedirectorysite": "Default-First-Site-Name",
-    "dnsname": "2013-LYNC-FE.Contoso.com",
-    "domaindnsname": "Contoso.com",
-    "forestdnsname": "Contoso.com",
-    "fullname": "2013-LYNC-FE.Contoso.com",
+    "dnsname": "test.example.org",
+    "domaindnsname": "example.org",
+    "forestdnsname": "example.org",
+    "fullname": "test.example.org",
     "ipaddress": "192.0.2.1, 2001:db8::1, 192.0.2.2, 2001:db8::2",
     "isvirtualmachine": "1",
     "logicalprocessors": "4",
-    "netbioscomputername": "2013-LYNC-FE",
-    "netbiosdomainname": "Contoso",
-    "networkname": "2013-LYNC-FE.Contoso.com",
-    "organizationalunit": "CN=Computers,DC=Contoso,DC=com",
-    "principalname": "2013-LYNC-FE.Contoso.com"
+    "netbioscomputername": "test",
+    "netbiosdomainname": "example",
+    "networkname": "test.example.org",
+    "organizationalunit": "CN=Computers,DC=example,DC=org",
+    "principalname": "test.example.org"
   },
   "timestamp": 1446653700541
 }
@@ -31,7 +31,7 @@
 ```json
 {
   "type": "scom.database",
-  "entity": "2013-lync-fe",
+  "entity": "test",
   "key": {
     "databasename": "cpsdyn"
   },
@@ -39,7 +39,7 @@
     "collation": "Latin1_General_BIN",
     "databaseautogrow": "True",
     "displayname": "cpsdyn",
-    "fullname": "2013-LYNC-FE.Contoso.com",
+    "fullname": "test.example.org",
     "instancename": "RTC",
     "logautogrow": "True",
     "owner": "sa",
@@ -56,12 +56,12 @@
 ```json
 {
   "type": "scom.operating_system",
-  "entity": "2013-lync-fe",
+  "entity": "test",
   "key": {},
   "tags": {
     "buildnumber": "9200",
     "displayname": "Microsoft Windows Server 2012 Datacenter Evaluation",
-    "fullname": "2013-LYNC-FE.Contoso.com",
+    "fullname": "test.example.org",
     "installdate": "11/12/2012 13:53:33",
     "installtype": "Full",
     "logicalprocessors": "4",
