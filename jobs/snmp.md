@@ -6,22 +6,21 @@ The SNMP job collects metrics from IP-addressable devices over the SNMP (Simple 
 
 * Install `snmp` package in the Collector server.
 
-  ```bash
-  apt-get install snmp
-  ```
-  
-  ```bash
-  yum -y install net-snmp net-snmp-utils
-  ```  
-  
-  Verify that `snmptranslate` utility is installed.
-  
-  ```bash
-  $ snmptranslate -h
-    USAGE: snmptranslate [OPTIONS] OID [OID]...
-    Version:  5.7.2
-    ...
-  ```
+```bash
+apt-get install snmp
+```
+
+```bash
+yum -y install net-snmp net-snmp-utils
+```
+
+* Verify that `snmptranslate -h` utility is installed.
+
+```txt
+USAGE: snmptranslate [OPTIONS] OID [OID]...
+Version:  5.7.2
+...
+```
 
 * Import base [MIB files](#base-mib-files) into the Collector prior to creating SNMP jobs.
 
@@ -227,7 +226,9 @@ iso.3.6.1.2.1.1.5.0 = STRING: "192.0.2.1"
 
 ### System View Restriction
 
-In case of `Bad value(endOfMibView)` error, modify SNMP daemon configuration on the target server.
+On some systems, access to OIDs other than those containing basic information is _disabled_ in by the SNMP daemon.
+
+In case of `Bad value(endOfMibView)` error, modify the SNMP daemon configuration on the target server.
 
 ![](./images/snmp-lock-error.png)
 
@@ -239,6 +240,8 @@ iso.3.6.1.2.1.25.1.7.0 = No more variables left in this MIB View (It is past the
 ```
 
 Open the `/etc/snmp/snmpd.conf` file.
+
+#### Ubuntu/Debian
 
 Remove `-V systemonly` restriction from the `rocommunity` setting.
 
@@ -252,6 +255,31 @@ Restart the SNMP daemon.
 ```bash
 service snmpd restart
 ```
+
+#### RHEL/Centos
+
+```txt
+#       group          context sec.model sec.level prefix read   write  notif
+access  notConfigGroup ""      any       noauth    exact  systemview none none
+```
+
+Create a new view named `all` containing all OIDs.
+
+```txt
+#       name           incl/excl     subtree         mask(optional)
+view    systemview    included   .1.3.6.1.2.1.1
+view    systemview    included   .1.3.6.1.2.1.25.1.1
+view    all           included   .1
+```
+
+Grant the `public` community read-only permissions to the `all` view.
+
+```txt
+#       group          context sec.model sec.level prefix read   write  notif
+access  notConfigGroup ""      any       noauth    exact  all none none
+```
+
+Restart the SNMP daemon to apply the changes.
 
 ### Unknown Objects
 
