@@ -1,0 +1,218 @@
+<list>
+  <com.axibase.tsd.service.portal.PortalServiceImpl_-PortalConfigAndAssignedEntityGroups>
+    <portalConfig>
+      <name>snmp</name>
+      <enabled>true</enabled>
+      <showInMenu>false</showInMenu>
+      <displayIndex>0</displayIndex>
+      <content>[configuration]
+  title = ${entity}
+  
+  width-units = 3
+  height-units = 3
+  offset-right = 50
+
+  timespan = 1 day
+  update-interval = 1 minute
+  disconnect-interval = 30 minute
+  legend-position = top
+  server-aggregate = true
+
+  markers = false
+  step-line = false
+    
+  entity = ${entity}
+
+[group]
+
+[widget]
+  type = chart
+  title = &lt;b&gt;${entity}&lt;/b&gt;: System Load Avg
+
+  min-range = 0
+  max-range = 2
+    
+
+  metric = snmp.laload
+
+  [series]
+    label = 1m
+    [tags]
+      lanames = Load-1
+
+  [series]
+    label = 15m
+    [tags]
+      lanames = Load-15
+
+[widget]
+  type = chart
+  title = CPU Utilization: Intraday
+  min-range = 0
+  max-range = 100
+  mode = stack
+
+  [series]
+    label = System
+    metric = snmp.sscpusystem
+  [series]
+    label = User
+    metric = snmp.sscpuuser
+
+[widget]
+  type = chart
+  title = CPU Utilization: Weekly
+  min-range = 0
+  max-range = 100
+  replace-value = 100 - value
+  metric = snmp.sscpuidle
+    
+  [series]
+    label = Now
+  [series]
+    label = 1-week Ago
+    time-offset = 1 week
+      
+[group]      
+  format = kilobytes
+  statistics = avg
+  period = auto
+  width-units = 0.75
+      
+[widget]
+  type = chart
+  title = Memory
+
+  [series]
+    metric = snmp.memtotalreal
+    alias = total
+    label = Total
+  [series]
+    metric = snmp.memavailreal
+    display = false
+    alias = avail
+  [series]
+    value = value(&apos;total&apos;) - value(&apos;avail&apos;)
+    label = Used
+    mode = column
+      
+[widget]
+  type = box
+  title = Memory Breakdown   
+  [series]
+    label = Buffered
+    metric = snmp.membuffer
+  [series]
+    label = Cached
+    metric = snmp.memcached
+  [series]
+    label = Shared
+    metric = snmp.memshared 
+
+[widget]
+  type = chart
+  title = Swap    
+
+  [series]
+    metric = snmp.memtotalswap
+    alias = total
+    label = Total
+  [series]
+    metric = snmp.memavailswap
+    display = false
+    alias = avail
+  [series]
+    value = value(&apos;total&apos;) - value(&apos;avail&apos;)
+    label = Used
+    mode = column
+     
+[widget]
+  type = chart
+  title = Swapping
+  format = numeric
+
+  [series]
+    label = Swap In
+    metric = snmp.ssswapin
+  [series]
+    label = Swap Out
+    metric = snmp.ssswapout  
+      
+[group]      
+  statistics = avg
+  period = auto
+  width-units = 1.5
+      
+[widget]
+  type = table
+  title = Disk Usage, GB
+  format = Math.round(10*value/(1024*1024))/10
+  merge-columns = entity, tags
+
+  column-entity = null
+  column-time = null
+  column-metric = null
+  column-value = null
+  [column]
+    tag = dskPath 
+    label = Path
+  [column]
+    tag = dskDevice
+    label = Device
+    format = value.length &gt; 10 ? value.substring(0, 15) + &apos;.&apos; : value
+      
+    [column]
+      key = used 
+      label = Used      
+    [column]
+      key = total
+      label = Total  
+    [column]
+      key = pct 
+      label = Used, %
+      format = percent
+
+  [tags]
+    dskDevice = *   
+    dskPath = *
+      
+  [series]
+    metric = snmp.dsktotal
+    alias = total
+  [series]
+    metric = snmp.dskused 
+    alias = used
+  [series]
+    value = 100*value(&apos;used&apos;)/value(&apos;total&apos;)    
+    alias = pct
+        
+[widget]
+  type = chart
+  title = Network Traffic / 1 second
+  tag-expression = tags.ifdescr != &apos;lo&apos;
+  statistic = counter
+  period = 5 minute
+  label-format = label: tags.ifdescr
+  format = byte
+  mode = column
+  timespan = 6 hour
+  [tags]
+    ifdescr = *   
+
+  [series]
+    label = In
+    metric = snmp.ifinoctets
+    replace-value = value/(5*60)
+  [series]
+    label = Out
+    metric = snmp.ifoutoctets   
+    replace-value = -value/(5*60)
+    series-type = negative</content>
+      <lastModified>2018-06-27 18:36:27.118 UTC</lastModified>
+      <guestAccess>false</guestAccess>
+    </portalConfig>
+    <groupsAssignedToPortal>
+      <string>snmp-operating-system</string>
+    </groupsAssignedToPortal>
+  </com.axibase.tsd.service.portal.PortalServiceImpl_-PortalConfigAndAssignedEntityGroups>
+</list>

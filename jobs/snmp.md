@@ -22,7 +22,14 @@ Version:  5.7.2
 ...
 ```
 
-* Import base [MIB files](#base-mib-files) into the Collector prior to creating SNMP jobs.
+## Quick Start
+
+* Import required MIB files into the Collector as described in the [Base MIB files](#base-mib-files) section.
+* Import [`snmp-os`](./resources/job_snmp_os.xml) SNMP job into the Collector.
+* Open the **Collections > Item Lists** page in Collector and customize the `SNMP Devices` list.
+* Open the `snmp-os` job in Collector and click **Test** to check connectivity.
+* Import [`group-snmp`](./resources/group-snmp.xml) SNMP entity group into ATSD.
+* Import [`portal-snmp`](./resources/portal-snmp.xml) SNMP Portal into ATSD.
 
 ## Job Settings
 
@@ -204,6 +211,10 @@ Upload the MIB files into your Collector instance in the order specified in the 
 | 3 | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) | The MIB module for SNMP entities | [`SNMPv2-TC.txt`](./resources/SNMPv2-SMI.txt) |
 | 4 | [`UCD-SNMP-MIB`](./resources/UCD-SNMP-MIB.txt) | System load average, CPU utilization, memory configuration and usage, disk used. | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) |
 | 5 | [`IF-MIB`](./resources/IF-MIB.txt) | Network interface counters | [`SNMPv2-MIB.txt`](./resources/SNMPv2-MIB.txt) |
+
+## SNMP Portal
+
+![](./images/snmp-portal.png)
 
 ## Troubleshooting
 

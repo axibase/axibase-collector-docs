@@ -1,0 +1,12 @@
+<list>
+  <com.axibase.tsd.model.EntityGroup>
+    <name>snmp-operating-system</name>
+    <tags/>
+    <portalNames>
+      <string>snmp</string>
+    </portalNames>
+    <entityTags/>
+    <expression>hasMetric(&apos;snmp.laload&apos;)</expression>
+    <enabled>true</enabled>
+  </com.axibase.tsd.model.EntityGroup>
+</list>
