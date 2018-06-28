@@ -271,10 +271,10 @@ View pods using [kubectl get](https://kubernetes.io/docs/user-guide/kubectl/v1.8
 ```sh
 $ kubectl get pod -o wide
 NAME                                 READY     STATUS    RESTARTS   AGE       IP          NODE
-atsd-1742852640-vvzlk                1/1       Running   0          2d        10.8.0.14   gke-cluster-1-default-pool-fcd89b74-bstn
-axibase-collector-2747957227-03dj2   1/1       Running   0          2d        10.8.2.8    gke-cluster-1-default-pool-fcd89b74-96gq
-axibase-collector-2747957227-5hr0g   1/1       Running   0          2d        10.8.0.15   gke-cluster-1-default-pool-fcd89b74-bstn
-axibase-collector-2747957227-whd99   1/1       Running   0          2d        10.8.1.8    gke-cluster-1-default-pool-fcd89b74-ln58
+atsd-1742852640-vvzlk                1/1       Running   0          2d        192.0.2.14   gke-cluster-1-default-pool-fcd89b74-bstn
+axibase-collector-2747957227-03dj2   1/1       Running   0          2d        192.0.2.8    gke-cluster-1-default-pool-fcd89b74-96gq
+axibase-collector-2747957227-5hr0g   1/1       Running   0          2d        192.0.2.15   gke-cluster-1-default-pool-fcd89b74-bstn
+axibase-collector-2747957227-whd99   1/1       Running   0          2d        192.0.2.9    gke-cluster-1-default-pool-fcd89b74-ln58
 ```
 
 View services using [kubectl get](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#get):
@@ -282,6 +282,6 @@ View services using [kubectl get](https://kubernetes.io/docs/user-guide/kubectl/
 ```sh
 $ kubectl get service -o wide
 NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE       SELECTOR
-atsd         NodePort    10.11.241.144   <none>        8081:30081/TCP,8443:30443/TCP   3d        app=atsd
-kubernetes   ClusterIP   10.11.240.1     <none>        443/TCP                         3d        <none>
+atsd         NodePort    198.51.100.2   <none>        8081:30081/TCP,8443:30443/TCP   3d        app=atsd
+kubernetes   ClusterIP   198.51.100.1     <none>        443/TCP                         3d        <none>
 ```

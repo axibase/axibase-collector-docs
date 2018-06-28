@@ -52,11 +52,10 @@ openssl req -subj "/CN=$HOST" -sha256 -new -key server-key.pem -out server.csr
 
 ## Sign the Public Key with our CA
 
-TLS connections need to be specified when creating the certificate, as the connections can be made via IP address as well as DNS name. For example, to allow connections
-using `10.10.10.20` and `127.0.0.1`:
+TLS connections need to be specified when creating the certificate, as the connections can be made via IP address as well as DNS name. For example, to allow connections from `192.0.2.1` and `127.0.0.1`:
 
 ```sh
-echo subjectAltName = IP:10.10.10.20,IP:127.0.0.1 > extfile.cnf
+echo subjectAltName = IP:192.0.2.1,IP:127.0.0.1 > extfile.cnf
 ```
 
 ```sh

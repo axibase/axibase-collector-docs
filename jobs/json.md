@@ -69,7 +69,7 @@ The expression selects all elements of the `book` array in the `root`'s child na
 | Name     | Name of the configuration. |
 | Protocol | HTTP or File protocol to download JSON files from a remote server or read them from the local file system. File protocol supports wildcards in Path. |
 | HTTP Pool                | Pre-defined HTTP connection parameters to limit the number of open connections, to customize timeout settings, and to re-use connections across multiple requests.<br> When HTTP Pool is selected, the Path field must contain a relative URI: `[/]path[?query][#fragment]` |
-| Path                     | URI Path to JSON file, for example `https://example.com/api/daily-summary.json`, or the absolute path to the file or files on the local file system.<br> If the HTTP Pool is enabled, the path must be relative, for example `/api/daily-summary.json`. Otherwise, the Path must be a full URI including protocol, host, port, and the path.<br> The Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the Path, the job executes as many queries as there are elements returned by the `${DATE_ITEM()}` function, substituting the `${DATE_ITEM()}` placeholder with the element value for each request.<br> The Path can include either the `${DATE_ITEM()}` or `${ITEM}` function, but not both. |
+| Path                     | URI Path to JSON file, for example `https://example.org/api/daily-summary.json`, or the absolute path to the file or files on the local file system.<br> If the HTTP Pool is enabled, the path must be relative, for example `/api/daily-summary.json`. Otherwise, the Path must be a full URI including protocol, host, port, and the path.<br> The Path supports the following placeholders:<br> - `${ITEM}`: current element in the Item List.<br> - `${TIME()}`: text output of the `TIME` function.<br> - `${DATE_ITEM()}`: text output of the `DATE_ITEM` function.<br> If `${DATE_ITEM()}` is present in the Path, the job executes as many queries as there are elements returned by the `${DATE_ITEM()}` function, substituting the `${DATE_ITEM()}` placeholder with the element value for each request.<br> The Path can include either the `${DATE_ITEM()}` or `${ITEM}` function, but not both. |
 | Format                   | JSON or JSON Lines. If the **JSON Lines** format is selected, the database adds the input lines contained in the file to a parent array object and processes the lines as a single JSON document. |
 | Delete Files on Upload   | **Applies to FILE protocol**. Delete source files parsed into at least one command and successfully sent to the database. |
 | Ignore Unchanged Files   | Prevents unchanged files or http entities from being repeatedly processed.<br>When enabled, the Collector compares the last modified time of the file (FILE) or **Last-Modified** header/MD5 hashcode (HTTP, `HTTP_POOL`) with the previously stored value and ignores the value if there are no changes.<br>In the case of HTTP and `HTTP_POOL` protocols, the Collector checks the **Last-Modified** response header. If the header is present and the value has not changed since the last execution, the response content is not downloaded. |
@@ -209,7 +209,7 @@ JSON:
             "total": 0
           },
           "id": 1,
-          "server": "1.2.3.4:1234"
+          "server": "198.51.100.1:1234"
         }
       ]
     }
@@ -227,7 +227,7 @@ Depth           | 2
 Result:
 
 ```ls
-series e:tst d:2016-07-07T15:22:59.593Z t:name=demo-backend t:server=1.2.3.4:1234 t:type=upstreams.peers m:id=1 m:active=0 m:responses.total=0 m:responses.1xx=0
+series e:tst d:2016-07-07T15:22:59.593Z t:name=demo-backend t:server=198.51.100.1:1234 t:type=upstreams.peers m:id=1 m:active=0 m:responses.total=0 m:responses.1xx=0
 ```
 
 ### Entity Fields Examples
@@ -248,7 +248,7 @@ JSON:
             "total": 0
           },
           "id": 1,
-          "server": "1.2.3.4:1234"
+          "server": "198.51.100.1:1234"
         }
       ]
     }
@@ -260,7 +260,7 @@ JSON:
 
   Field Name         | Field Value
   :----------------- | :----------
-  Path               | `http://example.com`
+  Path               | `http://example.org`
   **Default Entity** | **`${HOST}`**
   JSON Path          | `$.upstreams.demo-backend.peers.*`
   Depth              | 2
@@ -268,14 +268,14 @@ JSON:
   Result:
 
   ```ls
-  series e:example.com d:2016-07-07T15:19:01.365Z m:id=1 m:active=0 m:responses.total=0 m:responses.1xx=0
+  series e:example.org d:2016-07-07T15:19:01.365Z m:id=1 m:active=0 m:responses.total=0 m:responses.1xx=0
   ```
 
 * Default Entity contains placeholder `${PARENT(n)}`:
 
   Field Name         | Field Value
   :----------------- | :----------
-  Path               | `http://example.com`
+  Path               | `http://example.org`
   **Default Entity** | **`${PARENT(2)}`**
   JSON Path          | `$.upstreams.demo-backend.peers.*`
   Depth              | 2
@@ -290,7 +290,7 @@ JSON:
 
   Field Name         | Field Value
   :----------------- | :----------
-  Path               | `http://example.com`
+  Path               | `http://example.org`
   **Default Entity** | **`tst`**
   JSON Path          | `$.upstreams.demo-backend.peers.*`
   Depth              | 2
@@ -317,7 +317,7 @@ JSON:
             "total": 0
           },
           "id": 1,
-          "server": "1.2.3.4:1234",
+          "server": "198.51.100.1:1234",
           "type": "peer"
         }
       ]
@@ -328,7 +328,7 @@ JSON:
 
 Field Name       | Field Value
 :--------------- | :----------
-Path             | `http://example.com`
+Path             | `http://example.org`
 **Entity Field** | **type**
 Entity Prefix    | `tst.`
 JSON Path        | `$.upstreams.demo-backend.peers.*`
@@ -480,7 +480,7 @@ JSON:
             "total": 0
           },
           "id": 1,
-          "server": "1.2.3.4:1234"
+          "server": "198.51.100.1:1234"
         }
       ]
     }
@@ -498,7 +498,7 @@ Depth                     | 1
 Result:
 
 ```ls
-property t:upstreams.peers e:tst d:2016-07-06T07:42:46.824Z v:state=up v:server=10.0.0.2:15431 v:backup=false
+property t:upstreams.peers e:tst d:2016-07-06T07:42:46.824Z v:state=up v:server=198.51.100.1:15431 v:backup=false
 ```
 
 #### Property Type Field
@@ -704,7 +704,7 @@ series e:axibase/atsd d:2018-05-24T00:00:00.000Z m:repo.traffic.uniques=5 m:repo
               "total": 0
             },
             "id": 1,
-            "server": "1.2.3.4:1234"
+            "server": "198.51.100.1:1234"
           }
         ]
       }
@@ -743,7 +743,7 @@ series e:axibase/atsd d:2018-05-24T00:00:00.000Z m:repo.traffic.uniques=5 m:repo
               "total": 0
             },
             "id": 1,
-            "server": "1.2.3.4:1234"
+            "server": "198.51.100.1:1234"
           }
         ]
       }
@@ -782,7 +782,7 @@ JSON:
             "total": 0
           },
           "id": 1,
-          "server": "1.2.3.4:1234",
+          "server": "198.51.100.1:1234",
           "type": "peer"
         }
       ]
@@ -805,7 +805,7 @@ Message Default          |
 Result:
 
 ```ls
-message e:tst d:2016-07-06T08:19:30.563Z t:id=1 t:source=1.2.3.4:1234 t:type=peer m:""
+message e:tst d:2016-07-06T08:19:30.563Z t:id=1 t:source=198.51.100.1:1234 t:type=peer m:""
 ```
 
 ## Configuration Example

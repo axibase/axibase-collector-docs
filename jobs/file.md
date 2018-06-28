@@ -29,11 +29,11 @@ The files are parsed by ATSD using a [CSV Parser](https://axibase.com/docs/atsd/
 | **Protocol** | **Scheme** | **Wildcards** | **Description** |
 |:---|:---|:---|:---|
 | FILE | `file://` | yes | Read file or files from the local file system.<br>`/tmp/report/daily*.csv` |
-| HTTP | `http://` or `https://` | no | Download a file from a web server.<br>`https://example.com/traffic/direct.csv` |
+| HTTP | `http://` or `https://` | no | Download a file from a web server.<br>`https://example.org/traffic/direct.csv` |
 | HTTP_POOL | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br>`/traffic/direct.csv` |
-| FTP | `ftp://` | yes | Download file or files from an FTP server.<br>`ftp://example.com/data/CCE2_121W_*.csv` |
-| SFTP | `sftp://` | yes | Download file or files from a UNIX server over STFP protocol.<br>`sftp://ftp-reader:my-pwd@10.52.0.10:22/home/ftp-reader/*.csv` |
-| SCP | `scp://` | no | Download a file from a UNIX server over SCP protocol.<br>`scp://user-1:my-pwd@example.com:4022/home/user-1/r20160617.csv` |
+| FTP | `ftp://` | yes | Download file or files from an FTP server.<br>`ftp://example.org/data/CCE2_121W_*.csv` |
+| SFTP | `sftp://` | yes | Download file or files from a UNIX server over STFP protocol.<br>`sftp://ftp-reader:my-pwd@198.51.100.1:22/home/ftp-reader/*.csv` |
+| SCP | `scp://` | no | Download a file from a UNIX server over SCP protocol.<br>`scp://user-1:my-pwd@example.org:4022/home/user-1/r20160617.csv` |
 
 ## File Watch
 
@@ -74,7 +74,7 @@ FILE protocol supports directory traversal.
 |:---|:---|
 | File Format | CSV or JSON. JSON files are converted into CSV files prior to uploading.|
 | Protocol | Network or file protocol to download the file from a remote server or read from the local file system.|
-| Path | URI to the data file in RFC 3986 form: `[user:password@]host[:port][/]path[?query][#fragment]`.<br>Example: `https://example.com/traffic/direct.csv`.<br>If `HTTP_POOL` is selected, the URI must be relative: `/path[?query][#fragment]`.<br>If the `FILE` protocol is selected, the Path to files on the local file system must be absolute.<br>Supported placeholders: `${ITEM}`, `${TIME()}`, `${DATE_ITEM()}`.|
+| Path | URI to the data file in RFC 3986 form: `[user:password@]host[:port][/]path[?query][#fragment]`.<br>Example: `https://example.org/traffic/direct.csv`.<br>If `HTTP_POOL` is selected, the URI must be relative: `/path[?query][#fragment]`.<br>If the `FILE` protocol is selected, the Path to files on the local file system must be absolute.<br>Supported placeholders: `${ITEM}`, `${TIME()}`, `${DATE_ITEM()}`.|
 | Item List | A collection of elements to execute multiple file requests in a loop.<br>The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.<br>When Item List is selected and `${ITEM}` is present in the Path, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with an element value for each request.<br>`${ITEM}` value can be url-encoded as follows: `${ITEM?url}`|
 
 ### HTTP-specific Download Settings

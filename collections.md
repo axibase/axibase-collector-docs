@@ -180,7 +180,7 @@ Examples:
 * ***Example***
 
 ```txt
-URL = http://m.uploadedit.com/bbtc/1502281772577.txt
+URL = http://example.org/1502281772577.txt
 ```
 
 Remote file content:

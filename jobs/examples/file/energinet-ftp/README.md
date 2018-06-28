@@ -10,9 +10,9 @@ Download 5-minute metering data (new files only) from the Energinet (`energinet.
 
 ### URI
 
-Template: `ftp000148:my-pwd@10.102.0.51:21/onlinedata/${TIME("now", "yyyyMMdd")}_onlinedata.txt`
+Template: `ftp000148:my-pwd@192.0.2.1:21/onlinedata/${TIME("now", "yyyyMMdd")}_onlinedata.txt`
 
-Example: `ftp000148:my-pwd@10.102.0.51:21/onlinedata/20160609_onlinedata.txt`
+Example: `ftp000148:my-pwd@192.0.2.1:21/onlinedata/20160609_onlinedata.txt`
 
 ### Local Copy
 

@@ -38,17 +38,17 @@ ALTER ROLE readonly login;
 ```
 
 * Open the file `/etc/postgresql/${POSTGRES_VERSION}/main/pg_hba.conf`.
-* Add the following record to allow remote access from the Axibase Collector machine:
+* Add the following record to allow remote access from the Axibase Collector server using its IP address:
 
 ```txt
-host    all             readonly        10.102.0.12           trust
+host    all             readonly        192.0.2.1           trust
 ```
 
 * Open the file `/etc/postgresql/${POSTGRES_VERSION}/main/postgresql.conf`.
 * Enable the database to accept remote connections by specifying the external IP address:
 
 ```sh
-listen_addresses = 'localhost,10.102.0.9' # what IP address(es) to listen on;
+listen_addresses = 'localhost,192.0.2.1' # what IP address(es) to listen on;
 ```
 
 ### Import PostgreSQL Job into Axibase Collector

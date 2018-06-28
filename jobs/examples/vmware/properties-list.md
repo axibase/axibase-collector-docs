@@ -57,7 +57,7 @@
       "vm": "nurswgvml009 (1)"
     },
     "tags": {
-      "description": "10.102.0.8 Oracle EM",
+      "description": "192.0.2.4 Oracle EM",
       "host": "nuresx003",
       "mem_size_mb": "6144",
       "num_vcpu": "2",
@@ -90,8 +90,8 @@
       "host_key": "52d42485-687c-da1d-1f03-31aaed31e399",
       "host_model": "MS-7522",
       "host_vendor": "MSI",
-      "ip_address": "188.40.115.149",
-      "local_ip_address": "10.102.0.7",
+      "ip_address": "198.51.100.1",
+      "local_ip_address": "192.0.2.3",
       "mem_size": "51530223616",
       "mmode": "NO",
       "name": "nuresx002",
@@ -126,7 +126,7 @@
       },
       "tags": {
         "cluster": "NURCLS02",
-        "description": "10.102.0.2 Shared NFS/CIFS disk, ntp server",
+        "description": "192.0.2.2 Shared NFS/CIFS disk, ntp server",
         "mem_size_mb": "512",
         "num_vcpu": "1",
         "power_state": "On",

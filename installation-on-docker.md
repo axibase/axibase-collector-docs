@@ -65,7 +65,7 @@ If the user name or password contains a `$`, `&`, `#`, or `!` character, escape 
 
 The password must contain at least **six** (`6`) characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
-For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://10.102.0.6:8443`, specify:
+For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://192.0.2.1:8443`, specify:
 
 ```properties
 docker run \
@@ -74,7 +74,7 @@ docker run \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
-  -atsd-url=https://adm-dev:my\$pwd@10.102.0.6:8443
+  -atsd-url=https://adm-dev:my\$pwd@192.0.2.1:8443
 ```
 
 ## Start Container in Privileged Mode
@@ -105,7 +105,7 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
 |`JAVA_OPTS` | No| Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
 
-For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://10.102.0.6:8443`, specify:
+For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://192.0.2.1:8443`, specify:
 
 ```properties
 docker run \
@@ -115,7 +115,7 @@ docker run \
  --name=axibase-collector \
  --env COLLECTOR_USER_NAME=adm-dev \
  --env COLLECTOR_USER_PASSWORD=my\$pwd \
- --env ATSD_URL=https://10.102.0.6:8443 \
+ --env ATSD_URL=https://192.0.2.1:8443 \
  axibase/collector:latest
 ```
 

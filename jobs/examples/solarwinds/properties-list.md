@@ -13,7 +13,7 @@
     "cpuload": "0",
     "description": "Linux NURSWGVML011 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64",
     "dynamicip": "0",
-    "ip_address": "10.102.0.10",
+    "ip_address": "192.0.2.1",
     "ip_address_type": "IPv4",
     "isserver": "1",
     "lastboot": "2015-06-04 08:15:00.0",
@@ -122,7 +122,7 @@
     "vm": "nurswgvml006"
   },
   "tags": {
-    "description": "10.102.0.5 Hadoop/HBASE",
+    "description": "192.0.2.5 Hadoop/HBASE",
     "host": "nuresx002",
     "mem_size_mb": "2048",
     "num_vcpu": "1",
@@ -161,7 +161,7 @@
     "iopsread": "0.0",
     "iopstotal": "0.0",
     "iopswrite": "0.0",
-    "ipaddress": "10.102.0.10",
+    "ipaddress": "192.0.2.10",
     "islicensed": "1",
     "latencyread": "0.0",
     "latencytotal": "0.0",

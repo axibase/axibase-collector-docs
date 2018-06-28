@@ -4,9 +4,9 @@ The SNMP job collects metrics from IP-addressable devices over the SNMP (Simple 
 
 ## Job Settings
 
-The SNMP job supports creating multiple configurations for different [MIB files](#mib-files). The configurations are executed sequentially, while SNMP requests to remote devices in each configuration are executed in parallel.
+The SNMP job allows creating multiple configurations to query objects in different [MIB files](#mib-files). The configurations are executed sequentially, while SNMP requests to remote devices in each configuration are executed in parallel.
 
-Each configuration retrieves pre-defined object values, identified by OID (Object Identifier) from hostnames or IP addresses in the **Device List**. Metrics collected from the same device are sent into ATSD under an entity name based on the device hostname or IP address as specified in the **Device List**.
+Each configuration retrieves pre-defined object values, identified by OID (Object Identifier), from hostnames or IP addresses in the **Device List**. Metrics collected from the same device are sent into ATSD under an entity name based on the device hostname or IP address as specified in the **Device List**.
 
 ![](./images/snmp-job.png)
 
@@ -82,17 +82,17 @@ SNMP configuration example:
 Click **Test** to view sample series commands for the given configuration.
 
 ```ls
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.laLoad=1.56 t:laNames=Load-1
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.laLoad=2.14 t:laNames=Load-15
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.laLoad=1.97 t:laNames=Load-5
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memShared=494356
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memBuffer=403904
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memTotalReal=65124968
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memAvailReal=16156972
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memCached=25270224
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memTotalFree=49637572
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memAvailSwap=33480600
-series e:36e26a5fd70a d:2018-06-27T11:14:56.481Z m:snmp.memTotalSwap=33537916
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.laLoad=1.56 t:laNames=Load-1
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.laLoad=2.14 t:laNames=Load-15
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.laLoad=1.97 t:laNames=Load-5
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memShared=494356
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memBuffer=403904
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memTotalReal=65124968
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memAvailReal=16156972
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memCached=25270224
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memTotalFree=49637572
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memAvailSwap=33480600
+series e:192.0.2.1 d:2018-06-27T11:14:56.481Z m:snmp.memTotalSwap=33537916
 ```
 
 ## MIB Files
@@ -122,7 +122,7 @@ The Collector needs access to MIB files to translate OIDs received from the remo
 ```
 
 ```ls
-series e:36e26a5fd70a d:2018-06-27T10:09:19.649Z t:laNames=Load-1 m:snmp.laLoad=2.79
+series e:192.0.2.1 d:2018-06-27T10:09:19.649Z t:laNames=Load-1 m:snmp.laLoad=2.79
 ```
 
 The SNMP job supports built-in and custom MIB files.
@@ -163,7 +163,12 @@ IMPORTS
     IANAifType                               FROM IANAifType-MIB;
 ```
 
-When you import the MIB file the Collector searches for any parent files, specified in the `IMPORTS` section, among the previously loaded MIB files as well as MIB files stored on the underlying Linux operating system, typically in the `/usr/share/snmp` directory.
+When you import the MIB file the Collector searches for any parent files, specified in the `IMPORTS` section, among the previously loaded MIB files as well as MIB files stored on the underlying operating system.
+
+System MIB directory location:
+
+* On Linux, the MIB files are stored in the `/usr/share/snmp` directory.
+* On HP-UX, the MIB files are stored in the `/var/opt/OV/share/snmp_mibs` [directory](http://nixdoc.net/man-pages/HP-UX/snmpdm.1m.html).
 
 ### Base MIB Files
 

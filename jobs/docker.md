@@ -57,7 +57,7 @@ If the username or password contains `$`, `&`, `#`, or `!` character, escape the
 
 The password must contain at least **six** (6) characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
-For example, for user `adm-dev` with password `my$pwd` sending data to ATSD at `https://10.102.0.6:8443` specify:
+For example, for user `adm-dev` with password `my$pwd` sending data to ATSD at `https://192.0.2.1:8443` specify:
 
 ```properties
 docker run \
@@ -68,7 +68,7 @@ docker run \
    --volume /var/run/docker.sock:/var/run/docker.sock \
    --env=DOCKER_HOSTNAME=`hostname -f` \
   axibase/collector \
-   -atsd-url=https://adm-dev:my\$pwd@10.102.0.6:8443 \
+   -atsd-url=https://adm-dev:my\$pwd@192.0.2.1:8443 \
    -job-enable=docker-socket
 ```
 
@@ -195,10 +195,10 @@ In remote collection mode Axibase Collector fetches data from multiple remote Do
     systemctl status docker
     ```
 
-* Verify connectivity.
+* Verify connectivity by connecting to the Docker host on its hostname or IP address, for example `198.51.100.1`.
 
   ```sh
-  curl https://127.0.0.1:2376/info     \
+  curl https://198.51.100.1:2376/info     \
       --cert /home/user/certs/cert.pem \
       --key /home/user/certs/key.pem   \
       --cacert /home/user/certs/ca.pem
