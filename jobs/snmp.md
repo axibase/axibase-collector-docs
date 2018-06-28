@@ -45,12 +45,12 @@ Enter a hostname or IP address for one of the target systems and click **Load Al
 
 Supported SNMP protocol versions:
 
-* SNMP `v2`
-* SNMP `v3c`
+* SNMP `v2c`
+* SNMP `v3`
 
 ### Security Settings
 
-The following settings apply to SNMP protocol `v3c`.
+The following settings apply to SNMP protocol `v3`.
 
 | Field          | Description  |
 | :------------- |:-------------|
@@ -183,7 +183,7 @@ The following table contains links to MIB files for monitoring core operating sy
 Test that the target server is accessible using `snmpwalk` utility.
 
 ```bash
-snmpwalk -v2c -c public -p 161 192.0.2.1
+snmpwalk -v2c -c public udp:192.0.2.1:161
 ```
 
 ```txt
