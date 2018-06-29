@@ -1,0 +1,52 @@
+<list>
+  <com.axibase.collector.model.job.snmp.SnmpJobConfig>
+    <name>snmp-if</name>
+    <cronExpression>R 0/5 * * * ?</cronExpression>
+    <enabled>true</enabled>
+    <jobType>SNMP</jobType>
+    <defaultTags/>
+    <checkLastTime>false</checkLastTime>
+    <commitInterval>10</commitInterval>
+    <errorThreshold>0</errorThreshold>
+    <configurations>
+      <com.axibase.collector.model.job.snmp.SnmpConfiguration>
+        <configName>interface statistics</configName>
+        <transport>UDP</transport>
+        <port>161</port>
+        <mibName>IF-MIB</mibName>
+        <timeout>3</timeout>
+        <maxRepetitions>10</maxRepetitions>
+        <nonRepeaters>0</nonRepeaters>
+        <version>V2C</version>
+        <community>public</community>
+        <metricPrefix>snmp.</metricPrefix>
+        <entitySet>
+          <name>SNMP Devices</name>
+          <type>TEXT</type>
+          <discardDuplicates>false</discardDuplicates>
+          <entities>
+            <string>192.0.2.1</string>
+            <string>192.0.2.2</string>
+          </entities>
+        </entitySet>
+        <tagNames>
+          <string>ifType</string>
+          <string>ifPhysAddress</string>
+          <string>ifOperStatus</string>
+          <string>ifDescr</string>
+        </tagNames>
+        <metricColumns>
+          <string>ifOutOctets</string>
+          <string>ifSpeed</string>
+          <string>ifInOctets</string>
+        </metricColumns>
+        <retries>3</retries>
+        <securityName>username</securityName>
+        <authenticationPassPhrase>password</authenticationPassPhrase>
+        <authProtocol>MD5</authProtocol>
+        <privacyProtocol>DES</privacyProtocol>
+        <secLevel>AUTH_PRIV</secLevel>
+      </com.axibase.collector.model.job.snmp.SnmpConfiguration>
+    </configurations>
+  </com.axibase.collector.model.job.snmp.SnmpJobConfig>
+</list>

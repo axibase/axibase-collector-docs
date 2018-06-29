@@ -107,7 +107,7 @@ Enter the target hostname or IP address and click **Load All Values**.
 
 SNMP configuration example:
 
-![SNMP Configuration](./images/SNMP.png)
+![SNMP Configuration](./images/snmp-oids.png)
 
 Click **Test** to view sample series commands for the given configuration.
 
