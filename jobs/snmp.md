@@ -28,7 +28,7 @@ Version:  5.7.2
 * Import [`snmp-os`](./resources/job_snmp_os.xml) SNMP job into the Collector.
 * Open the **Collections > Item Lists** page in Collector and customize the `SNMP Devices` list.
 * Open the `snmp-os` job in Collector, open the `system statistics` configuration and click **Test** to check connectivity. Run the job manually.
-* Login into ATSD and verify that SNMP metrics are displayed on the **Metrics** tab with the `snmp*` prefix.
+* Log in to ATSD and verify that SNMP metrics are displayed on the **Metrics** tab with the `snmp*` prefix.
 * Import [`group-snmp`](./resources/group-snmp.xml) SNMP entity group into ATSD.
 * Import [`portal-snmp`](./resources/portal-snmp.xml) SNMP Portal into ATSD. See an example [portal](#snmp-portal) below.
 
