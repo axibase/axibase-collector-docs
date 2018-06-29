@@ -58,14 +58,14 @@ docker run \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
-  -atsd-url=https://collector-user:collector-password@atsd_host:atsd_https_port
+  -atsd-url=https://username:password@atsd_hostname:8443
 ```
 
 If the user name or password contains a `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
 
 The password must contain at least **six** (`6`) characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
-For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://192.0.2.1:8443`, specify:
+For example, for user `john.doe` with the password `secret` sending data to ATSD at `https://192.0.2.1:8443`, specify:
 
 ```properties
 docker run \
@@ -74,7 +74,7 @@ docker run \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
-  -atsd-url=https://adm-dev:my\$pwd@192.0.2.1:8443
+  -atsd-url=https://john.doe:secret@192.0.2.1:8443
 ```
 
 ## Start Container in Privileged Mode

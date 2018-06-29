@@ -19,7 +19,7 @@ Switch to the user under which Collector java processes execute.
 To look up the Axibase Collector installation directory, run:
 
 ```bash
-axibase@36e26a5fd70a:~$ ps aux | grep "axibase-collector.war"
+$ ps aux | grep "axibase-collector.war"
 axibase  25647 27.0  0.9 8037420 625988 ?      Sl   07:23   6:53 java -XX:PermSize=128m ...
 ```
 
@@ -38,7 +38,7 @@ tar xvf axibase-collector.tar.gz
 To look up Axibase Collector installation directory, run:
 
 ```sh
-axibase@36e26a5fd70a:~$ ps aux | grep "axibase-collector.war"
+$ ps aux | grep "axibase-collector.war"
 axibase  25647 27.0  0.9 8037420 625988 ?      Sl   07:23   6:53 java -XX:PermSize=128m ...
 -Dlogback.configurationFile=/opt/axibase-collector/conf/logback.xml ...
 ```

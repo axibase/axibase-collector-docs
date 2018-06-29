@@ -7,7 +7,7 @@ Monitoring disk space usage with a breakdown by individual container ensures con
 While the Docker [command line](https://docs.docker.com/engine/reference/commandline/ps/) includes a way to obtain container sizes using the `--size` option, the command can take [several minutes](https://github.com/docker/docker/issues/17832) to complete while significantly overloading the host disk subsystem and slowing down Docker Engine API response times. The CLI output does not expose space usage by volume and requires parsing size units (KB, MB, GB).
 
   ```sh
-  axibase@NURSWGHBS001:~$ docker ps -s --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
+  docker ps -s --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
   ```
 
   ```sh
@@ -23,7 +23,7 @@ While the Docker [command line](https://docs.docker.com/engine/reference/command
 For example, on a Docker host where the `/var/lib/docker` size is 30 GB with 20 running containers and 80 in total, the initial execution of the `docker ps -as` command takes more than 2 minutes while fully loading the host `I/O`.
 
   ```sh
-  axibase@NURSWGHBS001:~$ time docker ps -as
+  $ time docker ps -as
   CONTAINER ID   IMAGE                             COMMAND                  CREATED         STATUS         PORTS                     SIZE
   83010924db3c   axibase/atsd_package_validation   "/bin/bash /root/chec"   5 minutes ago   Up 3 minutes   atsd_package_validation   561.7 MB (virtual 818.9 MB)
   ...
@@ -151,8 +151,8 @@ Import the [rules](./volume-rules.xml) file to raise an alert whenever a volume 
 
 As an alternative to running the `du` script on the Docker host, you can launch an Axibase Collector container with the `/var/lib/docker/volumes` directory mounted in read-only mode.
 
-* Replace the `atsd_host` placeholder with the actual ATSD hostname in the command below.
-* Replace `collector-user` and `collector-password` with [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+* Replace the `atsd_hostname` placeholder with the actual ATSD hostname in the command below.
+* Replace `username` and `password` with [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
    ```properties
    docker run \
@@ -162,7 +162,7 @@ As an alternative to running the `du` script on the Docker host, you can launch 
      --name=axibase-collector \
      --volume /var/lib/docker/volumes:/var/lib/docker/volumes:ro \
      axibase/collector \
-      -atsd-url=https://collector-user:collector-password@atsd_host:8443 \
+      -atsd-url=https://username:password@atsd_hostname:8443 \
       -job-enable=docker-socket
    ```
 
@@ -193,7 +193,7 @@ As an alternative to running the `du` script on the Docker host, you can launch 
 * Run the script once manually to validate import:
 
    ```sh
-   docker exec axibase-collector /opt/axibase-collector/ext/docker_volume_collect.sh docker_hostname tcp://atsd_host:8081
+   docker exec axibase-collector /opt/axibase-collector/ext/docker_volume_collect.sh docker_hostname tcp://atsd_hostname:8081
    ```
 
 * Log in to ATSD and verify that the following metrics are available:
@@ -216,7 +216,7 @@ As an alternative to running the `du` script on the Docker host, you can launch 
    # Replace 'docker_hostname' with the hostname of the Docker host
    # Replace 'atsd_host' with ATSD hostname or IP address
    # Run script every 15 minutes
-   */15 * * * * /opt/axibase-collector/ext/docker_volume_collect.sh docker_hostname tcp://atsd_host:8081
+   */15 * * * * /opt/axibase-collector/ext/docker_volume_collect.sh docker_hostname tcp://atsd_hostname:8081
    # Empty line is required at the end of this file for a valid cron file
    ```
 

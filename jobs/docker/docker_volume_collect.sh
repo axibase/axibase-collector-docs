@@ -9,7 +9,7 @@
 # - Write commands to file.
 # ./docker_volume_collect.sh docker_hostname >> ~/out.txt
 # - Send commands to ATSD. Replace atsd_host with the actual ATSD hostname.
-# ./docker_volume_collect.sh docker_hostname tcp://atsd_host:8081
+# ./docker_volume_collect.sh docker_hostname tcp://atsd_hostname:8081
 
 metric_used=docker.volume.used
 metric_used_percent=docker.volume.used_percent

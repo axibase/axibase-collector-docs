@@ -216,7 +216,7 @@
         "inputarguments_9": "-Xloggc:/home/axibase/atsd/logs/gc.log",
         "librarypath": "/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib",
         "managementspecversion": "1.2",
-        "name": "19789@NURSWGVML007",
+        "name": "19789",
         "specname": "Java Virtual Machine Specification",
         "specvendor": "Oracle Corporation",
         "specversion": "1.7",

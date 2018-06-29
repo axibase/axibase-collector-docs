@@ -139,7 +139,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 #### keep_before
 
-* `ftp://user:password@192.0.2.1:21/home/user/nurswgvml106_*`
+* `ftp://username:password@192.0.2.1:21/home/user/nurswgvml106_*`
 * `${FILE?keep_before('_')}`
 
 | Matching Paths | Output |
