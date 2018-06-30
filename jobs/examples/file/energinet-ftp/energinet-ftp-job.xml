@@ -11,7 +11,7 @@
     <configurations>
       <com.axibase.collector.model.job.file.FileRoutingConfiguration>
         <name>energinet-dk-ftp</name>
-        <path>username:password@10.102.0.51:21/onlinedata/${TIME(&quot;now&quot;, &quot;yyyyMMdd&quot;)}_onlinedata.txt</path>
+        <path>username:password@192.0.2.1:21/onlinedata/${TIME(&quot;now&quot;, &quot;yyyyMMdd&quot;)}_onlinedata.txt</path>
         <encoding>ISO-8859-1</encoding>
         <detectEncoding>false</detectEncoding>
         <parserType>CSV</parserType>

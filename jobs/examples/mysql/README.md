@@ -38,7 +38,7 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 
 ### Configure MySQL Server Database Connection
 
-* Open the **Data Sources > Databases** page and select the `10.102.0.7` database.
+* Open the **Data Sources > Databases** page and select the `192.0.2.1` database.
 * Provide connection parameters to the target MySQL Server database as displayed below:
 
 ![](./images/mysql-datasource.png)
@@ -54,7 +54,7 @@ SELECT 1
 ### Verify Job Configuration
 
 * Open **MySQL Server** job.
-* Set **Data Source** to `10.102.0.7`.
+* Set **Data Source** to `192.0.2.1`.
 
 ![](./images/mysql-jdbc-job.png)
 

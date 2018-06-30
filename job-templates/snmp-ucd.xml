@@ -27,7 +27,7 @@
 			<entitySet>
 				<name>snmp hosts</name>
 				<entities>
-					<string>10.102.0.6</string>
+					<string>192.0.2.1</string>
 				</entities>
 			</entitySet>
 			<tagNames>

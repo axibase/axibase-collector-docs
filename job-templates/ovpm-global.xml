@@ -38,9 +38,9 @@
 				</entities>
 			</entitySet>
 			<connectionPoolConfig>
-				<name>ovpm-10.102.0.6</name>
+				<name>ovpm-192.0.2.1</name>
 				<protocol>http</protocol>
-				<server>10.102.0.6</server>
+				<server>192.0.2.1</server>
 				<port>8081</port>
 				<maxTotal>10</maxTotal>
 				<cookieEnabled>false</cookieEnabled>

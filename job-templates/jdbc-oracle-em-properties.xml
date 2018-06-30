@@ -15,7 +15,7 @@
 	<databaseConfiguration>
 		<name>OracleEM</name>
 		<type>ORACLE</type>
-		<server>10.102.0.8</server>
+		<server>192.0.2.1</server>
 		<port>1521</port>
 		<database>SYSMAN</database>
 		<dbUser>axibase</dbUser>

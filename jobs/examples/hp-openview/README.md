@@ -20,15 +20,15 @@ Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 
 
 ### Configure HP Open View HTTP Pool
 
-* Open the **Data Sources** menu and select **HTTP Pools**, select the `ovpm-10.102.0.6` database.
-* Provide connection parameters to the target `ovpm-10.102.0.6` pool as displayed below:
+* Open the **Data Sources** menu and select **HTTP Pools**, select the `ovpm-192.0.2.1` database.
+* Provide connection parameters to the target `ovpm-192.0.2.1` pool as displayed below:
 
 ![](./images/http_pool_conf.png)
 
 ### Verify Job Configuration
 
 * Open the `ovpm-global` job.
-* Set the **HTTP Pool** to `ovpm-10.102.0.6`.
+* Set the **HTTP Pool** to `ovpm-192.0.2.1`.
 
 ![](./images/ovmp_configuration.png)
 

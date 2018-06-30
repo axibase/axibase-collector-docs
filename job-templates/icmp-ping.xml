@@ -25,9 +25,8 @@
 			<entitySet>
 				<name>icmp-hosts</name>
 				<entities>
-					<string>google.com</string>
-					<string>10.102.0.10</string>
-					<string>axibase.com</string>
+					<string>example.org</string>
+					<string>192.0.2.1</string>
 				</entities>
 			</entitySet>
 			<ipVersion>Prefer IPv4</ipVersion>

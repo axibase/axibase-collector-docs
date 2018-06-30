@@ -9,9 +9,9 @@
     <commitInterval>10</commitInterval>
     <errorThreshold>0</errorThreshold>
     <databaseConfiguration>
-      <name>10.102.0.7</name>
+      <name>192.0.2.1</name>
       <type>MYSQL</type>
-      <server>10.102.0.7</server>
+      <server>192.0.2.1</server>
       <port>3306</port>
       <database>performance_schema</database>
       <dbUser>user</dbUser>

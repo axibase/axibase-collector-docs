@@ -2,21 +2,21 @@
 
 ## Overview
 
-AWS job allows you to copy [Amazon Web Services CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into Axibase Time Series Database for long-term retention, reporting, and visualization.
+AWS job allows you to copy [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into Axibase Time Series Database for long-term retention, reporting, and visualization.
 
-Refer to [AWS Documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
+The AWS job maintains markers for each CloudWatch metric in the built-in Collector database to load only incremental data. These markers allow the job to execute optimized API requests and to avoid data gaps in case of network outages.
 
-The AWS job stores markers for each CloudWatch metric to ensure API requests are incremental and load only the most recent data. These markers allow the job to build optimized queries and to avoid data gaps in case of network outages.
+When started for the first time, the AWS job loads available historical data for up to 2 weeks.
 
-Each job can be configured to execute multiple configurations to retrieve metrics from different [regions](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region). The configurations are processed sequentially within each job iteration.
-
-When an AWS job is started for the first time, the job loads available historical data from CloudWatch, available for up to 2 weeks.
+Each job can be configured to retrieve metrics from different [AWS regions](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region).
 
 ## Supported Namespaces
 
 Each AWS [namespace](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html) provides a set of metrics available for resources of a particular type.
 
-You can configure the AWS job to collect metrics for all or a subset of namespaces. To minimize the number of API queries, choose to collect data only for AWS services that you actively use.
+Refer to [AWS Documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
+
+You can configure the AWS job to collect metrics for all or a subset of namespaces. To reduce the number of API queries, collect data only for AWS services that you use.
 
 Available namespaces:
 
@@ -44,7 +44,7 @@ For each metric, the AWS job retrieves the following period statistics:
 * sum
 * sample count
 
-The AWS statistics are stored in ATSD as metrics which means that ATSD can compute aggregate statistics on top of AWS statistics.
+The AWS statistics are stored in ATSD as metrics which allows ATSD to compute aggregate statistics on top of AWS statistics.
 
 For example, the **AWS/Billing Estimated Charges** metric is stored as 5 metrics:
 
@@ -56,7 +56,7 @@ For example, the **AWS/Billing Estimated Charges** metric is stored as 5 metrics
 
 The number of metrics within each namespace varies greatly. For AWS/EC2 the list consists of more than 15 [metrics](#sample-aws-ec2-cloudwatch-metrics).
 
-The job assigns each metric to an entity which is determined based on the [primary dimension](#namespace-dimensions).
+The job assigns each metric to an entity which is extracted from the [primary dimension](#namespace-dimensions).
 
 ## Configuration Settings
 
