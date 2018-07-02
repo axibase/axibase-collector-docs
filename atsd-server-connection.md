@@ -57,7 +57,7 @@ The Collector transmits data into ATSD via HTTP protocol. The HTTP connection po
 * Open the **Data Sources > HTTP Pools** page in the top menu and click **Add**.
 * Enter a pool name.
 * Enter the hostname or IP address to the target ATSD server.
-* Define port `8443` and select `https` protocol.
+* Specify port `8443` and select `https` protocol.
 * Clear **Ignore SSL Certificate Errors** if the target ATSD [SSL certificate](https://axibase.com/docs/atsd/administration/ssl-ca-signed.html) is **trusted** (not self-signed).
 * Set timeouts and limits based on the [recommended settings](#recommended-pool-settings) below.
 * Select `Authentication Type=BASIC`, enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
