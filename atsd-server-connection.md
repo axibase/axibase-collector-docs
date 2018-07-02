@@ -16,7 +16,7 @@ With advanced configuration, each job stores data in a specific ATSD instance us
 
 ## Requirements
 
-To store data in a specific ATSD instance, Collector uses a restricted user account defined in the target ATSD instanc and authorized to write data and metadata for all or specific entities.
+To store data in a specific ATSD instance, Collector uses a restricted user account defined in the target ATSD instance and authorized to write data and metadata for all or specific entities.
 
 Create a [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) on the **Settings > User Accounts** page in the ATSD web interface.
 
