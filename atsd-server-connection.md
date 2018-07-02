@@ -22,13 +22,13 @@ The [collector account](https://axibase.com/docs/atsd/administration/collector-a
 
 ## Initial Configuration
 
-If the storage driver is not yet configured, the user is asked to create a storage driver on initial login into the Collector.
+If the storage driver is not yet configured, the user is asked to create a storage driver on initial login.
 
 * Specify the hostname or IP address of the target ATSD server.
 * Specify `https` service port address. The default is `8443`.
 * Enter the [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 * Click **Validate** to verify settings. In case of permission errors, ensure that the collector account has both `API_DATA_WRITE` and `API_META_WRITE` roles.
-* If validation is successful, click **Save** to create the storage driver. The collector will automatically create an HTTP connection pool and a storage driver based on the submitted settings.
+* If validation is successful, click **Save** to create the storage driver. The collector automatically creates an HTTP connection pool and a storage driver based on the submitted settings.
 
 ![ATSD Configuration Page](./images/atsd_configuration.png)
 
@@ -58,7 +58,7 @@ The Collector transmits data into ATSD via the HTTP protocol. The HTTP connectio
 * Enter a pool name.
 * Enter the hostname or IP address to the target ATSD server.
 * Select `8443` port and the `https` protocol.
-* Uncheck **Ignore SSL Certificate Errors** if the target ATSD [SSL certificate](https://axibase.com/docs/atsd/administration/ssl-ca-signed.html) is trusted (not self-signed).
+* Clear **Ignore SSL Certificate Errors** if the target ATSD [SSL certificate](https://axibase.com/docs/atsd/administration/ssl-ca-signed.html) is **trusted** (not self-signed).
 * Set timeouts and limits based on the [recommended settings](#recommended-pool-settings) below.
 * Select `Authentication Type=BASIC`, enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 * Set **Test Path** to `/ping`.
