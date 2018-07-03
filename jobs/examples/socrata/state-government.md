@@ -325,7 +325,7 @@ m:district=1080 m:proficient_1=40
 | Attribution | Department of Economic Development and Tourism |
 | Category | Economic Development |
 | Date Range | 2006-2012 |
-| Links | [catalog](https://catalog.data.gov/dataset/aaa-fuel-prices-52bf0), [attribution](https://hawaii.gov/dbedt),  [metadata](https://data.hawaii.gov/api/views/dqp6-3idi),  [data](https://data.hawaii.gov/api/views/dqp6-3idi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/ee379926) |
+| Links | [catalog](https://catalog.data.gov/dataset/aaa-fuel-prices-52bf0), [attribution](https://dbedt.hawaii.gov),  [metadata](https://data.hawaii.gov/api/views/dqp6-3idi),  [data](https://data.hawaii.gov/api/views/dqp6-3idi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/ee379926) |
 
 * Command
 
@@ -357,7 +357,7 @@ t:physicalunit=Dollars m:price=2.314
 | Attribution | Department of Revenue Services |
 | Category | Government |
 | Date Range | 2013-2014 |
-| Links | [catalog](https://catalog.data.gov/dataset/sales-and-use-tax-per-town-by-naics-2013-and-2014), [attribution](https://www.ct.gov/drs/cwp/view.asp?a=4128&q=483506), [metadata](https://data.ct.gov/api/views/rkm7-uwkb),  [data](https://data.ct.gov/api/views/rkm7-uwkb/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6be07c75) |
+| Links | [catalog](https://catalog.data.gov/dataset/sales-and-use-tax-per-town-by-naics-2013-and-2014), [attribution](http://www.ct.gov/drs/cwp/view.asp?a=4128&q=483506), [metadata](https://data.ct.gov/api/views/rkm7-uwkb),  [data](https://data.ct.gov/api/views/rkm7-uwkb/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6be07c75) |
 
 * Command
 
@@ -442,7 +442,7 @@ m:actual_peak_demand=2.56 m:consumption_annual_goals_percent_below_baseline=0
 | Attribution | Motor Vehicle Administration |
 | Category | Transportation |
 | Date Range | 2007-2015 |
-| Links | [catalog](https://catalog.data.gov/dataset/mva-vehicle-sales-counts-by-month-for-cy-2002-2015), [attribution](https://www.mva.maryland.gov/), [metadata](https://data.maryland.gov/api/views/un65-7ipd),  [data](https://data.maryland.gov/api/views/un65-7ipd/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f2083bc9) |
+| Links | [catalog](https://catalog.data.gov/dataset/mva-vehicle-sales-counts-by-month-for-cy-2002-2015), [attribution](http://www.mva.maryland.gov/), [metadata](https://data.maryland.gov/api/views/un65-7ipd),  [data](https://data.maryland.gov/api/views/un65-7ipd/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f2083bc9) |
 
 * Command
 
@@ -766,7 +766,7 @@ t:businesscity=Burien
 | Attribution | Department of Insurance |
 | Category | Business |
 | Date Range | 2007-2016 |
-| Links | [catalog](https://catalog.data.gov/dataset/insurance-company-complaints-resolutions-status-and-recoveries), [attribution](https://www.ct.gov/cid), [metadata](https://data.ct.gov/api/views/t64r-mt64),  [data](https://data.ct.gov/api/views/t64r-mt64/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/b1200161) |
+| Links | [catalog](https://catalog.data.gov/dataset/insurance-company-complaints-resolutions-status-and-recoveries), [attribution](http://www.ct.gov/cid), [metadata](https://data.ct.gov/api/views/t64r-mt64),  [data](https://data.ct.gov/api/views/t64r-mt64/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/b1200161) |
 
 * Command
 
@@ -985,7 +985,7 @@ t:type="Government & Finance" t:cash_ball=03 m:"09 36 44 53 59"
 | Attribution | Office of the Chief Medical Examiner |
 | Category | Health and Human Services |
 | Date Range | 2012-2015 |
-| Links | [catalog](https://catalog.data.gov/dataset/accidental-drug-related-deaths-january-2012-sept-2015), [attribution](https://www.ct.gov/ocme), [metadata](https://data.ct.gov/api/views/rybz-nyjw),  [data](https://data.ct.gov/api/views/rybz-nyjw/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/80aaea79) |
+| Links | [catalog](https://catalog.data.gov/dataset/accidental-drug-related-deaths-january-2012-sept-2015), [attribution](http://www.ct.gov/ocme), [metadata](https://data.ct.gov/api/views/rybz-nyjw),  [data](https://data.ct.gov/api/views/rybz-nyjw/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/80aaea79) |
 
 * Command
 
@@ -1039,7 +1039,7 @@ t:type="Health and Human Services" t:fentanyl=Y m:"Acute fent, hydrocod, benzodi
 | Id | `2ix7-8hwk` |
 | Name | Oregon Consumer Complaints |
 | State | [Oregon](https://data.oregon.gov) |
-| Description | Consumer complaints registered with the Oregon Department of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database does not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, affect the likelihood of a consumer complaint being filed. The number of complaints about a business is not a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints are not immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see [https://www.doj.state.or.us/consumer-protection/](`https://www.doj.state.or.us/consumer-protection/`) |
+| Description | Consumer complaints registered with the Oregon Department of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database does not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, affect the likelihood of a consumer complaint being filed. The number of complaints about a business is not a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints are not immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see [`https://www.doj.state.or.us/consumer-protection/`](https://www.doj.state.or.us/consumer-protection/) |
 | Attribution | Oregon Department of Justice |
 | Category | Public Safety |
 | Date Range | 2013-2016 |
