@@ -107,7 +107,7 @@ hasMetric('mysql.global_status.uptime')
 
 ![](./images/mysql-portal-icon.png)
 
-[**MySQL Server Performance Live Portal**](http://apps.axibase.com/chartlab/cf72dec3)
+[**MySQL Server Performance Live Portal**](https://apps.axibase.com/chartlab/cf72dec3)
 ![](./images/mysql-portal.png)
 
 ## Data Queries

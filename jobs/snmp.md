@@ -198,7 +198,7 @@ When you import the MIB file the Collector searches for any parent files, specif
 System MIB directory location:
 
 * On Linux, the MIB files are stored in the `/usr/share/snmp` directory.
-* On HP-UX, the MIB files are stored in the `/var/opt/OV/share/snmp_mibs` [directory](http://nixdoc.net/man-pages/HP-UX/snmpdm.1m.html).
+* On HP-UX, the MIB files are stored in the `/var/opt/OV/share/snmp_mibs` [directory](https://nixdoc.net/man-pages/HP-UX/snmpdm.1m.html).
 
 ### Base MIB Files
 

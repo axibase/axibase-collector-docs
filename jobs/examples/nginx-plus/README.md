@@ -13,7 +13,7 @@ The document contains instructions for the first method of configuration.
 
 ## Requirements
 
-* NGINX PLUS server with [`ngx_http_status_module`](http://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
+* NGINX PLUS server with [`ngx_http_status_module`](https://nginx.org/en/docs/http/ngx_http_status_module.html) enabled.
 * [Axibase Collector](../../../README.md) for scheduled polling of the NGINX status page.
 * [Axibase Time Series Database](https://axibase.com/docs/atsd/installation/) as a centralized data repository.
 
@@ -89,7 +89,7 @@ List of collected [nginx PLUS Server Metrics](./nginx-plus-server-metrics.md).
 * Open **Entity** tabs, find the nginx PLUS servers you want to see information about, and click the **Portal** icon.
 
 ![](./images/ngp_portal_selection.png)
-[nginx PLUS Status portal example](http://apps.axibase.com/chartlab/0adf6705)
+[nginx PLUS Status portal example](https://apps.axibase.com/chartlab/0adf6705)
 
 ## Notifications
 

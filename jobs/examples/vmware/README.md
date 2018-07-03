@@ -78,19 +78,19 @@ Query result must be `Query OK`.
 
 ### Live Portals
 
-* [VMware Cluster Portal](http://axibase.com/chartlab/36ae5c9e/3/)
+* [VMware Cluster Portal](https://apps.axibase.com/chartlab/36ae5c9e/3/)
 
 ![](./images/vmware_cluster_portal.png)
 
-* [VMware Host Portal](http://axibase.com/chartlab/36ae5c9e)
+* [VMware Host Portal](https://apps.axibase.com/chartlab/36ae5c9e)
 
 ![](./images/vmware_host_portal.png)
 
-* [VMware Host VMs](http://axibase.com/chartlab/36ae5c9e/2/)
+* [VMware Host VMs](https://apps.axibase.com/chartlab/36ae5c9e/2/)
 
 ![](./images/vmware_hostvm_breakdown_portal.png)
 
-* [VMware VM Portal](http://axibase.com/chartlab/36ae5c9e/4/)
+* [VMware VM Portal](https://apps.axibase.com/chartlab/36ae5c9e/4/)
 
 ![](./images/vmware_vm_portal.png)
 

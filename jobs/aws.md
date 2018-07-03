@@ -8,13 +8,13 @@ The AWS job maintains markers for each CloudWatch metric in the built-in Collect
 
 When started for the first time, the AWS job loads available historical data for up to 2 weeks.
 
-Each job can be configured to retrieve metrics from different [AWS regions](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region).
+Each job can be configured to retrieve metrics from different [AWS regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region).
 
 ## Supported Namespaces
 
-Each AWS [namespace](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html) provides a set of metrics available for resources of a particular type.
+Each AWS [namespace](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html) provides a set of metrics available for resources of a particular type.
 
-Refer to [AWS Documentation](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
+Refer to [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
 
 You can configure the AWS job to collect metrics for all or a subset of namespaces. To reduce the number of API queries, collect data only for AWS services that you use.
 
@@ -64,8 +64,8 @@ The job assigns each metric to an entity which is extracted from the [primary di
 |:---|:---|
 | Name | Configuration name. |
 | HTTP Pool | Pool of https connections to execute requests against the specified CloudWatch endpoint. The pool can be left empty. |
-| Endpoint  | [CloudWatch Endpoint](http://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region) URL.   |
-| Access key id  | Access key. See [Getting Your Access Key ID and Secret Access Key](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).   |
+| Endpoint  | [CloudWatch Endpoint](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region) URL.   |
+| Access key id  | Access key. See [Getting Your Access Key ID and Secret Access Key](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).   |
 | Secret access key  | Secret access key. |
 | Namespaces  | CloudWatch metric namespaces enabled for collection.   |
 | Collect Status  |  Collect status check metrics such as <br>`StatusCheckFailed`, `StatusCheckFailed_Instance`, `StatusCheckFailed_System` |

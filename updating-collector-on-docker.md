@@ -5,13 +5,13 @@
 The latest release is available at the following [link](https://axibase.com/public/axibase-collector_latest.htm):
 
 ```bash
-wget -O axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz
+wget -O axibase-collector.tar.gz https://axibase.com/public/axibase-collector-v{revision}.tar.gz
 ```
 
 If `wget` is not installed, use `curl`:
 
 ```bash
-curl -o axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz
+curl -o axibase-collector.tar.gz https://axibase.com/public/axibase-collector-v{revision}.tar.gz
 ```
 
 ## Copy Archive to Docker Host

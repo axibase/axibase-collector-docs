@@ -1,6 +1,6 @@
 # Overview
 
-This list contains references to datasets released by State Governments on [data.gov](http://catalog.data.gov/dataset?q=&sort=views_recent+desc&organization_type=State+Government&res_format=JSON) in [Socrata](https://github.com/socrata) format (JSON).
+This list contains references to datasets released by State Governments on [data.gov](https://catalog.data.gov/dataset?q=&sort=views_recent+desc&organization_type=State+Government&res_format=JSON) in [Socrata](https://github.com/socrata) format (JSON).
 
 ## Dataset Types
 
@@ -44,7 +44,7 @@ ___
 | Attribution | Illinois Department of Public Health, Office of Finance and Administration, Division of Vital Records |
 | Category | Health |
 | Date Range | 1995-2012 |
-| Links | catalog: `http://catalog.data.gov/dataset/abortion-demographics-1995-2012-8f496`,  metadata: `https://data.illinois.gov/api/views/f7nd-jj28`,  data: `https://data.illinois.gov/api/views/f7nd-jj28/rows.json?accessType=DOWNLOAD`,  portal: `https://apps.axibase.com/chartlab/55eb27ce` |
+| Links | catalog: `https://catalog.data.gov/dataset/abortion-demographics-1995-2012-8f496`,  metadata: `https://data.illinois.gov/api/views/f7nd-jj28`,  data: `https://data.illinois.gov/api/views/f7nd-jj28/rows.json?accessType=DOWNLOAD`,  portal: `https://apps.axibase.com/chartlab/55eb27ce` |
 
 * Command
 
@@ -102,7 +102,7 @@ series e:f7nd-jj28 d:1995-01-01T00:00:00.000Z t:year=TOTAL m:f7nd-jj28.value=523
 | Attribution | MSAC |
 | Category | Public Safety |
 | Date Range | 1975-2012 |
-| Links | [catalog](http://catalog.data.gov/dataset/anne-arundel-county-crime-rate-by-type-e5923), [metadata](https://data.maryland.gov/api/views/3fys-ggpk),  [data](https://data.maryland.gov/api/views/3fys-ggpk/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/a85c4f60) |
+| Links | [catalog](https://catalog.data.gov/dataset/anne-arundel-county-crime-rate-by-type-e5923), [metadata](https://data.maryland.gov/api/views/3fys-ggpk),  [data](https://data.maryland.gov/api/views/3fys-ggpk/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/a85c4f60) |
 
 ### Additional Commands
 
@@ -145,7 +145,7 @@ m:m_v_theft=599.3 m:violent_crime_rate=608.6 m:rape=22.3 m:population=331390
 | Attribution | The Port Authority of New York & New Jersey |
 | Category | Transportation |
 | Date Range | 2000-2015 |
-| Links | [catalog](http://catalog.data.gov/dataset/automobiles-annual-imports-and-exports-through-port-authority-of-ny-nj-maritime-terminals-), [attribution](http://www.panynj.gov/port/pdf/port-trade-statistics-summary-2001-2011.pdf), [metadata](https://data.ny.gov/api/views/u49g-d7hw), [data](https://data.ny.gov/api/views/u49g-d7hw/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/c041c40b) |
+| Links | [catalog](https://catalog.data.gov/dataset/automobiles-annual-imports-and-exports-through-port-authority-of-ny-nj-maritime-terminals-), [attribution](https://www.panynj.gov/port/pdf/port-trade-statistics-summary-2001-2011.pdf), [metadata](https://data.ny.gov/api/views/u49g-d7hw), [data](https://data.ny.gov/api/views/u49g-d7hw/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/c041c40b) |
 
 #### Series Command
 
@@ -174,7 +174,7 @@ series e:u49g-d7hw d:2015-01-01T00:00:00.000Z t:type=Imports m:volume=433822
 | Attribution | Bureau of Labor Statistics |
 | Category | Business and Economy |
 | Date Range | 2003-2014 |
-| Links | `http://catalog.data.gov/dataset/employment-figures-f55ae`,  [portal](https://apps.axibase.com/chartlab/fc75db9b) |
+| Links | `https://catalog.data.gov/dataset/employment-figures-f55ae`,  [portal](https://apps.axibase.com/chartlab/fc75db9b) |
 
 ### Additional Series Commands
 
@@ -255,7 +255,7 @@ m:total_nameplate_kw=4.6 m:expected_kwh_annual_production=5399.66 m:incentive_do
 | Attribution | DOH |
 | Category | Health |
 | Date Range | 2004-2008 |
-| Links | [catalog](http://catalog.data.gov/dataset/table-17-solid-waste-recycled-in-tons-851c9), [attribution](http://hawaii.gov/doh), [metadata](https://data.hawaii.gov/api/views/v48g-wbhi),  [data](https://data.hawaii.gov/api/views/v48g-wbhi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/48b1d9b2) |
+| Links | [catalog](https://catalog.data.gov/dataset/table-17-solid-waste-recycled-in-tons-851c9), [attribution](http://hawaii.gov/doh), [metadata](https://data.hawaii.gov/api/views/v48g-wbhi),  [data](https://data.hawaii.gov/api/views/v48g-wbhi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/48b1d9b2) |
 
 * Command
 
@@ -284,11 +284,11 @@ m:diverted_statewide=688820 m:produced_statewide=2116724
 | Id | `f3h8-mnxi` |
 | Name | Math And Reading Proficiency by School Year, Public School District and Grade Level |
 | State | [Iowa](https://data.iowa.gov) |
-| Description | Dataset contains information on public school districts academic progress of their students in reading and math annually starting with school year ending in 2003.  All public schools and districts report annually to the Iowa Department of Education through Adequate Yearly Progress (AYP).<br>All AYP determinations are made annually using reading and math student assessment data.  Proficiency is based on a standard score scale.  More information can be found at: `http://itp.education.uiowa.edu/ia/AYPInformation.aspx` |
+| Description | Dataset contains information on public school districts academic progress of their students in reading and math annually starting with school year ending in 2003.  All public schools and districts report annually to the Iowa Department of Education through Adequate Yearly Progress (AYP).<br>All AYP determinations are made annually using reading and math student assessment data.  Proficiency is based on a standard score scale.  More information can be found at: `https://itp.education.uiowa.edu/ia/AYPInformation.aspx` |
 | Attribution | Iowa Department of Education, Adequate Yearly Progress |
 | Category | Education |
 | Date Range | 2003-2015 |
-| Links | [catalog](http://catalog.data.gov/dataset/math-and-reading-proficiency-by-school-year-public-school-district-and-grade-level), [attribution](http://itp.education.uiowa.edu/ia/AYPInformation.aspx), [metadata](https://data.iowa.gov/api/views/f3h8-mnxi),  [data](https://data.iowa.gov/api/views/f3h8-mnxi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/bc9ba2d9) |
+| Links | [catalog](https://catalog.data.gov/dataset/math-and-reading-proficiency-by-school-year-public-school-district-and-grade-level), [attribution](https://itp.education.uiowa.edu/ia/AYPInformation.aspx), [metadata](https://data.iowa.gov/api/views/f3h8-mnxi),  [data](https://data.iowa.gov/api/views/f3h8-mnxi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/bc9ba2d9) |
 
 * Command
 
@@ -325,7 +325,7 @@ m:district=1080 m:proficient_1=40
 | Attribution | Department of Economic Development and Tourism |
 | Category | Economic Development |
 | Date Range | 2006-2012 |
-| Links | [catalog](http://catalog.data.gov/dataset/aaa-fuel-prices-52bf0), [attribution](http://hawaii.gov/dbedt),  [metadata](https://data.hawaii.gov/api/views/dqp6-3idi),  [data](https://data.hawaii.gov/api/views/dqp6-3idi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/ee379926) |
+| Links | [catalog](https://catalog.data.gov/dataset/aaa-fuel-prices-52bf0), [attribution](https://hawaii.gov/dbedt),  [metadata](https://data.hawaii.gov/api/views/dqp6-3idi),  [data](https://data.hawaii.gov/api/views/dqp6-3idi/rows.json?accessType=DOWNLOAD),  [portal](https://apps.axibase.com/chartlab/ee379926) |
 
 * Command
 
@@ -357,7 +357,7 @@ t:physicalunit=Dollars m:price=2.314
 | Attribution | Department of Revenue Services |
 | Category | Government |
 | Date Range | 2013-2014 |
-| Links | [catalog](http://catalog.data.gov/dataset/sales-and-use-tax-per-town-by-naics-2013-and-2014), [attribution](http://www.ct.gov/drs/cwp/view.asp?a=4128&q=483506), [metadata](https://data.ct.gov/api/views/rkm7-uwkb),  [data](https://data.ct.gov/api/views/rkm7-uwkb/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6be07c75) |
+| Links | [catalog](https://catalog.data.gov/dataset/sales-and-use-tax-per-town-by-naics-2013-and-2014), [attribution](https://www.ct.gov/drs/cwp/view.asp?a=4128&q=483506), [metadata](https://data.ct.gov/api/views/rkm7-uwkb),  [data](https://data.ct.gov/api/views/rkm7-uwkb/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6be07c75) |
 
 * Command
 
@@ -393,7 +393,7 @@ m:retail_sales_of_goods=0 m:total_tax_due_at_6_35=0
 | Attribution | MEA |
 | Category | Energy and Environment |
 | Date Range | 2007-2015 |
-| Links | `http://catalog.data.gov/dataset/per-capita-electricity-consumption-7b888`, [portal](https://apps.axibase.com/chartlab/db5aa772) |
+| Links | `https://catalog.data.gov/dataset/per-capita-electricity-consumption-7b888`, [portal](https://apps.axibase.com/chartlab/db5aa772) |
 
 * Command
 
@@ -442,7 +442,7 @@ m:actual_peak_demand=2.56 m:consumption_annual_goals_percent_below_baseline=0
 | Attribution | Motor Vehicle Administration |
 | Category | Transportation |
 | Date Range | 2007-2015 |
-| Links | [catalog](http://catalog.data.gov/dataset/mva-vehicle-sales-counts-by-month-for-cy-2002-2015), [attribution](http://www.mva.maryland.gov/), [metadata](https://data.maryland.gov/api/views/un65-7ipd),  [data](https://data.maryland.gov/api/views/un65-7ipd/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f2083bc9) |
+| Links | [catalog](https://catalog.data.gov/dataset/mva-vehicle-sales-counts-by-month-for-cy-2002-2015), [attribution](https://www.mva.maryland.gov/), [metadata](https://data.maryland.gov/api/views/un65-7ipd),  [data](https://data.maryland.gov/api/views/un65-7ipd/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f2083bc9) |
 
 * Command
 
@@ -475,7 +475,7 @@ m:used=49927 m:total_sales_new=755015820
 | Attribution | DAS Human Resources |
 | Category | Government |
 | Date Range | 2003-2015 |
-| Links | [catalog](http://catalog.data.gov/dataset/das-hr-almanac-executive-branch-employment-by-race),  [metadata](https://data.ct.gov/api/views/qm34-pq7e),  [data](https://data.ct.gov/api/views/qm34-pq7e/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/88942f63) |
+| Links | [catalog](https://catalog.data.gov/dataset/das-hr-almanac-executive-branch-employment-by-race),  [metadata](https://data.ct.gov/api/views/qm34-pq7e),  [data](https://data.ct.gov/api/views/qm34-pq7e/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/88942f63) |
 
 * Command
 
@@ -510,7 +510,7 @@ m:amer_indian=117 m:hispanic=2956 m:black=6559 m:asian=568
 | Attribution | New York State Higher Education Services Corporation |
 | Category | Education |
 | Date Range | 2009-2014 |
-| Links | [catalog](http://catalog.data.gov/dataset/scholarship-recipients-and-dollars-by-sector-group-beginning-2009), [attribution](http://www.hesc.ny.gov/content.nsf/SFC/Grants_Scholarships_and_Awards), [metadata](https://data.ny.gov/api/views/d8hf-wqd9),  [data](https://data.ny.gov/api/views/d8hf-wqd9/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/9026c3d7) |
+| Links | [catalog](https://catalog.data.gov/dataset/scholarship-recipients-and-dollars-by-sector-group-beginning-2009), [attribution](https://www.hesc.ny.gov/content.nsf/SFC/Grants_Scholarships_and_Awards), [metadata](https://data.ny.gov/api/views/d8hf-wqd9),  [data](https://data.ny.gov/api/views/d8hf-wqd9/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/9026c3d7) |
 
 * Command
 
@@ -544,7 +544,7 @@ m:scholarship_fte=2.5 m:scholarship_headcount=3
 | Attribution | New York State Office of Temporary and Disability Assistance (OTDA) |
 | Category | Human Services |
 | Date Range | 2013-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/public-assistance-and-snap-fraud-prevention-performance-measures-beginning-2013), [attribution](https://otda.ny.gov/resources/welfare-fraud/), [metadata](https://data.ny.gov/api/views/uubd-eei2),  [data](https://data.ny.gov/api/views/uubd-eei2/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/0e4a225d) |
+| Links | [catalog](https://catalog.data.gov/dataset/public-assistance-and-snap-fraud-prevention-performance-measures-beginning-2013), [attribution](https://otda.ny.gov/resources/welfare-fraud/), [metadata](https://data.ny.gov/api/views/uubd-eei2),  [data](https://data.ny.gov/api/views/uubd-eei2/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/0e4a225d) |
 
 * Command
 
@@ -597,7 +597,7 @@ m:paris_closed_prior_resolved=9
 | Attribution | Bureau of Labor Statistics |
 | Category | Business and Economy |
 | Date Range | 2009-2014 |
-| Links | [catalog](http://catalog.data.gov/dataset/maryland-veterans-unemployment-rate-3ea61), [attribution](http://www.bls.gov/), [metadata](https://data.maryland.gov/api/views/prxf-ppu5),  [data](https://data.maryland.gov/api/views/prxf-ppu5/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/61e23fa5) |
+| Links | [catalog](https://catalog.data.gov/dataset/maryland-veterans-unemployment-rate-3ea61), [attribution](https://www.bls.gov/), [metadata](https://data.maryland.gov/api/views/prxf-ppu5),  [data](https://data.maryland.gov/api/views/prxf-ppu5/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/61e23fa5) |
 
 * Command
 
@@ -627,7 +627,7 @@ m:national_veterans_unemployment_rate=8.7
 | Attribution | Maryland Transit Authority |
 | Category | Transportation |
 | Date Range | 2007-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/trips-taken-on-public-transit-by-transit-type-4abd1), [attribution](http://mta.maryland.gov/), [metadata](https://data.maryland.gov/api/views/5ymg-2p8u),  [data](https://data.maryland.gov/api/views/5ymg-2p8u/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/fd596ed9) |
+| Links | [catalog](https://catalog.data.gov/dataset/trips-taken-on-public-transit-by-transit-type-4abd1), [attribution](https://mta.maryland.gov/), [metadata](https://data.maryland.gov/api/views/5ymg-2p8u),  [data](https://data.maryland.gov/api/views/5ymg-2p8u/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/fd596ed9) |
 
 * Command
 
@@ -668,7 +668,7 @@ m:commuter_bus_total=249082 m:taxi_access_trips=29592
 | Attribution | U.S. Department of Commerce, Bureau of Economic Analysis, Compensation of Employees by Industry (SQ6, SQ6N) |
 | Category | Economy |
 | Date Range | 1998-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/employee-compensation-by-industry-in-iowa), [attribution](http://www.bea.gov/itable/index.cfm), [metadata](https://data.iowa.gov/api/views/yrss-ncc4),  [data](https://data.iowa.gov/api/views/yrss-ncc4/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f5eae012) |
+| Links | [catalog](https://catalog.data.gov/dataset/employee-compensation-by-industry-in-iowa), [attribution](https://www.bea.gov/itable/index.cfm), [metadata](https://data.iowa.gov/api/views/yrss-ncc4),  [data](https://data.iowa.gov/api/views/yrss-ncc4/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f5eae012) |
 
 * Command
 
@@ -718,7 +718,7 @@ series e:yrss-ncc4 d:1998-03-31T00:00:00.000Z t:industry_type=Farm t:industry=Fa
 | Description | Complaint data from consumer complaints filed with the Consumer Protection Division. <br>The existence of a complaint is not evidence of wrongdoing. |
 | Attribution | Washington State Attorney General's Office Consumer Protection Division |
 | Date Range | 2013-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/attorney-general-consumer-complaints),    [metadata](https://data.wa.gov/api/views/gpri-47xz),  [data](https://data.wa.gov/api/views/gpri-47xz/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/ad6653c1) |
+| Links | [catalog](https://catalog.data.gov/dataset/attorney-general-consumer-complaints),    [metadata](https://data.wa.gov/api/views/gpri-47xz),  [data](https://data.wa.gov/api/views/gpri-47xz/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/ad6653c1) |
 
 * Command
 
@@ -766,7 +766,7 @@ t:businesscity=Burien
 | Attribution | Department of Insurance |
 | Category | Business |
 | Date Range | 2007-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/insurance-company-complaints-resolutions-status-and-recoveries), [attribution](http://www.ct.gov/cid), [metadata](https://data.ct.gov/api/views/t64r-mt64),  [data](https://data.ct.gov/api/views/t64r-mt64/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/b1200161) |
+| Links | [catalog](https://catalog.data.gov/dataset/insurance-company-complaints-resolutions-status-and-recoveries), [attribution](https://www.ct.gov/cid), [metadata](https://data.ct.gov/api/views/t64r-mt64),  [data](https://data.ct.gov/api/views/t64r-mt64/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/b1200161) |
 
 * Command
 
@@ -802,11 +802,11 @@ t:conclusion=Unjustified t:type=Business t:disposition="Claim Settled" t:recover
 | Id | `d6yy-54nr` |
 | Name | Lottery Powerball Winning Numbers: Beginning 2010 |
 | State | [New York](https://data.ny.gov) |
-| Description | Go to `http://on.ny.gov/1GpWiHD` on the New York Lottery website for past Powerball results and payouts. |
+| Description | Go to `https://nylottery.ny.gov/powerball/past-winning-numbers` on the New York Lottery website for past Powerball results and payouts. |
 | Attribution | New York State Gaming Commission |
 | Category | Government & Finance |
 | Date Range | 2010-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010), [attribution](http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresults_powerball), [metadata](https://data.ny.gov/api/views/d6yy-54nr),  [data](https://data.ny.gov/api/views/d6yy-54nr/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/09133023) |
+| Links | [catalog](https://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010), [attribution](https://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresults_powerball), [metadata](https://data.ny.gov/api/views/d6yy-54nr),  [data](https://data.ny.gov/api/views/d6yy-54nr/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/09133023) |
 
 * Command
 
@@ -832,11 +832,11 @@ t:type="Government & Finance" t:multiplier=2.0 m:"17 22 36 37 52 24"
 | Id | `5xaw-6ayf` |
 | Name | Lottery Mega Millions Winning Numbers: Beginning 2002 |
 | State | [New York](https://data.ny.gov) |
-| Description | Go to `http://on.ny.gov/1J8tPSN` on the New York Lottery website for past Mega Millions results and payouts.|
+| Description | Go to `https://nylottery.ny.gov/mega-millions/past-winning-numbers` on the New York Lottery website for past Mega Millions results and payouts.|
 | Attribution | New York State Gaming Commission |
 | Category | Government & Finance |
 | Date Range | 2002-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/lottery-mega-millions-winning-numbers-beginning-2002), [attribution](http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresultsmega), [metadata](https://data.ny.gov/api/views/5xaw-6ayf),  [data](https://data.ny.gov/api/views/5xaw-6ayf/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/3084bd37) |
+| Links | [catalog](https://catalog.data.gov/dataset/lottery-mega-millions-winning-numbers-beginning-2002), [attribution](https://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresultsmega), [metadata](https://data.ny.gov/api/views/5xaw-6ayf),  [data](https://data.ny.gov/api/views/5xaw-6ayf/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/3084bd37) |
 
 * Command
 
@@ -866,7 +866,7 @@ t:type="Government & Finance" t:mega_ball=30 m:"15 18 25 33 47"
 | Description | Businesses registered with the Secretary of State Corporation Division during the month of June. |
 | Category | Business |
 | Date Range | June 2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/new-business-list-june-1accb),  [metadata](https://data.oregon.gov/api/views/i8h7-mn6v),  [data](https://data.oregon.gov/api/views/i8h7-mn6v/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/83760504) |
+| Links | [catalog](https://catalog.data.gov/dataset/new-business-list-june-1accb),  [metadata](https://data.oregon.gov/api/views/i8h7-mn6v),  [data](https://data.oregon.gov/api/views/i8h7-mn6v/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/83760504) |
 
 * Command
 
@@ -911,7 +911,7 @@ t:city=ATLANTA t:registry_number=122151194
 | Description | Updated 8/1/2016. List of New UCC filings entered during the previous month.  This list is updated by the 9th of every month. |
 | Category | Business |
 | Date Range | July 2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/ucc-list-of-filings-entered-last-month-7c45d),  [metadata](https://data.oregon.gov/api/views/snfi-f79b),  [data](https://data.oregon.gov/api/views/snfi-f79b/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6e35e121) |
+| Links | [catalog](https://catalog.data.gov/dataset/ucc-list-of-filings-entered-last-month-7c45d),  [metadata](https://data.oregon.gov/api/views/snfi-f79b),  [data](https://data.oregon.gov/api/views/snfi-f79b/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6e35e121) |
 
 * Command
 
@@ -951,11 +951,11 @@ t:entity_type=ORG t:mail_addr_1="4910 TIEDEMAN ROAD" t:cntry_cd_txt=USA t:origin
 | Id | `kwxv-fwze` |
 | Name | Lottery Cash 4 Life Winning Numbers: Beginning 2014 |
 | State | [New York](https://data.ny.gov) |
-| Description | Go to `http://on.ny.gov/1xRIvPz` on the New York Lottery website for past Cash 4 Life results and payouts. |
+| Description | Go to `https://on.ny.gov/1xRIvPz` on the New York Lottery website for past Cash 4 Life results and payouts. |
 | Attribution | New York State Gaming Commission |
 | Category | Government & Finance |
 | Date Range | 2014-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/lottery-cash-4-life-winning-numbers-beginning-2014), [attribution](http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresults_cash4life), [metadata](https://data.ny.gov/api/views/kwxv-fwze),  [data](https://data.ny.gov/api/views/kwxv-fwze/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/954ff842) |
+| Links | [catalog](https://catalog.data.gov/dataset/lottery-cash-4-life-winning-numbers-beginning-2014), [attribution](https://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresults_cash4life), [metadata](https://data.ny.gov/api/views/kwxv-fwze),  [data](https://data.ny.gov/api/views/kwxv-fwze/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/954ff842) |
 
 * Command
 
@@ -985,7 +985,7 @@ t:type="Government & Finance" t:cash_ball=03 m:"09 36 44 53 59"
 | Attribution | Office of the Chief Medical Examiner |
 | Category | Health and Human Services |
 | Date Range | 2012-2015 |
-| Links | [catalog](http://catalog.data.gov/dataset/accidental-drug-related-deaths-january-2012-sept-2015), [attribution](http://www.ct.gov/ocme), [metadata](https://data.ct.gov/api/views/rybz-nyjw),  [data](https://data.ct.gov/api/views/rybz-nyjw/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/80aaea79) |
+| Links | [catalog](https://catalog.data.gov/dataset/accidental-drug-related-deaths-january-2012-sept-2015), [attribution](https://www.ct.gov/ocme), [metadata](https://data.ct.gov/api/views/rybz-nyjw),  [data](https://data.ct.gov/api/views/rybz-nyjw/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/80aaea79) |
 
 * Command
 
@@ -1039,11 +1039,11 @@ t:type="Health and Human Services" t:fentanyl=Y m:"Acute fent, hydrocod, benzodi
 | Id | `2ix7-8hwk` |
 | Name | Oregon Consumer Complaints |
 | State | [Oregon](https://data.oregon.gov) |
-| Description | Consumer complaints registered with the Oregon Department of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database does not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, affect the likelihood of a consumer complaint being filed. The number of complaints about a business is not a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints are not immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see `http://www.doj.state.or.us/finfraud/index.shtml` |
+| Description | Consumer complaints registered with the Oregon Department of Justice.  The database of consumer complaints is derived from consumer contacts for the past 3 years and is for information only. This database does not offer a completely accurate or comprehensive account of every incident. Several factors, including a company’s size and volume of transactions, affect the likelihood of a consumer complaint being filed. The number of complaints about a business is not a reliable measure as to whether the organization is appropriately conducting business. The information in this database is updated as soon as possible. However, recently submitted complaints are not immediately available. The statements in this database do not necessarily reflect the opinion of the DOJ. For more information, see [https://www.doj.state.or.us/consumer-protection/](`https://www.doj.state.or.us/consumer-protection/`) |
 | Attribution | Oregon Department of Justice |
 | Category | Public Safety |
 | Date Range | 2013-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/oregon-consumer-complaints-7f511), [attribution](http://www.doj.state.or.us/), [metadata](https://data.oregon.gov/api/views/2ix7-8hwk),  [data](https://data.oregon.gov/api/views/2ix7-8hwk/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/00c21bea) |
+| Links | [catalog](https://catalog.data.gov/dataset/oregon-consumer-complaints-7f511), [attribution](https://www.doj.state.or.us/), [metadata](https://data.oregon.gov/api/views/2ix7-8hwk),  [data](https://data.oregon.gov/api/views/2ix7-8hwk/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/00c21bea) |
 
 * Command
 
@@ -1088,7 +1088,7 @@ m:"Provided goods or services different than the ones complainant ordered; unaut
 | Attribution | Department of Health |
 | Category | Health |
 | Date Range | 2005-2012 |
-| Links | [catalog](http://catalog.data.gov/dataset/oahu-food-establishments-8adda), [metadata](https://data.hawaii.gov/api/views/qkvm-skze),  [data](https://data.hawaii.gov/api/views/qkvm-skze/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/fdef2e30) |
+| Links | [catalog](https://catalog.data.gov/dataset/oahu-food-establishments-8adda), [metadata](https://data.hawaii.gov/api/views/qkvm-skze),  [data](https://data.hawaii.gov/api/views/qkvm-skze/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/fdef2e30) |
 
 * Command
 
@@ -1148,7 +1148,7 @@ t:mailing_address_city=HONOLULU
 | Attribution | NYS Department of Corrections and Community Supervision |
 | Category | Public Safety |
 | Date Range | 2008-2015 |
-| Links | [catalog](http://catalog.data.gov/dataset/parolees-under-community-supervision-beginning-2008), [metadata](https://data.ny.gov/api/views/pmxm-gftz),  [data](https://data.ny.gov/api/views/pmxm-gftz/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/3bc9ae9a) |
+| Links | [catalog](https://catalog.data.gov/dataset/parolees-under-community-supervision-beginning-2008), [metadata](https://data.ny.gov/api/views/pmxm-gftz),  [data](https://data.ny.gov/api/views/pmxm-gftz/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/3bc9ae9a) |
 
 * Command
 
@@ -1183,7 +1183,7 @@ t:crime="DRUG OFFENSES" t:age=29.0 t:gender=MALE t:type="Public Safety"
 | Attribution | NYSLA Wholesale Bureau / NYSITS |
 | Category | Economic Development |
 | Date Range | 2016-2018 |
-| Links | [catalog](http://catalog.data.gov/dataset/state-liquor-authority-sla-brand-label-and-wholesaler-information-for-alcoholic-beverage-p), [metadata](https://data.ny.gov/api/views/n2dz-pwuk),  [data](https://data.ny.gov/api/views/n2dz-pwuk/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f83cf3ff) |
+| Links | [catalog](https://catalog.data.gov/dataset/state-liquor-authority-sla-brand-label-and-wholesaler-information-for-alcoholic-beverage-p), [metadata](https://data.ny.gov/api/views/n2dz-pwuk),  [data](https://data.ny.gov/api/views/n2dz-pwuk/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f83cf3ff) |
 
 * Command
 
@@ -1223,7 +1223,7 @@ t:license_class_description=ALE
 | Attribution | Oregon Military Department |
 | Category | Government |
 | Date Range | 2015-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/information-technology-project-portfolio), [attribution](http://www.ct.gov/opm), [metadata](https://data.ct.gov/api/views/i7h5-rx65),  [data](https://data.ct.gov/api/views/i7h5-rx65/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/0653c6b5) |
+| Links | [catalog](https://catalog.data.gov/dataset/information-technology-project-portfolio), [attribution](http://www.ct.gov/opm), [metadata](https://data.ct.gov/api/views/i7h5-rx65),  [data](https://data.ct.gov/api/views/i7h5-rx65/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/0653c6b5) |
 
 * Command
 
@@ -1264,7 +1264,7 @@ m:"Pilot the use of virtual desktops or virtual applications in the agency."
 | Description | Updated 8/1/2016. List of All Active Filings and their associated Secured Parties. This Dataset is updated monthly by the 9th of each month. |
 | Category | Business |
 | Date Range | 1970-2016 |
-| Links | [catalog](http://catalog.data.gov/dataset/ucc-secured-parties-list-23e64),  [metadata](https://data.oregon.gov/api/views/2kf7-i54h),  [data](https://data.oregon.gov/api/views/2kf7-i54h/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/4a12f7d4) |
+| Links | [catalog](https://catalog.data.gov/dataset/ucc-secured-parties-list-23e64),  [metadata](https://data.oregon.gov/api/views/2kf7-i54h),  [data](https://data.oregon.gov/api/views/2kf7-i54h/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/4a12f7d4) |
 
 * Command
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Download statistics from the [Bureau of Labor Statistics service](http://www.bls.gov).
+Download statistics from the [Bureau of Labor Statistics service](https://www.bls.gov).
 
 ## File
 

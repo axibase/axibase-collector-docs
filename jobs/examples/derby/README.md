@@ -79,5 +79,5 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 
 ![](./images/derby_portal_icon.png)
 
-[**Derby Live Portal**](http://apps.axibase.com/chartlab/c4412a78)
+[**Derby Live Portal**](https://apps.axibase.com/chartlab/c4412a78)
 ![](./images/derby_portal.png)

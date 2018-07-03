@@ -5,7 +5,7 @@
 The latest release is available from the [Axibase Downloads](https://axibase.com/public/axibase-collector_latest.htm) page:
 
 ```bash
-wget -O axibase-collector.tar.gz http://axibase.com/public/axibase-collector-v{revision}.tar.gz
+wget -O axibase-collector.tar.gz https://axibase.com/public/axibase-collector-v{revision}.tar.gz
 ```
 
 ## Copy Archive

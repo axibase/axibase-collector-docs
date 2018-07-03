@@ -21,7 +21,7 @@ sudo yum install java-1.8.0-openjdk-devel
 
 ### Oracle JDK
 
-Download Java 8 JDK from the [Oracle web site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Download Java 8 JDK from the [Oracle web site](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 ```sh
 sudo rpm -i jdk-8u131-linux-x64.rpm
