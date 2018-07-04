@@ -2,7 +2,7 @@
 
 ## Overview
 
-Download nginx statistics using [api](http://nginx.org/en/docs/http/ngx_http_status_module.html).
+Download nginx statistics using [api](https://nginx.org/en/docs/http/ngx_http_status_module.html).
 
 The **Path** field contains the `${ITEM}` placeholder to allow a user to query multiple servers with one configuration.
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Download daily historical pricing information (OHLC) from [Yahoo! Finance](http://finance.yahoo.com/) for a collection of tickers:
+Download daily historical pricing information (OHLC) from [Yahoo! Finance](https://finance.yahoo.com/) for a collection of tickers:
 
 * AAPL
 * IBM

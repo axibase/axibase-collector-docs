@@ -8,7 +8,7 @@ The process involves enabling the nginx status page and configuring Axibase Coll
 
 ## Requirements
 
-* nginx server with `ngx_http_stub_status_module`(`http://nginx.org/en/docs/http/ngx_http_stub_status_module.html`) enabled.
+* nginx server with [`ngx_http_stub_status_module`](https://nginx.org/en/docs/http/ngx_http_stub_status_module.html) enabled.
 * [Axibase Collector](../../../README.md) for scheduled polling of the NGINX status page.
 * [Axibase Time Series Database](https://axibase.com/docs/atsd/installation/) as a centralized data repository.
 
@@ -114,7 +114,7 @@ List of collected [nginx server metrics](./nginx-basic-server-metrics.md).
 * Open the **Entity** tab, find the nginx servers you want to see information about, and click the **Portal** icon.
 
 ![](./images/nginx-portal-selection.png)
-[Basic nginx Status portal example](http://apps.axibase.com/chartlab/966f33e4)
+[Basic nginx Status portal example](https://apps.axibase.com/chartlab/966f33e4)
 ![Basic nginx Status portal](./images/nginx-portal-basic.png)
 
 ## Notifications

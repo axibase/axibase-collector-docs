@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to export archive data from a [PI Server](http://www.osisoft.com/pi-system/pi-capabilities/pi-server/) into the Axibase Time Series Database as series commands using the Collector PI job.
+This document describes how to export archive data from a [PI Server](https://www.osisoft.com/pi-system/pi-capabilities/pi-server/) into the Axibase Time Series Database as series commands using the Collector PI job.
 
 ## Requirements
 

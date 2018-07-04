@@ -8,7 +8,7 @@ nginx -V 2>&1 | grep -o with-http_stub_status_module
 
 If the output contains the module name, the module is installed.
 
-If the response is empty, upgrade to a [newer version of nginx](http://nginx.org/en/CHANGES) or recompile your nginx server with the `-with-http_stub_status_module` option.
+If the response is empty, upgrade to a [newer version of nginx](https://nginx.org/en/CHANGES) or recompile your nginx server with the `-with-http_stub_status_module` option.
 
 Sample `nginx -V` output:
 
@@ -22,7 +22,7 @@ configure arguments: --with-cc-opt='-g -O2 -fstack-protector --param=ssp-buffer-
 
 ## Configure Status Page
 
-Open the `nginx.conf` file and review the [configuration example](http://nginx.org/en/docs/http/ngx_http_stub_status_module.html#example) provided in nginx documentation.
+Open the `nginx.conf` file and review the [configuration example](https://nginx.org/en/docs/http/ngx_http_stub_status_module.html#example) provided in nginx documentation.
 
 ```sh
 sudo nano /etc/nginx/nginx.conf

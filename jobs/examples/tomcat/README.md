@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to collect JMX metrics exposed by [Apache Tomcat](http://tomcat.apache.org/) Servlet Containers  for long-term retention and monitoring in Axibase Time Series Database.
+This document describes how to collect JMX metrics exposed by [Apache Tomcat](https://tomcat.apache.org/) Servlet Containers  for long-term retention and monitoring in Axibase Time Series Database.
 
 ## Requirements
 
@@ -81,6 +81,6 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 
 ![](./images/tomcat_portal_icon.png)
 
-[**Tomcat Portal**](http://apps.axibase.com/chartlab/106bddba)
+[**Tomcat Portal**](https://apps.axibase.com/chartlab/106bddba)
 
 ![](./images/tomcat_portal.png)

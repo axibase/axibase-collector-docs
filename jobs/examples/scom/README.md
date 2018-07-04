@@ -3,7 +3,7 @@
 ## Overview
 
 [Microsoft System Center Operations Manager
-(SCOM)](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/ "Microsoft SCOM")
+(SCOM)](https://docs.microsoft.com/en-us/system-center/scom/welcome?view=sc-om-1801)
 is an agent-based monitoring system for the Microsoft Windows operating system and compatible applications.
 
 SCOM collects and stores statistics from Windows servers in Operations (`PerformanceDataAllView`) and DataWareHouse (`vperf_raw`, `vperf_hourly`, `vperf_daily`) database views.
@@ -81,11 +81,11 @@ SELECT 1
 
 ### Portals
 
-* [SCOM Server Live Portal](http://apps.axibase.com/chartlab/c09dc1cd)
+* [SCOM Server Live Portal](https://apps.axibase.com/chartlab/c09dc1cd)
 
 ![](./images/scom_server_portal.png)
 
-* [SCOM SQL Live Server](http://axibase.com/chartlab/693b4f8d/2/)
+* [SCOM SQL Live Server](https://axibase.com/chartlab/693b4f8d/2/)
 
 ![](./images/scom_sql_server_portal.png)
 

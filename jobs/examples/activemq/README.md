@@ -194,7 +194,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ![](./images/activemq_portal_icon.png)
 
-[**Active MQ Live Portal**](http://apps.axibase.com/chartlab/2f11a5ef)
+[**Active MQ Live Portal**](https://apps.axibase.com/chartlab/2f11a5ef)
 ![](./images/log_portal_example.png)
 
 ### Rules
