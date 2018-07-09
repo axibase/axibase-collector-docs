@@ -53,7 +53,7 @@ listen_addresses = 'localhost,192.0.2.1' # what IP address(es) to listen on;
 
 ### Import PostgreSQL Job into Axibase Collector
 
-* On **Jobs** page, select **Import** from the split button below the table and upload the [`postgres-jobs.xml`](./postgres-jobs.xml) file.
+* On **Jobs** page, select **Import** from the split-button below the table and upload the [`postgres-jobs.xml`](./postgres-jobs.xml) file.
 
 ### Configure PostgreSQL Database Connection
 
@@ -112,7 +112,7 @@ SELECT 1
 ### Entity Groups
 
 * Open **Settings > Entity Groups**.
-* Create a new Entity Group with the split button at the bottom of the page, navigate to the **Expression** tab under **Members**, and enter the following expression:
+* Create a new Entity Group with the split-button at the bottom of the page, navigate to the **Expression** tab under **Members**, and enter the following expression:
 
 ```javascript
 hasMetric('postgres.global_status.uptime')

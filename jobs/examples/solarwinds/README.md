@@ -14,7 +14,7 @@ SolarWinds Monitor products collect and store statistics from target devices in 
 
 ### Import SolarWinds JDBC job
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the [`collector-jobs-solarwinds-base-jobs.xml`](./collector-jobs-solarwinds-base-jobs.xml) file.
+* On the **Jobs** page, select **Import** from the split-button below the table and upload the [`collector-jobs-solarwinds-base-jobs.xml`](./collector-jobs-solarwinds-base-jobs.xml) file.
 
 ### Configure SolarWinds Database Connection
 

@@ -67,7 +67,7 @@ $AXIBASE_COLLECTOR_HOME/bin/start-collector.sh
 
 ### Import PI Server job into Axibase Collector
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the file [pi_jdbc_metric.xml](./pi_jdbc_metric.xml).
+* On the **Jobs** page, select **Import** from the split-button below the table and upload the file [pi_jdbc_metric.xml](./pi_jdbc_metric.xml).
 
 ### Configure PI Server Database Connection
 

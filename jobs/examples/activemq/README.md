@@ -117,7 +117,7 @@ chmod 600 ./conf/jmx.password
 1. Log in to Axibase Collector at `https://collector_hostname:9443`.
 1. Click the **Jobs** tab in the top menu.
 1. Locate the `jmx-activemq` job.
-1. On the **JMX Job** page, enable job status by checking the box and selecting **Enabled** from the split button at the bottom of the screen.
+1. On the **JMX Job** page, enable job status by checking the box and selecting **Enabled** from the split-button at the bottom of the screen.
 1. Adjust the `cron` expression if required. By default, the job is executed every 10 seconds.
 
 > For more information on `cron` expressions, see [Scheduling](../../../scheduling.md).
@@ -173,13 +173,13 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Entity group
 
-* Open **Settings > Entity Groups**, select **Import** from the split button and upload  [activemq_entity_group.xml](./configs/activemq_entity_group.xml).
+* Open **Settings > Entity Groups**, select **Import** from the split-button and upload  [activemq_entity_group.xml](./configs/activemq_entity_group.xml).
 * Select the imported `apache-activemq-brokers` group.
 * Verify that the group contains your Active MQ hosts.
 
 ### Entity Views
 
-* Open **Entity Views > Configure**, select **Import** from the split button and upload  [activemq_entity_view.xml](./configs/activemq_entity_view.xml).
+* Open **Entity Views > Configure**, select **Import** from the split-button and upload  [activemq_entity_view.xml](./configs/activemq_entity_view.xml).
 * Select the imported `Apache ActiveMQ Brokers` view.
 * Select the Entity Group that you created earlier.
 * Click **View** and browse information about your entities.
@@ -188,7 +188,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ### Portal
 
-* Open the **Portals** menu and select **Configure**. Select **Import** from the split button and upload [activemq_portal.xml](./configs/activemq_portal.xml).
+* Open the **Portals** menu and select **Configure**. Select **Import** from the split-button and upload [activemq_portal.xml](./configs/activemq_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group you created earlier.
 * Open the **Entities** tab, find the java application by name, and click the **Portal** icon.
 

@@ -16,7 +16,7 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 
 ### Import Tomcat job into Axibase Collector
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the job file depending on the version of your servlet container engine:
+* On the **Jobs** page, select **Import** from the split-button below the table and upload the job file depending on the version of your servlet container engine:
 * [Catalina](./configs/tomcat_catalina_job.xml)
 * [Standalone](./configs/tomcat_standalone_job.xml)
 
@@ -75,7 +75,7 @@ Configure your Java for JMX monitoring as described by the [JMX Job Documentatio
 
 ### Portal
 
-* Open the **Portals** menu and select **Configure**, click **Import** from the split button below the table, and upload [`tomcat_portal.xml`](./configs/tomcat_portal.xml).
+* Open the **Portals** menu and select **Configure**, click **Import** from the split-button below the table, and upload [`tomcat_portal.xml`](./configs/tomcat_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group created earlier.
 * Open the **Entities** tabs, find the java application by name, and the **Portal** icon.
 
