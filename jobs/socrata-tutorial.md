@@ -29,7 +29,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 6](./images/Figure6.png)
 
-   * **Enabled**: job status. Enable the job, and schedule the job for data collection with the period specified in the **`cron` Expression**, by clicking the check box. To
+   * **Enabled**: job status. Enable the job, and schedule the job for data collection with the period specified in the **`cron` Expression**, by clicking the checkbox. To
       have the job disabled, do not click the checkbox. Leave disabled for this tutorial.
    * **Name**: job name. Enter in a relevant name for your new Socrata job. For this tutorial, use the name `NYC-Social-Media-Usage`.
    * **`cron` Expression**: job execution time period. `cron` fields are specified in the following order: second, minute, hour, day-of-month, month, and day-of-week. You can randomize time of execution by putting `R` onto time placeholders. Click
