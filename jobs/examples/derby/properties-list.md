@@ -107,7 +107,7 @@
       "productname": "Apache Derby",
       "producttechnologyname": "Apache Derby Embedded Engine",
       "productvendorname": "The Apache Software Foundation",
-      "versionstring": "10.12.1.1 - (1704137)"
+      "versionstring": "v10.12.1.1 - (1704137)"
     },
     "date": "2016-05-31T08:15:00.803Z"
   }
