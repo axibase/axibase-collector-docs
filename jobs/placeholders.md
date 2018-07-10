@@ -106,7 +106,7 @@ Input: `ftp.example.org/data/95014_Cupertino_20160625_DAILY.csv`
 
 | **Expression** | **Result** |
 |:---|:---|
-| `${FILE}` | 95014_Cupertino_20160625_DAILY.csv |
+| `${FILE}` | `95014_Cupertino_20160625_DAILY.csv` |
 | `${FILE?keep_before('_')}` | 95014 |
 | `${FILE?keep_after('_')?keep_before('_')}` | Cupertino |
 | `${FILE?split('_')[0]}` | 95014 |
@@ -144,7 +144,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| /home/user/nurswgvml106_temperature.csv | nurswgvml106 |
+| `/home/user/nurswgvml106_temperature.csv` | nurswgvml106 |
 
 #### keep_before_last
 
@@ -153,7 +153,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| /opt/files/nurswgvml106_cpu_busy.csv<br>/opt/files/nurswgvml107_cpu_busy.csv | nurswgvml106_cpu<br>nurswgvml107_cpu |
+| `/opt/files/nurswgvml106_cpu_busy.csv<br>/opt/files/nurswgvml107_cpu_busy.csv` | nurswgvml106_cpu<br>nurswgvml107_cpu |
 
 #### replace
 
@@ -180,7 +180,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| /opt/files/nurswgvml106.cpu_busy.csv<br>/opt/files/nurswgvml107.cpu_busy.csv | nurswgvml106<br>nurswgvml107 |
+| `/opt/files/nurswgvml106.cpu_busy.csv<br>/opt/files/nurswgvml107.cpu_busy.csv` | nurswgvml106<br>nurswgvml107 |
 
 ### LOOKUP function
 

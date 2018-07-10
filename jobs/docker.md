@@ -36,7 +36,7 @@ In local collection mode, Axibase Collector containers run on each Docker host a
 ![Local Collection](./images/docker-local.png)
 
 * Create a [collector account](https://axibase.com/docs/atsd/administration/collector-rw-account.html) in ATSD.
-* Replace `atsd_hostname` with the ATSD hostname/IP address. The default https port is 8443.
+* Replace `atsd_hostname` with the ATSD hostname/IP address. The default HTTPS port is 8443.
 * Replace `username` and `password` with valid credentials in the script below.
 * Start Axibase Collector container:
 
@@ -99,7 +99,7 @@ Switch to the **Remote Collection** option or follow one of these steps:
 
 ## Remote Collection
 
-In remote collection mode Axibase Collector fetches data from multiple remote Docker hosts using https protocol.
+In remote collection mode Axibase Collector fetches data from multiple remote Docker hosts using HTTPS protocol.
 
 ![Local Collection](./images/docker-remote.png)
 
@@ -107,7 +107,7 @@ In remote collection mode Axibase Collector fetches data from multiple remote Do
 
 * Log in to the Docker host via SSH and generate [client and server certificates](./docker-certificates.md).
 
-* Configure the Docker daemon for secure access over https.
+* Configure the Docker daemon for secure access over HTTPS.
 
   **On Ubuntu 14.04**
 
@@ -225,7 +225,7 @@ If the username or password contains a `$`, `&`, `#`, or `!` character, escape t
 
 The password must contain at least **6** characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
-* Find the https port assigned to the `axibase-collector` container.
+* Find the HTTPS port assigned to the `axibase-collector` container.
 
 ```sh
 docker ps -a | grep axibase-collector
@@ -264,4 +264,5 @@ Locate the **docker-socket** job on the **Jobs** page and verify that the job is
 
 ## Testing and Evaluating
 
+<!-- markdownlint-disable MD106-->
 Optionally launch either the **atsd** and **axibase-collector** containers in a [test environment](./docker-compose.md) using  `docker-compose`.

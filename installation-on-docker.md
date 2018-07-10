@@ -49,7 +49,7 @@ docker run \
  axibase/collector:latest
 ```
 
-To automatically configure a connection to the Axibase Time Series Database, add the `-atsd-url` parameter containing the ATSD hostname and https port (default 8443), as well as [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+To automatically configure a connection to the Axibase Time Series Database, add the `-atsd-url` parameter containing the ATSD hostname and HTTPS port (default 8443), as well as [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
 ```properties
 docker run \
@@ -86,7 +86,7 @@ The launch command is different if the Collector container is used to [monitor s
 **Name** | **Required** | **Description**
 ----- | ----- | -----
 `--detach` | Yes | Run container in background and print container id.
-`--publish-all` | No | Publish exposed https port (`9443`) to a random port.
+`--publish-all` | No | Publish exposed HTTPS port (`9443`) to a random port.
 `--restart` | No | Auto-restart policy. **Not supported in all Docker Engine versions.**
 `--name` | No | Assign a host-unique name to the container.
 
@@ -97,9 +97,9 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 | **Name** | **Required** | **Description** |
 |:---|:---|:---|
 |`ATSD_SERVICE_HOST` | No | Host where Axibase Time Series Database is installed. |
-|`ATSD_SERVICE_PORT_HTTPS` | No | Https port. |
-|`ATSD_SERVICE_PORT_TCP` | No | Tcp port for [network commands](https://axibase.com/docs/atsd/api/network/). |
-|`ATSD_URL` | No | URL (protocol://host:port) for the Axibase Time Series Database connection.|
+|`ATSD_SERVICE_PORT_HTTPS` | No | HTTPS port. |
+|`ATSD_SERVICE_PORT_TCP` | No | TCP port for [network commands](https://axibase.com/docs/atsd/api/network/). |
+|`ATSD_URL` | No | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
 |`COLLECTOR_USER_NAME` | No | User name for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
 |`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
@@ -156,7 +156,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ee15099d9f88        axibase/collector   "/bin/bash /opt/axiba"   33 seconds ago      Up 32 seconds       0.0.0.0:32769->9443/tcp   axibase-collector
 ```
 
-Take note of the public https port assigned to axibase-collector container, for example **32769** in the example above.
+Take note of the public HTTPS port assigned to axibase-collector container, for example **32769** in the example above.
 
 ## Login
 

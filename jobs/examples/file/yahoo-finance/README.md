@@ -38,8 +38,8 @@ Date,Open,High,Low,Close,Volume,Adj Close
 
 ## Configuration
 
-* [FILE job configuration](./yahoo-finance-job.xml). Import xml into Collector.
-* [CSV Parser](./yahoo-finance-parser.xml). Import xml into ATSD.
+* [FILE job configuration](./yahoo-finance-job.xml). Import XML into Collector.
+* [CSV Parser](./yahoo-finance-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

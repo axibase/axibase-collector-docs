@@ -48,7 +48,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 ### Create Item List for nginx servers
 
 * Open the **Collections > Item Lists** page.
-* Add a new TEXT [Item List](../../../collections.md) named **nginx-servers**, containing DNS names or IP addresses of the monitored nginx servers, one server per line. Ensure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire url to the list and set the **Path** field equal to the `${ITEM}` placeholder.
+* Add a new TEXT [Item List](../../../collections.md) named **nginx-servers**, containing DNS names or IP addresses of the monitored nginx servers, one server per line. Ensure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire URL to the list and set the **Path** field equal to the `${ITEM}` placeholder.
 * **Save** the list.
 
 ![Server list example](./images/nginx-server-list.png)

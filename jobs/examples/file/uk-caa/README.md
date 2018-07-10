@@ -140,8 +140,8 @@ rundate,reporting_period,airport_name,this_year_pax,this_year_total_pax_UK_airpo
 
 ## Configuration
 
-* [FILE job configuration](./uk-caa-job.xml). Import xml into Collector.
-* [CSV Parser](./uk-caa-parser.xml). Import xml into ATSD.
+* [FILE job configuration](./uk-caa-job.xml). Import XML into Collector.
+* [CSV Parser](./uk-caa-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

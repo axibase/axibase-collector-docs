@@ -1,6 +1,6 @@
 # Collected Derby Properties
 
-* jmx.derby.cachemanager
+* `jmx.derby.cachemanager`
 
 ```json
 {

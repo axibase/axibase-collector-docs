@@ -85,6 +85,7 @@ The expected result is:
 
 * Modify JMX security credential files in the `./conf` directory.
 
+<!-- markdownlint-disable MD106-->
 jmx.access:
 
 ```sh
@@ -93,6 +94,7 @@ monitorRole readonly
 ```
 
 jmx.password:
+<!-- markdownlint-enable MD106-->
 
 ```sh
 # The "monitorRole" role has password "abc123".
