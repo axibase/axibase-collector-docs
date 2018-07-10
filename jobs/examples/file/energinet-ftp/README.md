@@ -51,8 +51,8 @@ Dato og tid      ;      1 ;      2 ;      3 ;      4 ;      5 ;      6 ;      7 
 
 ## Configuration
 
-* [FILE job configuration](./energinet-ftp-job.xml). Import xml into Collector.
-* [CSV Parser](./energinet-ftp-parser.xml). Import xml into ATSD.
+* [FILE job configuration](./energinet-ftp-job.xml). Import XML into Collector.
+* [CSV Parser](./energinet-ftp-parser.xml). Import XML into ATSD.
 
 ## Screenshot
 

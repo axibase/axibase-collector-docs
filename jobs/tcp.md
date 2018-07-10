@@ -10,8 +10,8 @@ If connection is successful, the `tcp-check-status` metric is set to 0, otherwis
 
 | **Name** | **Description** |
 | :--- |:--- |
-| tcp-connect-status | Connection status. |
-| tcp-connect-time | Number of milliseconds spent on opening the connection. |
+| `tcp-connect-status` | Connection status. |
+| `tcp-connect-time` | Number of milliseconds spent on opening the connection. |
 
 In case of failure retests, the values for the above metrics are based on the last connection attempt.
 

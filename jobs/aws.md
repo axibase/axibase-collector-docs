@@ -63,7 +63,7 @@ The job assigns each metric to an entity which is extracted from the [primary di
 | **Field** | **Description** |
 |:---|:---|
 | Name | Configuration name. |
-| HTTP Pool | Pool of https connections to execute requests against the specified CloudWatch endpoint. The pool can be left empty. |
+| HTTP Pool | Pool of HTTPS connections to execute requests against the specified CloudWatch endpoint. The pool can be left empty. |
 | Endpoint  | [CloudWatch Endpoint](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region) URL.   |
 | Access key id  | Access key. See [Getting Your Access Key ID and Secret Access Key](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).   |
 | Secret access key  | Secret access key. |
