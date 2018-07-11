@@ -3,116 +3,116 @@
 ## OVPM Linux
 
 ```css
- gbl_cpu_idle_util
- gbl_cpu_sys_mode_util
- gbl_cpu_total_util
- gbl_cpu_user_mode_util
- gbl_disk_phys_byte
- gbl_disk_phys_byte_rate
- gbl_disk_phys_io
- gbl_disk_phys_io_rate
- gbl_fs_space_util_peak
- gbl_mem_pagein
- gbl_mem_pagein_rate
- gbl_mem_pageout
- gbl_mem_pageout_rate
- gbl_mem_phys
- gbl_mem_swapin_byte
- gbl_mem_swapin_byte_rate
- gbl_mem_swapout_byte
- gbl_mem_swapout_byte_rate
- gbl_mem_util
- gbl_net_collision
- gbl_net_collision_rate
- gbl_net_error
- gbl_net_error_rate
- gbl_net_in_packet
- gbl_net_in_packet_rate
- gbl_net_out_packet
- gbl_net_out_packet_rate
- gbl_run_queue
- gbl_started_proc
- gbl_started_proc_rate
- gbl_swap_space_avail
- gbl_swap_space_used
- gbl_swap_space_util
+gbl_cpu_idle_util
+gbl_cpu_sys_mode_util
+gbl_cpu_total_util
+gbl_cpu_user_mode_util
+gbl_disk_phys_byte
+gbl_disk_phys_byte_rate
+gbl_disk_phys_io
+gbl_disk_phys_io_rate
+gbl_fs_space_util_peak
+gbl_mem_pagein
+gbl_mem_pagein_rate
+gbl_mem_pageout
+gbl_mem_pageout_rate
+gbl_mem_phys
+gbl_mem_swapin_byte
+gbl_mem_swapin_byte_rate
+gbl_mem_swapout_byte
+gbl_mem_swapout_byte_rate
+gbl_mem_util
+gbl_net_collision
+gbl_net_collision_rate
+gbl_net_error
+gbl_net_error_rate
+gbl_net_in_packet
+gbl_net_in_packet_rate
+gbl_net_out_packet
+gbl_net_out_packet_rate
+gbl_run_queue
+gbl_started_proc
+gbl_started_proc_rate
+gbl_swap_space_avail
+gbl_swap_space_used
+gbl_swap_space_util
 ```
 
 ## OVPM Windows
 
 ```css
- gbl_active_proc
- gbl_alive_proc
- gbl_completed_proc
- gbl_cpu_entl_util
- gbl_cpu_idle_util
- gbl_cpu_interrupt_util
- gbl_cpu_phys_total_util
- gbl_cpu_physc
- gbl_cpu_sys_mode_util
- gbl_cpu_total_util
- gbl_cpu_user_mode_util
- gbl_cswitch_rate
- gbl_disk_cache_read
- gbl_disk_cache_read_rate
- gbl_disk_logl_read
- gbl_disk_logl_read_rate
- gbl_disk_phys_byte
- gbl_disk_phys_byte_rate
- gbl_disk_phys_io
- gbl_disk_phys_io_rate
- gbl_disk_phys_read
- gbl_disk_phys_read_byte_rate
- gbl_disk_phys_read_pct
- gbl_disk_phys_read_rate
- gbl_disk_phys_write
- gbl_disk_phys_write_byte_rate
- gbl_disk_phys_write_rate
- gbl_disk_request_queue
- gbl_disk_util
- gbl_disk_util_peak
- gbl_loadavg
- gbl_machine_mem_used
- gbl_mem_cache
- gbl_mem_cache_flush_rate
- gbl_mem_cache_hit_pct
- gbl_mem_datamap_hit_pct
- gbl_mem_free
- gbl_mem_free_util
- gbl_mem_locked
- gbl_mem_locked_util
- gbl_mem_overhead
- gbl_mem_page_request
- gbl_mem_pagein
- gbl_mem_pagein_rate
- gbl_mem_pageout
- gbl_mem_pageout_rate
- gbl_mem_sys
- gbl_mem_sys_and_cache_util
- gbl_mem_sys_util
- gbl_mem_user
- gbl_mem_user_util
- gbl_mem_util
- gbl_net_deferred_pct
- gbl_net_error
- gbl_net_error_1_min_rate
- gbl_net_error_rate
- gbl_net_in_error_pct
- gbl_net_in_error_rate
- gbl_net_in_packet
- gbl_net_in_packet_rate
- gbl_net_out_error_pct
- gbl_net_out_error_rate
- gbl_net_out_packet
- gbl_net_out_packet_rate
- gbl_net_outqueue
- gbl_net_packet_rate
- gbl_net_util_peak
- gbl_proc_run_time
- gbl_proc_sample
- gbl_run_queue
- gbl_started_proc
- gbl_swap_space_util
- gbl_syscall
- gbl_syscall_rate
+gbl_active_proc
+gbl_alive_proc
+gbl_completed_proc
+gbl_cpu_entl_util
+gbl_cpu_idle_util
+gbl_cpu_interrupt_util
+gbl_cpu_phys_total_util
+gbl_cpu_physc
+gbl_cpu_sys_mode_util
+gbl_cpu_total_util
+gbl_cpu_user_mode_util
+gbl_cswitch_rate
+gbl_disk_cache_read
+gbl_disk_cache_read_rate
+gbl_disk_logl_read
+gbl_disk_logl_read_rate
+gbl_disk_phys_byte
+gbl_disk_phys_byte_rate
+gbl_disk_phys_io
+gbl_disk_phys_io_rate
+gbl_disk_phys_read
+gbl_disk_phys_read_byte_rate
+gbl_disk_phys_read_pct
+gbl_disk_phys_read_rate
+gbl_disk_phys_write
+gbl_disk_phys_write_byte_rate
+gbl_disk_phys_write_rate
+gbl_disk_request_queue
+gbl_disk_util
+gbl_disk_util_peak
+gbl_loadavg
+gbl_machine_mem_used
+gbl_mem_cache
+gbl_mem_cache_flush_rate
+gbl_mem_cache_hit_pct
+gbl_mem_datamap_hit_pct
+gbl_mem_free
+gbl_mem_free_util
+gbl_mem_locked
+gbl_mem_locked_util
+gbl_mem_overhead
+gbl_mem_page_request
+gbl_mem_pagein
+gbl_mem_pagein_rate
+gbl_mem_pageout
+gbl_mem_pageout_rate
+gbl_mem_sys
+gbl_mem_sys_and_cache_util
+gbl_mem_sys_util
+gbl_mem_user
+gbl_mem_user_util
+gbl_mem_util
+gbl_net_deferred_pct
+gbl_net_error
+gbl_net_error_1_min_rate
+gbl_net_error_rate
+gbl_net_in_error_pct
+gbl_net_in_error_rate
+gbl_net_in_packet
+gbl_net_in_packet_rate
+gbl_net_out_error_pct
+gbl_net_out_error_rate
+gbl_net_out_packet
+gbl_net_out_packet_rate
+gbl_net_outqueue
+gbl_net_packet_rate
+gbl_net_util_peak
+gbl_proc_run_time
+gbl_proc_sample
+gbl_run_queue
+gbl_started_proc
+gbl_swap_space_util
+gbl_syscall
+gbl_syscall_rate
 ```

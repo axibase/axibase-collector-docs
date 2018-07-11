@@ -58,8 +58,8 @@ Once you verify that the status page is enabled, restrict access to this page on
 Add the following lines at the **beginning** of the `location /nginx_status` directive:
 
 ```java
-   allow <collector_ip_address>;
-   deny all;
+allow <collector_ip_address>;
+deny all;
 ```
 
  For example, if your Collector is installed at `192.0.2.1`, the configuration appears thus:
