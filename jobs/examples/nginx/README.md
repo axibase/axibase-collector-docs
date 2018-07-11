@@ -55,7 +55,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 
 ### Import Jobs
 
-* Import the [nginx-collector-jobs.xml](./configs/nginx-collector-jobs.xml) job on the **Jobs** page by selecting **Import** from the split button below the table.
+* Import the [nginx-collector-jobs.xml](./configs/nginx-collector-jobs.xml) job on the **Jobs** page by selecting **Import** from the split-button below the table.
 * Open the `nginx-statistics` FILE job.
 * If the **Storage** drop-down is set to **None**, select the target ATSD server.
 * Set **Status** to **Enabled**.

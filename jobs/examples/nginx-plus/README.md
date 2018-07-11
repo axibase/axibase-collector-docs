@@ -33,7 +33,7 @@ Log in to Axibase Collector web interface.
 
 ### Import a Job
 
-* Import the [`nginx-plus-collector-job.xml`](./configs/nginx-plus-collector-job.xml) job on the **Jobs** page by selecting **Import** from the split button below the table.
+* Import the [`nginx-plus-collector-job.xml`](./configs/nginx-plus-collector-job.xml) job on the **Jobs** page by selecting **Import** from the split-button below the table.
 * Open the `nginx-plus-statistics` JSON job.
 * If the **Storage** drop-down is set to **None**, select the target ATSD server.
 * Set **Status** to **Enabled**.

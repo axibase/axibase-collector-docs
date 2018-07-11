@@ -34,7 +34,7 @@ Modify `mysql.cnf` by setting `bind-address = 0.0.0.0`.
 
 ### Import MySQL Server Job into Axibase Collector
 
-* Open the **Jobs** menu and select **Import** from the split button at the bottom of the screen to upload the [mysql-server-jobs.xml](./mysql-server-jobs.xml) file.
+* Open the **Jobs** menu and select **Import** from the split-button at the bottom of the screen to upload the [mysql-server-jobs.xml](./mysql-server-jobs.xml) file.
 
 ### Configure MySQL Server Database Connection
 

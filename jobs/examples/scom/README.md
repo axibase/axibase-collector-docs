@@ -18,7 +18,7 @@ Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations databas
 
 ### Import Microsoft SCOM JDBC job
 
-* On the **Jobs** page select **Import** from the split button below the table and upload the [`collector-jobs-scom-jobs.xml`](./collector-jobs-scom-jobs.xml) file.
+* On the **Jobs** page select **Import** from the split-button below the table and upload the [`collector-jobs-scom-jobs.xml`](./collector-jobs-scom-jobs.xml) file.
 
 ### Configure Microsoft SCOM Database Connection
 

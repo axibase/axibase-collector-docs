@@ -14,7 +14,7 @@ VMware vCenter collects and stores statistics from ESX servers in a Microsoft SQ
 
 ### Import VMware JDBC job
 
-* On the **Jobs** page, select **Import** from the split button below the table and upload the [`collector-jobs-vmware-jobs.xml`](./collector-jobs-vmware-jobs.xml) file.
+* On the **Jobs** page, select **Import** from the split-button below the table and upload the [`collector-jobs-vmware-jobs.xml`](./collector-jobs-vmware-jobs.xml) file.
 
 ### Configure VMware Database Connection
 

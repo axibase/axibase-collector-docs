@@ -20,7 +20,7 @@ Use the table below to create HTTP job configuration.
 | Driver Timeout, seconds |  Defines the amount of time the Driver waits to complete the request before returning the timeout exception message.*  |
 | Driver File Encoding |  Encoding of the file you are requesting with the script. * |
 
-> *These fields become available if you select the **Enable Web Driver** check box.
+> *These fields become available if you select the **Enable Web Driver** checkbox.
 
 ### `http.status` Metric Values Based on HTTP Response Codes
 

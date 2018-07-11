@@ -35,6 +35,6 @@ The copied job has the same name as the original job but with the `-cloned` post
 
 By default, cloned jobs are disabled.
 
-You can change the necessary settings and enable the job by selecting the check box and selecting **Enable** from the split button below the table.
+You can change the necessary settings and enable the job by selecting the checkbox and selecting **Enable** from the split-button below the table.
 
 A cloned job has a unique primary key and can run concurrently with the original job.

@@ -14,7 +14,7 @@ Oracle EM collects and stores statistics from remote databases, applications, an
 
 ### Import Oracle EM JDBC Job
 
-* On the **Jobs** page select **Import** from the split button below the table and upload the [`oracle-em-jobs.xml`](./oracle-em-jobs.xml) file.
+* On the **Jobs** page select **Import** from the split-button below the table and upload the [`oracle-em-jobs.xml`](./oracle-em-jobs.xml) file.
 
 ### Configure Oracle EM Database Connection
 

@@ -73,7 +73,7 @@ Configure Java applications for JMX monitoring according to [JMX Job Documentati
 
 ### Portal
 
-* Open the **Portals** page from the menu along the top of the interface, click **Import** from the split button, and upload [derby_portal.xml](./configs/derby_portal.xml).
+* Open the **Portals** page from the menu along the top of the interface, click **Import** from the split-button, and upload [derby_portal.xml](./configs/derby_portal.xml).
 * Click the **Assign** link and associate the portal with the entity group created earlier.
 * Open **Entity** tabs, find the java application by name, and click the **Portal** icon.
 
