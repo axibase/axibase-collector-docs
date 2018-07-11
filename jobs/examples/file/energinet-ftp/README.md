@@ -21,15 +21,15 @@ Example: `username:password@192.0.2.1:21/onlinedata/20160609_onlinedata.txt`
 ### First Lines
 
 ```ls
-1 Centrale kraftværker DK1
-2 Centrale kraftværker DK2
-3 Decentrale kraftværker DK1
-4 Decentrale kraftværker DK2
-5 Vindmøller  DK1
-6 Vindmøller  DK2
-7 Udveksling Jylland-Norge
-8 Udveksling Jylland-Sverige
-9 Udveksling Jylland-Tyskland
+1  Centrale kraftværker DK1
+2  Centrale kraftværker DK2
+3  Decentrale kraftværker DK1
+4  Decentrale kraftværker DK2
+5  Vindmøller  DK1
+6  Vindmøller  DK2
+7  Udveksling Jylland-Norge
+8  Udveksling Jylland-Sverige
+9  Udveksling Jylland-Tyskland
 10 Udveksling Sjælland-Sverige
 11 Udveksling Sjælland-Tyskland
 12 Udveksling Bornholm-Sverige
