@@ -7,7 +7,7 @@ Since fields with non-alphanumeric characters, excluding `_` and `-`, are not ac
 ## JSON
 
 ```json
-
+{
   "v": 1,
   "x": {
     "a.b": [
@@ -25,7 +25,7 @@ Since fields with non-alphanumeric characters, excluding `_` and `-`, are not ac
     ],
     "b.c": "v2"
   }
-}{
+}
 ```
 
 [JSON](./fields_with_non_alphanumeric.json) file.
