@@ -10,9 +10,10 @@ The Collector supports data markers to minimize the load on the source systems a
 
 * Download a CSV/TSV file from a URL or an FTP server and upload the file into ATSD.
 * Offload data from a relational database for long-term storage in ATSD.
-* Query a web service, convert JSON output into tabular format, and upload the file into ATSD.
-* Historize metrics by querying current values and retaining their history in ATSD.
-* Collect key performance metrics from Java applications (JMX), network devices (SNMP), etc.
+* [Historize metrics](https://axibase.com/use-cases/tutorials/historize/) by querying current values and retaining their history in ATSD.
+* Query a web service, convert JSON document into CSV format, and upload the file into ATSD.
+* Collect performance metrics from Java applications (JMX), network devices (SNMP), etc.
+* Copy data from operational support systems and plant historians for advanced analytics and visualization.
 
 ## Supported Databases
 
