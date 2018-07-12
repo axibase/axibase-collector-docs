@@ -39,7 +39,7 @@ ___
 |:---|:---|
 | Id | `f7nd-jj28` |
 | Name | Abortion Demographics, 1995-2012 |
-| State | [Illinois](https://data.illinois.gov) |
+| State | `https://data.illinois.gov` |
 | Description | The number of induced pregnancy terminations reported in Illinois by county (if in excess of 50), by age and marital status.<br>Note: Marital status and age are only for Illinois residents. |
 | Attribution | Illinois Department of Public Health, Office of Finance and Administration, Division of Vital Records |
 | Category | Health |

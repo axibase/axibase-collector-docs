@@ -16,7 +16,7 @@ The process involves enabling the nginx status page and configuring Axibase Coll
 
 Follow the steps outlined in the [nginx Server Configuration Guide](./nginx-configure.md) to enable metrics.
 
-The status page returns connection statistics in an unstructured/malformed format, which is parsed by ATSD with [RFC 7111](https://axibase.com/docs/atsd/parsers/csv/#schema-based-parsing) selectors using whitespace as a separator.
+The status page returns connection statistics in an unstructured and malformed format, which is parsed by ATSD with [RFC 7111](https://axibase.com/docs/atsd/parsers/csv/#schema-based-parsing) identifiers using whitespace as a separator.
 
 ```ls
 Active connections: 291

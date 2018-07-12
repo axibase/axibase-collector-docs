@@ -33,7 +33,7 @@ The JSON job provides a way to download JSON files from remote systems or read f
 [JSONPath](https://github.com/jayway/JsonPath#operators) is an expression evaluated against the JSON document to select objects or specific fields.
 
 * The expression starts with `$`, which represents the `root` object followed by a dot-separated path to matched objects.
-* `.{cname}` denotes a selector of the given object's child object with name `cname`.
+* `.{cname}` denotes a `selector` of a child object of the given object with name `cname`.
 * `{arr-name}[*]` stands for all elements of the specified array `arr-name`.
 
 Example:

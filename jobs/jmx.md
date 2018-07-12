@@ -109,7 +109,7 @@ The list specifies attributes whose values are retrieved by the application and 
 
 The list can include specific names as well as name patterns.
 
-You can specify the list of collected attributes by replacing specific attribute names with wildcards. For example, to collect all numeric attributes from MBean `java.lang:*,type=GarbageCollector`, specify `*` in the corresponding attribute selector field.
+You can specify the list of collected attributes by replacing specific attribute names with wildcards. For example, to collect all numeric attributes from MBean `java.lang:*,type=GarbageCollector`, specify `*` in the corresponding attribute `selector` field.
 
 | Object Name Pattern        | Attribute Name List  |
 |:-------------|:-------------|
