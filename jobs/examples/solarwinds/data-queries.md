@@ -4,7 +4,7 @@
 
 * Metrics Queries select the most recent statistics:
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS SysName, V.Caption AS Name,
 T.DateTime, T.DiskSize, T.AvgDiskUsed, T.PercentDiskUsed
 FROM VolumeUsage T, Nodes N, Volumes V
@@ -13,7 +13,7 @@ AND T.DateTime > ? AND V.VolumeSize > 0
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS SysName, V.Caption AS Name,
 T.DateTime, T.AvgDiskQueueLength, T.AvgDiskTransfer, T.AvgDiskReads, T.AvgDiskWrites
 FROM VolumePerformance T, Nodes N, Volumes V
@@ -22,14 +22,14 @@ AND VolumeTypeID IN (4, 10) AND V.VolumeSize > 0 AND T.DateTime > ?
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS SysName, T.DateTime, T.AvgResponseTime, T.PercentLoss
 FROM ResponseTime T, Nodes N
 WHERE T.NodeID = N.NodeID AND T.DateTime > ?
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS SysName, I.InterfaceName AS Name,
 T.DateTime, T.In_Averagebps, T.In_TotalBytes, T.In_TotalPkts, T.In_AvgUniCastPkts, T.In_AvgMultiCastPkts,
 T.Out_Averagebps, T.Out_TotalBytes, T.Out_TotalPkts, T.Out_AvgUniCastPkts, T.Out_AvgMultiCastPkts
@@ -38,8 +38,7 @@ WHERE T.NodeID = N.NodeID AND T.InterfaceID = I.InterfaceID AND I.NodeID = T.Nod
 ORDER BY T.DateTime
 ```
 
-```SQL
-
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS SysName, I.InterfaceName AS Name,
 T.DateTime, T.In_Discards, T.In_Errors, T.Out_Discards, T.Out_Errors
 FROM InterfaceErrors T, Nodes N, Interfaces I
@@ -47,7 +46,7 @@ WHERE T.NodeID = N.NodeID AND T.InterfaceID = I.InterfaceID AND I.NodeID = T.Nod
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS SysName, T.*
 FROM CPULoad T, Nodes N
 WHERE T.NodeID = N.NodeID   AND T.DateTime > ?
@@ -56,7 +55,7 @@ ORDER BY T.DateTime
 
 * Properties Query selects current properties:
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS ValidSysName, ObjectSubType,
 IP_Address, IP_Address_Type,
 DynamicIP, UnManaged, Caption, DNS, SysName, Vendor, Description, IOSVersion,
@@ -70,21 +69,21 @@ CPULoad, MemoryUsed, PercentMemoryUsed FROM Nodes N
 
 * Metrics Queries select the most recent statistics:
 
-```SQL
+```sql
 LECT N.HostName AS Name, C.Name AS Cluster, T.*
 FROM VIM_HostStatistics T, VIM_Hosts N, VIM_Clusters C
 WHERE T.HostID = N.HostID AND N.ClusterID = C.ClusterID AND T.DateTime > ?
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT N.Name, T.*
 FROM VIM_DataStoreStatistics T, VIM_DataStores N
 WHERE T.DataStoreID = N.DataStoreID AND N.Capacity > 0 AND T.DateTime > ?
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT REPLACE(N.Name, ' ', '_') AS Name, H.HostName AS Host, C.Name AS Cluster, T.*
 FROM VIM_VMStatistics T, VIM_VirtualMachines N, VIM_Hosts H, VIM_Clusters C
 WHERE T.VirtualMachineID = N.VirtualMachineID AND N.HostID = H.HostID
@@ -92,7 +91,7 @@ AND H.ClusterID = C.ClusterID AND N.ManagedStatus = 1 AND T.DateTime > ?
 ORDER BY T.DateTime
 ```
 
-```SQL
+```sql
 SELECT N.Name, T.*
 FROM VIM_ClusterStatistics T, VIM_Clusters N
 WHERE T.ClusterID = N.ClusterID
@@ -102,7 +101,7 @@ ORDER BY T.DateTime
 
 * Properties Query selects current properties:
 
-```SQL
+```sql
 SELECT LOWER(REPLACE(N.Name, ' ', '_')) AS Name, N.DataStoreIdentifier, N.Type, N.URL, N.Accessible,
 N.ManagedStatus, N.Capacity, N.FreeSpace,
 N.ProvisionedSpace, N.IOPSTotal, N.IOPSRead, N.IOPSWrite, N.LatencyTotal, N.LatencyRead, N.LatencyWrite,
@@ -110,7 +109,7 @@ N.DepletionDate, N.Platform, N.ClusterCount, N.Local
 FROM VIM_DataStores N* Metrics Queries select most recent statistics
 ```
 
-```SQL
+```sql
 SELECT LOWER(REPLACE(N.Name, ' ', '_')) AS VmName, N.Name, LOWER(H.HostName) AS Host,
 LOWER(REPLACE(C.Name, ' ', '_')) AS Cluster,
 N.UUID,N.ManagedObjectID,N.VMConfigFile,N.MemoryConfigured,N.MemoryShares,N.CPUShares,N.GuestState,
@@ -127,10 +126,9 @@ N.VolumeSummaryCapacityDepletionDate, N.DynamicMemoryEnabled,
 N.CpuCostop, N.SnapshotSummaryCount, N.DateCreated, N.OldestSnapshotDate,
 N.HeartBeat, N.SnapshotDateModified, N.MemoryAllocationLimit, N.VirtualDiskDateModified
 FROM VIM_VirtualMachines N, VIM_Hosts H, VIM_Clusters C WHERE N.HostID = H.HostID AND H.ClusterID = C.ClusterID
-
 ```
 
-```SQL
+```sql
 SELECT LOWER(N.HostName) AS ESXHostName, HostName,
 LOWER(REPLACE(C.Name, ' ', '_')) AS Cluster, N.ManagedObjectID, N.VMwareProductName, N.VMwareProductVersion,
 N.PollingMethod,N.Model,N.Vendor,N.ProcessorType,N.CpuCoreCount,N.CpuPkgCount,N.CpuMhz,N.NicCount,
@@ -143,7 +141,7 @@ N.TriggeredAlarmDescription,N.BootTime,N.DateCreated,N.TotalLatency
 FROM VIM_Hosts N, VIM_Clusters C WHERE N.ClusterID = C.ClusterID
 ```
 
-```SQL
+```sql
 SELECT LOWER(REPLACE(Name, ' ', '_')) AS ClusterName, Name, ManagedObjectID,
 TotalMemory, TotalCpu, CpuCoreCount, CpuThreadCount, EffectiveCpu, EffectiveMemory,
 DrsBehaviour, DrsStatus, DrsVmotionRate, HaAdmissionControlStatus, HaStatus,
@@ -157,7 +155,7 @@ DatastoreUsedSpace, CpuUtilizationDepletionDate, MemoryUtilizationDepletionDate 
 
 * Metrics Queries select the most recent statistics:
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS Name,
 REPLACE(C.Name, ' ', '_') AS Component, DateTime, R.ResponseTime, R.ComponentAvailability
 FROM APM_Component C, APM_Application A, Nodes N, APM_ResponseTime R
@@ -168,7 +166,7 @@ ORDER BY DateTime
 
 * Properties Query selects current properties:
 
-```SQL
+```sql
 SELECT REPLACE(ISNULL(NULLIF(N.SysName, ''), N.Caption), ' ', '_') AS Name,
 REPLACE(C.ComponentName, ' ', '_') AS Component, C.ComponentStatus, C.ComponentResponseTime
 FROM APM_AlertsData C, APM_Application A, Nodes N
