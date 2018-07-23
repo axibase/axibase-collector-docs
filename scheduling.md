@@ -18,7 +18,7 @@ Manual execution produces the same results as scheduled execution.
 
 The manual mode is useful for running temporarily disabled jobs (for example when developing new jobs or troubleshooting existing jobs).
 
-## cron Expressions
+## `cron` Expressions
 
 A `cron` expression is a string that determines a schedule for executing a job.
 

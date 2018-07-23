@@ -4,23 +4,24 @@ HTTP (Hypertext Transfer Protocol) is the underlying protocol used by the World 
 
 ## HTTP Job Configuration
 
-Use the table below to create HTTP job configuration.
+![](./images/http-job.png)
+
+Use the table below to create an HTTP job configuration.
 
 | Field         | Description |
 |:------------- |:-------------|
-| Name     | Name of the configuration. |
-| HTTP Pool |  Name of one of the configured HTTP pools that you want to use. |
-| Path |   Path to target files located on the remote or local file system from which HTTP Job reads.  |
-| Response Text |  Text for which Axibase Collector searches in the response from the server.   |
-| Response Text Match Type |  Defines how Collector searches for the necessary response text. <br> Possible options: <br>  **CONTAINS** - select this option if you want Collector to search for a partial match. <br>  **EQUALS** - select this option if you want to search for the exact match. <br> **REGEXP** - select this option if you want to use regular expressions for the search. |
+| Enabled | The job is active and queried data is stored|
+| Name     | Name of the HTTP job configuration. |
+| `cron` Expression | Run the job on a [`cron`](../scheduling.md#cron-expressions) schedule.
+| Item List| Apply the HTTP job to an [Item List](../collections.md#item-lists) `*`.|
+| HTTP Pool |  Name of a configured [HTTP pool](../atsd-server-connection.md#http-pool) to use `*`. |
+| Path |   Path to target files located on the remote or local file system from which HTTP job reads.  |
+| Response Text |  Text Axibase Collector searches for in the response from the server.   |
+| Response Text Match Type |  Defines how Collector searches for response text.<br>  `CONTAINS`: Search for a partial match. <br>  `EQUALS`: Search for an exact match. <br> `REGEXP`: Search via regular expression. |
 | Failure Retest |  Number of attempts to re-establish the connection.   |
 | Failure Retest Interval |   Delay between attempts to re-establish connection.    |
-| Enable Web Driver |  Defines whether you want to enable the Web Driver tool.  |
-| Driver Script | Selenium script. *  |
-| Driver Timeout, seconds |  Defines the amount of time the Driver waits to complete the request before returning the timeout exception message.*  |
-| Driver File Encoding |  Encoding of the file you are requesting with the script. * |
 
-> *These fields become available if you select the **Enable Web Driver** checkbox.
+> `*` Apply the HTTP job to **either** an Item List or HTTP Pool, but not both.
 
 ### `http.status` Metric Values Based on HTTP Response Codes
 
@@ -33,8 +34,8 @@ Use the table below to create HTTP job configuration.
 | `4` | `SocketTimeoutException` |
 | `5` | Other exceptions without HTTP response status |
 | `200` | `HTTP response status = 200`, but response text failed to match. |
-| `xxx` | HTTP response status. For example `500` (Server Error). |
+| `xxx` | HTTP response status. For example `500 Server Error`. |
 
 ### Configuration Example
 
-![HTTP Configuration](./images/httpconfiguration.png)
+![](./images/http-config-example.png)
