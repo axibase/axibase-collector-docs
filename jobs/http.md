@@ -29,7 +29,7 @@ Metric Prefix | Common prefix added to metric names, for example `jmx.activemq`.
 
 | Metric Value | Response Code |
 |:------------- |:-------------|
-| `0` | No error. TCP connection successful. HTTP status code `2xx` or `3xx`. String search succesful, if enabled. |
+| `0` | No error. TCP connection successful. HTTP status code `2xx` or `3xx`. String search successful, if enabled. |
 | `1` | `ConnectException` |
 | `2` | `NoRouteToHostException` |
 | `3` | `UnknownHostException` |
