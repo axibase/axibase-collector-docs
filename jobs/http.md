@@ -92,4 +92,10 @@ Click **Test** to view sample series commands for the given configuration.
 series e:example.org d:2018-07-24T18:00:00.000Z t:name=spring-boot t:url=http://example.org/spring-boot/example/ t:username=axibase m:http.download_size=1889 m:http.status=0 m:http.download_time=14 m:http.connection_time=1
 ```
 
-The above HTTP Job was executed at 18:00 on July 24, 2018. The queried site `www.example.org/springboot/example` response was 1,889 bytes and took 14 milliseconds to download. Valid connection was established in one millisecond and the SSL Certificate is valid.
+The response series command contains the following information:
+
+* The HTTP Job executed at 18:00 on July 24, 2018.
+* The queried site `www.example.org/springboot/example` response is 1,889 bytes and took 14 milliseconds to download.
+* Valid connection established in one millisecond and the SSL Certificate is valid.
+
+Collector passes this information to ATSD where it is stored and can trigger Alert Responses using the [Rule Engine](https://axibase.com/docs/atsd/rule-engine/), queried using [REST API](https://axibase.com/docs/atsd/api/data/), or added to a streaming [Portal](https://axibase.com/docs/atsd/portals/).
