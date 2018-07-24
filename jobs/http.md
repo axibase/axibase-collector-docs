@@ -30,8 +30,8 @@ Storage | Define location to store retrieved series commands.
 
 | Field         | Description |
 |:------------- |:-------------|
-| Item List| Apply the HTTP job to an [Item List](../collections.md#item-lists) `*`.|
-| HTTP Pool |  Apply a configured [HTTP pool](./http-pool.md) or [create one](#create-an-http-pool) by clicking **+** `*`. |
+| Item List| Apply the HTTP job to an [Item List](../collections.md#item-lists). `*`|
+| HTTP Pool |  Apply a configured [HTTP pool](./http-pool.md) or create one by clicking **+**. `*` |
 | Path |   Path to target files located on the remote or local file system from which HTTP job reads.  |
 | Collect SSL Metrics | Collect SSL certificate expiration and status metrics: `http.ssl_certificate_expiration_days` and `http.ssl_certificate_status`.
 String Matching | Define how Collector searches for response text.<br>Possible values:<br>`Contains String`: Search for partial match.<br>`Equals String`: Search for exact match.<br>`Matches String`: Search via regular expression.<br>`Does Not Contain String`: Search those strings which do not contain the target string defined in **Search String**.
