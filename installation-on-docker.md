@@ -65,7 +65,7 @@ If the username or password contains a `$`, `&`, `#`, or `!` character, escape t
 
 The password must contain at least **six** (`6`) characters and is subject to certain [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
-To send data to ATSD at `https://192.0.2.1:8443` as user `john.doe` with the password `password`, specify:
+To send data to ATSD at `https://192.0.2.1:8443` as user `john.doe` with the password `secret`, specify:
 
 ```sh
 docker run \
@@ -74,7 +74,7 @@ docker run \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
-  -atsd-url=https://john.doe:password@192.0.2.1:8443
+  -atsd-url=https://john.doe:secret@192.0.2.1:8443
 ```
 
 ## Start Container in Privileged Mode
