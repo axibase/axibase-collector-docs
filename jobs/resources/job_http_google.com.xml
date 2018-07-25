@@ -1,0 +1,26 @@
+<list>
+  <com.axibase.collector.model.job.http.HttpJobConfig>
+    <name>http-quick-start</name>
+    <cronExpression>R 0/5 * * * ?</cronExpression>
+    <enabled>true</enabled>
+    <jobType>HTTP</jobType>
+    <defaultTags/>
+    <checkLastTime>false</checkLastTime>
+    <commitInterval>10</commitInterval>
+    <errorThreshold>0</errorThreshold>
+    <configurations>
+      <com.axibase.collector.model.job.http.HttpConfiguration>
+        <name>google.com</name>
+        <path>https://google.com</path>
+        <responseText>google</responseText>
+        <matchType>CONTAINS</matchType>
+        <failureRetest>1</failureRetest>
+        <failureRetestDelay>5</failureRetestDelay>
+        <enableWebDriver>false</enableWebDriver>
+        <driverTimeout>0</driverTimeout>
+        <driverFileEncoding>UTF8</driverFileEncoding>
+        <collectSslMetrics>true</collectSslMetrics>
+      </com.axibase.collector.model.job.http.HttpConfiguration>
+    </configurations>
+  </com.axibase.collector.model.job.http.HttpJobConfig>
+</list>

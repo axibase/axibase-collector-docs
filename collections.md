@@ -2,31 +2,31 @@
 
 ## Item Lists
 
-Item List is a collection of strings which can be iterated to execute repetitive requests (queries) within the same job configuration.
+Item List is a collection of strings which can be iterated to execute repetitive requests within the same job configuration.
 
-The list can be defined by specifying items as text (one item per line) or by retrieving them from an external source such as file or script output.
+Populate the list by specifying items as text, one item per line, or by retrieving them from an external source such as file or script output.
 
 Items starting with the hash `#` symbol are treated as comments and are ignored.
 
 Supported list types:
 
-* [TEXT](#text)
-* [FILE](#file)
-* [SCRIPT](#script)
-* [URL](#url)
-* [QUERY](#query)
-* [ATSD_PROPERTY](#atsd_property)
+* [`TEXT`](#text)
+* [`FILE`](#file)
+* [`SCRIPT`](#script)
+* [`URL`](#url)
+* [`QUERY`](#query)
+* [`ATSD_PROPERTY`](#atsd_property)
 
 Job types with support for Item List automation:
 
-* FILE
-* HTTP
-* ICMP
-* JSON
-* OVPM
-* SNMP
-* SOCRATA
-* TCP
+* [FILE](./jobs/file.md)
+* [HTTP](./jobs/http.md)
+* [ICMP](./jobs/icmp.md)
+* [JSON](./jobs/json.md)
+* [OVPM](./jobs/ovpm.md)
+* [SNMP](./jobs/snmp.md)
+* [SOCRATA](./jobs/socrata.md)
+* [TCP](./jobs/tcp.md)
 
 ### Configuration
 
