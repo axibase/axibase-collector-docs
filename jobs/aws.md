@@ -2,13 +2,13 @@
 
 ## Overview
 
-AWS job allows you to copy [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into Axibase Time Series Database for long-term retention, reporting, and visualization.
+AWS Job copies [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into Axibase Time Series Database for long-term retention, reporting, and visualization.
 
-The AWS job maintains markers for each CloudWatch metric in the built-in Collector database to load only incremental data. These markers allow the job to execute optimized API requests and to avoid data gaps in case of network outages.
+This job maintains markers for each CloudWatch metric in the built-in Collector database to load only incremental data. These markers allow the job to execute optimized API requests and avoid data gaps in case of network outages.
 
-When started for the first time, the AWS job loads available historical data for up to 2 weeks.
+When started for the first time, the AWS Job loads available historical data for up to two weeks.
 
-Each job can be configured to retrieve metrics from different [AWS regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region).
+Configure each AWS Job to retrieve metrics from different [AWS regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region).
 
 ## Supported Namespaces
 
@@ -16,15 +16,15 @@ Each AWS [namespace](https://docs.aws.amazon.com/AmazonCloudWatch/latest/Develop
 
 Refer to [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html) for a complete list of available metrics.
 
-You can configure the AWS job to collect metrics for all or a subset of namespaces. To reduce the number of API queries, collect data only for AWS services that you use.
+Configure an AWS Job to collect metrics for all or a subset of namespaces. To reduce the number of API queries, collect data only for AWS services that you use.
 
-Available namespaces:
+**Available namespaces**:
 
 ![](./images/aws-namespaces.png)
 
 ## Schema
 
-The CloudWatch metrics are stored in ATSD using the following naming convention:
+CloudWatch metrics are stored in ATSD using the following naming convention:
 
 ```ls
 {namespace}.{metric-name}.{statistic-name}
@@ -36,15 +36,15 @@ The composite metric name is normalized by replacing slash and whitespace symbol
 aws_ebs.volumeidletime.maximum
 ```
 
-For each metric, the AWS job retrieves the following period statistics:
+For each metric, AWS Job retrieves the following period statistics:
 
-* average
-* minimum
-* maximum
-* sum
-* sample count
+* `average`
+* `minimum`
+* `maximum`
+* `sum`
+* `sample count`
 
-The AWS statistics are stored in ATSD as metrics which allows ATSD to compute aggregate statistics on top of AWS statistics.
+The AWS statistics are stored by ATSD as metrics. This enables the database to compute aggregate statistics on top of AWS statistics.
 
 For example, the **AWS/Billing Estimated Charges** metric is stored as 5 metrics:
 
@@ -62,36 +62,36 @@ The job assigns each metric to an entity which is extracted from the [primary di
 
 | **Field** | **Description** |
 |:---|:---|
-| Name | Configuration name. |
-| HTTP Pool | Pool of HTTPS connections to execute requests against the specified CloudWatch endpoint. The pool can be left empty. |
-| Endpoint  | [CloudWatch Endpoint](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region) URL.   |
-| Access key id  | Access key. See [Getting Your Access Key ID and Secret Access Key](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).   |
-| Secret access key  | Secret access key. |
-| Namespaces  | CloudWatch metric namespaces enabled for collection.   |
-| Collect Status  |  Collect status check metrics such as <br>`StatusCheckFailed`, `StatusCheckFailed_Instance`, `StatusCheckFailed_System` |
-| Property Refresh <br> Interval, minutes | Interval for loading resource attributes. |
+| `Name` | Configuration name. |
+| `HTTP Pool` | Pool of HTTPS connections to execute requests against the specified CloudWatch endpoint. The pool can be left empty. See [HTTP Pool](./http-pool.md) for more information. |
+| `Endpoint`  | [CloudWatch Endpoint](https://docs.aws.amazon.com/general/latest/gr/rande.html#cw_region) URL.   |
+| `Access key id`  | Access key. See [Getting Your Access Key ID and Secret Access Key](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).   |
+| `Secret access key`  | Secret access key. |
+| `Namespaces`  | CloudWatch metric namespaces enabled for collection.   |
+| `Collect Status`  |  Collect status check metrics such as <br>`StatusCheckFailed`, `StatusCheckFailed_Instance`, `StatusCheckFailed_System` |
+| `Property Refresh` <br> Interval, minutes | Interval at which to load resource attributes. |
 
 ## Configuration Steps
 
-* Create a read-only [IAM account](./aws-iam.md) for querying CloudWatch statistics.
-* Open the **Jobs** page, click **Add Job** and select **Use Wizard**.
+* Create a read-only [IAM account](./aws-iam.md) to query CloudWatch statistics.
+* Open the **Jobs** page, click **Add Job**, and select **Use Wizard**.
 * Specify access and secret keys.
-* Select AWS regions from which you want to collect data. <br>The wizard creates a separate AWS configuration for each region within the same job.
+* Select AWS regions from which to collect data. <br>The wizard creates a separate AWS configuration for each region within the same job.
 * Validate the credentials and save the job if there are no errors.
 
 ![](./images/aws-wizard-validate.png)
 
-* Select one of the created configurations and click **Test**.
+* Select one of the configurations and click **Test**.
 
 ![](./images/aws-test.png)
 
-* To view available metrics for a particular namespace, remove all namespaces except one and click **Test**.
+* To view available metrics for a particular namespace, clear the checkboxes for all namespaces except one and click **Test**.
 
 ## Validation
 
 * Open the AWS job page and set the schedule to `R 0/5 * * * ?` to execute the job every five minutes with random seconds.
-* On the AWS Jobs list page, check that Items Read and Commands Sent are greater than 0.
-* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job takes a while to load backlogged historical data for all metrics after the job is created.
+* On the **AWS Jobs** page, check that `Items Read` and `Commands Sent` are greater than `0`.
+* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job takes some time to load backlogged historical data for all metrics after creation.
 * Open the **Entities** tab and locate one of AWS EC2 instances. Click the **Portal** links to access pre-defined AWS portals.
 
 ![](./images/metric_list.png)
