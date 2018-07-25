@@ -6,7 +6,7 @@ For a quick installation of pre-integrated Axibase Collector and ATSD instances 
 
 ## Host Requirements
 
-* [Docker Engine](https://docs.docker.com/engine/installation/) 1.7+
+* [Docker Engine](https://docs.docker.com/engine/installation/) `1.7+`
 
 ## Image Information
 
@@ -16,7 +16,7 @@ For a quick installation of pre-integrated Axibase Collector and ATSD instances 
 
 ## Importing an Image in Restricted Environments
 
-If the Docker host has no connectivity to [Docker Hub](https://hub.docker.com), download and import the Collector image manually.
+If the Docker host does not have connectivity to [Docker Hub](https://hub.docker.com), download and import the Collector image manually.
 
 * Log in to a Docker host which is connected to Docker Hub.
 * Pull the Collector image from Docker Hub and export into an archive file:
@@ -38,9 +38,9 @@ Alternatively, download a pre-built image from the [`axibase.com`](https://axiba
 
 ## Start Container
 
-> Using Collector to monitor Docker? Launch container in privileged mode as described in the [Docker Job Documentation](./jobs/docker.md#local-installation).
+> Using Collector to monitor Docker? Launch the container in privileged mode as described in the [Docker Job Documentation](./jobs/docker.md#local-installation).
 
-```properties
+```sh
 docker run \
  --detach \
  --publish-all \
@@ -49,9 +49,9 @@ docker run \
  axibase/collector:latest
 ```
 
-To automatically configure a connection to the Axibase Time Series Database, add the `-atsd-url` parameter containing the ATSD hostname and HTTPS port (default 8443), as well as [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+To automatically configure a connection to the Axibase Time Series Database add the `-atsd-url` parameter with the ATSD hostname and HTTPS port, by default `8443`, as well as [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
-```properties
+```sh
 docker run \
  --detach \
  --publish-all \
@@ -61,20 +61,20 @@ docker run \
   -atsd-url=https://username:password@atsd_hostname:8443
 ```
 
-If the user name or password contains a `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
+If the username or password contains a `$`, `&`, `#`, or `!` character, escape the character with backslash `\`.
 
-The password must contain at least **six** (`6`) characters and is subject to the following [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
+The password must contain at least **six** (`6`) characters and is subject to certain [requirements](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements).
 
-For example, for user `john.doe` with the password `secret` sending data to ATSD at `https://192.0.2.1:8443`, specify:
+To send data to ATSD at `https://192.0.2.1:8443` as user `john.doe` with the password `password`, specify:
 
-```properties
+```sh
 docker run \
  --detach \
  --publish-all \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
-  -atsd-url=https://john.doe:secret@192.0.2.1:8443
+  -atsd-url=https://john.doe:password@192.0.2.1:8443
 ```
 
 ## Start Container in Privileged Mode
@@ -100,12 +100,12 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 |`ATSD_SERVICE_PORT_HTTPS` | No | HTTPS port. |
 |`ATSD_SERVICE_PORT_TCP` | No | TCP port for [network commands](https://axibase.com/docs/atsd/api/network/). |
 |`ATSD_URL` | No | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
-|`COLLECTOR_USER_NAME` | No | User name for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
+|`COLLECTOR_USER_NAME` | No | Username for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
 |`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
 |`JAVA_OPTS` | No| Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
 
-For example, for user `adm-dev` with the password `my$pwd` sending data to ATSD at `https://192.0.2.1:8443`, specify:
+To send data to ATSD at `https://192.0.2.1:8443` as user `mary.jones` with the password `password` sending data to ATSD at , specify:
 
 ```properties
 docker run \
@@ -113,13 +113,13 @@ docker run \
  --publish-all \
  --restart=always \
  --name=axibase-collector \
- --env COLLECTOR_USER_NAME=adm-dev \
- --env COLLECTOR_USER_PASSWORD=my\$pwd \
+ --env COLLECTOR_USER_NAME=mary.jones \
+ --env COLLECTOR_USER_PASSWORD=password \
  --env ATSD_URL=https://192.0.2.1:8443 \
  axibase/collector:latest
 ```
 
-For example, to set the maximum Java heap size, specify:
+To set the maximum Java heap size, specify:
 
 ```properties
 docker run \
@@ -139,11 +139,7 @@ Initializing the application can take up to five minutes.
 docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-collector.log
 ```
 
-Wait until the following message appears:
-
-> **FrameworkServlet 'dispatcher': initialization completed.**
-
-This message indicates that the initial configuration is complete.
+The following message indicates that the initial configuration is complete: `FrameworkServlet 'dispatcher': initialization completed.`
 
 ## Validation
 
@@ -156,21 +152,21 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ee15099d9f88        axibase/collector   "/bin/bash /opt/axiba"   33 seconds ago      Up 32 seconds       0.0.0.0:32769->9443/tcp   axibase-collector
 ```
 
-Take note of the public HTTPS port assigned to axibase-collector container, for example **32769** in the example above.
+Note the public HTTPS port assigned to `axibase-collector` container, `32769` in the example above.
 
 ## Login
 
 Open `https://docker_hostname:32769` in your browser and create an [administrator account](./configure-administrator-account.md).
 
-`docker_hostname` is the hostname or IP address of the Docker host and **32769** is the external port number assigned to the Collector container in the previous step.
+`docker_hostname` is the hostname or IP address of the Docker host and `32769` is the external port number assigned to the Collector container in the previous step.
 
-## Setup ATSD Connection
+## ATSD Connection Setup
 
-Configure the [ATSD Server connection](./atsd-server-connection.md) to send data into an Axibase Time Series Database instance.
+Configure [ATSD Server connection](./atsd-server-connection.md) to send data into an ATSD instance.
 
 ## Troubleshooting
 
-Review the following log files for any errors:
+Review the log files for any errors:
 
 ```sh
 docker exec -it axibase-collector tail -n 100 /opt/axibase-collector/logs/axibase-collector.log
