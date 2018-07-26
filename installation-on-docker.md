@@ -105,21 +105,7 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 |`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
 |`JAVA_OPTS` | No| Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
 
-To send data to ATSD at `https://192.0.2.1:8443` as user `mary.jones` with the password `password` sending data to ATSD at , specify:
-
-```properties
-docker run \
- --detach \
- --publish-all \
- --restart=always \
- --name=axibase-collector \
- --env COLLECTOR_USER_NAME=mary.jones \
- --env COLLECTOR_USER_PASSWORD=password \
- --env ATSD_URL=https://192.0.2.1:8443 \
- axibase/collector:latest
-```
-
-To set the maximum Java heap size, specify:
+To specify maximum Java heap size:
 
 ```properties
 docker run \
