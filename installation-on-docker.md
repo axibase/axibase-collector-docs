@@ -77,6 +77,14 @@ docker run \
   -atsd-url=https://john.doe:secret@192.0.2.1:8443
 ```
 
+The credentials can also be passed as environment variables.
+
+```sh
+ --name=axibase-collector \
+ --env COLLECTOR_USER_NAME=john.doe \
+ --env COLLECTOR_USER_PASSWORD=secret \
+```
+
 ## Start Container in Privileged Mode
 
 The launch command is different if the Collector container is used to [monitor statistics](./jobs/docker.md#local-installation) from the local Docker Engine.
@@ -94,27 +102,22 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 
 ## Environment Variables
 
-| **Name** | **Required** | **Description** |
-|:---|:---|:---|
-|`ATSD_SERVICE_HOST` | No | Host where Axibase Time Series Database is installed. |
-|`ATSD_SERVICE_PORT_HTTPS` | No | HTTPS port. |
-|`ATSD_SERVICE_PORT_TCP` | No | TCP port for [network commands](https://axibase.com/docs/atsd/api/network/). |
-|`ATSD_URL` | No | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
-|`COLLECTOR_USER_NAME` | No | Username for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
-|`COLLECTOR_USER_PASSWORD` | No | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
-|`DOCKER_HOSTNAME` | No | Hostname of the Docker host where Axibase Collector container is running.|
-|`JAVA_OPTS` | No| Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
+| **Name** | **Description** |
+|:---|:---|
+|`ATSD_SERVICE_HOST` | Host where Axibase Time Series Database is installed. |
+|`ATSD_SERVICE_PORT_HTTPS` | HTTPS port. |
+|`ATSD_SERVICE_PORT_TCP` | TCP port for [network commands](https://axibase.com/docs/atsd/api/network/). |
+|`ATSD_URL` | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
+|`COLLECTOR_USER_NAME` | Username for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
+|`COLLECTOR_USER_PASSWORD` | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
+|`DOCKER_HOSTNAME` | Hostname of the Docker host where Axibase Collector container is running.|
+|`JAVA_OPTS` | Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
 
-To specify maximum Java heap size:
+For example, add `JAVA_OPTS` variable to increase maximum Java heap size allocated to the Collector process.
 
-```properties
-docker run \
- --detach \
- --publish-all \
- --restart=always \
+```sh
  --name=axibase-collector \
  --env JAVA_OPTS=-Xmx512m \
- axibase/collector:latest
 ```
 
 ## Check Installation
