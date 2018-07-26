@@ -80,9 +80,9 @@ docker run \
 The credentials can also be passed as environment variables.
 
 ```sh
- --name=axibase-collector \
- --env COLLECTOR_USER_NAME=john.doe \
- --env COLLECTOR_USER_PASSWORD=secret \
+--name=axibase-collector \
+--env COLLECTOR_USER_NAME=john.doe \
+--env COLLECTOR_USER_PASSWORD=secret \
 ```
 
 ## Start Container in Privileged Mode
@@ -116,8 +116,8 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 For example, add `JAVA_OPTS` variable to increase maximum Java heap size allocated to the Collector process.
 
 ```sh
- --name=axibase-collector \
- --env JAVA_OPTS=-Xmx512m \
+--name=axibase-collector \
+--env JAVA_OPTS=-Xmx512m \
 ```
 
 ## Check Installation
