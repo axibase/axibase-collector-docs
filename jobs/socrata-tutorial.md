@@ -17,7 +17,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
 4. To select the type of job you want to add, complete either of these steps.
 
-   * Before completing the previous step, filter by desired job type (Socrata) in the **Jobs** tab. After clicking **Add Job**, the desired job type is specified.
+   * Before completing the previous step, filter by target job type (Socrata) in the **Jobs** tab. After clicking **Add Job**, job type is specified.
 
    ![Figure 4](./images/Figure4.png)
 

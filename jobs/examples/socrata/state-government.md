@@ -802,7 +802,7 @@ t:conclusion=Unjustified t:type=Business t:disposition="Claim Settled" t:recover
 | Id | `d6yy-54nr` |
 | Name | Lottery Powerball Winning Numbers: Beginning 2010 |
 | State | [New York](https://data.ny.gov) |
-| Description | Go to `https://nylottery.ny.gov/powerball/past-winning-numbers` on the New York Lottery website for past Powerball results and payouts. |
+| Description | Refer to `https://nylottery.ny.gov/powerball/past-winning-numbers` for the New York Lottery website for past Powerball results and payouts. |
 | Attribution | New York State Gaming Commission |
 | Category | Government & Finance |
 | Date Range | 2010-2016 |
@@ -832,7 +832,7 @@ t:type="Government & Finance" t:multiplier=2.0 m:"17 22 36 37 52 24"
 | Id | `5xaw-6ayf` |
 | Name | Lottery Mega Millions Winning Numbers: Beginning 2002 |
 | State | [New York](https://data.ny.gov) |
-| Description | Go to `https://nylottery.ny.gov/mega-millions/past-winning-numbers` on the New York Lottery website for past Mega Millions results and payouts.|
+| Description | Refer to `https://nylottery.ny.gov/mega-millions/past-winning-numbers` for New York Lottery website for past Mega Millions results and payouts.|
 | Attribution | New York State Gaming Commission |
 | Category | Government & Finance |
 | Date Range | 2002-2016 |
@@ -951,7 +951,7 @@ t:entity_type=ORG t:mail_addr_1="4910 TIEDEMAN ROAD" t:cntry_cd_txt=USA t:origin
 | Id | `kwxv-fwze` |
 | Name | Lottery Cash 4 Life Winning Numbers: Beginning 2014 |
 | State | [New York](https://data.ny.gov) |
-| Description | Go to `https://on.ny.gov/1xRIvPz` on the New York Lottery website for past Cash 4 Life results and payouts. |
+| Description | Refer to `https://on.ny.gov/1xRIvPz` for New York Lottery website for past Cash 4 Life results and payouts. |
 | Attribution | New York State Gaming Commission |
 | Category | Government & Finance |
 | Date Range | 2014-2016 |
