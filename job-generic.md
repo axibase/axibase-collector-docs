@@ -1,6 +1,6 @@
 # Jobs
 
-A job is a primary unit of configuration and scheduling in Axibase Collector.
+The Job is the primary unit of configuration and scheduling in Axibase Collector.
 
 Each job has the following generic properties:
 
@@ -9,7 +9,7 @@ Each job has the following generic properties:
 | Type | Job type, such as JDBC, JMX, FILE, etc.|
 | Name | Job name. |
 | Enabled | Job schedule status. The job must be enabled to execute on schedule. |
-| `cron` Expression | [`cron` Expression](./scheduling.md#cron-expressions) determines how frequently the job is executed.
+| `cron` Expression | [`cron` Expression](./scheduling.md#cron-expressions) determines how frequently the job is executed by Collector.
 | Storage | Target ATSD server for sending collected data. |
 
 Type-specific properties, such as a SQL query in a JDBC job or a CSV parser in a FILE job, are specified in nested configuration objects.
@@ -25,16 +25,16 @@ Type-specific properties, such as a SQL query in a JDBC job or a CSV parser in a
 
 The job can include multiple configurations. For example, a JDBC job can be configured to execute multiple SQL queries.
 
-![](./images/job-properties.png)
+![](./images/generic-job-config.png)
 
 ## Cloning Jobs
 
-You can create the exact copy of the job by clicking **Clone**.
+Create a copy of any job by clicking **Clone**.
 
-The copied job has the same name as the original job but with the `-cloned` postfix.
+The cloned job has the same name as the original job with the `-cloned` postfix appended.
 
 By default, cloned jobs are disabled.
 
-You can change the necessary settings and enable the job by selecting the checkbox and selecting **Enable** from the split-button below the table.
+Enable an inactive job by selecting the **Enable** checkbox.
 
 A cloned job has a unique primary key and can run concurrently with the original job.
