@@ -2,7 +2,7 @@
 
 To add a database as a data source in Axibase Collector, navigate to **Data Sources > Databases** and select **New Data Source**.
 
-| Field        | Description |
+| Field        | Description  |
 |:-------------|:-------------|
 | Name | Name of data source. |
 | Database Type  | Type of database. <br> Possible values: Oracle, MSSQL, MSSQL_Native, DB2, SOLID, MYSQL, POSTGRESQL, SYBASE, DERBY, SAP, PI_SERVER, VERTICA, CUSTOM      |
