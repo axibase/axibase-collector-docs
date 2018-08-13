@@ -1,4 +1,4 @@
-# FILE Job Example: Stackoverflow Tags
+# FILE Job Example: Stack Overflow Tags
 
 ## Overview
 
