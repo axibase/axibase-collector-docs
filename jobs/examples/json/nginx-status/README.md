@@ -1,4 +1,4 @@
-# JSON Job Example: Nginx Status
+# JSON Job Example: nginx Status
 
 ## Overview
 
@@ -153,7 +153,7 @@ Example: `http://demo.nginx.com/status`
 
 <br>
 
-* **Caches, Server Zones, and Upstreams:**
+* **Caches, Server Zones, and Upstreams**:
 
   ```javascript
   $['caches'|'server_zones'|'upstreams'].*

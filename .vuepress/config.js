@@ -121,8 +121,8 @@ const examplesMenu = [
     },
     ['/jobs/examples/jvm/', 'JVM'],
     ['/jobs/examples/mysql/', 'MySQL'],
-    ['/jobs/examples/nginx/', 'Nginx'],
-    ['/jobs/examples/nginx-plus/', 'Nginx Plus'],
+    ['/jobs/examples/nginx/', 'nginx'],
+    ['/jobs/examples/nginx-plus/', 'nginx Plus'],
     ['/jobs/examples/oracle-enterprise-manager/', 'Oracle EM'],
     {
         title: 'PI', children: [
