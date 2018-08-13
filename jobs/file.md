@@ -28,12 +28,12 @@ The files are parsed by ATSD using a [CSV Parser](https://axibase.com/docs/atsd/
 
 | **Protocol** | **Scheme** | **Wildcards** | **Description** |
 |:---|:---|:---|:---|
-| FILE | `file://` | yes | Read file or files from the local file system.<br>`/tmp/report/daily*.csv` |
-| HTTP | `http://` or `https://` | no | Download a file from a web server.<br>`https://example.org/traffic/direct.csv` |
-| HTTP_POOL | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br>`/traffic/direct.csv` |
-| FTP | `ftp://` | yes | Download file or files from an FTP server.<br>`ftp://example.org/data/CCE2_121W_*.csv` |
-| SFTP | `sftp://` | yes | Download file or files from a Unix server over STFP protocol.<br>`sftp://username:password@198.51.100.1:22/home/ftp-reader/*.csv` |
-| SCP | `scp://` | no | Download a file from a Unix server over SCP protocol.<br>`scp://username:password@example.org:4022/home/user-1/r20160617.csv` |
+| `FILE` | `file://` | yes | Read file or files from the local file system.<br>`/tmp/report/daily*.csv` |
+| `HTTP` | `http://` or `https://` | no | Download a file from a web server.<br>`https://example.org/traffic/direct.csv` |
+| `HTTP_POOL` | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br>`/traffic/direct.csv` |
+| `FTP` | `ftp://` | yes | Download file or files from an FTP server.<br>`ftp://example.org/data/CCE2_121W_*.csv` |
+| `SFTP` | `sftp://` | yes | Download file or files from a Unix server over STFP protocol.<br>`sftp://username:password@198.51.100.1:22/home/ftp-reader/*.csv` |
+| `SCP` | `scp://` | no | Download a file from a Unix server over SCP protocol.<br>`scp://username:password@example.org:4022/home/user-1/r20160617.csv` |
 
 ## File Watch
 
@@ -165,7 +165,7 @@ Refer to [placeholder examples](./placeholders.md).
 * [Australian Bureau of Meteorology: JSON](./examples/file/australia-bom/README.md#overview)
 * [Energinet DK Market Data](./examples/file/energinet-ftp/README.md#overview)
 * [pvoutput.org Solar System Statistics](./examples/file/pvout/README.md#overview)
-* [Stackoverflow Tags: JSON](./examples/file/stackoverflow/README.md#overview)
+* [Stack Overflow Tags: JSON](./examples/file/stackoverflow/README.md#overview)
 * [UK Civil Aviation Authority](./examples/file/uk-caa/README.md#overview)
 * [airnow.gov Climate and Pollution Statistics](./examples/file/airnow/README.md#overview)
 * [National Oceanic and Atmospheric Administration (NOAA) Mooring Data](./examples/file/noaa-mooring/README.md#overview)

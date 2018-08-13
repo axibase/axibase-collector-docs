@@ -490,7 +490,7 @@ JSON:
 
 Field Name                | Field Value
 :------------------------ | :----------
-Default Entity            | tst
+Default Entity            | `tst`
 JSON Path                 | $.upstreams.*.peers.*
 Depth                     | 1
 **Property Default Type** | **${PARENT(3)}.${PARENT}**
@@ -522,7 +522,7 @@ JSON:
 
 Field Name                | Field Value
 :------------------------ | :----------
-Default Entity            | tst
+Default Entity            | `tst`
 JSON Path                 | $
 Depth                     | 0
 **Property Type Field**   | **type**
@@ -554,7 +554,7 @@ JSON:
 
 Field Name                | Field Value
 :------------------------ | :----------
-Default Entity            | tst
+Default Entity            | `tst`
 JSON Path                 | $
 Depth                     | 0
 Property Type Field       | type
@@ -714,7 +714,7 @@ series e:axibase/atsd d:2018-05-24T00:00:00.000Z m:repo.traffic.uniques=5 m:repo
 
   Field Name                  | Field Value
   :-------------------------- | :----------
-  Default Entity              | tst
+  Default Entity              | `tst`
   JSON Path                   | $.upstreams.*.peers.*
   Depth                       | 1
   **Message Default Type**    | **${PARENT(3)}.${PARENT}**
@@ -753,7 +753,7 @@ series e:axibase/atsd d:2018-05-24T00:00:00.000Z m:repo.traffic.uniques=5 m:repo
 
   Field Name                  | Field Value
   :-------------------------- | :----------
-  Default Entity              | tst
+  Default Entity              | `tst`
   JSON Path                   | $.upstreams.*.peers.*
   Depth                       | 1
   **Message Default Type**    | **upstream**

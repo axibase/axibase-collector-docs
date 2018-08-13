@@ -44,7 +44,7 @@ Format     | JSON
 
   Field Name         | Field Value
 :----------------- | :----------
-Default Entity     | tst
+Default Entity     | `tst`
 JSON Path          | $
 Depth              | 1
 Included Fields    | ['x.y']
@@ -63,7 +63,7 @@ Metric Value Field | v
 
   Field Name         | Field Value
 :----------------- | :----------
-Default Entity     | tst
+Default Entity     | `tst`
 JSON Path          | $
 Depth              | 3
 Custom Tags        | test=${['x y']}

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Download Q&A activity statistics for a set of `stackoverflow` tags in JSON format.
+Download activity statistics for a set of `stackoverflow` tags in JSON format.
 
 API key is required.
 
