@@ -2,15 +2,15 @@
 
 ## Overview
 
-Data retrieved by Axibase Collector from external data sources is persisted by Collector in one or multiple ATSD databases configured on the **Admin > Storage Drivers** page.
+Data retrieved by Axibase Collector from external data sources is persisted by Collector in one or multiple ATSD databases, configured at **Admin > Storage Drivers**.
 
-By default configuration, all jobs running in the Collector transmit data into the same ATSD instance using a single shared storage driver.
+By default, all jobs running in Collector transmit data into the same ATSD instance using a single shared storage driver.
 
 ![](./images/storage-driver-basic.png)
 
 The storage driver sends data into ATSD over HTTP protocol.
 
-With advanced configuration, each job stores data in a specific ATSD instance using multiple storage drivers.
+Via advanced configuration, each job can store data in a specific ATSD instance by using multiple storage drivers.
 
 ![](./images/storage-driver-advanced.png)
 
@@ -18,53 +18,53 @@ With advanced configuration, each job stores data in a specific ATSD instance us
 
 To store data in a specific ATSD instance, Collector uses a restricted user account defined in the target ATSD instance and authorized to write data and metadata for all or specific entities.
 
-Create a [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) on the **Settings > User Accounts** page in the ATSD web interface.
+Create a [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) at **Settings > User Accounts** in the ATSD web interface.
 
 ## Initial Configuration
 
-If a storage driver is not yet configured, the database prompts you to create one on initial login.
+If no storage driver is configured for an ATSD instance, the database prompts you to create one upon login.
 
-* Specify the hostname or IP address of the target ATSD server.
-* Specify `https` service port address. The default is `8443`.
-* Enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
-* Click **Validate** to verify settings. In case of permission errors, ensure that the collector account has both `API_DATA_WRITE` and `API_META_WRITE` roles.
-* If validation is successful, click **Save** to create the storage driver. Collector automatically creates an HTTP connection pool and a storage driver based on the submitted settings.
+* Specify hostname or IP address of the target ATSD server.
+* Specify `https` service port address, default port is `8443`.
+* Enter [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+* Click **Validate** to verify settings. In case of permission errors, ensure that specified Collector account has both `API_DATA_WRITE` and `API_META_WRITE` roles.
+* Upon successful validation, click **Save** to create the storage driver. Collector automatically creates an HTTP connection pool and storage driver based on submitted settings.
 
 ![ATSD Configuration Page](./images/atsd_configuration.png)
 
 ## Storage Driver
 
-Storage drivers are enumerated on the **Admin > Storage Drivers** page.
+Storage drivers are enumerated at **Admin > Storage Drivers**.
 
-To create a new storage driver, open the **Storage Drivers** page and click **Add**.
+To create a new storage driver, navigate to the **Storage Drivers** page and click **Add**.
 
-Choose an existing [HTTP connection pool](#http-pool) from the **HTTP Pool** drop-down list or create a new pool by clicking the plus icon.
+Choose an existing [HTTP connection pool](#http-pool) from the **HTTP Pool** drop-down list or create a new pool by clicking ![](./images/plus-icon.png).
 
 Click **Test** to verify settings.
 
 ![](./images/storage-driver-test.png)
 
-If Collector has multiple storage drivers defined, each job can be configured to send collected data into a specific ATSD instance.
+If Collector contains multiple storage drivers, each unique job can be configured to send collected data into a specific ATSD instance.
 
 ![](./images/job-storage-driver.png)
 
 ## HTTP Pool
 
-The Collector transmits data into ATSD via HTTP protocol. The HTTP connection pool settings contain various limits and timeouts applied to HTTP connections initiated by Collector when sending data into ATSD.
+The Collector transmits data into ATSD via HTTP protocol. HTTP connection pool settings contain limits and timeouts which apply to HTTP connections initiated by Collector when sending data into ATSD.
 
 ### Create a New Pool
 
-* Open the **Data Sources > HTTP Pools** page in the top menu and click **Add**.
+* Navigate to **Data Sources > HTTP Pools** from the top menu and click **Add**.
 * Enter a pool name.
-* Enter the hostname or IP address to the target ATSD server.
+* Enter hostname or IP address of the target ATSD server.
 * Specify port `8443` and select `https` protocol.
-* Clear **Ignore SSL Certificate Errors** if the target ATSD [SSL certificate](https://axibase.com/docs/atsd/administration/ssl-ca-signed.html) is **trusted** (not self-signed).
+* Clear **Ignore SSL Certificate Errors** if the target ATSD [SSL Certificate](https://axibase.com/docs/atsd/administration/ssl-ca-signed.html) is **trusted** (not self-signed).
 * Set timeouts and limits based on the [recommended settings](#recommended-pool-settings) below.
-* Select `Authentication Type=BASIC`, enter [collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+* Select `Authentication Type=BASIC`, enter [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 * Set **Test Path** to `/ping`.
 * Click **Test** to verify settings.
 
-If the settings are valid, the test displays `200 OK` status.
+If the settings are valid, the test returns `200 OK` status.
 
 In case of `4xx` status codes, refer to [ATSD Authentication Codes](https://axibase.com/docs/atsd/administration/user-authentication.html#authentication-and-authorization-errors) for troubleshooting.
 
