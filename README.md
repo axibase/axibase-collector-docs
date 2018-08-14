@@ -27,8 +27,8 @@ The Collector supports data markers to minimize the load on the source systems a
 * Vertica
 * ATSD
 * SAP HANA
-* OSISoft PI Data Archive
-* OSISoft PIOleDBEnt
+* OSIsoft PI Data Archive
+* OSIsoft PIOleDBEnt
 * Custom
 
 ## Supported Data and Network Protocols

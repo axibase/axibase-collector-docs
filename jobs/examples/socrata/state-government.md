@@ -540,7 +540,7 @@ m:scholarship_fte=2.5 m:scholarship_headcount=3
 | Id | `uubd-eei2` |
 | Name | Public Assistance and SNAP Fraud Prevention Performance Measures: Beginning 2013 |
 | State | [New York](https://data.ny.gov) |
-| Description | This dataset from the New York State Office of Temporary and Disability Assistance contains the results of several local district investigations initiated by specific cases of the State’s cash public assistance programs and the Supplemental Nutrition Assistance Program (SNAP). The data includes information from the Front End Detection System (FEDS), the Intentional Program Violations (IPVs), Prison matches, and from the Public Assistance Reporting Information System (PARIS). |
+| Description | This dataset from the New York State Office of Temporary and Disability Assistance contains the results of several local district investigations initiated by specific cases of the State’s cash public assistance programs and the Supplemental Nutrition Assistance Program (SNAP). The data includes information from the Front End Detection System (FEDS), the Intentional Program Violations (IPV), Prison matches, and from the Public Assistance Reporting Information System (PARIS). |
 | Attribution | New York State Office of Temporary and Disability Assistance (OTDA) |
 | Category | Human Services |
 | Date Range | 2013-2016 |

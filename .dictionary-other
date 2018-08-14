@@ -14,6 +14,7 @@ enqueueing
 filesystem
 framebuffer
 historize
+hostname[s]?
 hugepages
 inodes
 itemList
@@ -28,6 +29,7 @@ newline
 ns
 offheap
 paratransit
+proxied
 reportable
 respawned
 resultset
@@ -35,6 +37,7 @@ resultsets
 retest
 checkboxes
 retests
+ridership
 schemas
 servlet
 sunspot

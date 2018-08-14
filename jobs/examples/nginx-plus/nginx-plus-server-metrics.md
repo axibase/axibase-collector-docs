@@ -31,7 +31,7 @@
 
 * `nginx-plus.keepalive`
 
-## Upstream's Peer Metrics
+## Upstream Peer Metrics
 
 * `nginx-plus.received`
 * `nginx-plus.fails`
@@ -67,7 +67,7 @@
 * `nginx-plus.stream.server_zone.processing`
 * `nginx-plus.stream.server_zone.sent`
 
-## Stream.upstream's Peer Metrics
+## Stream.upstream Peer Metrics
 
 * `nginx-plus.received`
 * `nginx-plus.fails`

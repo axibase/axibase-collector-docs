@@ -20,7 +20,7 @@ Select **PI** in the **Jobs** drop-down list. Click **Add Job**. Fill in all the
 ## PI Task Configuration
 
 Click **Create Configuration**.
-Provide tag-to-entity mapping. You can use freemarker expressions in the `Entity` field for string manipulations.
+Provide tag-to-entity mapping. You can use FreeMarker expressions in the `Entity` field for string manipulations.
 If you want to query only a subset of available tags or get `picomp2` values satisfying the condition, fill in the `WHERE Filter` fields.
 ![](./images/pi-config.png)
 

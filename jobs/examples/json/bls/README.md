@@ -28,7 +28,7 @@ Content-Type:application/json
 
 ### Local Copy
 
-[bls.json](./bls.json)
+[`bls.json`](./bls.json)
 
 ### JSON Path
 
