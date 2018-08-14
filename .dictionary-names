@@ -25,6 +25,7 @@ ENV
 ESX
 ETL
 FB
+FrameworkServlet
 FreeMarker
 Fri
 FTP
@@ -40,12 +41,13 @@ Jetty
 JMX
 JSON
 JSONPath
-JVN
+JVM
 Linux
 MBean[s]?
 MD5
 MiB
 MIB
+MIBs
 MSFT
 MySQL
 NaN
@@ -57,9 +59,11 @@ OHLC
 OIDs
 OpenSSL
 OpenView
+OracleEM
 OS
 OSIsoft
 OVPM
+OutOfMemory
 PIOleDBEnt
 PostgreSQL
 Powerball
@@ -68,7 +72,7 @@ SCOM
 SCP
 SELinux
 SFTP
-snmp
+SimpleDateFormat
 SNMP
 Socrata
 SolarWinds

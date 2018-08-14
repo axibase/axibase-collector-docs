@@ -207,7 +207,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 #### Import Rules
 
-* Open the **Configuration > Rules** page, click **Import** and upload [jvm_rules.xml](./configs/activemq_rules.xml).
+* Open the **Configuration > Rules** page, click **Import** and upload [`jvm_rules.xml`](./configs/activemq_rules.xml).
 * For each created rule, open the rule in the **Rule Editor**, and change the recipient address on the **Email Notifications** tab.
 * These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
 

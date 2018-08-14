@@ -18,7 +18,7 @@ Configure your Java application for JMX data collection as described by the [JMX
 
 ### Import JVM Job into Axibase Collector
 
-* On the **Jobs** page, select **Import** from the split-button at the bottom of the page and upload the [jmx-jvm-job.xml](./configs/jvm_job.xml) file.
+* On the **Jobs** page, select **Import** from the split-button at the bottom of the page and upload the [`jmx-jvm-job.xml`](./configs/jvm_job.xml) file.
 
 ### Configure JMV JMX Connection
 
@@ -100,12 +100,12 @@ Imported rules:
 
 | **Rule** |  **Description** |
 | :--- | :--- |
-| jvm_application_restart | Raise an alert when an application has been restarted less than 5 minutes ago.  |
-| jvm_cpu_load | Raise an alert when an application cpu load exceeds the set threshold. |
-| jvm_garbage_collection_rate |  Raise an alert when an application Garbage Collector rate exceeds the set threshold. |
-| jvm_garbage_collection_time |   Raise an alert when an application Garbage Collector time exceeds the set threshold. |
-| jvm_heap_memory_usage | Raise an alert when an application heap memory usage exceeds the set threshold. |
-| jvm_runtime_property_changed | Raise an alert when an application property is changed. |
-| jvm_system_load | Raise an alert when an application system load exceeds the set threshold. |
+| `jvm_application_restart` | Raise an alert when an application has been restarted less than 5 minutes ago.  |
+| `jvm_cpu_load` | Raise an alert when an application cpu load exceeds the set threshold. |
+| `jvm_garbage_collection_rate` |  Raise an alert when an application Garbage Collector rate exceeds the set threshold. |
+| `jvm_garbage_collection_time` |   Raise an alert when an application Garbage Collector time exceeds the set threshold. |
+| `jvm_heap_memory_usage` | Raise an alert when an application heap memory usage exceeds the set threshold. |
+| `jvm_runtime_property_changed` | Raise an alert when an application property is changed. |
+| `jvm_system_load` | Raise an alert when an application system load exceeds the set threshold. |
 
 To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).
