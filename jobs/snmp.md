@@ -412,7 +412,7 @@ iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
   | **`laConfig`**<br>`1.3.6.1.4.1.2021.10.1.4` | The watch point for load-averages to signal an error. If the load averages rises above this value, the `laErrorFlag` below is set. |
   | **`laLoadInt`**<br>`1.3.6.1.4.1.2021.10.1.5` | The `1`,`5` and `15` minute load averages as an integer. This is computed by taking the floating point `loadaverage` value and multiplying by `100`, then converting the value to an integer. |
   | **`laLoadFloat`**<br>`1.3.6.1.4.1.2021.10.1.6` | The `1`,`5` and `15` minute load averages as an opaquely wrapped floating point number. |
-  | **`laErrorFlag`**<br>`1.3.6.1.4.1.2021.10.1.100` | A Error setting to indicate the load-average has crossed its threshold value defined in the snmpd.conf file. It is set to `1` if the threshold is crossed, `0` otherwise. |
+  | **`laErrorFlag`**<br>`1.3.6.1.4.1.2021.10.1.100` | A Error setting to indicate the load-average has crossed its threshold value defined in the `snmpd.conf` file. It is set to `1` if the threshold is crossed, `0` otherwise. |
   | **`laErrMessage`**<br>`1.3.6.1.4.1.2021.10.1.101` | An error message describing the `loadaverage` and its surpassed watch-point value. |
 
 * Table `systemStats`: `1.3.6.1.4.1.2021.11`
@@ -461,7 +461,7 @@ iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
 
   | Object | Description |
   |:---|:---|
-  | **`logMatchMaxEntries`**<br>`1.3.6.1.4.1.2021.16.1` | The maximum number of `logmatch` entries this snmpd daemon can support. |
+  | **`logMatchMaxEntries`**<br>`1.3.6.1.4.1.2021.16.1` | The maximum number of `logmatch` entries this `snmpd` daemon can support. |
   | **`logMatchTable`**<br>`1.3.6.1.4.1.2021.16.2` | Table of monitored files. |
   | **`logMatchEntry`**<br>`1.3.6.1.4.1.2021.16.2.1` | Entry of file |
   | **`logMatchIndex`**<br>`1.3.6.1.4.1.2021.16.2.1.1` | Index of `logmatch` |
