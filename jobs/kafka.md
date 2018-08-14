@@ -38,7 +38,7 @@ If JSON message format is selected, you need to configure JSON fields mapping to
 ---| ---
 Entity | Entity name, specified literally or extracted from the specific field in the matched object.
 Entity Prefix | Text added to the entity name, retrieved from the specified field. For example, if Entity Prefix is set to `custom.`, and the field value is `my-host`, the resulting entity name is `custom.my-host`.
-Entity Expression | Freemarker expression to convert entities.<br>For example:<br>`${city?keep_after('.')}`<br>`${LOOKUP('city codes', city)}`
+Entity Expression | FreeMarker expression to convert entities.<br>For example:<br>`${city?keep_after('.')}`<br>`${LOOKUP('city codes', city)}`
 
 ### Time Fields
 
@@ -58,7 +58,7 @@ Included Fields | By default, all numeric fields from nested objects are include
 Excluded Fields | List of particular field names to be excluded from commands. Applies when **Included Fields** is empty.
 Annotation Fields | List of fields whose values are saved as text annotation along with the numeric value.
 Metric Name & Value | Metric name and value extracted from the given fields in the matched object.
-Field Expressions | Freemarker expressions to convert metric fields.<br>For example:<br>`${city?keep_after('.')}`<br>`${LOOKUP('city codes', city)}`
+Field Expressions | FreeMarker expressions to convert metric fields.<br>For example:<br>`${city?keep_after('.')}`<br>`${LOOKUP('city codes', city)}`
 
 ### Property Fields
 

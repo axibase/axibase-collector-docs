@@ -146,7 +146,7 @@ The `kafka-cluster-jmx` list contains items (`host,port,entity`):
 172.17.0.3,1099,kafka3
 ```
 
-Each row is split by [freemarker function](https://freemarker.apache.org/docs/ref_builtins_string.html#ref_builtin_split) to extract values:
+Each row is split by [FreeMarker function](https://freemarker.apache.org/docs/ref_builtins_string.html#ref_builtin_split) to extract values:
 
 ![image](./images/jmx_configuration_item_list_example.png)
 
