@@ -85,6 +85,9 @@ The credentials can also be passed as environment variables.
 --env COLLECTOR_USER_PASSWORD=secret \
 ```
 
+To specify [Failover driver](./atsd-server-connection.md#failover-driver) for set pass `-atsd-url-secondary` formatted as `-atsd-url`:
+
+
 ## Start Container in Privileged Mode
 
 The launch command is different if the Collector container is used to [monitor statistics](./jobs/docker.md#local-installation) from the local Docker Engine.

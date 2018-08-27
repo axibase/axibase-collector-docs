@@ -40,6 +40,8 @@ To create a new storage driver, navigate to the **Storage Drivers** page and cli
 
 Choose an existing [HTTP connection pool](#http-pool) from the **HTTP Pool** drop-down list or create a new pool by clicking ![](./images/plus-icon.png).
 
+If necessary specify [Failover driver](#failover-driver).
+
 Click **Test** to verify settings.
 
 ![](./images/storage-driver-test.png)
@@ -85,3 +87,9 @@ Read Timeout | `15`
 Socket Linger | `0`
 Socket Reuse | `true`
 Socket Keep-Alive | `true`
+
+## Failover driver
+
+Collector supports failover mechanism, if a storage driver is not available in some moment collector automatically switches  to  failover driver
+and tries to send data to another ATSD instance. If main driver becomes available, collector switches back to the storage driver.
+
