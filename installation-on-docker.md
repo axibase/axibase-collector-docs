@@ -85,8 +85,7 @@ The credentials can also be passed as environment variables.
 --env COLLECTOR_USER_PASSWORD=secret \
 ```
 
-To specify [Failover driver](./atsd-server-connection.md#failover-driver) for set pass `-atsd-url-secondary` formatted as `-atsd-url`:
-
+To specify a secondary database for [failover](./atsd-server-connection.md#failover-driver), add `-atsd-url-secondary` parameter containing the URL and user credentials of the secondary database in the same format as the `-atsd-url` parameter.
 
 ## Start Container in Privileged Mode
 

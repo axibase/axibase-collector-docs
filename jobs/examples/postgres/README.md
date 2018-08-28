@@ -95,7 +95,7 @@ SELECT 1
 ### Verify Metrics in ATSD
 
 * Log in to ATSD.
-* Click the **Metrics** tab and filter metrics by name `postgres.*`.
+* Open the **Metrics** tab and filter metrics by name `postgres.*`.
 
 ![](./images/postgres-metrics.png)
 
@@ -112,7 +112,7 @@ SELECT 1
 ### Entity Groups
 
 * Open **Settings > Entity Groups**.
-* Create a new Entity Group with the split-button at the bottom of the page, navigate to the **Expression** tab under **Members**, and enter the following expression:
+* Create a new Entity Group with the split-button at the bottom of the page, open the **Expression** tab under **Members**, and enter the following expression:
 
 ```javascript
 hasMetric('postgres.global_status.uptime')

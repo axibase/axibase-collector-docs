@@ -1,6 +1,6 @@
 # HTTP Pool
 
-To add an HTTP Pool as a data source in Axibase Collector, navigate to **Data Sources > HTTP Pools** and select **Add**.
+To add an HTTP Pool as a data source in Axibase Collector, open the **Data Sources > HTTP Pools** page and click **Add**.
 
 ## Fields
 

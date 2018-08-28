@@ -1,6 +1,6 @@
 # Kafka Consumer
 
-To add a consumer in Axibase Collector, navigate to **Data Sources > Kafka Consumers** and click **Add**.
+To add a consumer in Axibase Collector, open the **Data Sources > Kafka Consumers** page and click **Add**.
 
 ## Supported Brokers
 

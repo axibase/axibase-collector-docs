@@ -2,7 +2,7 @@
 
 ## Overview
 
-Data retrieved by Axibase Collector from external data sources is persisted by Collector in one or multiple ATSD databases, configured at **Admin > Storage Drivers**.
+Data retrieved by Axibase Collector from external data sources is persisted by Collector in one or multiple ATSD databases, configured on the **Admin > Storage Drivers** page.
 
 By default, all jobs running in Collector transmit data into the same ATSD instance using a single shared storage driver.
 
@@ -18,7 +18,7 @@ Via advanced configuration, each job can store data in a specific ATSD instance 
 
 To store data in a specific ATSD instance, Collector uses a restricted user account defined in the target ATSD instance and authorized to write data and metadata for all or specific entities.
 
-Create a [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) at **Settings > User Accounts** in the ATSD web interface.
+Create a [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) on the **Settings > User Accounts** page in the ATSD web interface.
 
 ## Initial Configuration
 
@@ -34,13 +34,13 @@ If no storage driver is configured for an ATSD instance, the database prompts yo
 
 ## Storage Driver
 
-Storage drivers are enumerated at **Admin > Storage Drivers**.
+Storage drivers are listed on the **Admin > Storage Drivers** page.
 
-To create a new storage driver, navigate to the **Storage Drivers** page and click **Add**.
+To create a new storage driver, open the **Storage Drivers** page and click **Add**.
 
 Choose an existing [HTTP connection pool](#http-pool) from the **HTTP Pool** drop-down list or create a new pool by clicking ![](./images/plus-icon.png).
 
-If necessary specify [Failover driver](#failover-driver).
+For a high-availability configuration, specify a [failover driver](#failover-driver) to deliver commands to a secondary ATSD database while the primary database is not available.
 
 Click **Test** to verify settings.
 
@@ -56,7 +56,7 @@ The Collector transmits data into ATSD via HTTP protocol. HTTP connection pool s
 
 ### Create a New Pool
 
-* Navigate to **Data Sources > HTTP Pools** from the top menu and click **Add**.
+* Open the **Data Sources > HTTP Pools** page from the top menu and click **Add**.
 * Enter a pool name.
 * Enter hostname or IP address of the target ATSD server.
 * Specify port `8443` and select `https` protocol.
@@ -88,8 +88,20 @@ Socket Linger | `0`
 Socket Reuse | `true`
 Socket Keep-Alive | `true`
 
-## Failover driver
+## Failover Driver
 
-Collector supports failover mechanism, if a storage driver is not available in some moment collector automatically switches  to  failover driver
-and tries to send data to another ATSD instance. If main driver becomes available, collector switches back to the storage driver.
+Collector supports an automated failover mechanism to ensure uninterrupted delivery of data.
 
+If the primary database becomes unavailable and the `atsd-url-secondary` parameter is set, Collector switches to the secondary database. While sending data to the secondary database, Collector periodically checks the status of the primary database and switches back once the connectivity is re-established.
+
+The following steps describe the switch-back procedure:
+
+* Collector determines that the current database that it is connected to is a secondary database.
+* The collector starts a background periodic task to re-connect to the primary database.
+* The periodic re-connect interval is 5 minutes.
+* The periodic re-connect task attempts to connect to the primary server. This task continues until the primary database is online or the collector shuts down.
+* If the primary database is available, the collector initiates a switch-back procedure:
+  * Sends a message to the secondary database that the collector is now disconnecting and specifying the URL of the primary database.
+  * Sets the primary database as the current database.
+  * Establishes a connection to the primary database.
+  * If the above connection is successful, the periodic re-connect task is stopped.
