@@ -105,3 +105,19 @@ The following steps describe the switch-back procedure:
   * Sets the primary database as the current database.
   * Establishes a connection to the primary database.
   * If the above connection is successful, the periodic re-connect task is stopped.
+
+> The failover mechanism applies only to the storage driver and does not affect delivery of commands by the built-in log aggregator. The log aggregator sends commands only to the primary database.
+  
+### Logging Switch-Back procedure
+
+The switch-back procedure states are logging with the message templates:
+
+| State | Message template |
+| --- | --- |
+| Job executor can't be send the batch of commands and switches to failover driver | Trying send collected data using Failover Driver `${DRIVER_URL}` |
+| No drivers for procedure | Storage driver switch procedure: there is no storage drivers to check |  
+| Scheduled procedure is started for storage drivers that has failover drivers | "Storage driver switch procedure: procedure is started for following drivers: `${LIST_OF_DRIVER_URLS}` |
+| Storage driver validation | Storage driver switch procedure: validation of storage driver ${DRIVER_URL} finished with result: ${VALIDATION_RESULT}` |
+| Storage driver switched back to primary ATSD | Storage driver switch procedure: storage Driver `${DRIVER_URL}` successfully switched back to primary |
+| Storage driver continues to use failover driver| Storage driver switch procedure: storage Driver `${DRIVER_URL}` successfully switched back to primary |
+| Storage driver switches to use failover driver | Storage driver switch procedure: storage Driver `${DRIVER_URL}` switches to use failover driver `${DRIVER_URL}`|
