@@ -114,7 +114,7 @@ The switch-back procedure states are logging with the message templates:
 
 | State | Message template |
 | --- | --- |
-| Job executor can't be send the batch of commands and switches to failover driver | Trying send collected data using Failover Driver `${DRIVER_URL}` |
+| Job executor fails to send the batch of commands and switches to failover driver | Trying send collected data using Failover Driver `${DRIVER_URL}` |
 | No drivers for procedure | Storage driver switch procedure: there is no storage drivers to check |  
 | Scheduled procedure is started for storage drivers that has failover drivers | Storage driver switch procedure: procedure is started for following drivers: `${LIST_OF_DRIVER_URLS}` |
 | Storage driver validation | Storage driver switch procedure: validation of storage driver `${DRIVER_URL}` finished with result: `${VALIDATION_RESULT}` |
