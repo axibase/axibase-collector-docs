@@ -121,3 +121,4 @@ The switch-back procedure states are logging with the message templates:
 | Storage driver switched back to primary ATSD | Storage driver switch procedure: storage Driver `${DRIVER_URL}` successfully switched back to primary |
 | Storage driver continues to use failover driver| Storage driver switch procedure: storage Driver `${DRIVER_URL}` successfully switched back to primary |
 | Storage driver switches to use failover driver | Storage driver switch procedure: storage Driver `${DRIVER_URL}` switches to use failover driver `${DRIVER_URL}`|
+| Scheduled procedure finishes for all drivers | Storage driver switch procedure: procedure is completed |
