@@ -86,6 +86,16 @@ The credentials can also be passed as environment variables.
 ```
 
 To specify a secondary database for [failover](./atsd-server-connection.md#failover-driver), add `-atsd-url-secondary` parameter containing the URL and user credentials of the secondary database in the same format as the `-atsd-url` parameter.
+Also it's possible to set [Failover Timeout](./atsd-server-connection.md#configuration-of-switch-back-procedure) with `-failover-interval` argument.
+
+```bash
+docker run -p 9443:9443 \
+	--name axibase-collector \
+	axibase/collector \
+ 	-atsd-url=https://john.doe:secret@192.0.2.1:8443 \
+ 	-atsd-url-secondary=https://username:password@198.51.100.1:8443 \
+ 	-failover-interval=30
+ ```
 
 ## Start Container in Privileged Mode
 
