@@ -90,12 +90,12 @@ Also it's possible to set [Failover Timeout](./atsd-server-connection.md#configu
 
 ```bash
 docker run -p 9443:9443 \
-	--name axibase-collector \
-	axibase/collector \
- 	-atsd-url=https://john.doe:secret@192.0.2.1:8443 \
- 	-atsd-url-secondary=https://username:password@198.51.100.1:8443 \
- 	-failover-interval=30
- ```
+  --name axibase-collector \
+  axibase/collector \
+  -atsd-url=https://john.doe:secret@192.0.2.1:8443 \
+  -atsd-url-secondary=https://username:password@198.51.100.1:8443 \
+  -failover-interval=30
+```
 
 ## Start Container in Privileged Mode
 
