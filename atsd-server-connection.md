@@ -114,7 +114,7 @@ The following steps describe the switch-back procedure:
 |---|---|---|---|---|---|
 | Failover Timeout | The interval of time, starting with the first error, after which the driver switches from primary to secondary. | Storage Driver | Seconds | 300 | Minimum: 15 |
 | Failover Switchback Interval | Interval of time for checking availability of the primary storage driver. Activated when sending command to the secondary driver in failover mode. | Application Settings| Seconds | 300 | Minimum: 60. Required restart to apply. |
-|Command Retention Interval| Interval after which unsent commands are deleted from file-based collector cache. | Application Settings| Seconds | 86400 | Minimum: 60 and must be greater than Failover Interval. Required restart to apply. |
+|Command Retention Interval| Interval after which not sent commands are deleted from file-based collector cache. | Application Settings| Seconds | 86400 | Minimum: 60 and must be greater than Failover Interval. Required restart to apply. |
 
 ### Logging Switch-Back procedure
 
