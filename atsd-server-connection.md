@@ -40,7 +40,7 @@ To create a new storage driver, open the **Storage Drivers** page and click **Ad
 
 Choose an existing [HTTP connection pool](#http-pool) from the **HTTP Pool** drop-down list or create a new pool by clicking ![](./images/plus-icon.png).
 
-For a high-availability configuration, specify a [failover driver](#failover-driver) to deliver commands to a secondary ATSD database while the primary database is not available.
+For a high-availability configuration, specify a [failover driver](#failover) to deliver commands to a secondary ATSD database while the primary database is not available.
 
 Click **Test** to verify settings.
 
@@ -90,13 +90,13 @@ Socket Keep-Alive | `true`
 
 ### Delivery
 
-The collector implements a file-based cache to temporarily store commands that could not be delivered to the target database due to network and other errors.
+The collector implements a file-based cache to temporarily store commands that are not delivered to the target database due to network and other errors.
 
 The pending commands are retained for the duration of time specified in the **Command Retention Interval** setting on the **Admin > Application Settings** page.
 
 | Name | Description |
 |---|---|
-| `Command Retention Interval` | Interval after which unsent commands are deleted from file-based collector cache.<br>Default: `86400 seconds` (1 day).<br>Minimum: `60 seconds`.<br>Must exceed the Failover Timeout.<br>Restart is required to apply changes. |
+| `Command Retention Interval` | Interval after which failed commands are deleted from file-based cache.<br>Default: `86400 seconds` (1 day).<br>Minimum: `60 seconds`.<br>Must exceed the Failover Timeout.<br>Restart is required to apply changes. |
 
 ## Failover
 
