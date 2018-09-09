@@ -88,45 +88,107 @@ Socket Linger | `0`
 Socket Reuse | `true`
 Socket Keep-Alive | `true`
 
-## Failover Driver
+### Delivery
 
-Collector supports an automated failover mechanism to ensure uninterrupted delivery of data.
+The collector implements a file-based cache to temporarily store commands that could not be delivered to the target database due to network and other errors.
 
-If the primary database becomes unavailable and the `atsd-url-secondary` parameter is set, Collector switches to the secondary database. While sending data to the secondary database, Collector periodically checks the status of the primary database and switches back once the connectivity is re-established.
+The pending commands are retained for the duration of time specified in the **Command Retention Interval** setting on the **Admin > Application Settings** page.
+
+| Name | Description |
+|---|---|
+| Command Retention Interval | Interval after which unsent commands are deleted from file-based collector cache.<br>Default: `86400 seconds` (1 day).<br>Minimum: `60 seconds`.<br>Must exceed the Failover Timeout.<br>Restart is required to apply changes. |
+
+## Failover
+
+Collector supports an automated failover mechanism to ensure uninterrupted data collection.
+
+If the primary database becomes unavailable and the failover driver is specified, Collector switches to the secondary database. While sending data to the secondary database, Collector periodically checks the status of the primary database and switches back once the connectivity is re-established.
 
 The following steps describe the switch-back procedure:
 
 * Collector determines that the current database that it is connected to is a secondary database.
 * The collector starts a background periodic task to re-connect to the primary database.
-* The periodic re-connect interval is 5 minutes.
+* The default periodic re-connect interval is `300` seconds.
 * The periodic re-connect task attempts to connect to the primary server. This task continues until the primary database is online or the collector shuts down.
 * If the primary database is available, the collector initiates a switch-back procedure:
-  * Sends a message to the secondary database that the collector is now disconnecting and specifying the URL of the primary database.
+  * Sends a message to the secondary database that the collector is now connecting to the primary database.
   * Sets the primary database as the current database.
   * Establishes a connection to the primary database.
   * If the above connection is successful, the periodic re-connect task is stopped.
 
-> The failover mechanism applies only to the storage driver and does not affect delivery of commands by the built-in log aggregator. The log aggregator sends commands only to the primary database.
+:::tip Note
+The failover mechanism applies only to the storage driver and does not affect delivery of commands by the built-in log aggregator. The log aggregator sends commands only to the primary database.
+:::
 
-### Configuration of Switch-Back procedure
+### Failover Parameters
 
-| Setting | Description | Scope | Unit | Default Value | Restriction |
-|---|---|---|---|---|---|
-| Failover Timeout | The interval of time, starting with the first error, after which the driver switches from primary to secondary. | Storage Driver | Seconds | 300 | Minimum: 15 |
-| Failover Switchback Interval | Interval of time for checking availability of the primary storage driver. Activated when sending command to the secondary driver in failover mode. | Application Settings| Seconds | 300 | Minimum: 60. Required restart to apply. |
-|Command Retention Interval| Interval after which not sent commands are deleted from file-based collector cache. | Application Settings| Seconds | 86400 | Minimum: 60 and must be greater than Failover Interval. Required restart to apply. |
+| Name | Description |
+|---|---|
+| Failover Timeout | Duration of time, starting with the first error, after which the driver switches from the primary to the secondary database.<br>Default: `300 seconds`.<br>Minimum: `15 seconds`. |
+| Failover Switchback Interval | Interval for checking availability of the primary storage driver. Activated when sending command to the secondary driver in failover mode.<br>Default: `300 seconds`.<br>Minimum: `60 seconds`.<br>Restart is required to apply changes. |
 
-### Logging Switch-Back procedure
+The failover timeout can be specified for each storage driver separately whereas the switchback interval applies to all drivers and is specified on the **Admin > Application Settings** page.
 
-The switch-back procedure states are logging with the message templates:
+### Failover Logging
 
-| State | Message template |
-| --- | --- |
-| Job executor fails to send the batch of commands and switches to failover driver | Trying send collected data using Failover Driver `${DRIVER_URL}` |
-| No drivers for procedure | Storage driver switch procedure: there is no storage drivers to check |  
-| Scheduled procedure is started for storage drivers that has failover drivers | Storage driver switch procedure: procedure is started for following drivers: `${LIST_OF_DRIVER_URLS}` |
-| Storage driver validation | Storage driver switch procedure: validation of storage driver `${DRIVER_URL}` finished with result: `${VALIDATION_RESULT}` |
-| Storage driver switched back to primary ATSD | Storage driver switch procedure: storage Driver `${DRIVER_URL}` successfully switched back to primary |
-| Storage driver continues to use failover driver| Storage driver switch procedure: storage Driver `${DRIVER_URL}` successfully switched back to primary |
-| Storage driver switches to use failover driver | Storage driver switch procedure: storage Driver `${DRIVER_URL}` switches to use failover driver `${DRIVER_URL}`|
-| Scheduled procedure finishes for all drivers | Storage driver switch procedure: procedure is completed |
+The switchback procedure states are logged with the following messages, each containing message tags `primary_driver_url` and `secondary_driver_url`.
+
+* Collector fails to send commands to the primary driver and attempts to switch to the secondary driver.
+
+  ```bash
+  Failed to send commands to the primary driver. Switching to secondary.
+  ```
+
+* Secondary driver is not available.
+
+  ```bash
+  Failed to send commands to the primary driver. Failed to connect to the secondary driver. Continue using primary driver.
+  ```
+
+* Secondary driver is available.
+
+  ```bash
+  Failed to send commands to the primary driver. Switched to secondary driver.
+  ```  
+
+* Re-connect procedure started for activated secondary drivers.
+
+  ```bash
+  Primary driver re-connect check procedure started.
+  ```
+
+* Primary driver validation result.
+
+  ```bash
+  Primary driver re-connect check result: ${VALIDATION_RESULT}
+  ```
+
+* Secondary storage driver continues to be in active state.
+
+  ```bash
+  Primary driver is not available. Continue sending data using secondary driver.
+  ```
+
+* Primary driver is available.
+
+  ```bash
+  Primary driver is available. Switching from secondary.
+  ```
+
+* Switched to primary driver.
+
+  ```bash
+  Primary driver is available. Switch from secondary complete.
+  ```
+
+* Failed to switch from secondary driver.
+
+  ```bash
+  Primary driver is available. Failed to switch from secondary. Continue sending data using secondary driver.
+  ```
+
+* Re-connect procedure stopped for all drivers.
+
+  ```bash
+  Primary driver re-connect check procedure stopped. All drivers are sending data to primary drivers.
+  ```
