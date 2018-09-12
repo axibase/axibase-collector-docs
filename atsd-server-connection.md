@@ -197,9 +197,6 @@ The switch-back procedure states are logged with the following messages, each co
 
 |Database| Severity | Date | Entity| Tags      | Message |
 |---|---|---|---|---|---|
-|Primary|NORMAL| 2018-09-12 08:32:18.070 | collector01| primary_driver_url =  `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check result: SUCCESSFUL|
-|Primary|WARNING| 2018-09-12 08:32:18.118 | collector01| primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver is available. Switching from secondary. |
-|Primary|NORMAL| 2018-09-12 08:32:18.175 | collector01| primary_driver_url =  `https://atsd.example.org`, secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver is available. Switch from secondary complete. |
 |Secondary|NORMAL| 2018-09-12 08:35:17.755 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check procedure started.|
 |Secondary|CRITICAL| 2018-09-12 08:33:00.122 | collector01|primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Failed to send commands to the primary driver. Switching to secondary.|
 |Secondary|CRITICAL| 2018-09-12 08:33:00.190 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Failed to send commands to the primary driver. Switched to secondary driver.|
