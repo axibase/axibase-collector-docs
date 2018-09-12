@@ -69,7 +69,7 @@ const landingPageMenu = [
     },
 
     {
-        title: 'Job\'s Configuration', children: [
+        title: 'Job Configuration', children: [
 
             ['/job-generic.md', 'Generic'],
             ['/job-autostart.md', 'Autostart'],
