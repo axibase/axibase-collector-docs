@@ -60,14 +60,14 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
     ![Figure 11](./images/Figure11.png)
 
-12. Navigate back to the Socrata job (the figure shown in step 7). Press **Run**. This sends generated commands to ATSD, which enables user to begin working with this dataset.
+12. Go back to the Socrata job (the figure shown in step 7). Click **Run**. This sends generated commands to ATSD, which enables user to begin working with this dataset.
     After hitting **Run**, you are redirected to this page by the database. Hit **Refresh** after a couple of seconds. If the database successfully completed the job, you see something like the images below.
 
     ![Figure 12](./images/Figure12.png)
 
     ![Figure 13](./images/Figure13.png)
 
-13. Navigate to your local ATSD instance and log in. Open the **Entities** tab to verify that metrics from the dataset are present in ATSD. You can search by your `dataset id`, which
+13. Log in to your local ATSD instance. Open the **Entities** tab to verify that metrics from the dataset are present in ATSD. You can search by your `dataset id`, which
     is assigned by the database from the original JSON file, in this case the id is `5b3a-rs48`. You can see that metrics are successfully sent from Collector to ATSD and begin analyzing this dataset.
 
     ![Figure 14](./images/Figure14.png)

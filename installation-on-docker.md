@@ -85,6 +85,20 @@ The credentials can also be passed as environment variables.
 --env COLLECTOR_USER_PASSWORD=secret \
 ```
 
+To specify a secondary database for [failover](./atsd-server-connection.md#failover), add `-atsd-url-secondary` parameter containing the URL and user credentials of the secondary database in the same format as the `-atsd-url` parameter.
+
+If necessary, customize the [failover parameters](./atsd-server-connection.md#failover-parameters) with `-failover-timeout` and `-failover-switchback-interval` arguments, specified in seconds.
+
+```bash
+docker run -p 9443:9443 \
+  --name axibase-collector \
+  axibase/collector \
+  -atsd-url=https://username:password@192.0.2.1:8443 \
+  -atsd-url-secondary=https://username:password@198.51.100.1:8443 \
+  -failover-timeout=60 \
+  -failover-switchback-interval=900
+```
+
 ## Start Container in Privileged Mode
 
 The launch command is different if the Collector container is used to [monitor statistics](./jobs/docker.md#local-installation) from the local Docker Engine.
