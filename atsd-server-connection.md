@@ -195,9 +195,8 @@ The switch-back procedure states are logged with the following messages, each co
 
 #### Failover Logging Example
 
-|Database| Severity | Date | Entity| Tags      | Message |
+|Database| Severity | Date | Entity| Tags | Message |
 |---|---|---|---|---|---|
-|Secondary|NORMAL| 2018-09-12 08:35:17.755 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check procedure started.|
 |Secondary|CRITICAL| 2018-09-12 08:33:00.122 | collector01|primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Failed to send commands to the primary driver. Switching to secondary.|
 |Secondary|CRITICAL| 2018-09-12 08:33:00.190 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Failed to send commands to the primary driver. Switched to secondary driver.|
 |Secondary|NORMAL| 2018-09-12 08:33:17.760 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check procedure started.|
@@ -206,6 +205,7 @@ The switch-back procedure states are logged with the following messages, each co
 |Secondary|NORMAL| 2018-09-12 08:34:17.757 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check procedure started.|
 |Secondary|CRITICAL| 2018-09-12 08:34:17.824 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check result: [Unexpected error: `javax.net.ssl.SSLHandshakeException`: Remote host closed connection during handshake]|
 |Secondary|WARNING| 2018-09-12 08:34:17.889 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver is not available. Continue sending data using secondary driver.|
+|Secondary|NORMAL| 2018-09-12 08:35:17.755 | collector01 | primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check procedure started.|
 |Primary|NORMAL| 2018-09-12 08:35:17.890 | collector01| primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver re-connect check result: SUCCESSFUL           |
 |Primary|WARNING| 2018-09-12 08:35:17.917 | collector01| primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver is available. Switching from secondary.       |
 |Primary|NORMAL| 2018-09-12 08:35:17.932 | collector01| primary_driver_url = `https://atsd.example.org` , secondary_driver_url = `https://198.51.100.1:8443`  | Primary driver is available. Switch from secondary complete. |
