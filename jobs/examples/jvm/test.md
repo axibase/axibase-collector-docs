@@ -23,3 +23,4 @@ Name | Example | Description | &nbsp;
 :---|:---|:---|---
 <a name="hello">`hello`</a> | `hello`<br>`percentile-markers = top` | Display percentiles markers.<br>Possible values: `all`, `none`, `top`, `bottom`.<br>Default value: `none`.|[↗](https://apps.axibase.com/chartlab/14cf1974/5/)
 [`world`](#world) | `world = all`<br>`percentile-markers = top` | Display percentiles markers.<br>Possible values: `all`, `none`, `top`, `bottom`.<br>Default value: `none`.|[↗](https://apps.axibase.com/chartlab/14cf1974/5/)
+[`check`](check) | `world = all`<br>`percentile-markers = top` | Display percentiles markers.<br>Possible values: `all`, `none`, `top`, `bottom`.<br>Default value: `none`.|[↗](https://apps.axibase.com/chartlab/14cf1974/5/)
