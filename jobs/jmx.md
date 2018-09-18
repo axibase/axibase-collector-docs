@@ -15,7 +15,7 @@ The JMX job can have one or multiple JMX configurations each describing connecti
 | Field       | Description |
 |:-------------|:-------------|
 | Name | Job configuration name. |
-| Item List | A collection of elements to execute multiple requests to JMX service in a loop.<br>The current element in the loop can be accessed with `${ITEM}` placeholder. When Item List is selected and `${ITEM}` is present in one of the fields, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with element value for each request.<br>The placeholder `${ITEM}` supports [standard functions](../collections.md#functions) and [column](../functions-freemarker.md#column) function. |
+| Item List | A collection of elements to execute multiple requests to JMX service in a loop.<br/>The current element in the loop can be accessed with `${ITEM}` placeholder. When Item List is selected and `${ITEM}` is present in one of the fields, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with element value for each request.<br/>The placeholder `${ITEM}` supports [standard functions](../collections.md#functions) and [column](../functions-freemarker.md#column) function. |
 | Host | Hostname or IP address of the remote server running Java application with JMX service. |
 | Port | JMX service port.  |
 | User Name | JMX username. |
@@ -47,10 +47,10 @@ Failed to retrieve RMIServer stub: javax.naming.ConfigurationException [Root exc
 | Field | Description |
 |:---|:---|
 | Entity | Entity name under which the database stores the data. |
-| Predefined Tags | Predefined tags added to all commands, one `name=value` pair per line.<br>This field supports the following placeholders:<br>- `${domain}` = Domain of the MBean<br>- `${name}` = Value of `name` attribute of the MBean |
+| Predefined Tags | Predefined tags added to all commands, one `name=value` pair per line.<br/>This field supports the following placeholders:<br/>- `${domain}` = Domain of the MBean<br/>- `${name}` = Value of `name` attribute of the MBean |
 | Command Type | Insert command type: `SERIES`, `PROPERTY` or `BOTH`. |
-| Metric Prefix | Common prefix added to metric names, for example `jmx.activemq.`<br>This field supports the following placeholders:<br>- `${domain}` = Domain of the MBean<br>- `${attribute_name}` = Value of attribute of the MBean<br>The attributes are excluded from series tags, if the attributes are included using a placeholder. |
-| Property Type Prefix  | Prefix added to property type, for example `jmx.activemq.`<br>Property type is set to MBean `type` attribute by default.<br>This field supports the following placeholders:<br>- `${domain}` = Domain of the MBean<br>- `${attribute_name}` = Value of attribute of the MBean<br>The attributes are excluded from property keys, if the attributes are included using a placeholder. |
+| Metric Prefix | Common prefix added to metric names, for example `jmx.activemq.`<br/>This field supports the following placeholders:<br/>- `${domain}` = Domain of the MBean<br/>- `${attribute_name}` = Value of attribute of the MBean<br/>The attributes are excluded from series tags, if the attributes are included using a placeholder. |
+| Property Type Prefix  | Prefix added to property type, for example `jmx.activemq.`<br/>Property type is set to MBean `type` attribute by default.<br/>This field supports the following placeholders:<br/>- `${domain}` = Domain of the MBean<br/>- `${attribute_name}` = Value of attribute of the MBean<br/>The attributes are excluded from property keys, if the attributes are included using a placeholder. |
 | Excluded Property Attributes | List of attribute names excluded from property commands.  |
 | Excluded Series Attributes | List of attribute names excluded from series commands. |
 
@@ -166,8 +166,8 @@ Select a checkbox next to an attribute name to add to the list of collected attr
 
 The following MBean attributes are ignored from **Viewer** and the commands:
 
-* Attribute value cannot be obtained due to a processing error: <br>- `UnsupportedOperationException`<br>- `UnmarshalException`<br>- `ReflectionException`<br>- `RuntimeOperationsException`<br>- `InstanceNotFoundException`
-* Attribute value is `NaN` (Not a Number) for numeric attributes in case of a **series** command. <br>`NaN` can occur, for example, on division by zero.
+* Attribute value cannot be obtained due to a processing error: <br/>- `UnsupportedOperationException`<br/>- `UnmarshalException`<br/>- `ReflectionException`<br/>- `RuntimeOperationsException`<br/>- `InstanceNotFoundException`
+* Attribute value is `NaN` (Not a Number) for numeric attributes in case of a **series** command. <br/>`NaN` can occur, for example, on division by zero.
 
 To view attributes ignored due to processing errors, enable debugging for the `MBeansInfoExtractor` class:
 

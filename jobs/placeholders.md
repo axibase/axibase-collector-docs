@@ -126,7 +126,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| /opt/files/cpu_busy.nurswgvml.106<br>/opt/files/cpu_busy.nurswgvml.107 | nurswgvml.106<br>nurswgvml.107 |
+| /opt/files/cpu_busy.nurswgvml.106<br/>/opt/files/cpu_busy.nurswgvml.107 | nurswgvml.106<br/>nurswgvml.107 |
 
 #### keep_after_last
 
@@ -153,7 +153,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| `/opt/files/nurswgvml106_cpu_busy.csv<br>/opt/files/nurswgvml107_cpu_busy.csv` | nurswgvml106_cpu<br>nurswgvml107_cpu |
+| `/opt/files/nurswgvml106_cpu_busy.csv<br/>/opt/files/nurswgvml107_cpu_busy.csv` | nurswgvml106_cpu<br/>nurswgvml107_cpu |
 
 #### replace
 
@@ -171,7 +171,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| /opt/files/nurswgvml106<br>/opt/files/nurswgvml107 | nurswgvml106<br>nurswgvml107 |
+| /opt/files/nurswgvml106<br/>/opt/files/nurswgvml107 | nurswgvml106<br/>nurswgvml107 |
 
 #### remove_ending
 
@@ -180,7 +180,7 @@ The **Path** field can be used to define [`Default Entity`](file.md#upload).
 
 | Matching Paths | Output |
 |:---|:---|
-| `/opt/files/nurswgvml106.cpu_busy.csv<br>/opt/files/nurswgvml107.cpu_busy.csv` | nurswgvml106<br>nurswgvml107 |
+| `/opt/files/nurswgvml106.cpu_busy.csv<br/>/opt/files/nurswgvml107.cpu_busy.csv` | nurswgvml106<br/>nurswgvml107 |
 
 ### LOOKUP function
 

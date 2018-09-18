@@ -16,7 +16,7 @@ Information is collected for the following object types:
 
 **Name** | **Description**
 ----- | -----
-`API Version` | API version used when querying the Docker Engine API. Defaults to `latest`. <br>Can be set to a specific version to ensure compatibility.
+`API Version` | API version used when querying the Docker Engine API. Defaults to `latest`. <br/>Can be set to a specific version to ensure compatibility.
 `Lifecycle Event Monitoring` | Enables continuous monitoring of container lifecycle events instead of scheduled polling.
 `Property Interval`, minutes | Interval for refreshing detailed image and container properties.
 `Statistics Interval`, seconds | Interval at which utilization statistics from running containers are collected.

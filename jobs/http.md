@@ -34,11 +34,11 @@ Storage | Define location to store retrieved series commands.
 | HTTP Pool |  Apply a configured [HTTP pool](./http-pool.md) or create one by clicking **+**. `*` |
 | Path |   Path to target files located on the remote or local file system from which HTTP job reads.  |
 | Collect SSL Metrics | Collect SSL certificate expiration and status metrics: `http.ssl_certificate_expiration_days` and `http.ssl_certificate_status`.
-String Matching | Define how Collector searches for response text.<br>Possible values:<br>`Contains String`: Search for partial match.<br>`Equals String`: Search for exact match.<br>`Matches String`: Search via regular expression.<br>`Does Not Contain String`: Search those strings which do not contain the target string defined in **Search String**.
+String Matching | Define how Collector searches for response text.<br/>Possible values:<br/>`Contains String`: Search for partial match.<br/>`Equals String`: Search for exact match.<br/>`Matches String`: Search via regular expression.<br/>`Does Not Contain String`: Search those strings which do not contain the target string defined in **Search String**.
 Search String | Text for which Collector searches.
 Retry Count | Number of attempts to re-establish a lost connection.|
 Retry Delay, seconds | Delay between attempts to re-establish a lost connection.
-Metric Prefix | Common prefix added to metric names, for example `jmx.activemq`.<br>This field supports the following [placeholders](./placeholders.md):<br>`$(domain)`: Domain of the `mbean`<br>`$(name)`: Value of the `mbean` attribute `name`.<br>`$(type)`: Value of the `mbean` attribute `type`.
+Metric Prefix | Common prefix added to metric names, for example `jmx.activemq`.<br/>This field supports the following [placeholders](./placeholders.md):<br/>`$(domain)`: Domain of the `mbean`<br/>`$(name)`: Value of the `mbean` attribute `name`.<br/>`$(type)`: Value of the `mbean` attribute `type`.
 
 > `*` Apply the HTTP job to **either** an Item List or HTTP Pool, but not both.
 

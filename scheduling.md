@@ -76,7 +76,7 @@ Second, minute, and hour fields support **R** (random) symbol to randomize execu
 | `30 15 14 1 * ?` | `30`| `15`| `14`| `1` | `*` | `?` | At 14:15:30 on the first of every month. |
 | `0 0 22 ? * 1-5` | `0` | `0` | `22`| `?` | `*` | `1-5` | At 22:00 on Mon, Tue, Wed, Thu and Fri. |
 | `0 5 0-10/2 * * ?` | `0` | `5` | `0-10/2` | `*` | `*` | `?` | At every ninth minute past the zero, second, fourth, sixth, eighth, and 10th hour. |
-| `0 0 0,12 1 */2 ?` | `0` | `0` | `0,12`| `1` | `*/2` | `?` | At 00:00 and 12:00 on the first in <br>January, March, May, July, September and November. |
+| `0 0 0,12 1 */2 ?` | `0` | `0` | `0,12`| `1` | `*/2` | `?` | At 00:00 and 12:00 on the first in <br/>January, March, May, July, September and November. |
 
 ## Execution State
 

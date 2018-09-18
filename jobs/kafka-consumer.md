@@ -11,8 +11,8 @@ To add a consumer in Axibase Collector, open the **Data Sources > Kafka Consumer
 **Field** | **Description**
 --------- | ---------------
 Name | Name of consumer.
-Server or Servers | A list of host/port pairs to use for establishing the initial connection to the Kafka cluster. The client makes use of all servers regardless of which servers are specified here for bootstrapping—this list only impacts the initial hosts used to discover the full set of servers.<br>This list must be in the form `host1:port1,host2:port2,...`.<br>Since these servers are just used for the initial connection to discover the full cluster membership, which can change dynamically, this list need not contain the full set of servers but more that one is advisable, in case a server is down.
-Security Protocol | Protocol used to communicate with brokers.<br>Supported protocols:<br>\- `PLAINTEXT`<br>\- `SSL`
+Server or Servers | A list of host/port pairs to use for establishing the initial connection to the Kafka cluster. The client makes use of all servers regardless of which servers are specified here for bootstrapping—this list only impacts the initial hosts used to discover the full set of servers.<br/>This list must be in the form `host1:port1,host2:port2,...`.<br/>Since these servers are just used for the initial connection to discover the full cluster membership, which can change dynamically, this list need not contain the full set of servers but more that one is advisable, in case a server is down.
+Security Protocol | Protocol used to communicate with brokers.<br/>Supported protocols:<br/>\- `PLAINTEXT`<br/>\- `SSL`
 Read Timeout, seconds | The amount of time in seconds to block message reading.
 Poll Timeout, ms | The amount of time in milliseconds to block waiting for input.
 Properties | Extended consumer properties
@@ -23,7 +23,7 @@ If **SSL** protocol is selected, you need to configure additional settings:
 
 **Field** | **Description**
 --------- | ---------------
-Key Store | Key stores:<br>\* CUSTOM - use custom trust/key stores<br>\* DEFAULT - use Collector stores
+Key Store | Key stores:<br/>\* CUSTOM - use custom trust/key stores<br/>\* DEFAULT - use Collector stores
 Trust Store Path | The location of the trust store file.
 Trust Store Password | The password for the trust store file.
 Two-Way Authentication | Enable 2-Way Authentication (client verification).

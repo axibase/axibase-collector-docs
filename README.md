@@ -85,10 +85,10 @@ The Collector supports data markers to minimize the load on the source systems a
 ----- | -----
 [AWS](./jobs/aws.md) | Collects AWS statistics using CloudWatch API.
 [Docker](./jobs/docker.md) | Collects container, image, and volume statistics using Docker Engine API.
-[File](./jobs/file.md) | Downloads CSV/TSV files from remote servers or local file system and uploads them into ATSD for parsing.<br>Supports HTTP/s, FTP, SFTP, SCP, and FILE protocols.
+[File](./jobs/file.md) | Downloads CSV/TSV files from remote servers or local file system and uploads them into ATSD for parsing.<br/>Supports HTTP/s, FTP, SFTP, SCP, and FILE protocols.
 [HTTP](./jobs/http.md) | Executes HTTP requests or Web Driver scripts and stores response status, response times, and SSL certificate status as metrics.
 [ICMP](./jobs/icmp.md) | Pings hostnames/IP addresses and stores response status.
-[JDBC](./jobs/jdbc.md) | Executes SQL queries against relational databases.<br>Converts rows into series,  property, or message commands.
+[JDBC](./jobs/jdbc.md) | Executes SQL queries against relational databases.<br/>Converts rows into series,  property, or message commands.
 [JMX](./jobs/jmx.md) | Collects MBean attribute values from Java applications.
 [JSON](./jobs/json.md) | Downloads JSON files, parses the documents and converts JSON fields into series, property, and message commands using JSONPath.
 [Kafka](./jobs/kafka.md) | Reads JSON messages from Kafka brokers, parses the messages and converts them into series, property, and message commands.

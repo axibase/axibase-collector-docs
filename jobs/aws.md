@@ -68,15 +68,15 @@ The job assigns each metric to an entity which is extracted from the [primary di
 | `Access key id`  | Access key. See [Getting Your Access Key ID and Secret Access Key](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).   |
 | `Secret access key`  | Secret access key. |
 | `Namespaces`  | CloudWatch metric namespaces enabled for collection.   |
-| `Collect Status`  |  Collect status check metrics such as <br>`StatusCheckFailed`, `StatusCheckFailed_Instance`, `StatusCheckFailed_System` |
-| `Property Refresh` <br> Interval, minutes | Interval at which to load resource attributes. |
+| `Collect Status`  |  Collect status check metrics such as <br/>`StatusCheckFailed`, `StatusCheckFailed_Instance`, `StatusCheckFailed_System` |
+| `Property Refresh` <br/> Interval, minutes | Interval at which to load resource attributes. |
 
 ## Configuration Steps
 
 * Create a read-only [IAM account](./aws-iam.md) to query CloudWatch statistics.
 * Open the **Jobs** page, click **Add Job**, and select **Use Wizard**.
 * Specify access and secret keys.
-* Select AWS regions from which to collect data. <br>The wizard creates a separate AWS configuration for each region within the same job.
+* Select AWS regions from which to collect data. <br/>The wizard creates a separate AWS configuration for each region within the same job.
 * Validate the credentials and save the job if there are no errors.
 
 ![](./images/aws-wizard-validate.png)
@@ -91,7 +91,7 @@ The job assigns each metric to an entity which is extracted from the [primary di
 
 * Open the AWS job page and set the schedule to `R 0/5 * * * ?` to execute the job every five minutes with random seconds.
 * On the **AWS Jobs** page, check that `Items Read` and `Commands Sent` are greater than `0`.
-* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br>Note that the AWS job takes some time to load backlogged historical data for all metrics after creation.
+* Log in to ATSD. Open the **Metrics** tab and review available metrics by typing `aws` into the **Name Mask**.<br/>Note that the AWS job takes some time to load backlogged historical data for all metrics after creation.
 * Open the **Entities** tab and locate one of AWS EC2 instances. Click the **Portal** links to access pre-defined AWS portals.
 
 ![](./images/metric_list.png)

@@ -4,7 +4,7 @@ OVPM protocol is used to retrieve data from the HP OpenView Performance Manager.
 
 ## Job Settings
 
-In comparison to the [Generic job](../job-generic.md) settings, OVPM job has an additional job-specific parameter. <br>
+In comparison to the [Generic job](../job-generic.md) settings, OVPM job has an additional job-specific parameter. <br/>
 
 **Max. serial errors threshold** - defines the maximum amount of consecutive errors after which no more queries are sent by the database.
 

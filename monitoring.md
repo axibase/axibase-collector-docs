@@ -6,7 +6,7 @@ Field | Description
 ---|---
 Type | `collector-job`
 Source | `job_name`
-Severity | `NORMAL` if successful<br>`MAJOR` on `PARTIAL_FAIL`<br>`CRITICAL` in case of `ERROR`
+Severity | `NORMAL` if successful<br/>`MAJOR` on `PARTIAL_FAIL`<br/>`CRITICAL` in case of `ERROR`
 Entity | Collector hostname.
 Tag `job_name` | Job name.
 Tag `status` | `COMPLETED`, `PARTIAL_FAIL`, `FAIL`
