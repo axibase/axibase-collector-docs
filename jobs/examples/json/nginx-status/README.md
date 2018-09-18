@@ -39,7 +39,7 @@ Example: `http://demo.nginx.com/status`
   property t:nginx_info e:demo.nginx.com d:2016-07-08T14:01:31.516Z k:address=203.0.113.0 v:nginx_version=1.9.13 v:pid=59970 v:load_timestamp=1467911779387 v:generation=11 v:version property t:nginx_info e:demo.nginx.com d:2016-07-08T14:01:31.516Z k:address=203.0.113.0 v:nginx_version=1.9.13 v:pid=59970 v:load_timestamp=1467911779387 v:generation=11 v:version=6
   ```
 
-<br>
+<br/>
 
 * **Peers:**
 
@@ -151,7 +151,7 @@ Example: `http://demo.nginx.com/status`
   property t:upstreams.peers e:demo.nginx.com d:2016-07-08T14:01:31.516Z k:upstream=demo-backend k:server=192.0.2.2:15431 k:type=upstreams.peers v:id=0 v:weight=1 v:state=up v:health_checks.last_passed=true v:backup=false
   ```
 
-<br>
+<br/>
 
 * **Caches, Server Zones, and Upstreams**:
 
@@ -267,7 +267,7 @@ Example: `http://demo.nginx.com/status`
   property t:caches e:demo.nginx.com d:2016-07-08T14:01:31.516Z k:name=http_cache k:type=caches v:cold=false v:max_size=536870912 v:size=536838144
   ```
 
-<br>
+<br/>
 
 * **Server Zones:**
 
@@ -299,7 +299,7 @@ Example: `http://demo.nginx.com/status`
   series e:demo.nginx.com d:2016-07-08T14:01:31.516Z t:name=dns_loadbalancer t:type=stream.server_zones m:nginx-plus.received=1154034 m:nginx-plus.connections=42742 m:nginx-plus.sent=5344776 m:nginx-plus.processing=0
   ```
 
-<br>
+<br/>
 
 * **Caches:**
 
@@ -361,7 +361,7 @@ Example: `http://demo.nginx.com/status`
   series e:demo.nginx.com d:2016-07-08T14:01:31.516Z t:name=http_cache t:cache_status=bypass t:type=caches m:nginx-plus.responses=340141 m:nginx-plus.bytes=13010815042 m:nginx-plus.responses_written=340113 m:nginx-plus.bytes_written=13010806733
   ```
 
-<br>
+<br/>
 
 ## Screenshots
 

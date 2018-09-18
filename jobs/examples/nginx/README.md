@@ -37,7 +37,7 @@ metric(cell(row, 1) + '_' + (cell(row,col-1)+'').substring(0,(cell(row,col-1)+''
 * Log in to the ATSD web interface.
 * Open the **Data** menu and select **CSV Parsers** page. Click **Import**.
 * Import [CSV parser](./configs/nginx-atsd-csv-parser.xml) for the nginx status page.
-* The parser splits status page content into cells and assembles series commands from extracted cell values.<br>In addition, the parser creates a derived metric `unhandled_percent` equal to `100*(1-handled/accepted)`.
+* The parser splits status page content into cells and assembles series commands from extracted cell values.<br/>In addition, the parser creates a derived metric `unhandled_percent` equal to `100*(1-handled/accepted)`.
 
 ## Configure Jobs in Axibase Collector
 
@@ -73,7 +73,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 ![nginx test](./images/nginx-collector-test-stat.png)
 
 * Open the `nginx-connect` configuration in the `nginx-connect-check` job.
-* Click **Test** to verify connectivity to the target server. <br>If TCP connection is successful, the `tcp-connect` metric returns a 0 exit code.
+* Click **Test** to verify connectivity to the target server. <br/>If TCP connection is successful, the `tcp-connect` metric returns a 0 exit code.
 
 ![nginx test](./images/nginx-collector-test-TCP.png)
 
@@ -89,7 +89,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 |:-----------------------:|:----------------------------------------------------------------------------------------|
 | Active connection       |The current number of active client connections, including Waiting connections.           |
 | Server accepts          |The total number of accepted client connections.                                         |
-| Server handled          |The total number of handled connections.<br> The parameter is lower than Server accepts if the resource limits have been reached (for example, the `worker_connections` limit).                          |
+| Server handled          |The total number of handled connections.<br/> The parameter is lower than Server accepts if the resource limits have been reached (for example, the `worker_connections` limit).                          |
 | Server requests         |The total number of client requests.                                                     |
 | Reading                 |The current number of connections where nginx is reading the request header.             |
 | Writing                 |The current number of connections where nginx is writing the response back to the client.|
@@ -141,7 +141,7 @@ The following rules are provided in the `nginx_notification_rules.xml` file:
 |:----------------------------------------:|:------------------------------------------------------------------------|
 |`nginx_unhandled_percent_high`| Raise an alert when an nginx server unhandled connection percentage is above 2%.|
 | `nginx_active_connections_low` | Raise an alert when an nginx server average Active Connection count is below 10 over the last 15 minutes.|
-| `nginx_active_connections_heartbeat`| Raise an alert when status page statistics are no longer being received by ATSD.<br> Check that the server is reachable and Axibase Collector job is running. |
-|`nginx_tcp_heartbeat`| Raise an alert when the TCP connect metric is no longer being received by ATSD or if the TCP connect metric contains error codes.<br>Check that the server is reachable and Axibase Collector job is running.|
+| `nginx_active_connections_heartbeat`| Raise an alert when status page statistics are no longer being received by ATSD.<br/> Check that the server is reachable and Axibase Collector job is running. |
+|`nginx_tcp_heartbeat`| Raise an alert when the TCP connect metric is no longer being received by ATSD or if the TCP connect metric contains error codes.<br/>Check that the server is reachable and Axibase Collector job is running.|
 
 To create your own rules, refer to [Rule Engine documentation](https://axibase.com/docs/atsd/rule-engine/).

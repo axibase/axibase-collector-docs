@@ -28,12 +28,12 @@ The files are parsed by ATSD using a [CSV Parser](https://axibase.com/docs/atsd/
 
 | **Protocol** | **Scheme** | **Wildcards** | **Description** |
 |:---|:---|:---|:---|
-| `FILE` | `file://` | yes | Read file or files from the local file system.<br>`/tmp/report/daily*.csv` |
-| `HTTP` | `http://` or `https://` | no | Download a file from a web server.<br>`https://example.org/traffic/direct.csv` |
-| `HTTP_POOL` | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br>`/traffic/direct.csv` |
-| `FTP` | `ftp://` | yes | Download file or files from an FTP server.<br>`ftp://example.org/data/CCE2_121W_*.csv` |
-| `SFTP` | `sftp://` | yes | Download file or files from a Unix server over STFP protocol.<br>`sftp://username:password@198.51.100.1:22/home/ftp-reader/*.csv` |
-| `SCP` | `scp://` | no | Download a file from a Unix server over SCP protocol.<br>`scp://username:password@example.org:4022/home/user-1/r20160617.csv` |
+| `FILE` | `file://` | yes | Read file or files from the local file system.<br/>`/tmp/report/daily*.csv` |
+| `HTTP` | `http://` or `https://` | no | Download a file from a web server.<br/>`https://example.org/traffic/direct.csv` |
+| `HTTP_POOL` | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br/>`/traffic/direct.csv` |
+| `FTP` | `ftp://` | yes | Download file or files from an FTP server.<br/>`ftp://example.org/data/CCE2_121W_*.csv` |
+| `SFTP` | `sftp://` | yes | Download file or files from a Unix server over STFP protocol.<br/>`sftp://username:password@198.51.100.1:22/home/ftp-reader/*.csv` |
+| `SCP` | `scp://` | no | Download a file from a Unix server over SCP protocol.<br/>`scp://username:password@example.org:4022/home/user-1/r20160617.csv` |
 
 ## File Watch
 
@@ -52,7 +52,7 @@ Consecutive file modification events that occurred within one second of each oth
 To download multiple files with the same configuration, utilize one of the following options:
 
 * Match multiple files with a `*` or `?` wildcard in the Path, provided the protocol supports wildcards.
-* Create a collection of items, referred to as `item list`, and include an `${ITEM}` placeholder in the Path. <br>The configuration is repeated for all elements in the list.<br>The item list can be defined manually or can be retrieved from an external source such as a script.<br>The item list can include parts of the Path or the entire Path.
+* Create a collection of items, referred to as `item list`, and include an `${ITEM}` placeholder in the Path. <br/>The configuration is repeated for all elements in the list.<br/>The item list can be defined manually or can be retrieved from an external source such as a script.<br/>The item list can include parts of the Path or the entire Path.
 * Include `${DATE_ITEM()}` function in the Path. The `${DATE_ITEM()}` function produces an array of dates between start and end time, formatted with the specified pattern. The configuration is repeated for all dates returned by the functions.
 
 Wildcard examples for FILE protocol:
@@ -74,19 +74,19 @@ FILE protocol supports directory traversal.
 |:---|:---|
 | File Format | CSV or JSON. JSON files are converted into CSV files prior to uploading.|
 | Protocol | Network or file protocol to download the file from a remote server or read from the local file system.|
-| Path | URI to the data file in RFC 3986 form: `[username:password@]host[:port][/]path[?query][#fragment]`.<br>Example: `https://example.org/traffic/direct.csv`.<br>If `HTTP_POOL` is selected, the URI must be relative: `/path[?query][#fragment]`.<br>If the `FILE` protocol is selected, the Path to files on the local file system must be absolute.<br>Supported placeholders: `${ITEM}`, `${TIME()}`, `${DATE_ITEM()}`.|
-| Item List | A collection of elements to execute multiple file requests in a loop.<br>The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.<br>When Item List is selected and `${ITEM}` is present in the Path, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with an element value for each request.<br>`${ITEM}` value can be URL-encoded as follows: `${ITEM?url}`|
+| Path | URI to the data file in RFC 3986 form: `[username:password@]host[:port][/]path[?query][#fragment]`.<br/>Example: `https://example.org/traffic/direct.csv`.<br/>If `HTTP_POOL` is selected, the URI must be relative: `/path[?query][#fragment]`.<br/>If the `FILE` protocol is selected, the Path to files on the local file system must be absolute.<br/>Supported placeholders: `${ITEM}`, `${TIME()}`, `${DATE_ITEM()}`.|
+| Item List | A collection of elements to execute multiple file requests in a loop.<br/>The current element in the loop can be accessed with the `${ITEM}` placeholder, which can be embedded into the Path and Default Entity fields.<br/>When Item List is selected and `${ITEM}` is present in the Path, the job executes as many queries as there are elements in the list, substituting `${ITEM}` with an element value for each request.<br/>`${ITEM}` value can be URL-encoded as follows: `${ITEM?url}`|
 
 ### HTTP-specific Download Settings
 
 | **Name** | **Description** |
 |:---|:---|
 | HTTP Pool | Pre-defined HTTP connection parameters with optional authentication credentials and custom network/connection settings. |
-| HTTP Method | HTTP method executed: `GET` or `POST`. <br>`POST` method provides a way to specify request headers and payload parameters.|
+| HTTP Method | HTTP method executed: `GET` or `POST`. <br/>`POST` method provides a way to specify request headers and payload parameters.|
 | Payload | `POST` method payload.|
 | Headers | HTTP request headers.|
 | Enable Web Driver | Executes Web Driver Script to download the file.|
-| Driver Script | Downloads the file by executing pre-recorded browser actions such as opening a page and clicking on a button to export a file.<br>The script can be recorded in Selenium IDE and exported into Java format. |
+| Driver Script | Downloads the file by executing pre-recorded browser actions such as opening a page and clicking on a button to export a file.<br/>The script can be recorded in Selenium IDE and exported into Java format. |
 | Driver File Encoding | File Encoding to use when saving the file downloaded with script.|
 | Driver Timeout | Maximum time, in seconds, allowed for the script to run before timeout. |
 
@@ -95,7 +95,7 @@ FILE protocol supports directory traversal.
 | **Name** | **Description** |
 |:---|:---|
 | Watch Enabled | Watch the target directories for file creations and modification and process the file on change event without a delay. |
-| Watch Interval | If set, ATSD watches the target directories for changes for the specified number of seconds.<br>If omitted or set to 0, ATSD watches the target paths until the next job start time.|
+| Watch Interval | If set, ATSD watches the target directories for changes for the specified number of seconds.<br/>If omitted or set to 0, ATSD watches the target paths until the next job start time.|
 
 > Watched directories must exist at the time the job is executed. Deleted / re-created changes in the directory during job execution are not visible to the job until after a restart.
 
@@ -103,9 +103,9 @@ FILE protocol supports directory traversal.
 
 | **Name** | **Format** | **Description** |
 |:---|:---|:---|
-| Minimum Line Count | CSV | Minimum line count for the CSV file to contain. <br>An error is raised if the threshold is greater than 0 and the number of lines in the file is less than the threshold. |
-| First Line Contains | CSV | Checks if the first non-empty line in the file contains the specified text. The check is case-sensitive.<br>If the specified text is not found within the first non-empty line, ATSD does not load the data.<br>Supported placeholders: ``${ITEM}`, `${TIME()}`, `${FILE}`, `${DIRECTORY}`, `${PATH}``. For example: `# Effective Data ${TIME("previous_day", "dd.MM.yyyy")}`. |
-| File Contains | JSON | Checks if the file contains the specified text on any line. The check is case-sensitive.<br>If the specified text is not found within the file text, ATSD does not load the data.<br>Supported placeholders: `${TIME}`. For example: `"report_date": "${TIME("current_day", "yy/MM/dd")}"`.|
+| Minimum Line Count | CSV | Minimum line count for the CSV file to contain. <br/>An error is raised if the threshold is greater than 0 and the number of lines in the file is less than the threshold. |
+| First Line Contains | CSV | Checks if the first non-empty line in the file contains the specified text. The check is case-sensitive.<br/>If the specified text is not found within the first non-empty line, ATSD does not load the data.<br/>Supported placeholders: ``${ITEM}`, `${TIME()}`, `${FILE}`, `${DIRECTORY}`, `${PATH}``. For example: `# Effective Data ${TIME("previous_day", "dd.MM.yyyy")}`. |
+| File Contains | JSON | Checks if the file contains the specified text on any line. The check is case-sensitive.<br/>If the specified text is not found within the file text, ATSD does not load the data.<br/>Supported placeholders: `${TIME}`. For example: `"report_date": "${TIME("current_day", "yy/MM/dd")}"`.|
 | Parse | JSON | JSON files are automatically validated by parsing the file as a JSON document. |
 
 ### Convert to CSV
@@ -114,8 +114,8 @@ FILE protocol supports directory traversal.
 
 | **Name** | **Description** |
 |:---|:---|
-| JSON Path | JSONPath expression to match an object or a list of objects in the JSON document. <br>Default path is `$`, which stands for the `root` object.<br>Collector attempts to convert fields of the matched objects to a tabular structure, using field names as column names and field values as cell values. For fields in the nested objects, column names are formed by concatenating parent object names using dot notation. Each matched objects returned by the JSON path expression is represented as a separate line in a CSV file. |
-| Traversal Depth | Limit traversal of the matched object or objects. <br>If **Depth** is set to a positive number, nested objects are included in the CSV files up to their depth level measured as the distance between the nested object and the matched object. When **Depth** is set to 1, the Collector includes only direct fields of the matched objects. If **Depth** is set to 0 or a negative number, the Collector traverses and includes all nested object in the CSV files. |
+| JSON Path | JSONPath expression to match an object or a list of objects in the JSON document. <br/>Default path is `$`, which stands for the `root` object.<br/>Collector attempts to convert fields of the matched objects to a tabular structure, using field names as column names and field values as cell values. For fields in the nested objects, column names are formed by concatenating parent object names using dot notation. Each matched objects returned by the JSON path expression is represented as a separate line in a CSV file. |
+| Traversal Depth | Limit traversal of the matched object or objects. <br/>If **Depth** is set to a positive number, nested objects are included in the CSV files up to their depth level measured as the distance between the nested object and the matched object. When **Depth** is set to 1, the Collector includes only direct fields of the matched objects. If **Depth** is set to 0 or a negative number, the Collector traverses and includes all nested object in the CSV files. |
 | Included Fields | By default, all fields with primitive data types (number, string, boolean) are included in the CSV file. Array fields are ignored. The list of included fields can be overridden explicitly by specifying particular field names, separated by comma. |
 | Excluded Fields | List of field names to be excluded from the CSV file. Applies if **Included Fields** is empty. |
 
@@ -123,12 +123,12 @@ FILE protocol supports directory traversal.
 
 | **Name** | **Description** |
 |:---|:---|
-| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br>The parser can be created on the **Settings > CSV Parser** page in ATSD. The parser must exist and be enabled.|
+| Parser Name | [CSV Parser](https://axibase.com/docs/atsd/parsers/csv/) name for parsing the uploaded CSV file.<br/>The parser can be created on the **Settings > CSV Parser** page in ATSD. The parser must exist and be enabled.|
 | Auto Detect Encoding | Automatically detect file `charset` based on leading bytes, the header, and the heuristics. ATSD accepts the `charset` and the file is correctly parsed by the database. |
 | Encoding | Specify the file `charset` to correctly parse the file in the database. |
-| Metric Prefix | Text added to all metrics names extracted from the CSV file, typically to column headers.<br>For example, if the Metric Prefix is set to `custom.`, and the file contains the `PageViews` column, the resulting metric name is `custom.Pageviews`.|
-| Default Entity | Default Entity name to use if the file does not contain information about the entity name. <br>The Default Entity name can include placeholders, such as `${ITEM}`, which are substituted by an element value when the Item List is selected. <br>Supported placeholders are: `${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
-| Custom Tags | List of `name=value` tag pairs, one per line. The tags are be stored by the database as additional series/property/message tags.<br>Supported placeholders are:`${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
+| Metric Prefix | Text added to all metrics names extracted from the CSV file, typically to column headers.<br/>For example, if the Metric Prefix is set to `custom.`, and the file contains the `PageViews` column, the resulting metric name is `custom.Pageviews`.|
+| Default Entity | Default Entity name to use if the file does not contain information about the entity name. <br/>The Default Entity name can include placeholders, such as `${ITEM}`, which are substituted by an element value when the Item List is selected. <br/>Supported placeholders are: `${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
+| Custom Tags | List of `name=value` tag pairs, one per line. The tags are be stored by the database as additional series/property/message tags.<br/>Supported placeholders are:`${ITEM}`, `${FILE}`, `${PATH}`, `${DIRECTORY}`, `${TIME()}`.|
 | Use Current Time | Enables all data contained in the CSV file to be stored with the current time of the Collector instead of the date/time possibly contained in the file. This option must be used when the CSV file does not contain any time/date information.|
 | Time Zone | Timezone which must be used by ATSD when parsing the datetime column in the CSV file, if the datetime format does not contain information about the time zone.|
 | Wait for Upload | Wait for ATSD to finish validating and parsing the uploaded file. If disabled, the server responds HTTP Code `200` (success) immediately after the file is transferred to ATSD. If **Wait for Upload** is disabled, the Collector job does not know if the upload file is valid or if there are errors. |
@@ -141,8 +141,8 @@ FILE protocol supports directory traversal.
 |:---|:---|
 | Delete Files on Upload | Applies to FILE protocol. Delete source files after you upload them to the database.|
 | Copy Files | Copy downloaded file or files into a **Success** or **Error** directory based on a local or remote status code. For example, if the file failed during validation, the file is copied to the **Error** directory.|
-| Success Directory | Absolute path to a directory for storing successfully uploaded files.<br>If the directory is specified but does not exist, the system creates the directory.<br>Supported placeholders: `${ITEM}`, `${TIME()}`.|
-| Error Directory | Absolute path to a directory for storing a file that failed to get uploaded successfully for any reason.<br>If the directory is specified but does not exist, the system creates the directory.<br>Supported placeholders: `${ITEM}`, `${TIME()}`.|
+| Success Directory | Absolute path to a directory for storing successfully uploaded files.<br/>If the directory is specified but does not exist, the system creates the directory.<br/>Supported placeholders: `${ITEM}`, `${TIME()}`.|
+| Error Directory | Absolute path to a directory for storing a file that failed to get uploaded successfully for any reason.<br/>If the directory is specified but does not exist, the system creates the directory.<br/>Supported placeholders: `${ITEM}`, `${TIME()}`.|
 
 ## Placeholders
 

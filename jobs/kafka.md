@@ -6,7 +6,7 @@ The Kafka job provides a way to read messages from an Apache Kafka broker or bro
 
 ## Job Settings
 
-In comparison to [Generic job](../job-generic.md), Kafka job has an additional **Consumer** field. <br>
+In comparison to [Generic job](../job-generic.md), Kafka job has an additional **Consumer** field. <br/>
 **Consumer** list allows you to select a [consumer](./kafka-consumer.md) to use.
 
 ![Kafka job settings](./images/kafka_job.png)
@@ -20,11 +20,11 @@ Use the table below to set configuration parameters.
 ----- | -----------
 Group Id | A unique string that identifies the consumer group this consumer belongs to.
 Topic Name | A topic is a category or feed name to which messages are published.
-Offset Reset Strategy | Initial offset:<br>\* `EARLIEST`: automatically reset the offset to the earliest offset<br>\* `LATEST`: automatically reset the offset to the latest offset<br>\* `LAST_N`: reset the offset to the latest offset and subtract `Last Cont` value from offset value.<br><br>Offset strategies (`EARLIEST`, `LATEST`) use at first job running, then job uses the last committed offset.<br>The `LAST_N` offset strategy does not use last committed offset, but last `N` records each time job executes.
+Offset Reset Strategy | Initial offset:<br/>\* `EARLIEST`: automatically reset the offset to the earliest offset<br/>\* `LATEST`: automatically reset the offset to the latest offset<br/>\* `LAST_N`: reset the offset to the latest offset and subtract `Last Cont` value from offset value.<br/><br/>Offset strategies (`EARLIEST`, `LATEST`) use at first job running, then job uses the last committed offset.<br/>The `LAST_N` offset strategy does not use last committed offset, but last `N` records each time job executes.
 Last Count | The number of last messages.
 Message Format | [Network API Command](https://axibase.com/docs/atsd/api/network/) or JSON. Network API Command stored in ATSD unmodified. The JSON message parsed into one or more commands.
 Use Listener | Enable continuous listener of messages instead of scheduled polling.
-Ignore Invalid Commands | If enabled, job skips messages for which no valid command can be created.<br>If the message is invalid and this case is not enabled, the job fails with an error.,
+Ignore Invalid Commands | If enabled, job skips messages for which no valid command can be created.<br/>If the message is invalid and this case is not enabled, the job fails with an error.,
 Commit | Send commands into ATSD synchronously and wait until the commands have been committed to the underlying storage.
 Batch Size | Number of commands to send into ATSD in one request.
 
@@ -38,7 +38,7 @@ If JSON message format is selected, you need to configure JSON fields mapping to
 ---| ---
 Entity | Entity name, specified literally or extracted from the specific field in the matched object.
 Entity Prefix | Text added to the entity name, retrieved from the specified field. For example, if Entity Prefix is set to `custom.`, and the field value is `my-host`, the resulting entity name is `custom.my-host`.
-Entity Expression | FreeMarker expression to convert entities.<br>For example:<br>`${city?keep_after('.')}`<br>`${LOOKUP('city codes', city)}`
+Entity Expression | FreeMarker expression to convert entities.<br/>For example:<br/>`${city?keep_after('.')}`<br/>`${LOOKUP('city codes', city)}`
 
 ### Time Fields
 
@@ -58,7 +58,7 @@ Included Fields | By default, all numeric fields from nested objects are include
 Excluded Fields | List of particular field names to be excluded from commands. Applies when **Included Fields** is empty.
 Annotation Fields | List of fields whose values are saved as text annotation along with the numeric value.
 Metric Name & Value | Metric name and value extracted from the given fields in the matched object.
-Field Expressions | FreeMarker expressions to convert metric fields.<br>For example:<br>`${city?keep_after('.')}`<br>`${LOOKUP('city codes', city)}`
+Field Expressions | FreeMarker expressions to convert metric fields.<br/>For example:<br/>`${city?keep_after('.')}`<br/>`${LOOKUP('city codes', city)}`
 
 ### Property Fields
 

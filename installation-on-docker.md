@@ -125,7 +125,7 @@ To bind the Collector to a particular port instead of a random one, replace `--p
 |`COLLECTOR_USER_NAME` | Username for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
 |`COLLECTOR_USER_PASSWORD` | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
 |`DOCKER_HOSTNAME` | Hostname of the Docker host where Axibase Collector container is running.|
-|`JAVA_OPTS` | Java VM options.<br>By default the Collector starts with option `-Xmx256m` |
+|`JAVA_OPTS` | Java VM options.<br/>By default the Collector starts with option `-Xmx256m` |
 
 For example, add `JAVA_OPTS` variable to increase maximum Java heap size allocated to the Collector process.
 

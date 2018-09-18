@@ -37,7 +37,7 @@ To create a new list, open the **Collections > Item Lists** page, and click **Ad
 |`Name` | Item List name.|
 |`Description` | Item List description.|
 | `Type` | Method used to retrieve list items. See [types](#types).|
-|`Discard Duplicates` | Discard items with the same name.<br>If `true`, the list discards duplicate items regardless of type (`TEXT`, `FILE`, `SCRIPT`).<br>String comparison for duplicate checks is case-sensitive.|
+|`Discard Duplicates` | Discard items with the same name.<br/>If `true`, the list discards duplicate items regardless of type (`TEXT`, `FILE`, `SCRIPT`).<br/>String comparison for duplicate checks is case-sensitive.|
 |`Items`, `Path`, `Command`... | Type-specific fields to configure the source for reading list items.|
 
 ### Usage
@@ -103,8 +103,8 @@ Executes a script specified in the **Command** field and reads lines from a stan
 
 **Field** | **Description**
 :--- | :---
-`Path to the Script` | Relative path to a script file returning Item List elements.<br>Scripts must be located in `$AXIBASE_COLLECTOR_HOME/conf/scripts` directory.
-`Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory `$AXIBASE_COLLECTOR_HOME/conf/scripts`, also this directory is used as working directory.<br>Specify a command interpreter by providing a shebang on the first line, for example `#!/usr/bin/env bash`.<br>You must provide the setting `script.text.execute.allow=true` in `server.properties` file to use this feature.
+`Path to the Script` | Relative path to a script file returning Item List elements.<br/>Scripts must be located in `$AXIBASE_COLLECTOR_HOME/conf/scripts` directory.
+`Command` | A list of commands returning Item List elements. During execution a temporary file is created in the directory `$AXIBASE_COLLECTOR_HOME/conf/scripts`, also this directory is used as working directory.<br/>Specify a command interpreter by providing a shebang on the first line, for example `#!/usr/bin/env bash`.<br/>You must provide the setting `script.text.execute.allow=true` in `server.properties` file to use this feature.
 
 The **Command** field must start with the script file name (absolute path not supported) and optional script arguments.
 

@@ -40,7 +40,7 @@ ___
 | Id | `f7nd-jj28` |
 | Name | Abortion Demographics, 1995-2012 |
 | State | `https://data.illinois.gov` |
-| Description | The number of induced pregnancy terminations reported in Illinois by county (if in excess of 50), by age and marital status.<br>Note: Marital status and age are only for Illinois residents. |
+| Description | The number of induced pregnancy terminations reported in Illinois by county (if in excess of 50), by age and marital status.<br/>Note: Marital status and age are only for Illinois residents. |
 | Attribution | Illinois Department of Public Health, Office of Finance and Administration, Division of Vital Records |
 | Category | Health |
 | Date Range | 1995-2012 |
@@ -284,7 +284,7 @@ m:diverted_statewide=688820 m:produced_statewide=2116724
 | Id | `f3h8-mnxi` |
 | Name | Math And Reading Proficiency by School Year, Public School District and Grade Level |
 | State | [Iowa](https://data.iowa.gov) |
-| Description | Dataset contains information on public school districts academic progress of their students in reading and math annually starting with school year ending in 2003.  All public schools and districts report annually to the Iowa Department of Education through Adequate Yearly Progress (AYP).<br>All AYP determinations are made annually using reading and math student assessment data.  Proficiency is based on a standard score scale.  More information can be found at: `https://itp.education.uiowa.edu/ia/AYPInformation.aspx` |
+| Description | Dataset contains information on public school districts academic progress of their students in reading and math annually starting with school year ending in 2003.  All public schools and districts report annually to the Iowa Department of Education through Adequate Yearly Progress (AYP).<br/>All AYP determinations are made annually using reading and math student assessment data.  Proficiency is based on a standard score scale.  More information can be found at: `https://itp.education.uiowa.edu/ia/AYPInformation.aspx` |
 | Attribution | Iowa Department of Education, Adequate Yearly Progress |
 | Category | Education |
 | Date Range | 2003-2015 |
@@ -353,7 +353,7 @@ t:physicalunit=Dollars m:price=2.314
 | Id | `rkm7-uwkb` |
 | Name | Sales and Use Tax per Town by NAICS (2013 and 2014) |
 | State | [Connecticut](https://data.ct.gov) |
-| Description | Sales and use tax data, by quarter, by town, disaggregated by the North America Industrial Classification (NAICS) groups for calendar years 2013 and 2014.  The data available is unique to each municipality as detailed NAICS information is only provided where there are ten or more taxpayers in a given category.<br>This data is updated annually, all four quarters of a calendar year are available at once.  This list reflects the tax collected at both the 6.35% and 7% rates, where applicable. |
+| Description | Sales and use tax data, by quarter, by town, disaggregated by the North America Industrial Classification (NAICS) groups for calendar years 2013 and 2014.  The data available is unique to each municipality as detailed NAICS information is only provided where there are ten or more taxpayers in a given category.<br/>This data is updated annually, all four quarters of a calendar year are available at once.  This list reflects the tax collected at both the 6.35% and 7% rates, where applicable. |
 | Attribution | Department of Revenue Services |
 | Category | Government |
 | Date Range | 2013-2014 |
@@ -715,7 +715,7 @@ series e:yrss-ncc4 d:1998-03-31T00:00:00.000Z t:industry_type=Farm t:industry=Fa
 | Id | gpri-47xz |
 | Name | Attorney General Consumer Complaints |
 | State | [Washington](https://data.wa.gov) |
-| Description | Complaint data from consumer complaints filed with the Consumer Protection Division. <br>The existence of a complaint is not evidence of wrongdoing. |
+| Description | Complaint data from consumer complaints filed with the Consumer Protection Division. <br/>The existence of a complaint is not evidence of wrongdoing. |
 | Attribution | Washington State Attorney General's Office Consumer Protection Division |
 | Date Range | 2013-2016 |
 | Links | [catalog](https://catalog.data.gov/dataset/attorney-general-consumer-complaints),    [metadata](https://data.wa.gov/api/views/gpri-47xz),  [data](https://data.wa.gov/api/views/gpri-47xz/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/ad6653c1) |
@@ -762,7 +762,7 @@ t:businesscity=Burien
 | Id | `t64r-mt64` |
 | Name | Insurance Company Complaints, Resolutions, Status, and Recoveries |
 | State | [Connecticut](https://data.ct.gov) |
-| Description | Listing of consumer complaints filed against Insurance companies licensed in Connecticut.<br>This dataset includes the Company, Line of Business, nature of complaint, outcome or resolution, and recovery. |
+| Description | Listing of consumer complaints filed against Insurance companies licensed in Connecticut.<br/>This dataset includes the Company, Line of Business, nature of complaint, outcome or resolution, and recovery. |
 | Attribution | Department of Insurance |
 | Category | Business |
 | Date Range | 2007-2016 |

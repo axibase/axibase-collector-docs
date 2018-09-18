@@ -96,7 +96,7 @@ The pending commands are retained for the duration of time specified in the **Co
 
 | Name | Description |
 |---|---|
-| `Command Retention Interval` | Interval after which failed commands are deleted from file-based cache.<br>Default: `86400 seconds` (1 day).<br>Minimum: `60 seconds`.<br>Must exceed the Failover Timeout.<br>Restart is required to apply changes. |
+| `Command Retention Interval` | Interval after which failed commands are deleted from file-based cache.<br/>Default: `86400 seconds` (1 day).<br/>Minimum: `60 seconds`.<br/>Must exceed the Failover Timeout.<br/>Restart is required to apply changes. |
 
 ## Failover
 
@@ -124,8 +124,8 @@ The failover mechanism applies only to the storage driver and does not affect de
 
 | Name | Description |
 |---|---|
-| `Failover Timeout` | Duration of time, starting with the first error, after which the driver switches from the primary to the secondary database.<br>Default: `300 seconds`.<br>Minimum: `15 seconds`. |
-| `Failover Switchback Interval` | Interval for checking availability of the primary storage driver. Activated when sending command to the secondary driver in failover mode.<br>Default: `300 seconds`.<br>Minimum: `60 seconds`.<br>Restart is required to apply changes. |
+| `Failover Timeout` | Duration of time, starting with the first error, after which the driver switches from the primary to the secondary database.<br/>Default: `300 seconds`.<br/>Minimum: `15 seconds`. |
+| `Failover Switchback Interval` | Interval for checking availability of the primary storage driver. Activated when sending command to the secondary driver in failover mode.<br/>Default: `300 seconds`.<br/>Minimum: `60 seconds`.<br/>Restart is required to apply changes. |
 
 The failover timeout can be specified for each storage driver separately whereas the switch-back interval applies to all drivers and is specified on the **Admin > Application Settings** page.
 
