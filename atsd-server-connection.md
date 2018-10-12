@@ -52,7 +52,7 @@ If Collector contains multiple storage drivers, each unique job can be configure
 
 ## HTTP Pool
 
-The Collector transmits data into ATSD via HTTP protocol. HTTP connection pool settings contain limits and timeouts which apply to HTTP connections initiated by Collector when sending data into ATSD.
+Collector transmits data into ATSD via HTTP protocol. HTTP connection pool settings contain limits and timeouts which apply to HTTP connections initiated by Collector when sending data into ATSD.
 
 ### Create a New Pool
 
@@ -90,7 +90,7 @@ Socket Keep-Alive | `true`
 
 ### Delivery
 
-The collector implements a file-based cache to temporarily store commands that are not delivered to the target database due to network and other errors.
+Collector implements a file-based cache to temporarily store commands that are not delivered to the target database due to network and other errors.
 
 The pending commands are retained for the duration of time specified in the **Command Retention Interval** setting on the **Admin > Application Settings** page.
 
@@ -107,11 +107,11 @@ If the primary database becomes unavailable and the failover driver is specified
 The following steps describe the switch-back procedure:
 
 * Collector determines that the current database that it is connected to is a secondary database.
-* The collector starts a background periodic task to re-connect to the primary database.
+* Collector starts a background periodic task to re-connect to the primary database.
 * The default periodic re-connect interval is `300` seconds.
-* The periodic re-connect task attempts to connect to the primary server. This task continues until the primary database is online or the collector shuts down.
-* If the primary database is available, the collector initiates a switch-back procedure:
-  * Sends a message to the secondary database that the collector is now connecting to the primary database.
+* The periodic re-connect task attempts to connect to the primary server. This task continues until the primary database is online or Collector shuts down.
+* If the primary database is available, Collector initiates a switch-back procedure:
+  * Sends a message to the secondary database that Collector is now connecting to the primary database.
   * Sets the primary database as the current database.
   * Establishes a connection to the primary database.
   * If the above connection is successful, the periodic re-connect task is stopped.

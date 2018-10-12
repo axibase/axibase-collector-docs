@@ -72,9 +72,9 @@ docker run \
    -job-enable=docker-socket
 ```
 
-Initializing the Collector database takes up to five minutes upon initial startup.
+Collector database initialization can take up to five minutes upon initial startup.
 
-The Docker job begins executing immediately.
+The Docker job begins to execute immediately.
 
 ### SELinux
 
@@ -254,7 +254,7 @@ The following message indicates that the initial configuration is finished:
 
 ## UI
 
-Verify the `HTTPS` port that is assigned to the Collector and open the application in your browser: `https://container-ip:port`
+Verify the `HTTPS` port that is assigned to Collector and open the application in your browser: `https://container-ip:port`
 
 ```sh
 docker ps | grep axibase-collector

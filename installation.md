@@ -70,7 +70,7 @@ Collector initialization takes up to five minutes.
 
 ## Check Installation
 
-Check the Collector log file for the message **FrameworkServlet 'dispatcher': initialization completed**.
+Check Collector log files for the message **FrameworkServlet 'dispatcher': initialization completed**.
 
 ```sh
 tail -f ./axibase-collector/logs/axibase-collector.log
