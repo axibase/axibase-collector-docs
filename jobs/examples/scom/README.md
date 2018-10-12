@@ -8,7 +8,7 @@ is an agent-based monitoring system for the Microsoft Windows operating system a
 
 SCOM collects and stores statistics from Windows servers in Operations (`PerformanceDataAllView`) and DataWareHouse (`vperf_raw`, `vperf_hourly`, `vperf_daily`) database views.
 
-Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations database view every 30 minutes to offload incremental data into the Axibase Time Series Database for long-term retention and operations analytics.
+Axibase Collector queries `PerformanceDataAllView`in the SCOM Operations database view every 30 minutes to offload incremental data into Axibase Time Series Database for long-term retention and operations analytics.
 
 ## Requirements
 

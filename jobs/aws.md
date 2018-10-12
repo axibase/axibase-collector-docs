@@ -2,7 +2,7 @@
 
 ## Overview
 
-AWS Job copies [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into Axibase Time Series Database for long-term retention, reporting, and visualization.
+AWS Job copies [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) statistics into ATSD for long-term retention, reporting, and visualization.
 
 This job maintains markers for each CloudWatch metric in the built-in Collector database to load only incremental data. These markers allow the job to execute optimized API requests and avoid data gaps in case of network outages.
 

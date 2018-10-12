@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the process of configuring ActiveMQ for availability and performance monitoring with the Axibase Time Series Database.
+This document describes the process of configuring ActiveMQ for availability and performance monitoring with ATSD.
 
 ## Requirements
 

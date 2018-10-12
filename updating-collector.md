@@ -33,7 +33,7 @@ su axibase
 tar xvf axibase-collector.tar.gz
 ```
 
-## Stop the Collector Process
+## Stop Collector Process
 
 To look up Axibase Collector installation directory, run:
 
@@ -57,7 +57,7 @@ Replace `/opt/axibase-collector/lib/axibase-collector.war` with the version cont
 cp ./axibase-collector/lib/axibase-collector.war /opt/axibase-collector/lib/
 ```
 
-## Start the Collector Process
+## Start Collector Process
 
 ```sh
 /opt/axibase-collector/bin/start-collector.sh

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to collect connection and request metrics from an nginx web server for long-term retention and monitoring in the Axibase Time Series Database.
+This document describes how to collect connection and request metrics from an nginx web server for long-term retention and monitoring in Axibase Time Series Database.
 
 The process involves enabling the nginx status page and configuring Axibase Collector to poll and upload this page every 5 seconds for parsing in ATSD.
 

@@ -25,7 +25,7 @@ Version:  5.7.2
 ## Quick Start
 
 * Import MIB files into Collector as described in the [Base MIB files](#base-mib-files) section.
-* Import [`snmp-os`](./resources/job_snmp_os.xml) SNMP job into the Collector.
+* Import [`snmp-os`](./resources/job_snmp_os.xml) SNMP Job into Collector.
 * Open the **Collections > Item Lists** page in Collector, specify monitored hosts in the `SNMP Devices` list.
 * Open the `snmp-os` job in Collector, open the `system statistics` configuration and click **Test** to check connectivity. Run the job manually to collect initial metric values.
 * Log in to ATSD and verify that SNMP metrics are displayed on the **Metrics** tab with the `snmp*` prefix.
@@ -68,7 +68,7 @@ Enter a hostname or IP address for one of the target systems and click **Load Al
 | Port | TCP or UDP port. |
 | Version | SNMP protocol version. |
 | Community |  SNMP community name, such as `public`.|
-| Timeout, seconds | Number of seconds after which the Collector interrupts the query. `0` or `-1` is unlimited. |
+| Timeout, seconds | Number of seconds after which Collector interrupts the query. `0` or `-1` is unlimited. |
 | Retries | Number of connection retries in case of network failure. |
 | Maximum Repetitions | Maximum number of iterations over the repeating variables. |
 | Non Repeaters | Number of supplied variables that must not be iterated over. |
@@ -93,7 +93,7 @@ The following settings apply to SNMP protocol `v3`.
 
 ## Testing Connections
 
-Network connectivity between the Collector and a remote system is required.
+Network connectivity between Collector and a remote system is required.
 
 To check that the SNMP daemon on the target device is reachable, open the SNMP configuration page.
 
@@ -145,7 +145,7 @@ laLoad OBJECT-TYPE
 ::= { iso(1) org(3) dod(6) internet(1) private(4) enterprises(1) ucdavis(2021) laTable(10) laEntry(1) 3 }
 ```
 
-The Collector needs access to MIB files to translate OIDs received from the remote systems into object names used in ATSD the metric and series tag names.
+Collector needs access to MIB files to translate OIDs received from the remote systems into object names used in ATSD the metric and series tag names.
 
 ```txt
 1.3.6.1.4.1.2021.10.1.3 --> laLoad
@@ -193,7 +193,7 @@ IMPORTS
     IANAifType                               FROM IANAifType-MIB;
 ```
 
-When you import the MIB file the Collector searches for any parent files, specified in the `IMPORTS` section, among the previously loaded MIB files as well as MIB files stored on the underlying operating system.
+When you import the MIB file Collector searches for any parent files, specified in the `IMPORTS` section, among the previously loaded MIB files as well as MIB files stored on the underlying operating system.
 
 System MIB directory location:
 

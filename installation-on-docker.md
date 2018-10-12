@@ -49,7 +49,7 @@ docker run \
  axibase/collector:latest
 ```
 
-To automatically configure a connection to the Axibase Time Series Database add the `-atsd-url` parameter with the ATSD hostname and HTTPS port, by default `8443`, as well as [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+To automatically configure a connection to ATSD add the `-atsd-url` parameter with the ATSD hostname and HTTPS port, by default `8443`, as well as [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
 ```sh
 docker run \
@@ -112,20 +112,20 @@ The launch command is different if the Collector container is used to [monitor s
 `--restart` | No | Auto-restart policy. **Not supported in all Docker Engine versions.**
 `--name` | No | Assign a host-unique name to the container.
 
-To bind the Collector to a particular port instead of a random one, replace `--publish-all` with `--publish 10443:9443`, where the first number indicates an available port on the Docker host.
+To bind Collector to a particular port instead of a random one, replace `--publish-all` with `--publish 10443:9443`, where the first number indicates an available port on the Docker host.
 
 ## Environment Variables
 
 | **Name** | **Description** |
 |:---|:---|
-|`ATSD_SERVICE_HOST` | Host where Axibase Time Series Database is installed. |
+|`ATSD_SERVICE_HOST` | ATSD host. |
 |`ATSD_SERVICE_PORT_HTTPS` | HTTPS port. |
 |`ATSD_SERVICE_PORT_TCP` | TCP port for [network commands](https://axibase.com/docs/atsd/api/network/). |
-|`ATSD_URL` | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
+|`ATSD_URL` | URL (`protocol://host:port`) for ATSD connection.|
 |`COLLECTOR_USER_NAME` | Username for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
 |`COLLECTOR_USER_PASSWORD` | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
 |`DOCKER_HOSTNAME` | Hostname of the Docker host where Axibase Collector container is running.|
-|`JAVA_OPTS` | Java VM options.<br/>By default the Collector starts with option `-Xmx256m` |
+|`JAVA_OPTS` | Java VM options.<br/>By default Collector starts with option `-Xmx256m` |
 
 For example, add `JAVA_OPTS` variable to increase maximum Java heap size allocated to the Collector process.
 
