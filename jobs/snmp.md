@@ -68,8 +68,7 @@ Enter a hostname or IP address for one of the target systems and click **Load Al
 | Port | TCP or UDP port. |
 | Version | SNMP protocol version. |
 | Community |  SNMP community name, such as `public`.|
-| Timeout, seconds | Number of seconds after which 
-Collector interrupts the query. `0` or `-1` is unlimited. |
+| Timeout, seconds | Number of seconds after which Collector interrupts the query. `0` or `-1` is unlimited. |
 | Retries | Number of connection retries in case of network failure. |
 | Maximum Repetitions | Maximum number of iterations over the repeating variables. |
 | Non Repeaters | Number of supplied variables that must not be iterated over. |
