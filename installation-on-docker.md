@@ -49,7 +49,7 @@ docker run \
  axibase/collector:latest
 ```
 
-To automatically configure a connection to the Axibase Time Series Database add the `-atsd-url` parameter with the ATSD hostname and HTTPS port, by default `8443`, as well as [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
+To automatically configure a connection to ATSD add the `-atsd-url` parameter with the ATSD hostname and HTTPS port, by default `8443`, as well as [Collector account](https://axibase.com/docs/atsd/administration/collector-account.html) credentials.
 
 ```sh
 docker run \
@@ -118,10 +118,10 @@ To bind Collector to a particular port instead of a random one, replace `--publi
 
 | **Name** | **Description** |
 |:---|:---|
-|`ATSD_SERVICE_HOST` | Host where Axibase Time Series Database is installed. |
+|`ATSD_SERVICE_HOST` | ATSD host. |
 |`ATSD_SERVICE_PORT_HTTPS` | HTTPS port. |
 |`ATSD_SERVICE_PORT_TCP` | TCP port for [network commands](https://axibase.com/docs/atsd/api/network/). |
-|`ATSD_URL` | URL (`protocol://host:port`) for the Axibase Time Series Database connection.|
+|`ATSD_URL` | URL (`protocol://host:port`) for ATSD connection.|
 |`COLLECTOR_USER_NAME` | Username for the [data collector](https://axibase.com/docs/atsd/administration/collector-rw-account.html) account. |
 |`COLLECTOR_USER_PASSWORD` | [Password](https://axibase.com/docs/atsd/administration/user-authentication.html#password-requirements) for the data Collector account.|
 |`DOCKER_HOSTNAME` | Hostname of the Docker host where Axibase Collector container is running.|

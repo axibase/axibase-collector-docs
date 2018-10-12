@@ -82,7 +82,7 @@ Open `https://hostname:9443` in your browser and [configure](./configure-adminis
 
 ## Setup ATSD Connection
 
-Configure Axibase Collector to send data into an Axibase Time Series Database instance.
+Configure Axibase Collector to send data into an ATSD instance.
 
 * [ATSD Server connection](./atsd-server-connection.md)
 

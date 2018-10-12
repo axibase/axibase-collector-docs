@@ -2,12 +2,12 @@
 
 ## Overview
 
-This document describes how to collect various metrics from an nginx PLUS web server for long-term retention and monitoring in the Axibase Time Series Database.
+This document describes how to collect various metrics from an nginx PLUS web server for long-term retention and monitoring in Axibase Time Series Database.
 
 You can organize the periodic data collection in several ways:
 
 * Configuring Axibase Collector JSON job to periodically poll server's status page and upload obtained data for parsing in ATSD.
-* Using [axibase_nginx_plus_collector](./axibase-nginx-plus-collector) python script along with an OS scheduler. This way is described at [axibase_nginx_plus_collector page](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector).
+* Using [`axibase_nginx_plus_collector`](./axibase-nginx-plus-collector) python script along with an OS scheduler. This method is described on [`axibase_nginx_plus_collector`](../../../jobs/examples/nginx-plus/axibase-nginx-plus-collector).
 
 The document contains instructions for the first method of configuration.
 

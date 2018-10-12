@@ -4,7 +4,7 @@
 
 JMX (Java Management Extensions) is an [industry-standard](https://java.sun.com/products/JavaManagement/download.html) technology for monitoring and managing Java applications. Java applications instrumented with JMX expose a set of resources called MBeans (Management Beans) with attributes and methods that can be queried and invoked programmatically by the user.
 
-The JMX job in Axibase Collector provides a way to query MBean attribute values from remote Java applications and transmit them to the Axibase Time Series Database for alerting and long-term retention. MBean attribute values can be stored as properties or series in case of numeric attributes.
+The JMX job in Axibase Collector provides a way to query MBean attribute values from remote Java applications and transmit them to Axibase Time Series Database for alerting and long-term retention. MBean attribute values can be stored as properties or series in case of numeric attributes.
 
 The JMX job can have one or multiple JMX configurations each describing connection parameters and MBean queries. Configurations in a given job commonly connect to the same Java application.
 

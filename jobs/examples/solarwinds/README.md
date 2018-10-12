@@ -4,7 +4,7 @@
 
 [SolarWinds](https://www.solarwinds.com/) provides multi-vendor network, server, and application monitoring software for small and medium-size environments.
 
-SolarWinds Monitor products collect and store statistics from target devices in a Microsoft SQL Server database (`SolarWindsOrion`), which Axibase Collector queries every 5 minutes to offload incremental data into the Axibase Time Series Database for long-term retention and operations analytics.
+SolarWinds Monitor products collect and store statistics from target devices in a Microsoft SQL Server database (`SolarWindsOrion`), which Axibase Collector queries every 5 minutes to offload incremental data into Axibase Time Series Database for long-term retention and operations analytics.
 
 ## Requirements
 

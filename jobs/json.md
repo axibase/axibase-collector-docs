@@ -2,7 +2,7 @@
 
 ## Overview
 
-The JSON job provides a way to download JSON files from remote systems or read files from the local file system to convert the files into series, properties, and message commands sent into the the Axibase Time Series Database.
+The JSON job provides a way to download JSON files from remote systems or read files from the local file system to convert the files into series, properties, and message commands sent into Axibase Time Series Database.
 
 ## Workflow
 
@@ -14,7 +14,7 @@ The JSON job provides a way to download JSON files from remote systems or read f
 4. Build a series, property, or message command from the object fields.
 5. Each matched object is translated into a separate set of commands.
 6. Repeat Steps 3-5 for each configuration setting/JSON expression.
-7. Send commands into the Axibase Time Series Database.
+7. Send commands into Axibase Time Series Database.
 
 ### File on Local File System
 

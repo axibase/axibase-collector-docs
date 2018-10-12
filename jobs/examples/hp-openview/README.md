@@ -6,7 +6,7 @@
 
 OVPM stores collected statistics in files on the local file system for several months.
 
-Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 15 minutes to offload incremental data into the Axibase Time Series Database for long-term retention and operations analytics.
+Axibase Collector queries the OVPM server for particular `GLOBAL` classes every 15 minutes to offload incremental data into ATSD for long-term retention and operations analytics.
 
 ## Requirements
 
