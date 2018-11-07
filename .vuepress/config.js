@@ -174,7 +174,14 @@ module.exports = {
     themeConfig: {
         nav: topNavMenu,
         logo: '/favicon-96x96.png',
-
+        algolia: {
+            appId: 'BH4D9OD16A',
+            apiKey: 'd46fb51356528c83c9c1c427e6d7206d',
+            indexName: 'axibase',
+            algoliaOptions: {
+                facetFilters: ["tags:collector"]
+            }
+        },
         sidebarDepth: 1,
         sidebar: {
             // Keep it last
