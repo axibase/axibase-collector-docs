@@ -98,4 +98,4 @@ The response series command contains the following information:
 * The queried site `www.example.org/springboot/example` response is 1,889 bytes and took 14 milliseconds to download.
 * Valid connection established in one millisecond and the SSL Certificate is valid.
 
-Collector passes this information to ATSD where it is stored and can trigger Alert Responses using the [Rule Engine](https://axibase.com/docs/atsd/rule-engine/), queried using [REST API](https://axibase.com/docs/atsd/api/data/), or added to a streaming [Portal](https://axibase.com/docs/atsd/portals/).
+Collector passes this information to ATSD, which is stored and can be used to trigger alert responses via [Rule Engine](https://axibase.com/docs/atsd/rule-engine/), queried using [REST API](https://axibase.com/docs/atsd/api/data/), or added to a streaming [Portal](https://axibase.com/docs/atsd/portals/).
