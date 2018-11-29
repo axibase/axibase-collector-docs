@@ -1,6 +1,6 @@
 # SNMP Job
 
-The SNMP job collects metrics from IP-addressable devices over the SNMP (Simple Network Management Protocol) protocol. It allows monitoring system availability and performance without installing a custom agent on the target system. The statistics are exposed by a SNMP daemon available by default on network devices and as a package for Linux, Windows, and HP-UX operating systems.
+The SNMP job collects metrics from IP-addressable devices over the SNMP (Simple Network Management Protocol) protocol. The job monitors system availability and performance without installing a custom agent on the target system. The statistics are exposed by a SNMP daemon available by default on network devices and as a package for Linux, Windows, and HP-UX operating systems.
 
 ## Prerequisites
 
@@ -335,7 +335,7 @@ iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
   | **`prMin`**<br/>`1.3.6.1.4.1.2021.2.1.3` | The minimum number of processes that must be running. An error setting is generated if the number of running processes is < the minimum. |
   | **`prMax`**<br/>`1.3.6.1.4.1.2021.2.1.4` | The maximum number of processes that must be running. An error setting is generated if the number of running processes is > the maximum. |
   | **`prCount`**<br/>`1.3.6.1.4.1.2021.2.1.5` | The number of current processes running with the name in question. |
-  | **`prErrorFlag`**<br/>`1.3.6.1.4.1.2021.2.1.100` | A Error setting to indicate trouble with a process. It goes to `1` if there is an error, `0` if no error. |
+  | **`prErrorFlag`**<br/>`1.3.6.1.4.1.2021.2.1.100` | A Error setting to indicate trouble with a process. Setting goes to `1` if there is an error, `0` if no error. |
   | **`prErrMessage`**<br/>`1.3.6.1.4.1.2021.2.1.101` | An error message describing the problem (if one exists). |
   | **`prErrFix`**<br/>`1.3.6.1.4.1.2021.2.1.102` | Setting this to one tries to fix the problem if the agent has been configured with a script to call to attempt to fix problems automatically using remote snmp operations. |
   | **`prErrFixCmd`**<br/>`1.3.6.1.4.1.2021.2.1.103` | The command that gets run when the `prErrFix` column is set to `1`. |
@@ -412,7 +412,7 @@ iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
   | **`laConfig`**<br/>`1.3.6.1.4.1.2021.10.1.4` | The watch point for load-averages to signal an error. If the load averages rises above this value, the `laErrorFlag` below is set. |
   | **`laLoadInt`**<br/>`1.3.6.1.4.1.2021.10.1.5` | The `1`,`5` and `15` minute load averages as an integer. This is computed by taking the floating point `loadaverage` value and multiplying by `100`, then converting the value to an integer. |
   | **`laLoadFloat`**<br/>`1.3.6.1.4.1.2021.10.1.6` | The `1`,`5` and `15` minute load averages as an opaquely wrapped floating point number. |
-  | **`laErrorFlag`**<br/>`1.3.6.1.4.1.2021.10.1.100` | A Error setting to indicate the load-average has crossed its threshold value defined in the `snmpd.conf` file. It is set to `1` if the threshold is crossed, `0` otherwise. |
+  | **`laErrorFlag`**<br/>`1.3.6.1.4.1.2021.10.1.100` | A Error setting to indicate the load-average has crossed its threshold value defined in the `snmpd.conf` file. Set to `1` if the threshold is crossed, `0` otherwise. |
   | **`laErrMessage`**<br/>`1.3.6.1.4.1.2021.10.1.101` | An error message describing the `loadaverage` and its surpassed watch-point value. |
 
 * Table `systemStats`: `1.3.6.1.4.1.2021.11`
@@ -492,7 +492,7 @@ iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
   | **`versionUpdateConfig`**<br/>`1.3.6.1.4.1.2021.100.11` | Set to `1` to read-read the config file(s). |
   | **`versionRestartAgent`**<br/>`1.3.6.1.4.1.2021.100.12` | Set to `1` to restart the agent. |
   | **`versionSavePersistentData`**<br/>`1.3.6.1.4.1.2021.100.13` | Set to `1` to force the agent to save it's persistent data immediately. |
-  | **`versionDoDebugging`**<br/>`1.3.6.1.4.1.2021.100.20` | Set to `1` to turn debugging statements on in the agent or `0` to turn it off. |
+  | **`versionDoDebugging`**<br/>`1.3.6.1.4.1.2021.100.20` | Set to `1` to turn debugging statements on in the agent or `0` to turn off. |
 
 * Table `snmperrs`: `1.3.6.1.4.1.2021.101`
 
@@ -500,7 +500,7 @@ iso.3.6.1.4.1.2021.2.1.5.2 = INTEGER: 0
   |:---|:---|
   | **`snmperrIndex`**<br/>`1.3.6.1.4.1.2021.101.1` | Bogus Index for `snmperrs` (always `0`). |
   | **`snmperrNames`**<br/>`1.3.6.1.4.1.2021.101.2` | snmp |
-  | **`snmperrErrorFlag`**<br/>`1.3.6.1.4.1.2021.101.100` | A Error setting to indicate trouble with the agent. It goes to `1` if there is an error, `0` if no error. |
+  | **`snmperrErrorFlag`**<br/>`1.3.6.1.4.1.2021.101.100` | A Error setting to indicate trouble with the agent. Goes to `1` if there is an error, `0` if no error. |
   | **`snmperrErrMessage`**<br/>`1.3.6.1.4.1.2021.101.101` | An error message describing the problem (if one exists). |
 
 * Table `mrTable`: `1.3.6.1.4.1.2021.102`

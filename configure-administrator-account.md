@@ -1,6 +1,6 @@
 # Creating Administrator Account
 
-When you access Axibase Collector for the first time, Collector prompts you to configure a built-in administrator account.
+When accessing Axibase Collector for the first time, Collector prompts you to configure a built-in administrator account.
 
 Set up this account as part of the installation process:
 

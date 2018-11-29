@@ -106,7 +106,7 @@ If the primary database becomes unavailable and the failover driver is specified
 
 The following steps describe the switch-back procedure:
 
-* Collector determines that the current database that it is connected to is a secondary database.
+* Collector determines that the current database to which there is a connection is a secondary database.
 * Collector starts a background periodic task to re-connect to the primary database.
 * The default periodic re-connect interval is `300` seconds.
 * The periodic re-connect task attempts to connect to the primary server. This task continues until the primary database is online or Collector shuts down.
