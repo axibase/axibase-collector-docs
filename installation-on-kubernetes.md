@@ -16,7 +16,7 @@ data:
   collector-pass: MTIzNDU2Nzg5MA==
 ```
 
-Create the secret using the [`kubectl create`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#create) command:
+Create the secret using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./secret.yaml
@@ -91,7 +91,7 @@ The **template** field contains the following instructions for the pod:
 * The container has a memory request of 600 MiB and a memory limit of 1,200 MiB.
 * Open ports `8081` and `8443` to accept incoming TCP traffic.
 
-Create the deployment using the [`kubectl create`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#create) command:
+Create the deployment using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./atsd-deployment.yaml
@@ -151,7 +151,7 @@ The service automatically creates environment variables, which are [supported by
         name: tcp
   ```
 
-Create the service using the [`kubectl create`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#create) command:
+Create the service using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./atsd-service.yaml
@@ -248,7 +248,7 @@ The **template** field contains the following instructions:
 * The container uses the `docker-socket` volume, indicated by the **volumeMounts** field.
 * Open ports `9443` for the container to send and accept traffic. The port is also opened on each Node, specified by the `hostPort: 9443` field.
 
-Create the deployment using the [`kubectl create`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#create) command:
+Create the deployment using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./collector-deployment.yaml
@@ -257,7 +257,7 @@ deployment "axibase-collector" created
 
 ## Verify Installation
 
-View deployments using [`kubectl get`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#get):
+View deployments using [`kubectl get`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get):
 
 ```sh
 $ kubectl get deploy -o wide
@@ -266,7 +266,7 @@ atsd                1         1         1            1           2d        atsd 
 axibase-collector   3         3         3            3           2d        axibase-collector   axibase/collector:latest   app=axibase-collector
 ```
 
-View pods using [`kubectl get`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#get):
+View pods using [`kubectl get`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get):
 
 ```sh
 $ kubectl get pod -o wide
@@ -277,7 +277,7 @@ axibase-collector-2747957227-5hr0g   1/1       Running   0          2d        19
 axibase-collector-2747957227-whd99   1/1       Running   0          2d        192.0.2.9    gke-cluster-1-default-pool-fcd89b74-ln58
 ```
 
-View services using [`kubectl get`](https://kubernetes.io/docs/user-guide/kubectl/v1.8/#get):
+View services using [`kubectl get`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get):
 
 ```sh
 $ kubectl get service -o wide
