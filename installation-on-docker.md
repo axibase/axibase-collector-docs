@@ -144,6 +144,20 @@ docker exec -it axibase-collector tail -f /opt/axibase-collector/logs/axibase-co
 
 The following message indicates that the initial configuration is complete: `FrameworkServlet 'dispatcher': initialization completed.`
 
+## Access Log Files
+
+Application logs are written to `/opt/axibase-collector/logs` directory within the container.
+
+To persist logs outside of the container, map the logging directory to a mount point on the Docker host.
+
+```bash
+docker run -p 9443:9443 \
+  --volume /tmp/collector-logs:/opt/axibase-collector/logs \
+  axibase/collector
+```
+
+This provides access to logs files even when the container is stopped.
+
 ## Validation
 
 ```sh
