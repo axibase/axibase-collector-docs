@@ -157,7 +157,7 @@ As an alternative to running the `du` script on the Docker host, you can launch 
    ```properties
    docker run \
      --detach \
-     --publish-all \
+     --publish 9443:9443 \
      --restart=always \
      --name=axibase-collector \
      --volume /var/lib/docker/volumes:/var/lib/docker/volumes:ro \

@@ -44,7 +44,7 @@ In local collection mode, Axibase Collector containers run on each Docker host a
 ```properties
 docker run \
    --detach \
-   --publish-all \
+   --publish 9443:9443 \
    --restart=always \
    --name=axibase-collector \
    --volume /var/run/docker.sock:/var/run/docker.sock \
@@ -63,7 +63,7 @@ For example, for user `john.doe` with password `secret` sending data to ATSD at 
 ```properties
 docker run \
    --detach \
-   --publish-all \
+   --publish 9443:9443 \
    --restart=always \
    --name=axibase-collector \
    --volume /var/run/docker.sock:/var/run/docker.sock \
@@ -103,7 +103,7 @@ The job name in the `job-enable` parameter must match the name specified in the 
 ```properties
 docker run \
    --detach \
-   --publish-all \
+   --publish 9443:9443 \
    --restart=always \
    --name=axibase-collector \
    --volume /host/path/to/configs:/tmp \
@@ -254,7 +254,7 @@ In remote collection mode Axibase Collector fetches data from multiple remote Do
 ```properties
 docker run \
    --detach \
-   --publish-all \
+   --publish 9443:9443 \
    --name=axibase-collector \
   axibase/collector \
    -atsd-url=https://username:password@atsd_hostname:8443

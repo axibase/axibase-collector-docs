@@ -43,7 +43,7 @@ Alternatively, download a pre-built image from the [`axibase.com`](https://axiba
 ```sh
 docker run \
  --detach \
- --publish-all \
+ --publish 9443:9443 \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest
@@ -54,7 +54,7 @@ To automatically configure a connection to ATSD add the `-atsd-url` parameter wi
 ```sh
 docker run \
  --detach \
- --publish-all \
+ --publish 9443:9443 \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
@@ -70,7 +70,7 @@ To send data to ATSD at `https://192.0.2.1:8443` as user `john.doe` with the pas
 ```sh
 docker run \
  --detach \
- --publish-all \
+ --publish 9443:9443 \
  --restart=always \
  --name=axibase-collector \
  axibase/collector:latest \
