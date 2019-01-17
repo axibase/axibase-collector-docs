@@ -1,0 +1,72 @@
+<list>
+  <com.axibase.collector.model.job.docker.DockerJobConfig>
+    <name>docker-socket-nosize</name>
+    <cronExpression>0 * * * * ?</cronExpression>
+    <enabled>false</enabled>
+    <jobType>DOCKER</jobType>
+    <defaultTags/>
+    <checkLastTime>false</checkLastTime>
+    <commitInterval>10</commitInterval>
+    <errorThreshold>0</errorThreshold>
+    <configurations>
+      <com.axibase.collector.model.job.docker.DockerConfiguration>
+        <name>docker-socket</name>
+        <connectionPoolConfig>
+          <name>docker-socket</name>
+          <protocol>unix</protocol>
+          <server>localhost</server>
+          <port>80</port>
+          <maxTotal>64</maxTotal>
+          <cookieEnabled>false</cookieEnabled>
+          <soTimeout>3</soTimeout>
+          <soReuse>false</soReuse>
+          <soLinger>0</soLinger>
+          <soKeepAlive>false</soKeepAlive>
+          <tcpNoDelay>false</tcpNoDelay>
+          <sslSkip>false</sslSkip>
+          <closeInterval>0</closeInterval>
+          <connectionTimeout>15</connectionTimeout>
+          <connectionPoolTimeout>60</connectionPoolTimeout>
+          <testPath>/info</testPath>
+          <authType>NONE</authType>
+          <userName></userName>
+          <headers/>
+          <parameters/>
+          <keyStore>NONE</keyStore>
+          <unixSocket>/var/run/docker.sock</unixSocket>
+          <redirectsEnabled>false</redirectsEnabled>
+        </connectionPoolConfig>
+        <propertyRefreshInterval>180</propertyRefreshInterval>
+        <apiVersion>LATEST</apiVersion>
+        <watcherEnabled>true</watcherEnabled>
+        <statisticsInterval>15</statisticsInterval>
+        <processCollectionInterval>0</processCollectionInterval>
+        <entitySet>
+          <name>Docker Excluded Processes</name>
+          <type>TEXT</type>
+          <discardDuplicates>false</discardDuplicates>
+          <entities>
+            <string>/bin/bash</string>
+            <string>bash</string>
+            <string>tail *</string>
+            <string>vim *</string>
+            <string>/usr/sbin/cron</string>
+            <string>sleep *</string>
+            <string>/bin/sleep*</string>
+            <string>su*</string>
+            <string>awk *</string>
+            <string>nano *</string>
+            <string>sed *</string>
+            <string>/bin/sh *</string>
+            <string>/bin/bash *</string>
+          </entities>
+        </entitySet>
+        <environmentTags>*</environmentTags>
+        <checkConfiguration>60</checkConfiguration>
+        <retainDeletedContainers>7</retainDeletedContainers>
+        <retainDeletedEntities>true</retainDeletedEntities>
+        <containerSizeInterval>0</containerSizeInterval>
+      </com.axibase.collector.model.job.docker.DockerConfiguration>
+    </configurations>
+  </com.axibase.collector.model.job.docker.DockerJobConfig>
+</list>
