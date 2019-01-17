@@ -19,6 +19,7 @@ Information is collected for the following object types:
 `API Version` | API version used when querying the Docker Engine API. Defaults to `latest`. <br/>Can be set to a specific version to ensure compatibility.
 `Lifecycle Event Monitoring` | Enables continuous monitoring of container lifecycle events instead of scheduled polling.
 `Property Interval`, minutes | Interval for refreshing detailed image and container properties.
+`Container Size Interval`, seconds | Interval at which disk sizes of the running containers are collected.
 `Statistics Interval`, seconds | Interval at which utilization statistics from running containers are collected.
 `Process Interval`, minutes | Interval at which `top` process list is collected from running docker containers.
 `Excluded Processes` | Lists processes, separated by comma, to exclude from collection. Expressions support the wildcard option (`*`).
@@ -75,6 +76,44 @@ docker run \
 Collector database initialization can take up to five minutes upon initial startup.
 
 The Docker job begins to execute immediately.
+
+### Custom Job Settings
+
+To launch a Docker job with customized settings, download the [`docker-socket-nosize.xml`](./resources/docker-socket-nosize.xml), modify the settings as required (for example, set `containerSizeInterval` to `0`).
+
+```xml
+<com.axibase.collector.model.job.docker.DockerConfiguration>
+  <!-- do not change other DockerConfiguration settings -->
+  <propertyRefreshInterval>180</propertyRefreshInterval>
+  <statisticsInterval>15</statisticsInterval>
+  <processCollectionInterval>0</processCollectionInterval>
+  <checkConfiguration>60</checkConfiguration>
+  <retainDeletedContainers>7</retainDeletedContainers>
+  <retainDeletedEntities>true</retainDeletedEntities>
+  <containerSizeInterval>0</containerSizeInterval>
+</com.axibase.collector.model.job.docker.DockerConfiguration>
+```
+
+Copy the file to `/host/path/to/configs` directory on the Docker host.
+
+Modify directory path and job name in the below command to launch the container.
+
+The job name in the `job-enable` parameter must match the name specified in the XML file, for example `<name>docker-socket-nosize</name>`.
+
+```properties
+docker run \
+   --detach \
+   --publish-all \
+   --restart=always \
+   --name=axibase-collector \
+   --volume /host/path/to/configs:/tmp \
+   --volume /var/run/docker.sock:/var/run/docker.sock \
+   --env=DOCKER_HOSTNAME=`hostname -f` \
+  axibase/collector \
+   -atsd-url=https://john.doe:secret@192.0.2.1:8443 \
+   -job-path=/tmp/docker-socket-nosize.xml \
+   -job-enable=docker-socket-nosize
+```
 
 ### SELinux
 
