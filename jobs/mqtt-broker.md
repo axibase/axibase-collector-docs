@@ -15,8 +15,6 @@ Port | Port to use for the connection
 Username | Username to use for the connection
 Password | Password to use for the connection
 
-
-
 ## Screenshots
 
 ### Configuration
