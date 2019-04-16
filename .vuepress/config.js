@@ -18,7 +18,7 @@ const topNavMenu = [
             {text: 'JMX', link: '/jobs/jmx.md'},
             {text: 'JSON', link: '/jobs/json.md'},
             {text: 'Kafka', link: '/jobs/kafka.md'},
-            {text: 'Kafka', link: '/jobs/mqtt.md'},
+            {text: 'MQTT', link: '/jobs/mqtt.md'},
             {text: 'OVPM', link: '/jobs/ovpm.md'},
             {text: 'PI', link: '/jobs/pi.md'},
             {text: 'SNMP', link: '/jobs/snmp.md'},
