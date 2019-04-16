@@ -23,7 +23,7 @@ Payload Format | Format of the message payload. Supported formats: `JSON`, `CSV`
 
 ## TEXT Settings
 
-If TEXT message format is selected, you should specify freemarker expression to **Command Template** field for mapping message text to ATSD network command.
+If TEXT message format is selected, you must specify freemarker expression to **Command Template** field for mapping message text to ATSD network command.
 
 ### Variables
 
@@ -39,7 +39,7 @@ If TEXT message format is selected, you should specify freemarker expression to 
 
 ## CSV Settings
 
-If CSV message format is selected, you should specify freemarker expression to **Command Template** field for mapping each csv line text to ATSD network command.
+If `CSV` message format is selected, you must specify freemarker expression to **Command Template** field for mapping each csv line text to ATSD network command.
 
 ### Variables
 
@@ -73,8 +73,6 @@ Sample Mapping Result:
 
 ![](./images/mqtt_text_mapping_result.png)
 
-
-
 ## JSON Settings
 
 If JSON message format is selected, you need to configure JSON fields mapping to command fields:
@@ -106,7 +104,6 @@ Annotation Fields | List of fields whose values are saved as text annotation alo
 
 **Name** | **Description**
 ---|---
-
 
 ### Configuration Example
 
