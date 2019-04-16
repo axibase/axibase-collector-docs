@@ -47,7 +47,7 @@ All variables for `TEXT` mode are available in `CSV` mode and `line` variable re
 
 ### Methods
 
-**Name**| Params |  **Description**
+**Name**| **Parameters** |  **Description**
 ---|---|---
 `cell` | `id` - index of column | Get line column by index. If index is out of range empty string returns.
 
