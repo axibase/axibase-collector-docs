@@ -39,7 +39,7 @@ If TEXT message format is selected, you must specify freemarker expression to **
 
 ## CSV Settings
 
-If `csv` message format is selected, you must specify freemarker expression to **Command Template** field for mapping each csv line text to ATSD network command.
+If CSV message format is selected, you must specify freemarker expression to **Command Template** field for mapping each CSV line text to ATSD network command.
 
 ### Variables
 
