@@ -16,7 +16,7 @@ data:
   collector-pass: MTIzNDU2Nzg5MA==
 ```
 
-Create the secret using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
+Create the secret using the [`kubectl create`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./secret.yaml
