@@ -2,108 +2,105 @@
 
 ## Overview
 
-The Mqtt job provides a way to read messages from an MQTT broker to convert them into series, property, and message commands.
+The MQTT job provides a way to continuously read messages from one or multiple topics in an MQTT broker. The messages are parsed as CSV, JSON or plain text and converted into series, property, and message [commands](https://axibase.com/docs/atsd/api/network/) in the Axibase Time Series Database.
 
 ## Job Settings
 
-In comparison to [Generic job](../job-generic.md), MQTT job has an additional **MQTT Broker** field. <br/>
-**MQTT Broker** list allows you to select a [consumer](./mqtt-broker.md) to use.
+MQTT job settings provide an additional **MQTT Broker** field to configure MQTT broker connection which in turn allows you to select a specific [consumer](./mqtt-broker.md) to use.
 
 ![MQTT job settings](./images/mqtt_job_configuration.png)
 
 ### Job Configuration
 
 To configure a MQTT job, click **Create Configuration**.
-Use the table below to set configuration parameters.
+Set parameters as follows.
 
 **Field** | **Description**
 ----- | -----------
 Topic | The topic to subscribe to, which can include wildcards
-Payload Format | Format of the message payload. Supported formats: `JSON`, `CSV`, `TEXT`
+Payload Format | Message payload format: `CSV`, `JSON`, `TEXT`
 
-## TEXT Settings
+## CSV Format
 
-If TEXT message format is selected, you must specify freemarker expression to **Command Template** field for mapping message text to ATSD network command.
+If `CSV` format is selected, the message payload is automatically split into lines and the expression in the **Command Template** field is applied to each line separately.
 
 ### Variables
+
+The following variables can be included in the command template and passed to functions:
 
 **Name**| **Description**
 ---|---
-`job` | Current Job Name
-`configuration` | Current Configuration Name
-`text` | Text of processing message
-`topic` | Message source topic
-`receiveTime` | Time of message delivery in milliseconds
-`host` | Broker Host
-`port` | Broker Port
-
-## CSV Settings
-
-If CSV message format is selected, you must specify freemarker expression to **Command Template** field for mapping each CSV line text to ATSD network command.
-
-### Variables
-
-All variables for `TEXT` mode are available in `CSV` mode and `line` variable representing current processing line of payload text.
+`job` | Current job name.
+`configuration` | Current configuration Name.
+`topic` | Message source topic.
+`receiveTime` | Message delivery in Unix milliseconds.
+`host` | Broker host.
+`port` | Broker port.
+`text` | Message payload, the entire text consisting of all lines.
+`line` | Current line in the CSV document.
 
 ### Methods
 
-**Name**| **Parameters** |  **Description**
----|---|---
-`cell` | `id` - index of column | Get line column by index. If index is out of range empty string returns.
-
-### Configuration
-
-![](./images/mqtt_csv_configuration.png)
-
-Sample Mapping Result:
-
-![](./images/mqtt_csv_tes_result.png)
-
-#### Default Command Template
-
-```injectedfreemarker
-message e:${host} t:type=mqtt t:source=${job} t:configuration=${configuration} m:${text}
-```
+**Name**| **Description**
+---|---
+`cell(int n)` | `n` - column index, starts with `1` for the first column.<br>Returns the value of `n-th` cell in the current line by index.<br>Returns an empty string if the index is out of range.
 
 ### Configuration Example
 
-![](./images/mqtt_text_configuration.png)
+Sample message payload, consisting of two lines without a header:
 
-Sample Mapping Result:
+```
+br-1116,2019-04-16T11:16:59.189Z,,temperature,90.44,pressure,4.0
+br-1489,2019-04-16T11:16:59.148Z,,temperature,30.31,pressure,4.6
+```
 
-![](./images/mqtt_text_mapping_result.png)
+Command template, applied to each line:
 
-## JSON Settings
+```
+series d:${cell(2)} e:${cell(1)} t:topic=${topic} m:${cell(4)}=${cell(5)} m:${cell(6)}=${cell(7)}
+```
 
-If JSON message format is selected, you need to configure JSON fields mapping to command fields:
+Series commands produced by applying the template to each line:
+
+```
+series d:2019-04-16T11:16:59.189Z e:br-1116 t:topic=/test/bioreactor m:temperature=90.44 m:pressure=4.0
+series d:2019-04-16T11:16:59.148Z e:br-1489 t:topic=/test/bioreactor m:temperature=30.31 m:pressure=4.6
+```
+
+![](./images/mqtt_csv_configuration.png)
+
+Example:
+
+![](./images/mqtt_csv_tes_result.png)
+
+## JSON Format
+
+If `JSON` format is selected, the payload is parsed as a JSON document and the ATSD `series` command [fields](https://axibase.com/docs/atsd/api/network/series.html) are extracted from the named fields in the JSON document.
 
 ### Entity Fields
 
 **Name** | **Description**
 ---| ---
-Entity | Entity name, specified literally or extracted from the specific field in the matched object.
-Entity Prefix | Text added to the entity name, retrieved from the specified field. For example, if Entity Prefix is set to `custom.`, and the field value is `my-host`, the resulting entity name is `custom.my-host`.
+Entity | Entity name, specified literally or extracted from the specific field in the document.
+Entity Prefix | Text added to the entity name. For example, if prefix is `custom.`, and the entity field value is `my-host`, the resulting entity name is `custom.my-host`.
 
 ### Time Fields
 
 **Name** | **Description**
 ---| ---
-Time Default | Specify time value for all commands.
-Time Field   | Field with values that specify time for all commands.
-Time Format  | Date format applied when parsing time value.
-Time Zone    | Timezone can be optionally applied if the extracted date is in local time, otherwise the local Collector time zone is in effect.
+Time Default | Literal time value specified if the JSON document contains no date field.
+Time Field   | Name of the JSON field containing the event date.
+Time Format  | Date pattern applied when parsing the date.
+Time Zone    | Timezone applied if the parsed date is lacking timezone information, otherwise the Collector time zone is in effect.
 
 ### Series Fields
 
 **Name** | **Description**
 --- | ---
-Metric Prefix | Text added to the metric name. For example, if Metric Prefix is set to `custom.`, and the metric name is `cpu_busy`, the resulting metric name is `custom.cpu_busy`.
-Included Fields | By default, all numeric fields from nested objects are included in commands. The list of included fields can be overridden explicitly by specifying their names, separated by comma.
-Excluded Fields | List of particular field names to be excluded from commands. Applies when **Included Fields** is empty.
-Annotation Fields | List of fields whose values are saved as text annotation along with the numeric value.
-
-**Name** | **Description**
----|---
+Metric Prefix | Text added to the metric name. See **Entity Name** for reference.
+Included Fields | By default, all numeric fields from nested objects are included in the series command as metrics. To override, specify the list of included fields by name, separated by comma.
+Excluded Fields | List of particular field names excluded from the command. Applies when **Included Fields** is empty.
+Annotation Fields | List of field names whose values are saved as text annotation.
 
 ### Configuration Example
 
@@ -111,6 +108,20 @@ Annotation Fields | List of fields whose values are saved as text annotation alo
 
 ![MQTT JSON mapping settings](./images/kafka_json_mapping_settings.png)
 
-* Sample Mapping Result:
-
 ![](./images/mqtt_json_mapping_result.png)
+
+
+## TEXT Format
+
+If `TEXT` format is selected, enter an expression in the **Command Template** field to convert message text to an ATSD network command.
+
+### Variables
+
+All variables for `CSV` mode are available in `TEXT` mode as well except the `line` variable.
+
+### Configuration Example
+
+![](./images/mqtt_text_configuration.png)
+
+![](./images/mqtt_text_mapping_result.png)
+
