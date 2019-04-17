@@ -1,6 +1,6 @@
 # MQTT Broker
 
-To add a broker in Axibase Collector, open the **Data Sources > MQTT Brokers** page and click **Add**.
+To create a connection to MQTT broker, open the **Data Sources > MQTT Brokers** page and click **Add**.
 
 ## Supported Brokers
 
@@ -10,10 +10,10 @@ To add a broker in Axibase Collector, open the **Data Sources > MQTT Brokers** p
 
 **Field** | **Description**
 --------- | ---------------
-Hostname  | Host of the broker use for the connection
+Hostname  | Hostname or IP address of the MQTT broker
 Port | Port to use for the connection
-Username | Username to use for the connection
-Password | Password to use for the connection
+Username | Username
+Password | Password
 
 ## Screenshots
 
