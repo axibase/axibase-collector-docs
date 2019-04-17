@@ -49,20 +49,20 @@ The following variables can be included in the command template and passed to fu
 
 Sample message payload, consisting of two lines without a header:
 
-```
+```txt
 br-1116,2019-04-16T11:16:59.189Z,,temperature,90.44,pressure,4.0
 br-1489,2019-04-16T11:16:59.148Z,,temperature,30.31,pressure,4.6
 ```
 
 Command template, applied to each line:
 
-```
+```ls
 series d:${cell(2)} e:${cell(1)} t:topic=${topic} m:${cell(4)}=${cell(5)} m:${cell(6)}=${cell(7)}
 ```
 
 Series commands produced by applying the template to each line:
 
-```
+```ls
 series d:2019-04-16T11:16:59.189Z e:br-1116 t:topic=/test/bioreactor m:temperature=90.44 m:pressure=4.0
 series d:2019-04-16T11:16:59.148Z e:br-1489 t:topic=/test/bioreactor m:temperature=30.31 m:pressure=4.6
 ```
@@ -110,7 +110,6 @@ Annotation Fields | List of field names whose values are saved as text annotatio
 
 ![](./images/mqtt_json_mapping_result.png)
 
-
 ## TEXT Format
 
 If `TEXT` format is selected, enter an expression in the **Command Template** field to convert message text to an ATSD network command.
@@ -124,4 +123,3 @@ All variables for `CSV` mode are available in `TEXT` mode as well except the `li
 ![](./images/mqtt_text_configuration.png)
 
 ![](./images/mqtt_text_mapping_result.png)
-
