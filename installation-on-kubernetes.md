@@ -151,7 +151,7 @@ The service automatically creates environment variables, which are [supported by
         name: tcp
   ```
 
-Create the service using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
+Create the service using the [`kubectl create`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./atsd-service.yaml
@@ -248,7 +248,7 @@ The **template** field contains the following instructions:
 * The container uses the `docker-socket` volume, indicated by the **volumeMounts** field.
 * Open ports `9443` for the container to send and accept traffic. The port is also opened on each Node, specified by the `hostPort: 9443` field.
 
-Create the deployment using the [`kubectl create`](https://v1-9.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
+Create the deployment using the [`kubectl create`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) command:
 
 ```sh
 $ kubectl create -f ./collector-deployment.yaml
