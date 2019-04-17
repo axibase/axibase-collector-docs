@@ -106,7 +106,7 @@ Annotation Fields | List of field names whose values are saved as text annotatio
 
 ![MQTT Configuration Example](./images/mqtt_configuration_json.png)
 
-![MQTT JSON mapping settings](./images/kafka_json_mapping_settings.png)
+![MQTT JSON mapping settings](./images/mqtt_json_mapping.png)
 
 ![](./images/mqtt_json_mapping_result.png)
 
