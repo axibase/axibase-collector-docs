@@ -109,7 +109,7 @@ Annotation Fields | List of fields whose values are saved as text annotation alo
 
 ![MQTT Configuration Example](./images/mqtt_configuration_json.png)
 
-![MQTT JSON mapping settings](./images/kafka_json_mapping_settings.png)
+![MQTT JSON mapping settings](./images/mqtt_json_mapping.png)
 
 * Sample Mapping Result:
 

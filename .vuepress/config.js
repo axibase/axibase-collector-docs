@@ -144,7 +144,8 @@ const examplesMenu = [
 const dataSourcesMenu = [
     ['/jobs/jdbc-data-source.html', 'Database'],
     ['/jobs/http-pool.html', 'HTTP Pool'],
-    ['/jobs/kafka-consumer.html', 'Kafka Consumer']
+    ['/jobs/kafka-consumer.html', 'Kafka Consumer'],
+    ['/jobs/mqtt-broker.html', 'MQTT Broker']
 ];
 
 const confMenu = [
