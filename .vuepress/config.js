@@ -31,7 +31,8 @@ const topNavMenu = [
         text: 'Data Sources', items: [
             {text: 'Database', link: '/jobs/jdbc-data-source.html'},
             {text: 'HTTP Pool', link: '/jobs/http-pool.md'},
-            {text: 'Kafka Consumer', link: "/jobs/kafka-consumer.md"}
+            {text: 'Kafka Consumer', link: "/jobs/kafka-consumer.md"},
+            {text: 'MQTT Broker', link: "/jobs/mqtt-broker.md"}
         ]
     },
     {text: 'Examples', link: '/jobs/examples/', highlighted: true},
