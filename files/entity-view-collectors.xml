@@ -1,0 +1,133 @@
+<linked-list>
+  <com.axibase.tsd.model.EntityView>
+    <columns>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>PORTALS_COLUMN</type>
+        <header>Portals</header>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>PROPERTIES_COLUMN</type>
+        <header>Properties</header>
+        <value>build_info</value>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>NAME_COLUMN</type>
+        <header>Name</header>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>ENTITY_TAG</type>
+        <header>Status</header>
+        <value>status</value>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>PROPERTY_TAG</type>
+        <header>Revision</header>
+        <value>build_info::revision-number</value>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>PROPERTY_TAG</type>
+        <header>Built By</header>
+        <value>build_info::built-by</value>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>PROPERTY_TAG</type>
+        <header>Docker Host</header>
+        <value>docker_info::docker-host</value>
+        <link>ENTITY</link>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>PROPERTY_TAG</type>
+        <header>Docker Version</header>
+        <value>docker_info::serverversion</value>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>RAM, GiB</header>
+        <value>collector.jvm_total_physical_memory_size</value>
+        <link>CHART</link>
+        <formatting>formatNumber(value/(1024*1024*1024), &apos;0&apos;)</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>JMV Memory Max, MiB</header>
+        <value>collector.jvm_memory_max</value>
+        <link>CHART</link>
+        <formatting>formatNumber(value/(1024*1024), &apos;0&apos;)</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>JVM Memory Used, %</header>
+        <value>collector.jvm_memory_used_percent</value>
+        <link>CHART</link>
+        <formatting>formatNumber(value, &apos;0.0&apos;)</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>System Load Avg</header>
+        <value>collector.jvm_system_load_average</value>
+        <link>CHART</link>
+        <formatting>formatNumber(value, &apos;0.0&apos;)</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>Process CPU Load</header>
+        <value>collector.jvm_process_cpu_load</value>
+        <link>CHART</link>
+        <formatting>formatNumber(value, &apos;0.0&apos;)</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>System CPU Load</header>
+        <value>collector.jvm_system_cpu_load</value>
+        <link>CHART</link>
+        <formatting>formatNumber(value, &apos;0.0&apos;)</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>Jobs OK</header>
+        <value>collector.jobs-ok</value>
+        <link>CHART</link>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>Jobs Enabled</header>
+        <value>collector.jobs-enabled</value>
+        <link>CHART</link>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>SERIES_VALUE</type>
+        <header>Jobs Failed</header>
+        <value>collector.jobs-failed</value>
+        <link>CHART</link>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>METRICS_COLUMN</type>
+        <header>Last Insert (jvm)</header>
+        <value>collector.jvm_memory_max:900</value>
+        <formatting>formatIntervalShort(elapsedTime(value))</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>METRICS_COLUMN</type>
+        <header>Last Insert (All)</header>
+        <value>:900</value>
+        <formatting>formatIntervalShort(elapsedTime(value))</formatting>
+      </com.axibase.tsd.model.EntityViewColumn>
+    </columns>
+    <displayIndex>0</displayIndex>
+    <enabled>true</enabled>
+    <entityGroups class="linked-hash-set">
+      <string>axibase-collectors</string>
+    </entityGroups>
+    <expression class="null"/>
+    <filter class="null"/>
+    <filters class="java.util.Arrays$ArrayList">
+      <a class="com.axibase.tsd.model.EntityView$EntityViewFilter-array"/>
+    </filters>
+    <grouping class="null"/>
+    <icon class="null"/>
+    <menu>false</menu>
+    <multiEntityPortalName class="null"/>
+    <name>Axibase Collectors</name>
+    <pageSize>100</pageSize>
+  </com.axibase.tsd.model.EntityView>
+</linked-list>

@@ -1,0 +1,229 @@
+<list>
+  <com.axibase.tsd.service.portal.PortalServiceImpl_-PortalConfigAndAssignedEntityGroups>
+    <portalConfig>
+      <name>axibase-collector</name>
+      <enabled>true</enabled>
+      <showInMenu>false</showInMenu>
+      <displayIndex>0</displayIndex>
+      <content>[configuration]
+  title = ${entity}
+
+  width-units = 3
+  height-units = 4
+  offset-right = 40
+  timespan = 1 day
+  update-interval = 1 minute
+  disconnect-interval = 30 minute
+  
+  entity = ${entity}
+
+[group]
+
+[widget]
+  type = chart
+  title = JVM Memory
+  format = bytes
+
+  [series]
+    label = Max
+    metric = collector.jvm_memory_max
+
+  [series]
+    label = Used
+    metric = collector.jvm_memory_used
+
+[widget]
+  type = chart
+  title = Host Memory
+  format = bytes
+   
+  [series]
+    label = Physical Total
+    metric = collector.jvm_total_physical_memory_size   
+    alias = ptotal
+
+  [series]
+    label = Swap Total
+    metric = collector.jvm_total_swap_space_size   
+    alias = stotal
+ 
+  [series]
+    metric = collector.jvm_free_physical_memory_size   
+    alias = pfree
+    display = false
+      
+  [series]
+    metric = collector.jvm_free_swap_space_size 
+    alias = sfree
+    display = false      
+        
+  [series]
+    label = Physical Used
+    value = value(&apos;ptotal&apos;) - value(&apos;pfree&apos;)      
+
+  [series]
+    label = Swap Used
+    value = value(&apos;stotal&apos;) - value(&apos;sfree&apos;)   
+
+[widget]
+  type = chart
+  title = Sent Commands
+  statistics = counter 
+
+  [series]
+    label = OK
+    metric = collector.commands-success  
+    color = green
+      
+  [series]
+    label = Fail
+    metric = collector.commands-fail  
+    color = red
+
+[group]      
+      
+[widget]
+  type = chart
+  title = CPU Load
+  max-range = 100
+  min-range = 0
+
+  [series]
+    label = Process
+    metric = collector.jvm_process_cpu_load
+
+  [series]
+    label = System
+    metric = collector.jvm_system_cpu_load
+      
+[widget]
+  type = chart
+  title = Host Load Average
+  mode = stack
+
+  [series]
+    label = System Load Avg
+    metric = collector.jvm_system_load_average 
+
+
+[widget]
+  type = chart
+  title = File Descriptors
+
+  [series]
+    label = Open Files
+    metric = collector.jvm_open_file_descriptor_count  
+      
+      
+[group]
+  
+[widget]
+  type = property
+  title = Build Info
+  timespan = all
+  column-time = null
+  #column-entity = null
+  expand-tags = true
+  transpose = true
+
+	[property]
+	  type = build_info
+    
+      
+[widget]
+  type = chart
+  title = Jobs
+  
+  [series]
+    label = OK
+    metric = collector.jobs-ok  
+    color = green
+  [series]
+    label = Failed
+    metric = collector.jobs-failed
+    color = red
+      
+/*      
+[widget]
+  type = chart
+  title = Job Execution Time, ms
+  #label-format = tags.job/tags.job_type
+  label-format = tags.job
+  mode = range
+  metric = collector.job-exec-time
+    [tags]
+      job = *  
+    
+  [series]
+*/
+      
+[group]
+      
+[widget]
+    type = table
+    title = Job Execution Statistics
+    width-units = 3
+    timespan = 1 day
+    column-metric = null
+    column-entity = null
+    column-time = null
+
+    [column]
+      key = job
+      label = Job   
+    [column]
+      key = job_type
+      label = Job Type         
+	[column]
+      key = time
+      label = Last Executed 
+      format = %b-%d %H:%M:%S
+    
+    [column]
+      key = value
+      label = Last
+      alert-expression = row.data.alert
+      alert-style = alert == 1 ? &apos;color: green&apos; : &apos;color: red&apos; 
+      
+	[column]
+      key = avg
+      label = Average
+      series-value = avg()
+	
+	[column]
+      key = min
+      label = Minimum
+	  series-value = min()
+	
+	[column]
+	  key = max
+      label = Maximum
+	  series-value = max()
+      
+	[column]
+	  key = min_value_time
+      label = Min Value Time
+	  series-value = min_value_time() 
+      format = %b-%d %H:%M:%S   
+      
+	[column]
+	  key = max_value_time
+      label = Max Value Time
+	  series-value = max_value_time() 
+      format = %b-%d %H:%M:%S
+  
+    sort = avg DESC, tags.job
+
+    [series]
+      metric = collector.job-exec-time
+    [tags]
+      job = * 
+    </content>
+      <lastModified>2018-03-14 09:15:28.499 UTC</lastModified>
+      <guestAccess>false</guestAccess>
+    </portalConfig>
+    <groupsAssignedToPortal>
+      <string>axibase-collectors</string>
+    </groupsAssignedToPortal>
+  </com.axibase.tsd.service.portal.PortalServiceImpl_-PortalConfigAndAssignedEntityGroups>
+</list>
