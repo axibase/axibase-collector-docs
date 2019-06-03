@@ -1223,7 +1223,7 @@ t:license_class_description=ALE
 | Attribution | Oregon Military Department |
 | Category | Government |
 | Date Range | 2015-2016 |
-| Links | [catalog](https://catalog.data.gov/dataset/information-technology-project-portfolio), [attribution](http://www.ct.gov/opm), [metadata](https://data.ct.gov/api/views/i7h5-rx65),  [data](https://data.ct.gov/api/views/i7h5-rx65/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/0653c6b5) |
+| Links | [catalog](https://catalog.data.gov/dataset/information-technology-project-portfolio), [attribution](https://portal.ct.gov/opm), [metadata](https://data.ct.gov/api/views/i7h5-rx65),  [data](https://data.ct.gov/api/views/i7h5-rx65/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/0653c6b5) |
 
 * Command
 

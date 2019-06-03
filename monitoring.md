@@ -56,7 +56,7 @@ The following example demonstrates a portal configuration that allows viewing jo
 
 ## Monitoring Multiple Collectors
 
-To view the health and performance of multiple collector instances, execute the following steps.
+Perform the steps below to view the status and performance of multiple collector instances.
 
 ### Create Entity Group
 
