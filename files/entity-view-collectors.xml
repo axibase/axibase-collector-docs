@@ -12,6 +12,12 @@
       </com.axibase.tsd.model.EntityViewColumn>
       <com.axibase.tsd.model.EntityViewColumn>
         <type>NAME_COLUMN</type>
+        <header>Messages</header>
+        <label>icon-search</label>
+        <linkTemplate>/messages?search=1&amp;interval.intervalCount=1&amp;interval.intervalUnit=MONTH&amp;entity=${entity}&amp;_excludeGroups=on&amp;chart=</linkTemplate>
+      </com.axibase.tsd.model.EntityViewColumn>
+      <com.axibase.tsd.model.EntityViewColumn>
+        <type>NAME_COLUMN</type>
         <header>Name</header>
       </com.axibase.tsd.model.EntityViewColumn>
       <com.axibase.tsd.model.EntityViewColumn>
@@ -126,7 +132,7 @@
     <grouping class="null"/>
     <icon class="null"/>
     <menu>false</menu>
-    <multiEntityPortalName class="null"/>
+    <multiEntityPortalName>axibase-collectors-compare</multiEntityPortalName>
     <name>Axibase Collectors</name>
     <pageSize>100</pageSize>
   </com.axibase.tsd.model.EntityView>

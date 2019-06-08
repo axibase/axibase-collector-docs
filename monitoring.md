@@ -64,6 +64,18 @@ Open **Settings > Entity Groups** and create a new entity group called `axibase-
 
 ![](./images/collector-group.png)
 
+### Create Portal
+
+Open the **Portals > Configure** page and import the **axibase-collector** portal from [`portal-axibase-collector.xml`](./files/portal-axibase-collector.xml). This portal contains key collector metrics.
+
+Check that the portal is assigned to the `axibase-collectors` group.
+
+![](./images/portal-assign.png)
+
+### Create Multi-Entity Portal
+
+Open the **Portals > Configure** page and import the **axibase-collectors-compare** portal from [`portal-axibase-collectors-compare.xml`](./files/portal-axibase-collectors-compare.xml). This portal compares key metrics across multiple collectors.
+
 ### Create Entity View
 
 Open the **Entity Views > Configure** page and import the following **Axibase Collectors** view from the [`entity-view-collectors.xml`](./files/entity-view-collectors.xml)
@@ -72,13 +84,9 @@ Check that the view is mapped to the `axibase-collectors` group.
 
 ![](./images/entity-view-map.png)
 
-### Create Portal
+Check that **Multi-Entity Portal** is set to display `axibase-collectors-compare` portal.
 
-Open the **Portals > Configure** page and import the following **axibase-collector** portal from the [`portal-axibase-collector.xml`](./files/portal-axibase-collector.xml)
-
-Check that the portal is assigned to the `axibase-collectors` group.
-
-![](./images/portal-assign.png)
+![](./images/monitor-collectors-multi-set.png)
 
 ### Verify Configuration
 
@@ -91,3 +99,7 @@ Click the chart icon on the left to view the assigned portal.
 ![](./images/portal-ev.png)
 
 ![](./images/collector-portal.png)
+
+Click **View Portal** to compare multiple collectors.
+
+![](./images/monitor-collectors-multi-select.png)

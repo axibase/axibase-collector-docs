@@ -1,0 +1,153 @@
+<list>
+  <com.axibase.tsd.service.portal.PortalServiceImpl_-PortalConfigAndAssignedEntityGroups>
+    <portalConfig>
+      <name>axibase-collectors-compare</name>
+      <enabled>true</enabled>
+      <showInMenu>true</showInMenu>
+      <displayIndex>0</displayIndex>
+      <content>[configuration]
+  title = Axibase Collectors
+
+  width-units = 3
+  height-units = 4
+  offset-right = 40
+  timespan = 2 day
+  update-interval = 5 minute
+  disconnect-count = 5
+  pointer-position = none
+  rotate-ticks = 0
+  server-aggregate = true
+  legend-value = false
+  step-line = false
+  
+  entities = ${entities}
+
+[group]
+  statistics = avg 
+  period = 15 minute
+  step-line = false
+
+[widget]
+  type = chart
+  title = JVM Memory Used
+  format = bytes
+  label-format = entity
+
+  [series]
+    metric = collector.jvm_memory_used
+         
+[widget]
+  type = chart
+  title = Process CPU Load
+  max-range = 100
+  min-range = 0
+  label-format = entity
+
+  [series]
+    metric = collector.jvm_process_cpu_load
+
+[widget]
+  type = chart
+  title = File Descriptors
+  label-format = entity
+  statistics = avg
+
+  [series]
+    metric = collector.jvm_open_file_descriptor_count      
+      
+[group]
+  step-line = false
+  
+
+[widget]
+  type = property
+  title = Properties
+  timespan = all
+  transpose = false
+  #expand-tags = true
+  join = entity
+  sort = entity
+  merge-properties = true
+  parse-number = true
+  command-time = null
+    
+  [column]
+      key = entity
+      label = Hostname
+      onclick = callDialog({type: &apos;page&apos;, url: &apos;/portal/name/axibase-collector?entity=&apos; + row.entity})
+  [column]
+      key = docker_info.time
+      label = Last Update      
+  [column]
+      key = build_info.time
+      label = Last Update (Build)
+      display=false
+  [column]
+      key = revision-number
+      label = Revision
+      
+  columns = docker-host
+  columns = serverversion      
+  columns = operatingsystem      
+  columns = driver
+  columns = kernelversion
+
+  [property]
+    type = build_info
+  [property]
+    type = docker_info  
+
+[widget]
+  type = chart
+  title = Sent Commands, per period. Status OK
+  statistics = counter 
+  period = 1 hour
+  end-time = current_hour
+  label-format = entity
+  mode = column-stack
+
+  [series]
+    metric = collector.commands-success  
+
+[widget]
+  type = chart
+  title = Failed Commands, per period. Status &lt;b color=red&gt;FAIL&lt;/b&gt;
+  statistics = counter
+  period = 1 hour
+  end-time = current_hour
+  label-format = entity
+  mode = column-stack
+    
+  [series]
+    metric = collector.commands-fail  
+
+[group]      
+      
+[widget]
+  type = chart
+  width-units = 3
+  height-units = 2
+  disconnect-count = 2
+  format = fixed(value/1000, 1)
+  title = Average Job Execution Time, seconds
+  label-format = entity : tags.job
+  metric = collector.job-exec-time
+  statistics = avg
+  period = 1 hour
+  end-time = current_hour
+  step-line = false
+    
+  [tags]
+    job = *  
+    
+  [series]
+   
+    </content>
+      <lastModified>2019-06-08 07:16:30.612 UTC</lastModified>
+      <guestAccess>false</guestAccess>
+    </portalConfig>
+    <groupsAssignedToPortal>
+      <string>axibase-collectors</string>
+    </groupsAssignedToPortal>
+  </com.axibase.tsd.service.portal.PortalServiceImpl_-PortalConfigAndAssignedEntityGroups>
+</list>

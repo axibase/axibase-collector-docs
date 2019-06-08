@@ -11,7 +11,7 @@
   width-units = 3
   height-units = 4
   offset-right = 40
-  timespan = 1 day
+  timespan = 2 day
   update-interval = 1 minute
   disconnect-interval = 30 minute
   
@@ -219,7 +219,7 @@
     [tags]
       job = * 
     </content>
-      <lastModified>2018-03-14 09:15:28.499 UTC</lastModified>
+      <lastModified>2019-06-08 07:18:01.343 UTC</lastModified>
       <guestAccess>false</guestAccess>
     </portalConfig>
     <groupsAssignedToPortal>
