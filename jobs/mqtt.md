@@ -2,27 +2,52 @@
 
 ## Overview
 
-The MQTT job provides a way to continuously read messages from one or multiple topics in an MQTT broker. The messages are parsed as CSV, JSON or plain text and converted into series, property, and message [commands](https://axibase.com/docs/atsd/api/network/) in the Axibase Time Series Database.
+The MQTT job provides a way to subscribe for messages with an MQTT message broker. The messages are continuously read from one or multiple matching topics in CSV, JSON or plain text formats and stored as series, property, and message [commands](https://axibase.com/docs/atsd/api/network/) in the Axibase Time Series Database.
+
+![](./images/mqtt-sub.png)
 
 ## Job Settings
 
-MQTT job settings provide an additional **MQTT Broker** field to configure MQTT broker connection which in turn allows you to select a specific [consumer](./mqtt-broker.md) to use.
+The connection to the target MQTT broker is set at the job level and applies to all configurations within the same job. The **MQTT Broker** setting at the job level specifies which MQTT broker to connect to. The list of [brokers](./mqtt-broker.md) can be configured on the **Data Sources > MQTT Brokers** page or by clicking on the plus icon.
 
-![MQTT job settings](./images/mqtt_job_configuration.png)
+![MQTT job settings](./images/mqtt_cfg.png)
 
-### Job Configuration
+## Job Configuration
 
-To configure a MQTT job, click **Create Configuration**.
-Set parameters as follows.
+The job may contain multiple configurations with each configuration representing a separate subscription.
 
-**Field** | **Description**
------ | -----------
-Topic | The topic to subscribe to, which can include wildcards
-Payload Format | Message payload format: `CSV`, `JSON`, `TEXT`
+Click **Create Configuration** to create a subscription.
+
+## Topic Filter
+
+The **Topic** field contains the filter expression which can select a specific topic or match multiple topics using `/` as the level delimiter and `#` as the multi-level [wildcard](https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.5.0/com.ibm.mq.pla.doc/q005020_.htm).
+
+Examples:
+
+* `A/topic-1` - subscribe to the `A/topic-1` topic.
+* `A/#` - subscribe to all topics under the `A` level, for example `A/topic-1` and `A/topic-2`, but not `B/topic-1`.
+
+![](./images/mqtt_sub.png)
+
+## Message Format
+
+**Format** | **Description** | **Supported Command Types**
+--- | --- | ---
+CSV | Multi-line comma-separated text. | Series, property, message.
+TEXT | Free-form text. | Series, property, message.
+JSON | JSON document | Series.
+
+## Compression
+
+**Format** | **Description**
+--- | ---
+NONE | Payload message is processed as text, without decompression.
+ZIP | Payload message is decompressed with `zip` codec.
+GZ | Payload message is decompressed with `gzip` codec.
 
 ## CSV Format
 
-If `CSV` format is selected, the message payload is automatically split into lines and the expression in the **Command Template** field is applied to each line separately.
+If `CSV` format is selected, the message is automatically split into lines and the expression in the **Command Template** field is applied to **each line separately**.
 
 ### Variables
 
@@ -77,34 +102,64 @@ Example:
 
 If `JSON` format is selected, the payload is parsed as a JSON document and the ATSD `series` command [fields](https://axibase.com/docs/atsd/api/network/series.html) are extracted from the named fields in the JSON document.
 
+### Arrays
+
+If the message payload is an array, each element in the array is processed as a separate JSON document.
+
+```json
+[
+    { -- document-1 > command-1 },
+    { -- document-2 > command-2 }
+]
+```
+
+### Key-Value Maps
+
+If the JSON document contains an object with paired names and values, use the **Transformation** section to extract the pairs into series tags.
+
+```json
+"props": [
+      { "pname": "Site", "pval": "NUR" },
+      { "pname": "Building", "pval": "A-1" }
+]
+```
+
+![](./images/mqtt_pairs.png)
+
 ### Entity Fields
 
 **Name** | **Description**
 ---| ---
-Entity | Entity name, specified literally or extracted from the specific field in the document.
-Entity Prefix | Text added to the entity name. For example, if prefix is `custom.`, and the entity field value is `my-host`, the resulting entity name is `custom.my-host`.
+Field | Entity name, specified literally or extracted from the specific field in the document.
+Default Value | Default value applied if the entity name cannot be extracted from the payload message.
+
+The **Default Value** can include placeholders with the following variables, for example `${host}`.
+
+**Name**| **Description**
+---|---
+`job` | Current job name.
+`configuration` | Configuration name.
+`topic` | Topic name.
+`host` | Broker host.
+`port` | Broker port.
 
 ### Time Fields
 
 **Name** | **Description**
 ---| ---
-Time Default | Literal time value specified if the JSON document contains no date field.
-Time Field   | Name of the JSON field containing the event date.
-Time Format  | Date pattern applied when parsing the date.
-Time Zone    | Timezone applied if the parsed date is lacking timezone information, otherwise the Collector time zone is in effect.
+Field   | Name of the JSON field containing the event date.
+Format  | Date pattern applied when parsing the date.
+Zone    | Timezone applied to the parsed date if the format lacks the timezone information, otherwise the Collector time zone is in effect.
 
 ### Series Fields
 
 **Name** | **Description**
 --- | ---
-Metric Prefix | Text added to the metric name. See **Entity Name** for reference.
-Included Fields | By default, all numeric fields from nested objects are included in the series command as metrics. To override, specify the list of included fields by name, separated by comma.
-Excluded Fields | List of particular field names excluded from the command. Applies when **Included Fields** is empty.
+Metric Prefix | Text added to the metric name.
+Included Fields | By default, all **numeric** fields from nested objects are included in the series command as metrics. To override, specify the list of included fields by name, separated by comma.
+Excluded Fields | List of field names excluded from the command. Applies when **Included Fields** is empty.
 Annotation Fields | List of field names whose values are saved as text annotation.
-
-### Configuration Example
-
-![MQTT Configuration Example](./images/mqtt_configuration_json.png)
+Name & Value Fields |Name of the field containing the metric name and metric value.
 
 ![MQTT JSON mapping settings](./images/mqtt_json_mapping.png)
 
@@ -112,13 +167,9 @@ Annotation Fields | List of field names whose values are saved as text annotatio
 
 ## TEXT Format
 
-If `TEXT` format is selected, enter an expression in the **Command Template** field to convert message text to an ATSD network command.
-
-### Variables
+If `TEXT` format is selected, enter an expression in the **Command Template** field to convert message text to a valid ATSD [command](https://axibase.com/docs/atsd/api/network/).
 
 All variables for `CSV` mode are available in `TEXT` mode as well except the `line` variable.
-
-### Configuration Example
 
 ![](./images/mqtt_text_configuration.png)
 
