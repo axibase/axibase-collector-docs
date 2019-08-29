@@ -14,7 +14,7 @@ The connection to the target MQTT broker is set at the job level and applies to 
 
 ## Job Configuration
 
-The job may contain multiple configurations with each configuration representing a separate subscription.
+The job can contain multiple configurations with each configuration representing a separate subscription.
 
 Click **Create Configuration** to create a subscription.
 
