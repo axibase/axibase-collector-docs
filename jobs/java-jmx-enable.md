@@ -6,7 +6,7 @@
 
 #### Reference Information
 
-* Configuring JMX in ActiveMQ: [`activemq.apache.org/jmx.html`](http://activemq.apache.org/jmx.html)
+* Configuring JMX in ActiveMQ: [`activemq.apache.org/jmx.html`](https://activemq.apache.org/jmx.html)
 
 #### Configure JMX properties
 

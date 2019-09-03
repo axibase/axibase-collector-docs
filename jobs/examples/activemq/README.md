@@ -6,7 +6,7 @@ This document describes the process of configuring ActiveMQ for availability and
 
 ## Requirements
 
-* [ActiveMQ version 5.x.+](http://activemq.apache.org)
+* [ActiveMQ version 5.x.+](https://activemq.apache.org)
 
 ## Installation Steps
 
@@ -45,7 +45,7 @@ See [Aggregation Log Filter](https://github.com/axibase/aggregation-log-filter) 
   * Search for the `ACTIVEMQ_SUNJMX_START` setting and modify the setting as specified below.
   * Replace `activemq_hostname` with the full hostname or the IP address of the ActiveMQ server.
   * This must be the same hostname that Axibase Collector uses when connecting to the ActiveMQ server.
-  * For more information on configuring JMX in ActiveMQ, see [Apache ActiveMQ Documentation](http://activemq.apache.org/jmx.html)
+  * For more information on configuring JMX in ActiveMQ, see [Apache ActiveMQ Documentation](https://activemq.apache.org/jmx.html)
 
 ActiveMQ `5.11.x` and later:
 

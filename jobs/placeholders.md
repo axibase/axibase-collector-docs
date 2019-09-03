@@ -196,9 +196,9 @@ Treat Item List as a properties file. Key is a substring of item list row before
 
 | Parameter name | Parameter type | Description |
 | :--------------|:---------------|:------------|
-| itemList       | String         | Name of the Item List |
-| key            | String         | Lookup Key  |
-| separator      | String (optional) | Key/value separator |
+| `itemList`       | String         | Name of the Item List |
+| `key`            | String         | Lookup Key  |
+| `separator`      | String (optional) | Key/value separator |
 
 `LOOKUP(itemList, key, keyColumnIndex, valueColumnIndex, separator=',')`
 
