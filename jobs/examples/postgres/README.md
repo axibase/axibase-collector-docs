@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to collect statistical metrics introduced in [PostgreSQL](http://www.mysql.com/) `9.1+` for long-term retention and monitoring in Axibase Time Series Database.
+This document describes how to collect statistical metrics introduced in [PostgreSQL](https://www.postgresql.org/) `9.1+` for long-term retention and monitoring in Axibase Time Series Database.
 
 The process involves enabling a JDBC job in Axibase Collector to poll [statistics views](https://www.postgresql.org/docs/9.1/static/monitoring-stats.html) in the PostgreSQL database and uploading the counters and properties into ATSD for processing.
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes how to collect global status metrics from `performance_schema` introduced in [MySQL](http://www.mysql.com/) `5.7+` for long-term retention and monitoring in Axibase Time Series Database.
+This document describes how to collect global status metrics from `performance_schema` introduced in [MySQL](https://www.mysql.com/) `5.7+` for long-term retention and monitoring in Axibase Time Series Database.
 
 The process involves enabling a JDBC job in Axibase Collector to poll a `global_status` table and uploading the counters to ATSD for processing.
 

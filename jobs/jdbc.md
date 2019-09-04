@@ -48,7 +48,7 @@ Use the table below to fill in the fields and configure the query.
 | Default Entity  | Default entity assigned to the collected commands. |
 | Entity Column   | Retrieve entity value from the specified entity column. |
 | Entity Replacement Expression | FreeMarker expression to extract entity name from an input string or to retrieve the entity name from a lookup table using [`LOOKUP`](./placeholders.md#functions). |
-| Split Condition  | One or multiple WHERE conditions to copy the base query into multiple queries returning smaller resultsets.  |
+| Split Condition  | One or multiple WHERE conditions to copy the base query into multiple queries returning smaller result sets.  |
 | Tag Columns     | Columns that contain series tags. |
 | Predefined Tags    | Assign predefined tags to all series. |
 | Time Column | Column containing the timestamp. |
