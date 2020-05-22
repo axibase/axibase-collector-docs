@@ -20,7 +20,7 @@ The configuration uses the HTTP pool to increase timeout to 180 seconds.
 
 Template: `/aq/data/?startDate=${TIME("current_hour - 360 * hour", "yyyy-MM-dd'T'HH")}&endDate=${TIME("current_hour - 12 * hour", "yyyy-MM-dd'T'HH")}&parameters=PM25,O3,PM10,CO,NO2,SO2&BBOX=${ITEM?keep_after('<1>')?keep_before('<2>')}&dataType=C&format=text/csv&API_KEY=****`
 
-[Example](http://www.airnowapi.org:80/aq/data/?startDate=2016-06-22T15&endDate=2016-07-07T03&parameters=PM25,O3,PM10,CO,NO2,SO2&BBOX=-122.3978,37.7658,-122.3978,37.7658&dataType=C&format=text/csv&API_KEY=****)
+Example: `http://www.airnowapi.org:80/aq/data/?startDate=2016-06-22T15&endDate=2016-07-07T03&parameters=PM25,O3,PM10,CO,NO2,SO2&BBOX=-122.3978,37.7658,-122.3978,37.7658&dataType=C&format=text/csv&API_KEY=****`
 
 ### Local Copy
 
