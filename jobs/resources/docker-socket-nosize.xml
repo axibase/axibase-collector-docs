@@ -45,6 +45,7 @@
             <retainDeletedContainers>7</retainDeletedContainers>
             <retainDeletedEntities>true</retainDeletedEntities>
             <containerSizeInterval>0</containerSizeInterval>
+            <apiTimeout>300</apiTimeout>
             <entitySet>
                 <name>Docker Excluded Processes</name>
                 <type>TEXT</type>
