@@ -74,8 +74,10 @@ const landingPageMenu = [
         title: 'Job Configuration', children: [
 
             ['/job-generic.md', 'Generic'],
+            ['job-import.md', 'Import'],
             ['/job-autostart.md', 'Autostart'],
             '/scheduling.md'
+
         ],
         collapsable: true
     },
