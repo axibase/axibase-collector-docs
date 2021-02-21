@@ -244,7 +244,7 @@ In case of `Bad value(endOfMibView)` error, modify the SNMP daemon configuration
 
 ![](./images/snmp-lock-error.png)
 
-The error is displayed as `end of the MIB tree` at the end of the the `snmpwalk` output.
+The error is displayed as `end of the MIB tree` at the end of the `snmpwalk` output.
 
 ```txt
 ...

@@ -72,7 +72,7 @@ The `cloudwatch:` actions are required to list available CloudWatch metrics and 
 
 To simplify configuration, use wildcards to grant multiple actions using prefix matching. For example, specify `route53:List*` action instead of `route53:ListHealthChecks` and `route53:ListTagsForResources`.
 
-Sample namespace-specific actions:
+Sample actions:
 
 * [`ec2:DescribeInstances`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html)
 * [`ec2:DescribeVolumes`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVolumes.html)

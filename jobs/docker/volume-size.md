@@ -32,7 +32,7 @@ For example, on a Docker host where the `/var/lib/docker` size is 30 GB with 20 
   sys 0m0.032s
   ```
 
-![docker-ps](./docker-ps-as.png)
+![](./docker-ps-as.png)
 
 Executing API requests with the `&size=1` parameter typically requires even more time than the `docker ps -as` command and can cause timeout issues for API clients.
 

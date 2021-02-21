@@ -14,7 +14,7 @@ The Path field contains the `${ITEM}` placeholder which allows multiple nginx se
 
 ### Local Copy
 
-[nginx_status](./nginx_status)
+[`nginx_status`](./nginx_status)
 
 ### Content
 

@@ -81,7 +81,7 @@ Both parts of the query support wildcards:
 
 ### [Object Name](https://docs.oracle.com/javase/7/docs/api/javax/management/ObjectName.html) Pattern
 
-The pattern pattern matches MBean instances of specified type and name.
+The pattern matches MBean instances of specified type and name.
 
 ```sh
 org.apache.activemq:brokerName=localhost,type=Broker   -->     TotalProducerCount, TotalMessageCount

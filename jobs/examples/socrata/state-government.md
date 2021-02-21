@@ -23,15 +23,13 @@ ___
 | Hawaii | [Table 17: Solid Waste Recycled (in tons)](#table-17-solid-waste-recycled-in-tons) | Iowa Department of Education, Adequate Yearly Progress |
 | Iowa | [Math And Reading Proficiency by School Year, Public School District, and Grade Level](#math-and-reading-proficiency-by-school-year-public-school-district-and-grade-level) | Iowa Department of Education, Adequate Yearly Progress |
 | Hawaii | [AAA Fuel Prices](#aaa-fuel-prices) | Department of Economic Development and Tourism |
-| Connecticut | [Sales and Use Tax per Town by NAICS (2013 and 2014)](#sales-and-use-tax-per-town-by-naics-2013-and-2014) | Department of Revenue Services |
-| Maryland | [Per Capita Electricity Consumption](#per-capita-electricity-consumption) | MEA |
+| Maryland | [Electricity Consumption](#electricity-consumption) | MEA |
 | Maryland | [MVA Vehicle Sales Counts by Month for CY 2002-2015](#mva-vehicle-sales-counts-by-month-for-cy-2002---2015) | Motor Vehicle Administration |
 | Connecticut | [DAS HR Almanac - Executive Branch Employment By Race](#das-hr-almanac---executive-branch-employment-by-race) | DAS Human Resources |
 | New York | [Scholarship Recipients and Dollars by Sector Group: Beginning 2009](#scholarship-recipients-and-dollars-by-sector-group-beginning-2009) | New York State Higher Education Services Corporation |
 | New York | [Public Assistance and SNAP Fraud Prevention Performance Measures: Beginning 2013](#public-assistance-and-snap-fraud-prevention-performance-measures-beginning-2013) | New York State Office of Temporary and Disability Assistance (OTDA) |
 | Maryland | [Maryland Veterans Unemployment Rate](#maryland-veterans-unemployment-rate) | Bureau of Labor Statistics
 | Maryland | [Trips Taken on Public Transit by Transit Type - Monthly Total Trips](#trips-taken-on-public-transit-by-transit-type---monthly-total-trips) | Maryland Transit Authority |
-| Iowa | [Employee Compensation by Industry in Iowa](#employee-compensation-by-industry-in-iowa) | U.S. Department of Commerce, Bureau of Economic Analysis, Compensation of Employees by Industry (SQ6, SQ6N) |
 
 ### Abortion Demographics, 1995-2012
 

@@ -48,7 +48,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 ### Create Item List for nginx servers
 
 * Open the **Collections > Item Lists** page.
-* Add a new TEXT [Item List](../../../collections.md) named **nginx-servers**, containing DNS names or IP addresses of the monitored nginx servers, one server per line. Ensure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire URL to the list and set the **Path** field equal to the `${ITEM}` placeholder.
+* Add a new TEXT [Item List](../../../collections.md) named `nginx-servers`, containing DNS names or IP addresses of the monitored nginx servers, one server per line. Ensure that each server on the list is accessible on the specified protocol and port and exposes the status page on the same path: `/nginx_status`. If the protocols and ports are different, move the entire URL to the list and set the **Path** field equal to the `${ITEM}` placeholder.
 * **Save** the list.
 
 ![Server list example](./images/nginx-server-list.png)
@@ -79,7 +79,7 @@ Axibase Collector polls the nginx status page every 5 seconds and uploads the do
 
 * Log in to the ATSD web interface.
 * Open the **Metrics** tab and apply the `nginx*` name mask to view `nginx` metrics received by ATSD.
-* Click the **Series** link and check that metrics are present for each server in the **nginx-servers** list.
+* Click the **Series** link and check that metrics are present for each server in the `nginx-servers` list.
 
 ![nginx metrics](./images/nginx-metrics-list.png)
 

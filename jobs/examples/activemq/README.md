@@ -89,7 +89,7 @@ The expected result is:
 jmx.access:
 
 ```sh
-# The "monitorRole" role has readonly access.
+# The "monitorRole" role has read-only access.
 monitorRole readonly
 ```
 
@@ -126,7 +126,7 @@ chmod 600 ./conf/jmx.password
 
 ![JMX_JOB](./images/jmx_job_to_configuration.png)
 
-##### Configuring activemq-series
+##### Configuring `activemq-series`
 
 1. Select the `activemq-series` configuration.
 1. On the **JMX Configuration** page, enter the JMX connection parameters as above:
@@ -154,7 +154,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 ![](./images/series_config_85.png)
 
-##### Configuring activemq-property
+##### Configuring `activemq-property`
 
 1. From the table on the **JMX Job** page, click **Edit** next to the `activemq-property` configuration.
 1. Set **Host**, **Port**, **User Name**, **Password**, and **Entity** fields as described in the previous section.
@@ -209,7 +209,7 @@ If the specified configuration is correct, there must be no errors or empty fiel
 
 * Open the **Configuration > Rules** page, click **Import** and upload [`jvm_rules.xml`](./configs/activemq_rules.xml).
 * For each created rule, open the rule in the **Rule Editor**, and change the recipient address on the **Email Notifications** tab.
-* These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
+* These rules automatically apply to all Java applications monitored by Axibase Collector.
 
 Imported rules:
 

@@ -12,7 +12,7 @@ The process involves enabling a JDBC job in Axibase Collector to poll [statistic
 
 ## Installation Steps
 
-## Create a readonly user for Axibase Collector
+## Create a read-only user for Axibase Collector
 
 * Create a user:
 

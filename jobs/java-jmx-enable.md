@@ -68,7 +68,7 @@ Ensure that the owner of these files is the same as the ActiveMQ user.
 `jmx.access`:
 
 ```txt
-# The "monitorRole" role has readonly access.
+# The "monitorRole" role has read-only access.
 monitorRole readonly
 ```
 

@@ -94,7 +94,7 @@ Configure your Java application for JMX data collection as described by the [JMX
 
 * Open the **Alerts** menu and select **Rules**, click **Import**, and upload [`jvm_rules.xml`](./configs/jvm_rules.xml).
 * For each created rule: open the rule in the **Rule Editor** and change recipient address on the **Email Notifications** tab.
-* These rules automatically apply to all JVM-based applications monitored by Axibase Collector.
+* These rules automatically apply to all Java applications monitored by Axibase Collector.
 
 Imported rules:
 
