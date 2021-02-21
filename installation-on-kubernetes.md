@@ -233,7 +233,7 @@ Notes:
 * `axibase-collector` deployment is defined in **metadata: name** field.
 * The Deployment creates **three** replicated Pods, indicated by the [**replicas**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#replicas) field. To install Collector on each node, the replicas value must equal node count.
 * The **`selector`** field defines how the deployment finds pods to be managed. In this case, select a pod based on the label defined in the Pod template (`app: axibase-collector`).
-* The pod template specification, **template: spec**, indicates that the Pod must run one container, named `axibase-collector`, which runs the latest [axibase-collector](https://hub.docker.com/r/axibase/collector/) image from Docker Hub.
+* The pod template specification, **template: spec**, indicates that the Pod must run one container, named `axibase-collector`, which runs the latest [image](https://hub.docker.com/r/axibase/collector/) from Docker Hub.
 * The deployment opens port `9443`.
 
 The **template** field contains the following instructions:

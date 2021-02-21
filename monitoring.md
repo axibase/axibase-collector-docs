@@ -66,7 +66,7 @@ Open **Settings > Entity Groups** and create a new entity group called `axibase-
 
 ### Create Portal
 
-Open the **Portals > Configure** page and import the **axibase-collector** portal from [`portal-axibase-collector.xml`](./files/portal-axibase-collector.xml). This portal contains key collector metrics.
+Open the **Portals > Configure** page and import the `axibase-collector` portal from [`portal-axibase-collector.xml`](./files/portal-axibase-collector.xml). This portal contains key collector metrics.
 
 Check that the portal is assigned to the `axibase-collectors` group.
 
@@ -74,7 +74,7 @@ Check that the portal is assigned to the `axibase-collectors` group.
 
 ### Create Multi-Entity Portal
 
-Open the **Portals > Configure** page and import the **axibase-collectors-compare** portal from [`portal-axibase-collectors-compare.xml`](./files/portal-axibase-collectors-compare.xml). This portal compares key metrics across multiple collectors.
+Open the **Portals > Configure** page and import the `axibase-collectors-compare` portal from [`portal-axibase-collectors-compare.xml`](./files/portal-axibase-collectors-compare.xml). This portal compares key metrics across multiple collectors.
 
 ### Create Entity View
 

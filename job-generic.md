@@ -31,7 +31,7 @@ The job can include multiple configurations. For example, a JDBC job can be conf
 
 Create a copy of any job by clicking **Clone**.
 
-The cloned job has the same name as the original job with the `-cloned` postfix appended.
+The cloned job has the same name as the original job with the `-cloned` suffix appended.
 
 By default, cloned jobs are disabled.
 

@@ -25,11 +25,13 @@ loopback
 lowercased
 meteo
 mlocked
+namespace[s]?
 newline
 ns
 offheap
 paratransit
 proxied
+preconfigure[d]?
 reportable
 respawned
 resultset

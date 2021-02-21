@@ -30,7 +30,7 @@ The files are parsed by ATSD using a [CSV Parser](https://axibase.com/docs/atsd/
 |:---|:---|:---|:---|
 | `FILE` | `file://` | yes | Read file or files from the local file system.<br/>`/tmp/report/daily*.csv` |
 | `HTTP` | `http://` or `https://` | no | Download a file from a web server.<br/>`https://example.org/traffic/direct.csv` |
-| `HTTP_POOL` | `http://` or `https://`| no | Download a file from a web server using pre-configured HTTP pool.<br/>`/traffic/direct.csv` |
+| `HTTP_POOL` | `http://` or `https://`| no | Download a file from a web server using preconfigured HTTP pool.<br/>`/traffic/direct.csv` |
 | `FTP` | `ftp://` | yes | Download file or files from an FTP server.<br/>`ftp://example.org/data/CCE2_121W_*.csv` |
 | `SFTP` | `sftp://` | yes | Download file or files from a Unix server over STFP protocol.<br/>`sftp://username:password@198.51.100.1:22/home/ftp-reader/*.csv` |
 | `SCP` | `scp://` | no | Download a file from a Unix server over SCP protocol.<br/>`scp://username:password@example.org:4022/home/user-1/r20160617.csv` |
@@ -41,7 +41,7 @@ In addition to scheduled checks, the FILE protocol exposes a setting to continuo
 
 When some creates or changes the file in the watched directory, the job is processed with the same workflow as files identified with the scheduled execution, except that the job continues running and watching for subsequent changes until the next job start time or until the watch interval expires.
 
-File watch test configurations are pre-configured to watch the directory for 15 seconds.
+File watch test configurations are preconfigured to watch the directory for 15 seconds.
 
 Consecutive file modification events that occurred within one second of each other are deduplicated by the protocol to prevent too many files being sent into the database.
 

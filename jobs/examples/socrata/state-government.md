@@ -346,43 +346,7 @@ t:physicalunit=Dollars m:price=2.314
 }
 ```
 
-### Sales and Use Tax per Town by NAICS (2013 and 2014)
-
-| **Name** | **Value** |
-|:---|:---|
-| Id | `rkm7-uwkb` |
-| Name | Sales and Use Tax per Town by NAICS (2013 and 2014) |
-| State | [Connecticut](https://data.ct.gov) |
-| Description | Sales and use tax data, by quarter, by town, disaggregated by the North America Industrial Classification (NAICS) groups for calendar years 2013 and 2014.  The data available is unique to each municipality as detailed NAICS information is only provided where there are ten or more taxpayers in a given category.<br/>This data is updated annually, all four quarters of a calendar year are available at once.  This list reflects the tax collected at both the 6.35% and 7% rates, where applicable. |
-| Attribution | Department of Revenue Services |
-| Category | Government |
-| Date Range | 2013-2014 |
-| Links | [catalog](https://catalog.data.gov/dataset/sales-and-use-tax-per-town-by-naics-2013-and-2014), [attribution](http://www.ct.gov/drs/cwp/view.asp?a=4128&q=483506), [metadata](https://data.ct.gov/api/views/rkm7-uwkb),  [data](https://data.ct.gov/api/views/rkm7-uwkb/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/6be07c75) |
-
-* Command
-
-```ls
-series e:rkm7-uwkb d:2014-01-01T00:00:00.000Z t:naics_industry_code="230 Construction"
-t:municipality="OUT OF COUNTRY" m:taxpayer_count=16 m:total_tax_due_at_7=0
-m:retail_sales_of_goods=0 m:total_tax_due_at_6_35=0
-```
-
-* JSON
-
-```JSON
-{
-      "naics_industry_code": "230 Construction",
-      "taxpayer_count": 16,
-      "total_tax_due_at_7": 0,
-      "retail_sales_of_goods": 0,
-      "periods_ending": "Quarter 1 - JAN to MAR",
-      "municipality": "OUT OF COUNTRY ",
-      "calendar_year": 2014,
-      "total_tax_due_at_6_35": 0
-}
-```
-
-### Per Capita Electricity Consumption
+### Electricity Consumption
 
 | **Name** | **Value** |
 |:---|:---|
@@ -654,36 +618,6 @@ m:commuter_bus_total=249082 m:taxi_access_trips=29592
       "light_rail": 563420,
       "commuter_bus_total": 249082,
       "taxi_access_trips": 29592
-}
-```
-
-### Employee Compensation by Industry in Iowa
-
-| **Name** | **Value** |
-|:---|:---|
-| Id | `yrss-ncc4` |
-| Name | Employee Compensation by Industry in Iowa |
-| State | [Iowa](https://data.iowa.gov) |
-| Description | This dataset contains employee compensation estimates in thousands of dollars, seasonally adjusted at annual rates.  All dollar estimates are in current dollars (not adjusted for inflation).  Compensation is the total remuneration, both monetary and in kind, payable by employers to employees in return for their work during the period. The data consists of wages and salaries and of supplements to wages and salaries. Compensation is presented on an accrual basis - that is, the number reflects compensation liabilities incurred by the employer in a given period regardless of when the compensation is received by the employee. The estimates of compensation by industry for 1998-2006 are based on the 2002 North American Industry Classification System (NAICS). The estimates for 2007-2010 are based on the 2007 NAICS. The estimates for 2011 forward are based on the 2012 NAICS. |
-| Attribution | U.S. Department of Commerce, Bureau of Economic Analysis, Compensation of Employees by Industry (SQ6, SQ6N) |
-| Category | Economy |
-| Date Range | 1998-2016 |
-| Links | [catalog](https://catalog.data.gov/dataset/employee-compensation-by-industry-in-iowa), [attribution](https://www.bea.gov/itable/index.cfm), [metadata](https://data.iowa.gov/api/views/yrss-ncc4),  [data](https://data.iowa.gov/api/views/yrss-ncc4/rows.json?accessType=DOWNLOAD), [portal](https://apps.axibase.com/chartlab/f5eae012) |
-
-* Command
-
-```ls
-series e:yrss-ncc4 d:1998-03-31T00:00:00.000Z t:industry_type=Farm t:industry=Farm m:compensation=351164
-```
-
-* JSON
-
-```JSON
-{
-      "compensation": 351164,
-      "quarter_ending": "1998-03-31T00:00:00",
-      "industry_type": "Farm",
-      "industry": "Farm"
 }
 ```
 

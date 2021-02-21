@@ -304,4 +304,4 @@ Locate the **docker-socket** job on the **Jobs** page and verify that the job is
 ## Testing and Evaluating
 
 <!-- markdownlint-disable MD106-->
-Optionally launch either the **atsd** and **axibase-collector** containers in a [test environment](./docker-compose.md) using  `docker-compose`.
+Optionally launch either the `atsd` and `axibase-collector` containers in a [test environment](./docker-compose.md) using  `docker-compose`.

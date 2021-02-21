@@ -48,7 +48,7 @@ The JSON file (1.1 MB) can be found on the [City of New York website](https://da
 
    ![Figure 9](./images/Figure9.png)
 
-9. Press **Add** to create a pre-configured settings section.
+9. Press **Add** to create a preconfigured settings section.
 10. Press **Test**. To view descriptions of each of the fields shown below, see [Job Configuration Documentation](../jobs/socrata.md#job-configuration).
 
     ![Figure 10](./images/Figure10.png)
