@@ -2,7 +2,7 @@
 
 ## Overview
 
-[HP OpenView Performance Manager](https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=PERFMINFO) is an agent-based centralized data collection solution.
+HP OpenView Performance Manager is an agent-based centralized data collection solution.
 
 OVPM stores collected statistics in files on the local file system for several months.
 
