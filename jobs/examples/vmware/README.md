@@ -2,7 +2,7 @@
 
 ## Overview
 
-[VMware vCenter](https://www.vmware.com/products/vcenter-server) provides a centralized platform for managing VMware vSphere environments.
+VMware vCenter provides a centralized platform for managing VMware vSphere environments.
 
 VMware vCenter collects and stores statistics from ESX servers in a Microsoft SQL Server database (`VIM_VCDB`) which Axibase Collector queries every 20 minutes to offload incremental statistics from the `VPX_HIST_STAT1` table into Axibase Time Series Database for long-term retention and operations analytics.
 
